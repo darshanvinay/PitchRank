@@ -1,0 +1,83 @@
+{
+  "league": "ligue1",
+  "season": "2026-2027",
+  "verified_on": "2026-10-22",
+  "roster_source": "https://ligue1.com/fr/articles/l1_article_5293-les-dates-de-reprise-des-clubs-de-l1-2627",
+  "results_source": "https://www.football-data.co.uk/mmz4281/2627/F1.csv",
+  "valuation_source": "https://footballwhispers.com/blog/ligue-1-squad-values-every-club-ranked/",
+  "valuation_date_basis": "Underlying Transfermarkt values are September 2026; 2026-09-04 is the publication reference date, not an asserted exact valuation day.",
+  "clubs": [
+    {
+      "provider_name": "Angers",
+      "official_name": "Angers SCO"
+    },
+    {
+      "provider_name": "Auxerre",
+      "official_name": "AJ Auxerre"
+    },
+    {
+      "provider_name": "Brest",
+      "official_name": "Stade Brestois 29"
+    },
+    {
+      "provider_name": "Le Havre",
+      "official_name": "Havre AC"
+    },
+    {
+      "provider_name": "Le Mans",
+      "official_name": "Le Mans FC"
+    },
+    {
+      "provider_name": "Lens",
+      "official_name": "RC Lens"
+    },
+    {
+      "provider_name": "Lille",
+      "official_name": "LOSC"
+    },
+    {
+      "provider_name": "Lorient",
+      "official_name": "FC Lorient"
+    },
+    {
+      "provider_name": "Lyon",
+      "official_name": "Olympique Lyonnais"
+    },
+    {
+      "provider_name": "Marseille",
+      "official_name": "Olympique de Marseille"
+    },
+    {
+      "provider_name": "Monaco",
+      "official_name": "AS Monaco"
+    },
+    {
+      "provider_name": "Nice",
+      "official_name": "OGC Nice"
+    },
+    {
+      "provider_name": "Paris FC",
+      "official_name": "Paris FC"
+    },
+    {
+      "provider_name": "Paris SG",
+      "official_name": "Paris Saint-Germain"
+    },
+    {
+      "provider_name": "Rennes",
+      "official_name": "Stade Rennais F.C."
+    },
+    {
+      "provider_name": "Strasbourg",
+      "official_name": "RC Strasbourg Alsace"
+    },
+    {
+      "provider_name": "Toulouse",
+      "official_name": "Toulouse FC"
+    },
+    {
+      "provider_name": "Troyes",
+      "official_name": "ESTAC Troyes"
+    }
+  ]
+}

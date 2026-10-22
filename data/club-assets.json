@@ -1,0 +1,386 @@
+{
+  "Arsenal": {
+    "file": "arsenal.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+  },
+  "Man City": {
+    "file": "man-city.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/281.png"
+  },
+  "Chelsea": {
+    "file": "chelsea.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+  },
+  "Liverpool": {
+    "file": "liverpool.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+  },
+  "Man United": {
+    "file": "man-united.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+  },
+  "Tottenham": {
+    "file": "tottenham.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/148.png"
+  },
+  "Newcastle": {
+    "file": "newcastle.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/762.png"
+  },
+  "Brighton": {
+    "file": "brighton.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1237.png"
+  },
+  "Crystal Palace": {
+    "file": "crystal-palace.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/873.png"
+  },
+  "Brentford": {
+    "file": "brentford.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1148.png"
+  },
+  "Bournemouth": {
+    "file": "bournemouth.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/989.png"
+  },
+  "Aston Villa": {
+    "file": "aston-villa.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+  },
+  "Nott'm Forest": {
+    "file": "nottm-forest.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/703.png"
+  },
+  "Sunderland": {
+    "file": "sunderland.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/289.png"
+  },
+  "Leeds": {
+    "file": "leeds.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/399.png"
+  },
+  "Fulham": {
+    "file": "fulham.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/931.png"
+  },
+  "Everton": {
+    "file": "everton.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+  },
+  "Ipswich": {
+    "file": "ipswich.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/677.png"
+  },
+  "Coventry": {
+    "file": "coventry.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/990.png"
+  },
+  "Hull": {
+    "file": "hull.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/3008.png"
+  },
+  "Ath Bilbao": {
+    "file": "laliga-621.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/621.png"
+  },
+  "Ath Madrid": {
+    "file": "laliga-13.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+  },
+  "Osasuna": {
+    "file": "laliga-331.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/331.png"
+  },
+  "Celta": {
+    "file": "laliga-940.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/940.png"
+  },
+  "Alaves": {
+    "file": "laliga-1108.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1108.png"
+  },
+  "Elche": {
+    "file": "laliga-1531.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1531.png"
+  },
+  "Barcelona": {
+    "file": "laliga-131.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+  },
+  "Getafe": {
+    "file": "laliga-3709.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/3709.png"
+  },
+  "Levante": {
+    "file": "laliga-3368.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/3368.png"
+  },
+  "Malaga": {
+    "file": "laliga-1084.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1084.png"
+  },
+  "Santander": {
+    "file": "laliga-630.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/630.png"
+  },
+  "Vallecano": {
+    "file": "laliga-367.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/367.png"
+  },
+  "La Coruna": {
+    "file": "laliga-897.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/897.png"
+  },
+  "Espanol": {
+    "file": "laliga-714.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/714.png"
+  },
+  "Betis": {
+    "file": "laliga-150.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/150.png"
+  },
+  "Real Madrid": {
+    "file": "laliga-418.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+  },
+  "Sociedad": {
+    "file": "laliga-681.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/681.png"
+  },
+  "Sevilla": {
+    "file": "laliga-368.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+  },
+  "Valencia": {
+    "file": "laliga-1049.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1049.png"
+  },
+  "Villarreal": {
+    "file": "laliga-1050.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1050.png"
+  },
+  "Atalanta": {
+    "file": "seriea-800.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/800.png"
+  },
+  "Bologna": {
+    "file": "seriea-1025.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1025.png"
+  },
+  "Cagliari": {
+    "file": "seriea-1390.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1390.png"
+  },
+  "Como": {
+    "file": "seriea-1047.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1047.png"
+  },
+  "Fiorentina": {
+    "file": "seriea-430.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/430.png"
+  },
+  "Frosinone": {
+    "file": "seriea-8970.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/8970.png"
+  },
+  "Genoa": {
+    "file": "seriea-252.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/252.png"
+  },
+  "Inter": {
+    "file": "seriea-46.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+  },
+  "Juventus": {
+    "file": "seriea-506.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+  },
+  "Lazio": {
+    "file": "seriea-398.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/398.png"
+  },
+  "Lecce": {
+    "file": "seriea-1005.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1005.png"
+  },
+  "Milan": {
+    "file": "seriea-5.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+  },
+  "Monza": {
+    "file": "seriea-2919.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/2919.png"
+  },
+  "Napoli": {
+    "file": "seriea-6195.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/6195.png"
+  },
+  "Parma": {
+    "file": "seriea-130.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+  },
+  "Roma": {
+    "file": "seriea-12.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+  },
+  "Sassuolo": {
+    "file": "seriea-6574.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/6574.png"
+  },
+  "Torino": {
+    "file": "seriea-416.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/416.png"
+  },
+  "Udinese": {
+    "file": "seriea-410.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+  },
+  "Venezia": {
+    "file": "seriea-607.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/607.png"
+  },
+  "Augsburg": {
+    "file": "bundesliga-167.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/167.png"
+  },
+  "Bayern Munich": {
+    "file": "bundesliga-27.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+  },
+  "Dortmund": {
+    "file": "bundesliga-16.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/16.png"
+  },
+  "Ein Frankfurt": {
+    "file": "bundesliga-24.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/24.png"
+  },
+  "Elversberg": {
+    "file": "bundesliga-64.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/64.png"
+  },
+  "FC Koln": {
+    "file": "bundesliga-3.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+  },
+  "Freiburg": {
+    "file": "bundesliga-60.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/60.png"
+  },
+  "Hamburg": {
+    "file": "bundesliga-41.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/41.png"
+  },
+  "Hoffenheim": {
+    "file": "bundesliga-533.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/533.png"
+  },
+  "Leverkusen": {
+    "file": "bundesliga-15.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+  },
+  "M'gladbach": {
+    "file": "bundesliga-18.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/18.png"
+  },
+  "Mainz": {
+    "file": "bundesliga-39.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/39.png"
+  },
+  "Paderborn": {
+    "file": "bundesliga-127.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/127.png"
+  },
+  "RB Leipzig": {
+    "file": "bundesliga-23826.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/23826.png"
+  },
+  "Schalke 04": {
+    "file": "bundesliga-33.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/33.png"
+  },
+  "Stuttgart": {
+    "file": "bundesliga-79.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+  },
+  "Union Berlin": {
+    "file": "bundesliga-89.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/89.png"
+  },
+  "Werder Bremen": {
+    "file": "bundesliga-86.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/86.png"
+  },
+  "Angers": {
+    "file": "ligue1-1420.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1420.png"
+  },
+  "Auxerre": {
+    "file": "ligue1-290.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/290.png"
+  },
+  "Brest": {
+    "file": "ligue1-3911.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/3911.png"
+  },
+  "Le Havre": {
+    "file": "ligue1-738.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/738.png"
+  },
+  "Le Mans": {
+    "file": "ligue1-1164.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1164.png"
+  },
+  "Lens": {
+    "file": "ligue1-826.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/826.png"
+  },
+  "Lille": {
+    "file": "ligue1-1082.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+  },
+  "Lorient": {
+    "file": "ligue1-1158.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1158.png"
+  },
+  "Lyon": {
+    "file": "ligue1-1041.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+  },
+  "Marseille": {
+    "file": "ligue1-244.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+  },
+  "Monaco": {
+    "file": "ligue1-162.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+  },
+  "Nice": {
+    "file": "ligue1-417.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/417.png"
+  },
+  "Paris FC": {
+    "file": "ligue1-10004.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/10004.png"
+  },
+  "Paris SG": {
+    "file": "ligue1-583.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+  },
+  "Rennes": {
+    "file": "ligue1-273.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/273.png"
+  },
+  "Strasbourg": {
+    "file": "ligue1-667.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/667.png"
+  },
+  "Toulouse": {
+    "file": "ligue1-415.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/415.png"
+  },
+  "Troyes": {
+    "file": "ligue1-1095.png",
+    "source": "https://tmssl.akamaized.net/images/wappen/head/1095.png"
+  }
+}

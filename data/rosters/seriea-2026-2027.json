@@ -1,0 +1,91 @@
+{
+  "league": "seriea",
+  "season": "2026-2027",
+  "verified_on": "2026-10-22",
+  "roster_source": "https://www.legaseriea.it/serie-a",
+  "results_source": "https://www.football-data.co.uk/mmz4281/2627/I1.csv",
+  "valuation_source": "https://footballwhispers.com/blog/serie-a-squad-values-every-club-ranked/",
+  "valuation_date_basis": "Underlying Transfermarkt values are September 2026; 2026-09-07 is the publication reference date, not an asserted exact valuation day.",
+  "clubs": [
+    {
+      "provider_name": "Atalanta",
+      "official_name": "Atalanta"
+    },
+    {
+      "provider_name": "Bologna",
+      "official_name": "Bologna"
+    },
+    {
+      "provider_name": "Cagliari",
+      "official_name": "Cagliari"
+    },
+    {
+      "provider_name": "Como",
+      "official_name": "Como"
+    },
+    {
+      "provider_name": "Fiorentina",
+      "official_name": "Fiorentina"
+    },
+    {
+      "provider_name": "Frosinone",
+      "official_name": "Frosinone"
+    },
+    {
+      "provider_name": "Genoa",
+      "official_name": "Genoa"
+    },
+    {
+      "provider_name": "Inter",
+      "official_name": "Inter"
+    },
+    {
+      "provider_name": "Juventus",
+      "official_name": "Juventus"
+    },
+    {
+      "provider_name": "Lazio",
+      "official_name": "Lazio"
+    },
+    {
+      "provider_name": "Lecce",
+      "official_name": "Lecce"
+    },
+    {
+      "provider_name": "Milan",
+      "official_name": "Milan"
+    },
+    {
+      "provider_name": "Monza",
+      "official_name": "Monza"
+    },
+    {
+      "provider_name": "Napoli",
+      "official_name": "Napoli"
+    },
+    {
+      "provider_name": "Parma",
+      "official_name": "Parma"
+    },
+    {
+      "provider_name": "Roma",
+      "official_name": "Roma"
+    },
+    {
+      "provider_name": "Sassuolo",
+      "official_name": "Sassuolo"
+    },
+    {
+      "provider_name": "Torino",
+      "official_name": "Torino"
+    },
+    {
+      "provider_name": "Udinese",
+      "official_name": "Udinese"
+    },
+    {
+      "provider_name": "Venezia",
+      "official_name": "Venezia"
+    }
+  ]
+}

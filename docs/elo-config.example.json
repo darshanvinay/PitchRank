@@ -1,0 +1,9 @@
+{
+  "initial_rating": 1500.0,
+  "promoted_default": 1400.0,
+  "k_factor": 20.0,
+  "home_advantage": 65.0,
+  "rating_scale": 400.0,
+  "goal_multiplier_scale": 1.0,
+  "season_regression": 0.25
+}

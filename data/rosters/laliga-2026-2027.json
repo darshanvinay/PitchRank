@@ -1,0 +1,91 @@
+{
+  "league": "laliga",
+  "season": "2026-2027",
+  "verified_on": "2026-10-22",
+  "roster_source": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+  "results_source": "https://www.football-data.co.uk/mmz4281/2627/SP1.csv",
+  "valuation_source": "https://footballwhispers.com/blog/la-liga-squad-values-every-club-ranked/",
+  "valuation_date_basis": "Published 6 September 2026; underlying Transfermarkt values dated September 2026 only. as_of is the publication reference date, not an asserted exact valuation day.",
+  "clubs": [
+    {
+      "provider_name": "Ath Bilbao",
+      "official_name": "Athletic Club"
+    },
+    {
+      "provider_name": "Ath Madrid",
+      "official_name": "Atlético de Madrid"
+    },
+    {
+      "provider_name": "Osasuna",
+      "official_name": "CA Osasuna"
+    },
+    {
+      "provider_name": "Celta",
+      "official_name": "Celta"
+    },
+    {
+      "provider_name": "Alaves",
+      "official_name": "Deportivo Alavés"
+    },
+    {
+      "provider_name": "Elche",
+      "official_name": "Elche CF"
+    },
+    {
+      "provider_name": "Barcelona",
+      "official_name": "FC Barcelona"
+    },
+    {
+      "provider_name": "Getafe",
+      "official_name": "Getafe CF"
+    },
+    {
+      "provider_name": "Levante",
+      "official_name": "Levante UD"
+    },
+    {
+      "provider_name": "Malaga",
+      "official_name": "Málaga CF"
+    },
+    {
+      "provider_name": "Santander",
+      "official_name": "R. Racing Club"
+    },
+    {
+      "provider_name": "Vallecano",
+      "official_name": "Rayo Vallecano"
+    },
+    {
+      "provider_name": "La Coruna",
+      "official_name": "RC Deportivo"
+    },
+    {
+      "provider_name": "Espanol",
+      "official_name": "RCD Espanyol de Barcelona"
+    },
+    {
+      "provider_name": "Betis",
+      "official_name": "Real Betis"
+    },
+    {
+      "provider_name": "Real Madrid",
+      "official_name": "Real Madrid"
+    },
+    {
+      "provider_name": "Sociedad",
+      "official_name": "Real Sociedad"
+    },
+    {
+      "provider_name": "Sevilla",
+      "official_name": "Sevilla FC"
+    },
+    {
+      "provider_name": "Valencia",
+      "official_name": "Valencia CF"
+    },
+    {
+      "provider_name": "Villarreal",
+      "official_name": "Villarreal CF"
+    }
+  ]
+}
