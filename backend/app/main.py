@@ -10,7 +10,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from app.api.data import DataUnavailable, league_data
 from app.api.schemas import League, TeamDetail
-from app.core.leagues import LeagueId
+from app.core.leagues import LeagueId, LeagueView
 from app.core.season import current_season
 from app.db.session import ROOT, get_engine
 from app.services.season import refresh_season
@@ -37,7 +37,7 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
         )
 
     @app.get("/api/league", response_model=League)
-    def league(league: LeagueId = "epl"):
+    def league(league: LeagueView = "epl"):
         return league_data(database, selected_season, league)[0]
 
     @app.get("/api/teams/{team_id}", response_model=TeamDetail)
@@ -54,7 +54,7 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
         }
 
     @app.post("/api/refresh", response_model=League)
-    def refresh(request: Request, league: LeagueId = "epl"):
+    def refresh(request: Request, league: LeagueView = "epl"):
         # Local manual update only; reject cross-site form submissions. The development Vite
         # proxy preserves Host, and production serves the frontend on the same origin.
         origin = request.headers.get("origin")

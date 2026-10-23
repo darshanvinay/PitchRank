@@ -1,0 +1,35 @@
+[
+  {
+    "season": "2024-2025",
+    "date": "2025-02-19",
+    "home": "PSV",
+    "away": "Juventus",
+    "score": [
+      2,
+      1
+    ],
+    "source": "https://www.uefa.com/newsfiles/UCL/2025/2044483_TS.pdf"
+  },
+  {
+    "season": "2025-2026",
+    "date": "2026-02-25",
+    "home": "Juventus",
+    "away": "Galatasaray",
+    "score": [
+      3,
+      0
+    ],
+    "source": "https://www.uefa.com/newsfiles/UCL/2026/2047770_FR.pdf"
+  },
+  {
+    "season": "2025-2026",
+    "date": "2026-03-17",
+    "home": "Sporting CP",
+    "away": "Bodø/Glimt",
+    "score": [
+      3,
+      0
+    ],
+    "source": "https://www.uefa.com/uefachampionsleague/podcasts/02a3-202bacac64ad-82192dc9fe25-1000--sporting-cp-produce-stunning-comeback-as-arsenal-paris-and-/"
+  }
+]

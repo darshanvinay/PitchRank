@@ -1,0 +1,88 @@
+{
+  "league": "laliga",
+  "season": "2025-2026",
+  "verified_on": "2026-10-22",
+  "roster_source": "https://www.football-data.co.uk/mmz4281/2526/SP1.csv",
+  "clubs": [
+    {
+      "provider_name": "Alaves",
+      "official_name": "Deportivo Alavés"
+    },
+    {
+      "provider_name": "Ath Bilbao",
+      "official_name": "Athletic Club"
+    },
+    {
+      "provider_name": "Ath Madrid",
+      "official_name": "Atlético de Madrid"
+    },
+    {
+      "provider_name": "Barcelona",
+      "official_name": "FC Barcelona"
+    },
+    {
+      "provider_name": "Betis",
+      "official_name": "Real Betis"
+    },
+    {
+      "provider_name": "Celta",
+      "official_name": "Celta"
+    },
+    {
+      "provider_name": "Elche",
+      "official_name": "Elche CF"
+    },
+    {
+      "provider_name": "Espanol",
+      "official_name": "RCD Espanyol de Barcelona"
+    },
+    {
+      "provider_name": "Getafe",
+      "official_name": "Getafe CF"
+    },
+    {
+      "provider_name": "Girona",
+      "official_name": "Girona"
+    },
+    {
+      "provider_name": "Levante",
+      "official_name": "Levante UD"
+    },
+    {
+      "provider_name": "Mallorca",
+      "official_name": "Mallorca"
+    },
+    {
+      "provider_name": "Osasuna",
+      "official_name": "CA Osasuna"
+    },
+    {
+      "provider_name": "Oviedo",
+      "official_name": "Oviedo"
+    },
+    {
+      "provider_name": "Real Madrid",
+      "official_name": "Real Madrid"
+    },
+    {
+      "provider_name": "Sevilla",
+      "official_name": "Sevilla FC"
+    },
+    {
+      "provider_name": "Sociedad",
+      "official_name": "Real Sociedad"
+    },
+    {
+      "provider_name": "Valencia",
+      "official_name": "Valencia CF"
+    },
+    {
+      "provider_name": "Vallecano",
+      "official_name": "Rayo Vallecano"
+    },
+    {
+      "provider_name": "Villarreal",
+      "official_name": "Villarreal CF"
+    }
+  ]
+}

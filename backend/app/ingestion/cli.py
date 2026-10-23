@@ -48,7 +48,11 @@ def main() -> None:
     refresh.add_argument("--file", type=Path, help="Local results CSV instead of download")
     refresh.add_argument("--squads", type=Path, help="Documented squad values CSV")
     for command in (load, refresh):
-        command.add_argument("--league", choices=LEAGUES, default="epl")
+        command.add_argument(
+            "--league",
+            choices=[*LEAGUES, "europe"] if command is refresh else LEAGUES,
+            default="epl",
+        )
     args = parser.parse_args()
     try:
         engine = get_engine()

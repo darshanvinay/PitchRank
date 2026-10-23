@@ -19,10 +19,14 @@ class RatingUpdate:
     multiplier: float
 
 
-def expected_score(home: float, away: float, config: EloConfig) -> float:
+def expected_score(home: float, away: float, config: EloConfig, neutral: bool = False) -> float:
     if not all(math.isfinite(value) for value in (home, away)):
         raise ValueError("Ratings must be finite")
-    exponent = (home - away + config.home_advantage) / config.rating_scale * math.log(10)
+    exponent = (
+        (home - away + (0 if neutral else config.home_advantage))
+        / config.rating_scale
+        * math.log(10)
+    )
     # Stable logistic: exp() only receives nonpositive arguments.
     if exponent >= 0:
         return 1 / (1 + math.exp(-exponent))
@@ -38,12 +42,20 @@ def goal_multiplier(home_goals: int, away_goals: int, config: EloConfig) -> floa
 
 
 def update_ratings(
-    home: float, away: float, home_goals: int, away_goals: int, config: EloConfig
+    home: float,
+    away: float,
+    home_goals: int,
+    away_goals: int,
+    config: EloConfig,
+    importance: float = 1.0,
+    neutral: bool = False,
 ) -> RatingUpdate:
+    if not math.isfinite(importance) or importance <= 0:
+        raise ValueError("Match importance must be positive and finite")
     multiplier = goal_multiplier(home_goals, away_goals, config)
-    expected = expected_score(home, away, config)
+    expected = expected_score(home, away, config, neutral)
     actual = 1.0 if home_goals > away_goals else (0.0 if home_goals < away_goals else 0.5)
-    change = config.k_factor * multiplier * (actual - expected)
+    change = config.k_factor * importance * multiplier * (actual - expected)
     return RatingUpdate(
         home, away, home + change, away - change, change, -change, expected, actual, multiplier
     )

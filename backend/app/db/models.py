@@ -72,6 +72,8 @@ class Match(Base):
     league: Mapped[str] = mapped_column(String(10), default="epl", server_default="epl", index=True)
     id: Mapped[int] = mapped_column(primary_key=True)
     source: Mapped[str] = mapped_column(String(80))
+    stage: Mapped[str] = mapped_column(String(20), default="domestic", server_default="domestic")
+    neutral: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
     external_id: Mapped[str | None] = mapped_column(String(100))
     season: Mapped[str] = mapped_column(String(9), index=True)
     match_date: Mapped[date] = mapped_column(Date)

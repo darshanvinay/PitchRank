@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 from typing import Literal
 
+LeagueView = Literal["epl", "laliga", "seriea", "bundesliga", "ligue1", "europe"]
 LeagueId = Literal["epl", "laliga", "seriea", "bundesliga", "ligue1"]
 
 

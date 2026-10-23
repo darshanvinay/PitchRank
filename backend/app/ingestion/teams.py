@@ -70,11 +70,16 @@ def normalize_name(name: str) -> str:
 def seed_teams(session: Session, league: str = "epl") -> None:
     from app.core.leagues import competition
 
+    if league == "ucl":
+        seed_ucl_teams(session)
+        return
     competition(league)
     clubs = CLUBS
     if league != "epl":
-        snapshot = json.loads((ROOT / "data" / "rosters" / f"{league}-2026-2027.json").read_text())
-        clubs = {c["provider_name"]: [c["official_name"]] for c in snapshot["clubs"]}
+        clubs = {}
+        for path in sorted((ROOT / "data" / "rosters").glob(f"{league}-*.json")):
+            snapshot = json.loads(path.read_text())
+            clubs.update({c["provider_name"]: [c["official_name"]] for c in snapshot["clubs"]})
     assets = json.loads((ROOT / "data" / "club-assets.json").read_text())
     for short, alternatives in clubs.items():
         canonical = alternatives[0] if alternatives else short
@@ -107,7 +112,7 @@ def resolve_team(session: Session, name: str, source: str, league: str = "epl") 
         select(TeamAlias)
         .join(Team, Team.id == TeamAlias.team_id)
         .where(
-            Team.league == league,
+            (Team.league == league) if league != "ucl" else True,
             TeamAlias.source == source,
             TeamAlias.name == normalize_name(name),
         )
@@ -134,3 +139,34 @@ def verified_roster(league: str, season: str) -> set[str] | None:
             "for this league and season"
         )
     return names
+
+
+def seed_ucl_teams(session: Session) -> None:
+    from app.core.leagues import LEAGUES
+
+    for league in LEAGUES:
+        seed_teams(session, league)
+    registry = json.loads((ROOT / "data/ucl-clubs.json").read_text())
+    for item in registry["clubs"]:
+        if item["league"] != "other":
+            team_id = resolve_team(
+                session, item["domestic_name"], "football-data.co.uk", item["league"]
+            )
+        else:
+            team = session.scalar(select(Team).where(Team.canonical_name == item["name"]))
+            if team is None:
+                team = Team(canonical_name=item["name"], display_name=item["name"], league="other")
+                session.add(team)
+                session.flush()
+            team_id = team.id
+        normalized = normalize_name(item["provider_name"])
+        existing = session.scalar(
+            select(TeamAlias).where(
+                TeamAlias.source == "fixturedownload.com", TeamAlias.name == normalized
+            )
+        )
+        if existing is None:
+            session.add(TeamAlias(team_id=team_id, source="fixturedownload.com", name=normalized))
+        elif existing.team_id != team_id:
+            raise ValueError(f"Conflicting UCL identity mapping for {item['provider_name']}")
+    session.flush()

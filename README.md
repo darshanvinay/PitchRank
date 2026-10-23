@@ -8,6 +8,10 @@ and Ligue 1), showing their Elo ratings, W/D/L, goals, goal difference, squad va
 form. Every club has a rating-history chart and match-by-match Elo changes. Light and dark mode,
 search, sorting, and manual refresh work without an API account.
 
+European Rankings shows the dynamic Top 25 from the same connected Elo ratings used by domestic
+leaderboards. See [unified European Elo](docs/unified-europe.md) for coverage, assumptions, valuation
+limitations, before/after ratings, complete Top 25 and verification.
+
 ## Run the app
 
 Requires Python 3.12+ and Node.js 22.12+. From this repository root:
@@ -17,11 +21,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e './backend[dev]'
 alembic -c backend/alembic.ini upgrade head
-pitchrank refresh --season 2026-2027
-pitchrank refresh --league laliga --season 2026-2027
-pitchrank refresh --league seriea --season 2026-2027
-pitchrank refresh --league bundesliga --season 2026-2027
-pitchrank refresh --league ligue1 --season 2026-2027
+pitchrank refresh --league europe --season 2026-2027
 cd frontend
 npm ci
 npm run build
@@ -47,7 +47,7 @@ Vite proxies `/api` to the local backend. The production build supports direct t
 
 ## Only three steps
 
-1. **Data collection.** Reuse the existing validated Pandas importer for current-season EPL and La Liga results.
+1. **Data collection.** Reuse the existing validated Pandas importer for five domestic leagues and Champions League results.
    Import documented squad valuations into SQLite, recording source URL and valuation date.
 2. **Elo calculation.** Seed ratings with a capped logarithmic market-value adjustment, then replay
    completed matches chronologically with the existing pure Elo match-update functions.
@@ -61,15 +61,15 @@ starting Elo = 1500 + clamp(60 × ln(squad value / shared reference), −100, +1
 expected home score = 1 / (1 + 10^((away Elo − home Elo − 65) / 400))
 actual home score = 1 for a win, 0.5 for a draw, 0 for a loss
 multiplier = max(1, ln(abs(home goals − away goals) + 1))
-change = 20 × multiplier × (actual score − expected score)
+change = 20 × importance × multiplier × (actual score − expected score)
 home Elo += change
 away Elo -= change
 ```
 
 The shared reference is fixed at €556.425m (the existing EPL September 2026 snapshot median),
 and stays unchanged across leagues and when more leagues are imported. Equal squad values receive
-equal starting ratings. Cross-league comparisons remain squad-value anchored until cross-league
-results are included; domestic results alone cannot calibrate relative league strength.
+equal starting ratings. All five leagues now share one chronological pool connected by Champions
+League matches, with ratings carried between seasons and the squad prior applied only once.
 
 The prior gives equal relative spending differences equal influence, capped at 100 Elo in either
 direction. Missing squad values use a clearly labelled neutral 1500 starting rating. Results after

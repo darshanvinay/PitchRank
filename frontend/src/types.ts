@@ -1,4 +1,7 @@
 export interface Club {
+  league_id: import("./navigation").LeagueId;
+  league_name: string;
+  last_change: number;
   id: number;
   name: string;
   crest_url: string | null;
@@ -19,7 +22,7 @@ export interface Club {
   form: string[];
 }
 export interface League {
-  league_id: import("./navigation").LeagueId;
+  league_id: import("./navigation").LeagueId | "europe";
   name: string;
   country: string;
   valuation_note: string;
@@ -33,9 +36,18 @@ export interface League {
   squad_log_scale: number;
   squad_cap: number;
   squad_reference_eur: number;
+  pool_matches: number;
+  pool_teams: number;
+  ucl_matches: number;
+  history_start: string;
+  importance_weights: Record<string, number>;
   clubs: Club[];
 }
 export interface Result {
+  competition: string;
+  importance: number;
+  home_league: import("./navigation").LeagueId | null;
+  away_league: import("./navigation").LeagueId | null;
   match_id: number;
   date: string;
   home_id: number;

@@ -162,9 +162,17 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const leagueId = selectedLeague(location.search);
-  const scope = competitions[leagueId];
-  const activeLeague = useRef(leagueId);
-  activeLeague.current = leagueId;
+  const viewId = location.pathname === "/europe" ? "europe" : leagueId;
+  const scope =
+    viewId === "europe"
+      ? {
+          name: "European Rankings",
+          country: "Europe",
+          source: "https://fixturedownload.com/results/champions-league-2026",
+        }
+      : competitions[leagueId];
+  const activeLeague = useRef(viewId);
+  activeLeague.current = viewId;
   const [revision, setRevision] = useState(0);
   const path = (url: string) => leaguePath(url, leagueId);
   useEffect(() => {
@@ -186,7 +194,7 @@ export default function App() {
     setError("");
     setRefreshError("");
     setNotice("");
-    request<League>(`/api/league?league=${leagueId}`, {
+    request<League>(`/api/league?league=${viewId}`, {
       signal: controller.signal,
     })
       .then(setLeague)
@@ -194,7 +202,7 @@ export default function App() {
         if (error.name !== "AbortError") setError(error.message);
       });
     return () => controller.abort();
-  }, [leagueId, revision]);
+  }, [viewId, revision]);
   useEffect(() => {
     document.title = `PitchRank — ${scope.name} strength ratings`;
   }, [scope.name, location.pathname]);
@@ -203,15 +211,15 @@ export default function App() {
     setRefreshError("");
     setNotice("");
     try {
-      const updated = await request<League>(`/api/refresh?league=${leagueId}`, {
+      const updated = await request<League>(`/api/refresh?league=${viewId}`, {
         method: "POST",
       });
-      if (activeLeague.current === leagueId) {
+      if (activeLeague.current === viewId) {
         setLeague(updated);
         setNotice(`${scope.name} results refreshed and ratings recalculated.`);
       }
     } catch (error) {
-      if (activeLeague.current === leagueId)
+      if (activeLeague.current === viewId)
         setRefreshError((error as Error).message);
     } finally {
       setBusy(false);
@@ -239,13 +247,13 @@ export default function App() {
           </Link>
           <div className="workspace">
             <label className="context-label" htmlFor="league-selector">
-              League · {scope.country}
+              League · {competitions[leagueId].country}
             </label>
             <select
               id="league-selector"
               name="league"
               className="league-selector"
-              aria-label={`League · ${scope.country}`}
+              aria-label={`League · ${competitions[leagueId].country}`}
               value={leagueId}
               disabled={busy}
               onChange={(event) =>
@@ -271,6 +279,10 @@ export default function App() {
                 className="nav-chevron"
                 size={15}
               />
+            </NavLink>
+            <NavLink to="/europe">
+              <BarChart3 aria-hidden="true" size={17} />
+              European Rankings
             </NavLink>
             <NavLink to={path("/method")}>
               <CircleHelp aria-hidden="true" size={17} />
@@ -312,7 +324,7 @@ export default function App() {
             </span>
             <div className="top-actions">
               <span className="data-stamp">
-                {league?.league_id === leagueId
+                {league?.league_id === viewId
                   ? `Through ${date(league.results_through, true)}`
                   : "Loading data…"}
               </span>
@@ -345,11 +357,12 @@ export default function App() {
               message={error}
               retry={() => setRevision((v) => v + 1)}
             />
-          ) : !league || league.league_id !== leagueId ? (
+          ) : !league || league.league_id !== viewId ? (
             <Loading />
           ) : (
             <Routes>
               <Route path="/" element={<Leaderboard league={league} />} />
+              <Route path="/europe" element={<Leaderboard league={league} />} />
               <Route
                 path="/teams/:id"
                 element={<TeamPage key={leagueId} league={league} />}
@@ -369,7 +382,8 @@ export default function App() {
           <footer className="page-footer">
             <span>PitchRank · Strength beyond the standings.</span>
             <a href={scope.source} target="_blank" rel="noreferrer">
-              Results: Football-Data{" "}
+              Results:{" "}
+              {viewId === "europe" ? "Fixture Download" : "Football-Data"}{" "}
               <ExternalLink aria-hidden="true" size={12} />
             </a>
           </footer>
@@ -379,21 +393,33 @@ export default function App() {
   );
 }
 function Leaderboard({ league }: { league: League }) {
-  const path = (url: string) => leaguePath(url, league.league_id);
+  const european = league.league_id === "europe";
+  const path = (url: string) =>
+    leaguePath(url, league.league_id === "europe" ? "epl" : league.league_id);
   const [params, setParams] = useSearchParams();
   const query = params.get("q") || "";
   const sort = params.get("sort") || "rating";
   const clubs = league.clubs
     .filter((c) => c.name.toLowerCase().includes(query.toLowerCase()))
+    .filter(
+      (c) =>
+        !european ||
+        !params.get("filterLeague") ||
+        c.league_id === params.get("filterLeague"),
+    )
     .sort((a, b) =>
       sort === "value"
         ? (b.squad_value ?? 0) - (a.squad_value ?? 0)
         : sort === "change"
-          ? b.change - a.change
+          ? european
+            ? b.last_change - a.last_change
+            : b.change - a.change
           : a.rank - b.rank,
     );
   const leader = league.clubs[0];
-  const changeLeader = [...league.clubs].sort((a, b) => b.change - a.change)[0];
+  const changeLeader = [...league.clubs].sort((a, b) =>
+    european ? b.last_change - a.last_change : b.change - a.change,
+  )[0];
   const setFilter = (key: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(key, value);
@@ -406,7 +432,11 @@ function Leaderboard({ league }: { league: League }) {
         <div>
           <div className="eyebrow">Club strength ratings</div>
           <h1>{league.name}</h1>
-          <p>A clearer view of who’s performing, and against whom.</p>
+          <p>
+            {european
+              ? "The top 25 across five leagues, connected by Champions League results."
+              : "A clearer view of who’s performing, and against whom."}
+          </p>
         </div>
         <span className="season-label">
           {league.season.replace("-", "/")} season
@@ -417,25 +447,38 @@ function Leaderboard({ league }: { league: League }) {
           <span className="stat-label">Highest rated</span>
           <div className="strip-club">
             <Crest club={leader} size={25} />
-            <Link to={path(`/teams/${leader.id}`)}>{leader.name}</Link>
+            <Link to={leaguePath(`/teams/${leader.id}`, leader.league_id)}>
+              {leader.name}
+            </Link>
             <span className="strip-number">{number.format(leader.rating)}</span>
           </div>
         </div>
         <div>
-          <span className="stat-label">Biggest season gain</span>
+          <span className="stat-label">
+            {european ? "Biggest last-match gain" : "Biggest season gain"}
+          </span>
           <div className="strip-club">
-            <Link to={path(`/teams/${changeLeader.id}`)}>
+            <Link
+              to={leaguePath(
+                `/teams/${changeLeader.id}`,
+                changeLeader.league_id,
+              )}
+            >
               {changeLeader.name}
             </Link>
             <span className="strip-number">
-              <Change value={changeLeader.change} />
+              <Change
+                value={
+                  european ? changeLeader.last_change : changeLeader.change
+                }
+              />
             </span>
           </div>
         </div>
         <div>
           <span className="stat-label">Performance evidence</span>
           <div className="strip-value">
-            {integer.format(league.matches)}
+            {integer.format(european ? league.pool_matches : league.matches)}
             <span>matches processed</span>
           </div>
         </div>
@@ -444,8 +487,10 @@ function Leaderboard({ league }: { league: League }) {
         <div className="section-title">
           <div>
             <h2 id="rankings-heading">
-              Elo leaderboard{" "}
-              <span className="count">{league.clubs.length}</span>
+              {european ? "European leaderboard" : "Elo leaderboard"}{" "}
+              <span className="count">
+                {european ? clubs.length : league.clubs.length}
+              </span>
             </h2>
             <p>
               Ratings reflect results, opposition and a capped squad-value
@@ -469,6 +514,26 @@ function Leaderboard({ league }: { league: League }) {
               onChange={(event) => setFilter("q", event.target.value)}
             />
           </label>
+          {european && (
+            <label className="sort-control">
+              <span className="sr-only">Filter Top 25 by domestic league</span>
+              <select
+                name="filterLeague"
+                aria-label="Filter Top 25 by domestic league"
+                value={params.get("filterLeague") || ""}
+                onChange={(event) =>
+                  setFilter("filterLeague", event.target.value)
+                }
+              >
+                <option value="">All five leagues</option>
+                {(Object.keys(competitions) as LeagueId[]).map((id) => (
+                  <option key={id} value={id}>
+                    {competitions[id].name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
           <label className="sort-control">
             <span>Sort by</span>
             <select
@@ -478,16 +543,19 @@ function Leaderboard({ league }: { league: League }) {
               onChange={(event) => setFilter("sort", event.target.value)}
             >
               <option value="rating">Elo rating</option>
-              <option value="change">Season gain</option>
-              <option value="value">Squad value</option>
+              <option value="change">
+                {european ? "Last match change" : "Season gain"}
+              </option>
+              {!european && <option value="value">Squad value</option>}
             </select>
           </label>
         </div>
         <div className="table-scroll">
-          <table className="leaderboard">
+          <table className={`leaderboard ${european ? "european-table" : ""}`}>
             <caption className="sr-only">
-              Current-season Elo rankings, season statistics and squad values.
-              Elo rank is different from the official league position.
+              {european
+                ? "European Top 25: club, domestic league, unified Elo, last-match Elo change and recent form."
+                : "Current-season domestic statistics and unified Elo ratings. Elo rank is different from the official league position."}
             </caption>
             <thead>
               <tr>
@@ -497,33 +565,42 @@ function Leaderboard({ league }: { league: League }) {
                 <th scope="col" className="club-cell">
                   Club
                 </th>
+                {european && <th scope="col">Domestic league</th>}
                 <th scope="col" className="numeric rating-cell">
                   Elo rating
                 </th>
-                <th scope="col" className="numeric">
-                  MP
-                </th>
-                <th scope="col" className="numeric">
-                  W
-                </th>
-                <th scope="col" className="numeric">
-                  D
-                </th>
-                <th scope="col" className="numeric">
-                  L
-                </th>
-                <th scope="col" className="numeric">
-                  GF
-                </th>
-                <th scope="col" className="numeric">
-                  GA
-                </th>
-                <th scope="col" className="numeric">
-                  GD
-                </th>
-                <th scope="col" className="numeric value-cell">
-                  Squad value
-                </th>
+                {european ? (
+                  <th scope="col" className="numeric">
+                    Last match Δ
+                  </th>
+                ) : (
+                  <>
+                    <th scope="col" className="numeric">
+                      MP
+                    </th>
+                    <th scope="col" className="numeric">
+                      W
+                    </th>
+                    <th scope="col" className="numeric">
+                      D
+                    </th>
+                    <th scope="col" className="numeric">
+                      L
+                    </th>
+                    <th scope="col" className="numeric">
+                      GF
+                    </th>
+                    <th scope="col" className="numeric">
+                      GA
+                    </th>
+                    <th scope="col" className="numeric">
+                      GD
+                    </th>
+                    <th scope="col" className="numeric value-cell">
+                      Squad value
+                    </th>
+                  </>
+                )}
                 <th scope="col" className="form-cell">
                   Last 5
                 </th>
@@ -538,14 +615,15 @@ function Leaderboard({ league }: { league: League }) {
                     </span>
                   </td>
                   <th scope="row" className="club-cell">
-                    <Link to={path(`/teams/${club.id}`)}>
+                    <Link to={leaguePath(`/teams/${club.id}`, club.league_id)}>
                       <Crest club={club} />
                       <span>{club.name}</span>
                       <ChevronRight aria-hidden="true" size={14} />
                     </Link>
                   </th>
+                  {european && <td>{club.league_name}</td>}
                   <td className="numeric rating-cell">
-                    <Link to={path(`/teams/${club.id}`)}>
+                    <Link to={leaguePath(`/teams/${club.id}`, club.league_id)}>
                       {number.format(club.rating)}
                     </Link>
                     <span className="rating-track" aria-hidden="true">
@@ -556,27 +634,35 @@ function Leaderboard({ league }: { league: League }) {
                       />
                     </span>
                   </td>
-                  <td className="numeric">{club.played}</td>
-                  <td className="numeric">{club.won}</td>
-                  <td className="numeric">{club.drawn}</td>
-                  <td className="numeric">{club.lost}</td>
-                  <td className="numeric">{club.goals_for}</td>
-                  <td className="numeric">{club.goals_against}</td>
-                  <td className="numeric gd">
-                    {club.goal_difference > 0 ? "+" : ""}
-                    {club.goal_difference}
-                  </td>
-                  <td className="numeric value-cell">
-                    <span
-                      title={
-                        club.squad_value
-                          ? `Valued ${date(club.valuation_date)}`
-                          : "No documented value; neutral 1500 starting rating"
-                      }
-                    >
-                      {money(club.squad_value)}
-                    </span>
-                  </td>
+                  {european ? (
+                    <td className="numeric">
+                      <Change value={club.last_change} />
+                    </td>
+                  ) : (
+                    <>
+                      <td className="numeric">{club.played}</td>
+                      <td className="numeric">{club.won}</td>
+                      <td className="numeric">{club.drawn}</td>
+                      <td className="numeric">{club.lost}</td>
+                      <td className="numeric">{club.goals_for}</td>
+                      <td className="numeric">{club.goals_against}</td>
+                      <td className="numeric gd">
+                        {club.goal_difference > 0 ? "+" : ""}
+                        {club.goal_difference}
+                      </td>
+                      <td className="numeric value-cell">
+                        <span
+                          title={
+                            club.squad_value
+                              ? `Valued ${date(club.valuation_date)}`
+                              : "No documented value; neutral 1500 starting rating"
+                          }
+                        >
+                          {money(club.squad_value)}
+                        </span>
+                      </td>
+                    </>
+                  )}
                   <td className="form-cell">
                     <Form items={club.form} />
                   </td>
@@ -586,15 +672,24 @@ function Leaderboard({ league }: { league: League }) {
           </table>
           {clubs.length === 0 && (
             <div className="empty-state">
-              No clubs match “{query}”.{" "}
-              <button onClick={() => setFilter("q", "")}>Clear search</button>
+              {european
+                ? "No Top 25 clubs match the selected filters."
+                : `No clubs match “${query}”.`}{" "}
+              <button
+                onClick={() => {
+                  setParams(european ? {} : { league: league.league_id });
+                }}
+              >
+                Clear filters
+              </button>
             </div>
           )}
         </div>
         <div className="table-key">
           <span>
-            MP played · W wins · D draws · L losses · GF goals for · GA goals
-            against · GD goal difference
+            {european
+              ? "Last match Δ includes domestic and Champions League matches. Form: oldest to newest."
+              : "MP played · W wins · D draws · L losses · GF goals for · GA goals against · GD goal difference"}
           </span>
           <span>Elo is not the points table.</span>
         </div>
@@ -603,17 +698,18 @@ function Leaderboard({ league }: { league: League }) {
         <CircleHelp aria-hidden="true" size={17} />
         <p>
           <strong>Squad value starts the story. Results write the rest.</strong>{" "}
-          Market value sets a capped initial rating; completed matches determine
-          every move after that. {league.squad_coverage}/{league.squad_count}{" "}
-          clubs have documented values.{" "}
-          <Link to={path("/method")}>View sources and calculation</Link>
+          Market value initializes a club once; ratings carry across seasons.
+          Completed matches determine every move after that.{" "}
+          {league.squad_coverage}/{league.squad_count} clubs have documented
+          values. <Link to={path("/method")}>View sources and calculation</Link>
         </p>
       </div>
     </>
   );
 }
 function TeamPage({ league }: { league: League }) {
-  const path = (url: string) => leaguePath(url, league.league_id);
+  const path = (url: string) =>
+    leaguePath(url, league.league_id === "europe" ? "epl" : league.league_id);
   const { id } = useParams();
   const [detail, setDetail] = useState<TeamDetail | null>(null);
   const [error, setError] = useState("");
@@ -665,6 +761,10 @@ function TeamPage({ league }: { league: League }) {
           </span>
         </div>
       </section>
+      <p className="stat-context">
+        Domestic season statistics. Elo history and results also include
+        Champions League matches.
+      </p>
       <div className="team-stats">
         {[
           ["Played", club.played],
@@ -712,8 +812,8 @@ function TeamPage({ league }: { league: League }) {
               </Suspense>
             </div>
             <figcaption>
-              One fixed squad-value snapshot initializes this season’s replay.
-              Match updates are zero-sum.
+              Ratings carry across seasons. Domestic and Champions League match
+              updates are zero-sum.
             </figcaption>
           </figure>
           <details className="history-details">
@@ -752,8 +852,8 @@ function TeamPage({ league }: { league: League }) {
           </span>
           <p>
             {club.squad_value
-              ? `A ${money(club.squad_value)} squad value contributes ${delta(club.initial_rating - 1500)} Elo to the neutral 1500 starting rating.`
-              : "No reliable squad value is stored. This club uses a neutral 1500 starting rating."}
+              ? `The season opened at ${number.format(club.initial_rating)} Elo. Previous ratings carry forward; squad value initializes a club only once.`
+              : "No documented initial squad value is stored. The first rating used the neutral 1500 prior and has since carried forward."}
           </p>
           <dl>
             <div>
@@ -771,8 +871,8 @@ function TeamPage({ league }: { league: League }) {
               </dd>
             </div>
             <div>
-              <dt>Matches of evidence</dt>
-              <dd>{club.played}</dd>
+              <dt>Rated matches this season</dt>
+              <dd>{results.length}</dd>
             </div>
           </dl>
           {league.league_id !== "epl" && (
@@ -808,7 +908,7 @@ function TeamPage({ league }: { league: League }) {
               key={result.match_id}
               result={result}
               club={club}
-              leagueId={league.league_id}
+              leagueId={club.league_id}
             />
           ))
         ) : (
@@ -824,29 +924,47 @@ function TeamPage({ league }: { league: League }) {
 function ResultRow({
   result,
   club,
-  leagueId,
 }: {
   result: Result;
   club: Club;
   leagueId: LeagueId;
 }) {
-  const path = (url: string) => leaguePath(url, leagueId);
   const home = result.home_id === club.id;
   const own = home ? result.home_goals : result.away_goals;
   const against = home ? result.away_goals : result.home_goals;
   const outcome = own > against ? "W" : own < against ? "L" : "D";
   return (
     <div className="result-row">
-      <time dateTime={result.date}>{date(result.date, true)}</time>
+      <time
+        dateTime={result.date}
+        title={`${result.competition} · importance ${result.importance}`}
+      >
+        {date(result.date, true)}
+        <small>
+          {result.competition === "Champions League" ? "UCL" : "League"}
+        </small>
+      </time>
       <span className={`outcome form-${outcome.toLowerCase()}`}>{outcome}</span>
       <div className="result-teams">
-        <Link to={path(`/teams/${result.home_id}`)}>{result.home}</Link>
+        {result.home_league ? (
+          <Link to={leaguePath(`/teams/${result.home_id}`, result.home_league)}>
+            {result.home}
+          </Link>
+        ) : (
+          <span>{result.home}</span>
+        )}
         <strong>
           {result.home_goals}
           <span>–</span>
           {result.away_goals}
         </strong>
-        <Link to={path(`/teams/${result.away_id}`)}>{result.away}</Link>
+        {result.away_league ? (
+          <Link to={leaguePath(`/teams/${result.away_id}`, result.away_league)}>
+            {result.away}
+          </Link>
+        ) : (
+          <span>{result.away}</span>
+        )}
       </div>
       <span className="result-change">
         <Change value={home ? result.home_change : result.away_change} />
@@ -856,7 +974,8 @@ function ResultRow({
   );
 }
 function Method({ league }: { league: League }) {
-  const path = (url: string) => leaguePath(url, league.league_id);
+  const path = (url: string) =>
+    leaguePath(url, league.league_id === "europe" ? "epl" : league.league_id);
   const sources = [
     ...new Set(league.clubs.map((c) => c.value_source).filter(Boolean)),
   ];
@@ -877,11 +996,11 @@ function Method({ league }: { league: League }) {
         <div>
           <h2>A measured starting point</h2>
           <p>
-            Every club starts at 1500 Elo. Squad market value adds a logarithmic
-            adjustment relative to one shared reference of{" "}
-            {money(league.squad_reference_eur)}, capped at ±{league.squad_cap}{" "}
-            points. Doubling squad value has the same effect at every budget
-            level.
+            A club enters the connected replay once, at 1500 Elo plus a squad
+            market value logarithmic adjustment relative to one shared reference
+            of {money(league.squad_reference_eur)}, capped at ±
+            {league.squad_cap} points. Doubling squad value has the same effect
+            at every budget level.
           </p>
           <code>
             1500 + clamp({league.squad_log_scale} × ln(value /{" "}
@@ -911,7 +1030,7 @@ function Method({ league }: { league: League }) {
             0. The difference between actual and expected determines the update.
           </p>
           <code>
-            change = 20 × max(1, ln(absolute goal margin + 1)) × (actual −
+            change = 20 × I × max(1, ln(absolute goal margin + 1)) × (actual −
             expected)
           </code>
           <p>
@@ -927,17 +1046,28 @@ function Method({ league }: { league: League }) {
         <div>
           <h2>Evidence, without double-counting</h2>
           <p>
+            Initial configurable importance assumptions: domestic{" "}
+            {league.importance_weights.domestic.toFixed(2)}; UCL league phase{" "}
+            {league.importance_weights.league.toFixed(2)}; knockout rounds{" "}
+            {league.importance_weights.knockout.toFixed(2)}; semifinals/final{" "}
+            {league.importance_weights.finals.toFixed(2)}. These weights are not
+            proven optimal. Neutral finals have no home advantage; 90-minute
+            scores exclude extra-time and shootout goals. No trophy bonus.
+          </p>
+          <p>
             Wins, draws and losses enter through the actual result. Goals for
             and against enter through the goal margin. Opponent strength enters
             through the expected score. Matches played measure how much evidence
             exists; simply playing a match earns no points.
           </p>
           <p>
-            Only the current season is replayed, in chronological order. Matches
-            with an ambiguous kickoff order share the ratings available before
-            that group. Each league is replayed independently with identical
-            parameters. Refreshing replaces only the selected league’s season
-            calculation without duplicating matches.
+            Domestic and Champions League results since {league.history_start}{" "}
+            are replayed together, chronologically. Ratings carry forward
+            without seasonal resets or repeated squad bonuses. Matches with an
+            ambiguous kickoff order share the ratings available before that
+            group. All competitions share one pool. Refreshing imports the
+            selected league and UCL, then recalculates the connected pool
+            atomically without duplicating matches.
           </p>
         </div>
       </section>
@@ -950,13 +1080,23 @@ function Method({ league }: { league: League }) {
             statistics and Elo values are calculated from stored match results.
             Squad values use a fixed snapshot for this replay, which may have
             been published after the season began; this is a strength estimate,
-            not a historical prediction.
+            not a historical prediction. Historical replay starts in{" "}
+            {league.history_start}; the available September 2026 values are a
+            retrospective initial prior, not information known at the historical
+            kickoff. Clubs without a documented value start at 1500.
           </p>
           <a href={league.source} target="_blank" rel="noreferrer">
             Football-Data · {league.name} results
             <ExternalLink aria-hidden="true" size={14} />
           </a>
           <p>{league.valuation_note}</p>
+          <a
+            href="https://fixturedownload.com/results/champions-league-2026"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fixture Download · Champions League results
+          </a>
           {sources.map((source) => (
             <a key={source} href={source!} target="_blank" rel="noreferrer">
               Football Whispers · squad values citing Transfermarkt
@@ -970,10 +1110,12 @@ function Method({ league }: { league: League }) {
             to their owners.
           </p>
           <p>
-            Ratings share one numerical scale, but comparisons between leagues
-            are anchored by squad values only. Domestic matches cannot establish
-            the relative strength of separate leagues; cross-league results
-            would be needed for that calibration.
+            Ratings are connected by {league.ucl_matches} Champions League
+            matches in a pool of {league.pool_teams} clubs and{" "}
+            {league.pool_matches} matches. Opponents outside the five leagues
+            remain in the calculation but are excluded from the Top 25. Their
+            non-UCL domestic results are not included. The finite history window
+            and retrospective valuation priors remain limitations.
           </p>
           <p>
             These ratings are not the official league standings, guaranteed

@@ -2,6 +2,9 @@ from pydantic import BaseModel
 
 
 class Club(BaseModel):
+    league_id: str
+    league_name: str
+    last_change: float
     id: int
     name: str
     crest_url: str | None
@@ -23,6 +26,10 @@ class Club(BaseModel):
 
 
 class Result(BaseModel):
+    home_league: str | None
+    away_league: str | None
+    competition: str
+    importance: float
     match_id: int
     date: str
     home_id: int
@@ -50,6 +57,11 @@ class League(BaseModel):
     squad_log_scale: float
     squad_reference_eur: float
     squad_cap: float
+    pool_matches: int
+    pool_teams: int
+    ucl_matches: int
+    history_start: str
+    importance_weights: dict[str, float]
     clubs: list[Club]
 
 

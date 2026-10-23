@@ -13,7 +13,7 @@ from sqlalchemy import select, update
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session
 
-from app.core.leagues import competition
+from app.core.leagues import Competition, competition
 from app.db.models import ImportRun, Match, MatchObservation, ModelVersion
 from app.ingestion.teams import resolve_team, seed_teams, verified_roster
 
@@ -127,8 +127,15 @@ def import_csv(
     location: str | None = None,
     league: str = "epl",
 ) -> ImportSummary:
-    info = competition(league)
-    verified_roster(league, season)
+    info = (
+        competition(league)
+        if league != "ucl"
+        else Competition(
+            "Champions League", "Europe", "UCL", "UTC", "https://fixturedownload.com", ""
+        )
+    )
+    if league != "ucl":
+        verified_roster(league, season)
     payload = path.read_bytes()
     frame = parse_csv(payload, season)
     start = season_start(season)
@@ -151,6 +158,13 @@ def import_csv(
                 if row.get("Time", ""):
                     local = datetime.strptime(f"{day} {row['Time']}", "%Y-%m-%d %H:%M")
                     kickoff = local.replace(tzinfo=ZoneInfo(info.timezone)).astimezone(timezone.utc)
+                stage = row.get("Stage", "domestic")
+                if stage not in (
+                    {"league", "knockout", "finals"} if league == "ucl" else {"domestic"}
+                ):
+                    raise ValueError("Invalid competition stage")
+                if row.get("Neutral", "0") not in {"0", "1"}:
+                    raise ValueError("Neutral venue must be 0 or 1")
                 result = Result(
                     match_date=day,
                     kickoff_at=kickoff,
@@ -193,7 +207,13 @@ def import_csv(
             if match is None:
                 values = result.model_dump(exclude={"outcome"})
                 match = Match(
-                    **values, season=season, source=source, status="finished", league=league
+                    stage=raw.get("Stage", "domestic"),
+                    neutral=raw.get("Neutral", "0") == "1",
+                    **values,
+                    season=season,
+                    source=source,
+                    status="finished",
+                    league=league,
                 )
                 session.add(match)
                 session.flush()
@@ -214,7 +234,15 @@ def import_csv(
                 if stored_kickoff and stored_kickoff.tzinfo is None:
                     stored_kickoff = stored_kickoff.replace(tzinfo=timezone.utc)
                 time_changed = result.kickoff_at is not None and stored_kickoff != result.kickoff_at
-                if corrected or time_changed:
+                metadata_changed = (match.stage, match.neutral) != (
+                    raw.get("Stage", "domestic"),
+                    raw.get("Neutral", "0") == "1",
+                )
+                if corrected or time_changed or metadata_changed:
+                    match.stage, match.neutral = (
+                        raw.get("Stage", "domestic"),
+                        raw.get("Neutral", "0") == "1",
+                    )
                     match.home_goals, match.away_goals = result.home_goals, result.away_goals
                     match.status = "finished"
                     if result.kickoff_at:

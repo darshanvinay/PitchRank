@@ -1,0 +1,80 @@
+{
+  "league": "bundesliga",
+  "season": "2025-2026",
+  "verified_on": "2026-10-22",
+  "roster_source": "https://www.football-data.co.uk/mmz4281/2526/D1.csv",
+  "clubs": [
+    {
+      "provider_name": "Augsburg",
+      "official_name": "Augsburg"
+    },
+    {
+      "provider_name": "Bayern Munich",
+      "official_name": "Bayern Munich"
+    },
+    {
+      "provider_name": "Dortmund",
+      "official_name": "Borussia Dortmund"
+    },
+    {
+      "provider_name": "Ein Frankfurt",
+      "official_name": "Eintracht Frankfurt"
+    },
+    {
+      "provider_name": "FC Koln",
+      "official_name": "Cologne"
+    },
+    {
+      "provider_name": "Freiburg",
+      "official_name": "Freiburg"
+    },
+    {
+      "provider_name": "Hamburg",
+      "official_name": "Hamburg"
+    },
+    {
+      "provider_name": "Heidenheim",
+      "official_name": "Heidenheim"
+    },
+    {
+      "provider_name": "Hoffenheim",
+      "official_name": "Hoffenheim"
+    },
+    {
+      "provider_name": "Leverkusen",
+      "official_name": "Bayer Leverkusen"
+    },
+    {
+      "provider_name": "M'gladbach",
+      "official_name": "Borussia Mönchengladbach"
+    },
+    {
+      "provider_name": "Mainz",
+      "official_name": "Mainz"
+    },
+    {
+      "provider_name": "RB Leipzig",
+      "official_name": "RB Leipzig"
+    },
+    {
+      "provider_name": "St Pauli",
+      "official_name": "St Pauli"
+    },
+    {
+      "provider_name": "Stuttgart",
+      "official_name": "VfB Stuttgart"
+    },
+    {
+      "provider_name": "Union Berlin",
+      "official_name": "Union Berlin"
+    },
+    {
+      "provider_name": "Werder Bremen",
+      "official_name": "Werder Bremen"
+    },
+    {
+      "provider_name": "Wolfsburg",
+      "official_name": "Wolfsburg"
+    }
+  ]
+}

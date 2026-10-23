@@ -21,6 +21,8 @@ class PlayedMatch:
     away_team_id: int
     home_goals: int
     away_goals: int
+    stage: str = "domestic"
+    neutral: bool = False
 
 
 @dataclass(frozen=True)

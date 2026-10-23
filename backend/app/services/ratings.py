@@ -50,6 +50,8 @@ def played(matches: list[Match]) -> list[PlayedMatch]:
             m.away_team_id,
             m.home_goals,
             m.away_goals,
+            m.stage or "domestic",
+            bool(m.neutral),
         )
         for m in matches
         if m.status == "finished"

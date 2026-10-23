@@ -28,8 +28,6 @@ def replay_season(
     if len({m.id for m in matches}) != len(matches):
         raise ValueError("Duplicate match IDs")
     seasons = {m.season for m in matches}
-    if len(seasons) > 1:
-        raise ValueError("Current-season replay accepts one season only")
     initial = {
         team: starting_rating(value, config.squad_reference_eur, config)
         for team, value in values.items()
@@ -52,12 +50,26 @@ def replay_season(
                 if home == away or home in seen or away in seen:
                     raise ValueError("Club repeated in a kickoff group")
                 seen.update((home, away))
+                importance = {
+                    "domestic": config.domestic_importance,
+                    "league": config.ucl_league_importance,
+                    "knockout": config.ucl_knockout_importance,
+                    "finals": config.ucl_finals_importance,
+                }.get(match.stage)
+                if importance is None:
+                    raise ValueError(f"Unknown match stage: {match.stage}")
                 result = update_ratings(
-                    ratings[home], ratings[away], match.home_goals, match.away_goals, config.elo
+                    ratings[home],
+                    ratings[away],
+                    match.home_goals,
+                    match.away_goals,
+                    config.elo,
+                    importance,
+                    match.neutral,
                 )
                 entries.append(ReplayEntry(match, len(entries) + 1, result))
                 pending[home] += result.home_change
                 pending[away] += result.away_change
             for team, delta in pending.items():
                 ratings[team] += delta
-    return ReplayResult(entries, ratings, next(iter(seasons), None), set(values)), initial
+    return ReplayResult(entries, ratings, max(seasons, default=None), set(values)), initial

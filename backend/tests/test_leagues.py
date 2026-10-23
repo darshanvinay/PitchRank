@@ -1,5 +1,6 @@
 """Focused multi-league integration tests, using small, explicit result fixtures."""
 
+import copy
 import json
 from datetime import datetime
 
@@ -27,6 +28,15 @@ SEASON = "2026-2027"
 HEADER = "Div,Date,Time,HomeTeam,AwayTeam,FTHG,FTAG,FTR\n"
 
 
+def domestic_snapshot(value):
+    """Without UCL edges, domestic figures stay isolated; pool metadata is shared."""
+    value = copy.deepcopy(value)
+    metadata = value[0] if isinstance(value, tuple) else value
+    for key in ("refreshed_at", "results_through", "pool_matches", "pool_teams", "ucl_matches"):
+        metadata.pop(key, None)
+    return value
+
+
 @pytest.fixture
 def leagues(tmp_path):
     engine = get_engine(f"sqlite:///{tmp_path / 'leagues.sqlite3'}")
@@ -43,18 +53,18 @@ def leagues(tmp_path):
     engine.dispose()
 
 
-def test_independent_calculations_preserve_other_league_exactly(leagues):
+def test_unconnected_domestic_matches_preserve_other_league_figures(leagues):
     engine, england, spain = leagues
     before = league_data(engine, SEASON)
     refresh_season(engine, SEASON, spain, league="laliga")
-    assert league_data(engine, SEASON) == before
+    assert domestic_snapshot(league_data(engine, SEASON)) == domestic_snapshot(before)
     spanish = league_data(engine, SEASON, "laliga")
     assert {c["id"] for c in before[0]["clubs"]}.isdisjoint(c["id"] for c in spanish[0]["clubs"])
     assert spanish[0]["matches"] == 2 and spanish[0]["squad_coverage"] == 20
     assert {c["name"] for c in spanish[0]["clubs"]} == verified_roster("laliga", SEASON)
     england.write_text(england.read_text().replace("3,0,H", "0,1,A"))
     refresh_season(engine, SEASON, england)
-    assert league_data(engine, SEASON, "laliga") == spanish
+    assert domestic_snapshot(league_data(engine, SEASON, "laliga")) == domestic_snapshot(spanish)
     assert league_data(engine, SEASON) != before
 
 
@@ -104,7 +114,7 @@ def test_rejects_wrong_division_club_and_outcome_without_mutation(leagues, row):
     spain.write_text(HEADER + row)
     with pytest.raises(ImportValidationError):
         refresh_season(engine, SEASON, spain, league="laliga")
-    assert league_data(engine, SEASON) == before
+    assert domestic_snapshot(league_data(engine, SEASON)) == domestic_snapshot(before)
     with Session(engine) as session:
         assert session.scalars(select(Match).where(Match.league == "laliga")).all() == []
 
@@ -134,7 +144,7 @@ def test_la_liga_squads_match_verified_roster_and_source(leagues):
         import_squads(engine, ROOT / "data/squads/2026-2027.csv", SEASON, "laliga")
 
 
-def test_staleness_and_history_deletion_are_scoped(leagues):
+def test_unified_staleness_invalidates_every_view_and_rebuilds_atomically(leagues):
     engine, _, spain = leagues
     refresh_season(engine, SEASON, spain, league="laliga")
     spanish = league_data(engine, SEASON, "laliga")
@@ -142,9 +152,10 @@ def test_staleness_and_history_deletion_are_scoped(leagues):
         session.scalar(select(SquadValue).where(SquadValue.league == "epl")).value_eur += 100
     with pytest.raises(DataUnavailable):
         league_data(engine, SEASON)
-    assert league_data(engine, SEASON, "laliga") == spanish
+    with pytest.raises(DataUnavailable):
+        league_data(engine, SEASON, "laliga")
     calculate_season(engine, SEASON)
-    assert league_data(engine, SEASON, "laliga") == spanish
+    assert domestic_snapshot(league_data(engine, SEASON, "laliga")) == domestic_snapshot(spanish)
 
 
 def test_spanish_import_does_not_invalidate_legacy_epl_model(leagues):
@@ -183,7 +194,7 @@ def test_api_refresh_routes_only_selected_league_and_checks_team_scope(leagues, 
         monkeypatch.setattr(module, "refresh_season", refresh)
         assert client.post("/api/refresh?league=laliga").status_code == 200
         assert called == ["laliga"]
-        assert client.get("/api/league").json() == english
+        assert domestic_snapshot(client.get("/api/league").json()) == domestic_snapshot(english)
         for method, url in [
             (client.get, "/api/league"),
             (client.post, "/api/refresh"),
@@ -292,7 +303,9 @@ def test_new_league_refresh_is_idempotent_and_preserves_other_four(
     assert called == [league]
     assert league_data(engine, SEASON, league)[1] != before[league][1]
     for other in LEAGUES.keys() - {league}:
-        assert league_data(engine, SEASON, other) == before[other]
+        assert domestic_snapshot(league_data(engine, SEASON, other)) == domestic_snapshot(
+            before[other]
+        )
     again = refresh_season(engine, SEASON, files[league], league=league)
     assert again["import"]["unchanged"] == 1
     assert again["matches"] == 1 and again["history_rows"] == 2

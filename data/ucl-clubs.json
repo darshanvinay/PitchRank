@@ -1,0 +1,330 @@
+{
+  "source": "https://fixturedownload.com/results/champions-league-2026",
+  "clubs": [
+    {
+      "provider_name": "Arsenal",
+      "league": "epl",
+      "domestic_name": "Arsenal"
+    },
+    {
+      "provider_name": "Aston Villa",
+      "league": "epl",
+      "domestic_name": "Aston Villa"
+    },
+    {
+      "provider_name": "Chelsea",
+      "league": "epl",
+      "domestic_name": "Chelsea"
+    },
+    {
+      "provider_name": "Liverpool",
+      "league": "epl",
+      "domestic_name": "Liverpool"
+    },
+    {
+      "provider_name": "Man City",
+      "league": "epl",
+      "domestic_name": "Man City"
+    },
+    {
+      "provider_name": "Man Utd",
+      "league": "epl",
+      "domestic_name": "Man United"
+    },
+    {
+      "provider_name": "Newcastle",
+      "league": "epl",
+      "domestic_name": "Newcastle"
+    },
+    {
+      "provider_name": "Tottenham",
+      "league": "epl",
+      "domestic_name": "Tottenham"
+    },
+    {
+      "provider_name": "Athletic Club",
+      "league": "laliga",
+      "domestic_name": "Ath Bilbao"
+    },
+    {
+      "provider_name": "Atleti",
+      "league": "laliga",
+      "domestic_name": "Ath Madrid"
+    },
+    {
+      "provider_name": "Barcelona",
+      "league": "laliga",
+      "domestic_name": "Barcelona"
+    },
+    {
+      "provider_name": "Girona",
+      "league": "laliga",
+      "domestic_name": "Girona"
+    },
+    {
+      "provider_name": "Real Betis",
+      "league": "laliga",
+      "domestic_name": "Betis"
+    },
+    {
+      "provider_name": "Real Madrid",
+      "league": "laliga",
+      "domestic_name": "Real Madrid"
+    },
+    {
+      "provider_name": "Villarreal",
+      "league": "laliga",
+      "domestic_name": "Villarreal"
+    },
+    {
+      "provider_name": "Atalanta",
+      "league": "seriea",
+      "domestic_name": "Atalanta"
+    },
+    {
+      "provider_name": "Bologna",
+      "league": "seriea",
+      "domestic_name": "Bologna"
+    },
+    {
+      "provider_name": "Como",
+      "league": "seriea",
+      "domestic_name": "Como"
+    },
+    {
+      "provider_name": "Inter",
+      "league": "seriea",
+      "domestic_name": "Inter"
+    },
+    {
+      "provider_name": "Juventus",
+      "league": "seriea",
+      "domestic_name": "Juventus"
+    },
+    {
+      "provider_name": "Milan",
+      "league": "seriea",
+      "domestic_name": "Milan"
+    },
+    {
+      "provider_name": "Napoli",
+      "league": "seriea",
+      "domestic_name": "Napoli"
+    },
+    {
+      "provider_name": "Roma",
+      "league": "seriea",
+      "domestic_name": "Roma"
+    },
+    {
+      "provider_name": "B. Dortmund",
+      "league": "bundesliga",
+      "domestic_name": "Dortmund"
+    },
+    {
+      "provider_name": "Bayern München",
+      "league": "bundesliga",
+      "domestic_name": "Bayern Munich"
+    },
+    {
+      "provider_name": "Frankfurt",
+      "league": "bundesliga",
+      "domestic_name": "Ein Frankfurt"
+    },
+    {
+      "provider_name": "Leipzig",
+      "league": "bundesliga",
+      "domestic_name": "RB Leipzig"
+    },
+    {
+      "provider_name": "Leverkusen",
+      "league": "bundesliga",
+      "domestic_name": "Leverkusen"
+    },
+    {
+      "provider_name": "Stuttgart",
+      "league": "bundesliga",
+      "domestic_name": "Stuttgart"
+    },
+    {
+      "provider_name": "Brest",
+      "league": "ligue1",
+      "domestic_name": "Brest"
+    },
+    {
+      "provider_name": "Lens",
+      "league": "ligue1",
+      "domestic_name": "Lens"
+    },
+    {
+      "provider_name": "Lille",
+      "league": "ligue1",
+      "domestic_name": "Lille"
+    },
+    {
+      "provider_name": "Marseille",
+      "league": "ligue1",
+      "domestic_name": "Marseille"
+    },
+    {
+      "provider_name": "Monaco",
+      "league": "ligue1",
+      "domestic_name": "Monaco"
+    },
+    {
+      "provider_name": "Paris",
+      "league": "ligue1",
+      "domestic_name": "Paris SG"
+    },
+    {
+      "provider_name": "AEK Athens",
+      "league": "other",
+      "name": "AEK Athens"
+    },
+    {
+      "provider_name": "Ajax",
+      "league": "other",
+      "name": "Ajax"
+    },
+    {
+      "provider_name": "Benfica",
+      "league": "other",
+      "name": "Benfica"
+    },
+    {
+      "provider_name": "Bodø/Glimt",
+      "league": "other",
+      "name": "Bodø/Glimt"
+    },
+    {
+      "provider_name": "Celtic",
+      "league": "other",
+      "name": "Celtic"
+    },
+    {
+      "provider_name": "Club Brugge",
+      "league": "other",
+      "name": "Club Brugge"
+    },
+    {
+      "provider_name": "Copenhagen",
+      "league": "other",
+      "name": "Copenhagen"
+    },
+    {
+      "provider_name": "Crvena Zvezda",
+      "league": "other",
+      "name": "Crvena Zvezda"
+    },
+    {
+      "provider_name": "Fenerbahçe",
+      "league": "other",
+      "name": "Fenerbahçe"
+    },
+    {
+      "provider_name": "Feyenoord",
+      "league": "other",
+      "name": "Feyenoord"
+    },
+    {
+      "provider_name": "GNK Dinamo",
+      "league": "other",
+      "name": "GNK Dinamo"
+    },
+    {
+      "provider_name": "Galatasaray",
+      "league": "other",
+      "name": "Galatasaray"
+    },
+    {
+      "provider_name": "Kairat Almaty",
+      "league": "other",
+      "name": "Kairat Almaty"
+    },
+    {
+      "provider_name": "LASK",
+      "league": "other",
+      "name": "LASK"
+    },
+    {
+      "provider_name": "Olympiacos",
+      "league": "other",
+      "name": "Olympiacos"
+    },
+    {
+      "provider_name": "PSV",
+      "league": "other",
+      "name": "PSV"
+    },
+    {
+      "provider_name": "Pafos",
+      "league": "other",
+      "name": "Pafos"
+    },
+    {
+      "provider_name": "Porto",
+      "league": "other",
+      "name": "Porto"
+    },
+    {
+      "provider_name": "Qarabag",
+      "league": "other",
+      "name": "Qarabag"
+    },
+    {
+      "provider_name": "S. Bratislava",
+      "league": "other",
+      "name": "S. Bratislava"
+    },
+    {
+      "provider_name": "Sabah",
+      "league": "other",
+      "name": "Sabah"
+    },
+    {
+      "provider_name": "Salzburg",
+      "league": "other",
+      "name": "Salzburg"
+    },
+    {
+      "provider_name": "Shakhtar",
+      "league": "other",
+      "name": "Shakhtar"
+    },
+    {
+      "provider_name": "Slavia Praha",
+      "league": "other",
+      "name": "Slavia Praha"
+    },
+    {
+      "provider_name": "Sparta Praha",
+      "league": "other",
+      "name": "Sparta Praha"
+    },
+    {
+      "provider_name": "Sporting CP",
+      "league": "other",
+      "name": "Sporting CP"
+    },
+    {
+      "provider_name": "Sturm Graz",
+      "league": "other",
+      "name": "Sturm Graz"
+    },
+    {
+      "provider_name": "Union SG",
+      "league": "other",
+      "name": "Union SG"
+    },
+    {
+      "provider_name": "Viking",
+      "league": "other",
+      "name": "Viking"
+    },
+    {
+      "provider_name": "Young Boys",
+      "league": "other",
+      "name": "Young Boys"
+    }
+  ]
+}
