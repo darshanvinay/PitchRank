@@ -17,3 +17,5 @@ frontend/dist/
 *.tsbuildinfo
 
 .taste-skill/
+data/raw/openfootball/
+data/raw/domestic-history/

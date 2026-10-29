@@ -1,6 +1,9 @@
 import hashlib
 import io
+import os
 import re
+import ssl
+import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -55,6 +58,7 @@ class ImportSummary:
     inserted: int
     updated: int
     unchanged: int
+    skipped: int = 0
 
 
 def season_start(season: str) -> int:
@@ -66,13 +70,26 @@ def season_start(season: str) -> int:
     return start
 
 
+def provider_ssl_context() -> ssl.SSLContext:
+    """Use macOS's trusted bundle if a python.org install lacks its own CA file."""
+    if (
+        sys.platform == "darwin"
+        and not os.getenv("SSL_CERT_FILE")
+        and not os.getenv("SSL_CERT_DIR")
+        and ssl.get_default_verify_paths().cafile is None
+        and Path("/etc/ssl/cert.pem").is_file()
+    ):
+        return ssl.create_default_context(cafile="/etc/ssl/cert.pem")
+    return ssl.create_default_context()
+
+
 def download_season(season: str, directory: Path, league: str = "epl") -> Path:
     division = competition(league).division
     start = season_start(season)
     code = f"{start % 100:02d}{(start + 1) % 100:02d}"
     url = f"https://www.football-data.co.uk/mmz4281/{code}/{division}.csv"
-    request = Request(url, headers={"User-Agent": "PitchRank/0.1 historical research"})
-    with urlopen(request, timeout=60) as response:
+    request = Request(url, headers={"User-Agent": "PitchRank/1.0", "Cache-Control": "no-cache"})
+    with urlopen(request, timeout=60, context=provider_ssl_context()) as response:
         payload = response.read(10_000_001)
     if len(payload) > 10_000_000:
         raise ImportValidationError("CSV exceeds 10 MB limit")
@@ -126,6 +143,7 @@ def import_csv(
     source: str = SOURCE,
     location: str | None = None,
     league: str = "epl",
+    complete_snapshot: bool = False,
 ) -> ImportSummary:
     info = (
         competition(league)
@@ -145,19 +163,33 @@ def import_csv(
         validated = []
         seen = {}
         errors = []
+        skipped = 0
         for index, row in frame.iterrows():
             row_number = int(index) + 2
             try:
                 if "Div" in row and row["Div"] != info.division:
                     raise ValueError(f"Expected {info.name} division {info.division}")
                 day = parse_date(row["Date"])
-                # Wide boundaries admit the COVID-delayed 2019-2020 season (July finish).
-                if not date(start, 7, 1) <= day <= date(start + 1, 8, 1):
+                # COVID-delayed Serie A finished on 2 August 2020, beyond the old Aug 1 cap.
+                end = date(start + 1, 8, 31 if start == 2019 else 1)
+                if not date(start, 7, 1) <= day <= end:
                     raise ValueError(f"Date {day} falls outside season {season}")
+                status = row.get("Status", "").lower()
+                if status in {"scheduled", "postponed", "cancelled", "abandoned", "incomplete"}:
+                    skipped += 1
+                    continue
+                if not any(row[field] for field in ("FTHG", "FTAG", "FTR")):
+                    skipped += 1
+                    continue
                 kickoff = None
                 if row.get("Time", ""):
                     local = datetime.strptime(f"{day} {row['Time']}", "%Y-%m-%d %H:%M")
                     kickoff = local.replace(tzinfo=ZoneInfo(info.timezone)).astimezone(timezone.utc)
+                now = datetime.now(timezone.utc)
+                if day > now.astimezone(ZoneInfo(info.timezone)).date() or (
+                    kickoff and kickoff > now
+                ):
+                    raise ValueError("Future fixture cannot have a completed result")
                 stage = row.get("Stage", "domestic")
                 if stage not in (
                     {"league", "knockout", "finals"} if league == "ucl" else {"domestic"}
@@ -174,7 +206,9 @@ def import_csv(
                     away_goals=score(row["FTAG"]),
                     outcome=row["FTR"],
                 )
-                key = (day, result.home_team_id, result.away_team_id)
+                # A domestic home/away pairing occurs once per season, even if its date changes.
+                # UCL opponents may meet again in knockouts, so retain date in that key.
+                key = (day if league == "ucl" else None, result.home_team_id, result.away_team_id)
                 if key in seen and seen[key] != result:
                     raise ValueError("Conflicting duplicate results within the CSV")
                 if key not in seen:
@@ -184,6 +218,29 @@ def import_csv(
                 errors.append(f"row {row_number}: {exc}")
         if errors:
             raise ImportValidationError("Import rejected:\n" + "\n".join(errors))
+        if not validated:
+            raise ImportValidationError("No completed results; stored data was preserved")
+        if complete_snapshot:
+            stored = session.scalars(
+                select(Match).where(
+                    Match.season == season,
+                    Match.league == league,
+                    Match.source == source,
+                    Match.status == "finished",
+                )
+            ).all()
+            missing = [
+                m
+                for m in stored
+                if (m.match_date if league == "ucl" else None, m.home_team_id, m.away_team_id)
+                not in seen
+            ]
+            if missing:
+                raise ImportValidationError(
+                    f"{league} {season}: provider snapshot is missing {len(missing)} previously "
+                    f"completed matches (IDs {', '.join(str(m.id) for m in missing[:10])}). "
+                    "Possible stale/truncated feed or result withdrawal; review required."
+                )
         run = ImportRun(
             league=league,
             source=source,
@@ -195,15 +252,18 @@ def import_csv(
         session.flush()
         inserted = updated = unchanged = 0
         for row_number, result, raw in validated:
-            match = session.scalar(
-                select(Match).where(
-                    Match.season == season,
-                    Match.league == league,
-                    Match.match_date == result.match_date,
-                    Match.home_team_id == result.home_team_id,
-                    Match.away_team_id == result.away_team_id,
-                )
+            query = select(Match).where(
+                Match.season == season,
+                Match.league == league,
+                Match.home_team_id == result.home_team_id,
+                Match.away_team_id == result.away_team_id,
             )
+            if league == "ucl":
+                query = query.where(Match.match_date == result.match_date)
+            candidates = session.scalars(query).all()
+            if len(candidates) > 1:
+                raise ImportValidationError("Ambiguous existing fixture identity; review required")
+            match = candidates[0] if candidates else None
             if match is None:
                 values = result.model_dump(exclude={"outcome"})
                 match = Match(
@@ -219,10 +279,16 @@ def import_csv(
                 session.flush()
                 inserted += 1
             else:
-                corrected = (match.home_goals, match.away_goals, match.status) != (
+                corrected = (
+                    match.home_goals,
+                    match.away_goals,
+                    match.status,
+                    match.match_date,
+                ) != (
                     result.home_goals,
                     result.away_goals,
                     "finished",
+                    result.match_date,
                 )
                 # Never silently overwrite a conflicting result from a different provider.
                 if corrected and match.source != source:
@@ -245,6 +311,7 @@ def import_csv(
                     )
                     match.home_goals, match.away_goals = result.home_goals, result.away_goals
                     match.status = "finished"
+                    match.match_date = result.match_date
                     if result.kickoff_at:
                         match.kickoff_at = result.kickoff_at
                     match.processed = False
@@ -262,4 +329,4 @@ def import_csv(
                 session.execute(update(ModelVersion).values(needs_rebuild=True))
             session.execute(update(Match).where(Match.league == league).values(processed=False))
         run.inserted, run.updated, run.unchanged = inserted, updated, unchanged
-        return ImportSummary(run.id, inserted, updated, unchanged)
+        return ImportSummary(run.id, inserted, updated, unchanged, skipped)

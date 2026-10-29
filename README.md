@@ -168,3 +168,60 @@ MVP is the current scope. No predictions, ML, simulations, or additional infrast
 
 Design skills: [installation and prior-use audit](docs/design-skills-audit.md).
 Extension checks: [La Liga verification](docs/laliga-verification.md).
+
+## Data freshness and manual updates
+
+From the repository root, run `.venv/bin/pitchrank refresh --season 2026-2027` to synchronize
+all five domestic leagues and Champions League. Refresh now defaults to `--league europe`;
+use `--league laliga` for Spain only. Inspect stored coverage and successful sync time with
+`.venv/bin/pitchrank status --league laliga --season 2026-2027`.
+
+The website shows each domestic league's latest completed match date and actual last successful
+import time. Refresh remains manual. Existing matches are updated incrementally and connected
+ratings are replayed chronologically; incomplete/future games and truncated provider snapshots
+are rejected or excluded. See [freshness diagnosis, changed files and verification](docs/data-freshness.md).
+
+## Historical Champions League results
+
+The existing sidebar now includes **Champions League History**, with historical season, stage,
+and club filters. Import the pinned CC0 Openfootball archive using:
+
+```sh
+.venv/bin/alembic -c backend/alembic.ini upgrade head
+.venv/bin/pitchrank ucl-history --all
+```
+
+Available coverage is **2011/12–2025/26: 1,997 main-draw matches**. The six requested seasons
+2005/06–2010/11 are explicitly unavailable in this source. This is historical ingestion and
+browsing, without a prediction model. See [reader, API, completeness and limitations](docs/ucl-history.md).
+
+## Historical domestic Elo
+
+Import the five leagues' completed 2010/11–2025/26 seasons with
+`.venv/bin/pitchrank domestic-history`. Reconstruct neutral-prior, cutoff-safe ratings with
+`.venv/bin/pitchrank historical-elo --cutoff 2021-02-16` (optional `--team-id` and `--config`).
+No current squad values or matches on/after the cutoff enter historical ratings. Live ratings
+are preserved. See [coverage, parameters, date repairs and limitations](docs/historical-domestic-elo.md).
+
+## Historical knockout backtesting
+
+Run `.venv/bin/pitchrank knockout-backtest --seasons 2020-2021` for the backend-only Round-of-16
+advancement benchmark. Supply multiple seasons and optional `--output report.json`, `--config`
+or `--draw-strength`. It freezes pre-round Elo, reuses Davidson probabilities and enumerates
+both legs with historical tie rules. No tournament simulator or frontend is included.
+See [measured results, assumptions and reproducibility](docs/knockout-backtesting.md).
+
+### Historical full knockout brackets
+
+Open `/champions-league/bracket` for frozen Model A forecasts from the Round of 16 through a
+single neutral final. Both greedy selection and dynamic-programming global selection are available.
+Every forecast names its bracket assumptions: a hypothetical fixed R16 ordering or the retrospective
+recorded draw. Recorded-draw backtests are conditional; they are not unconditional historical forecasts.
+
+```sh
+PYTHONPATH=backend .venv/bin/python -m app.backtesting.tournament \
+  --output docs/tournament-backtest-results.json
+```
+
+The read-only endpoint is `/api/ucl/bracket?season=2020-2021&scenario=r16_order`.
+See [full methodology, measured results and interview explanation](docs/tournament-backtesting.md).

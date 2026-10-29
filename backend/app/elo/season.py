@@ -23,10 +23,15 @@ def starting_rating(value: float | None, reference: float | None, config: Season
 
 
 def replay_season(
-    matches: list[PlayedMatch], values: dict[int, float | None], config: SeasonConfig
+    matches: list[PlayedMatch],
+    values: dict[int, float | None],
+    config: SeasonConfig,
+    offseason_regression: float = 0.0,
 ) -> tuple[ReplayResult, dict[int, float]]:
     if len({m.id for m in matches}) != len(matches):
         raise ValueError("Duplicate match IDs")
+    if not math.isfinite(offseason_regression) or not 0 <= offseason_regression <= 1:
+        raise ValueError("Offseason regression must be between 0 and 1")
     seasons = {m.season for m in matches}
     initial = {
         team: starting_rating(value, config.squad_reference_eur, config)
@@ -34,6 +39,7 @@ def replay_season(
     }
     ratings = initial.copy()
     entries = []
+    last_season = {}
     ordered = sorted(matches, key=lambda m: (m.match_date, m.home_team_id, m.away_team_id))
     for _, group in groupby(ordered, key=lambda m: m.match_date):
         day = list(group)
@@ -50,6 +56,16 @@ def replay_season(
                 if home == away or home in seen or away in seen:
                     raise ValueError("Club repeated in a kickoff group")
                 seen.update((home, away))
+                year = int(match.season[:4])
+                for team in (home, away):
+                    previous = last_season.get(team, year)
+                    if year < previous:
+                        raise ValueError("Overlapping seasons for the same club; review chronology")
+                    if year > previous:
+                        ratings[team] = config.elo.initial_rating + (
+                            ratings[team] - config.elo.initial_rating
+                        ) * (1 - offseason_regression) ** (year - previous)
+                    last_season[team] = year
                 importance = {
                     "domestic": config.domestic_importance,
                     "league": config.ucl_league_importance,

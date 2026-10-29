@@ -50,6 +50,7 @@ class League(BaseModel):
     season: str
     results_through: str | None
     refreshed_at: str
+    last_synced_at: str | None
     matches: int
     squad_coverage: int
     squad_count: int

@@ -75,6 +75,7 @@ class Match(Base):
     stage: Mapped[str] = mapped_column(String(20), default="domestic", server_default="domestic")
     neutral: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
     external_id: Mapped[str | None] = mapped_column(String(100))
+    ucl_detail: Mapped[dict | None] = mapped_column(JSON)
     season: Mapped[str] = mapped_column(String(9), index=True)
     match_date: Mapped[date] = mapped_column(Date)
     # Provider kickoff times use the selected league’s local timezone, stored as UTC.

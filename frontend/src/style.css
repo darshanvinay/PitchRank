@@ -340,6 +340,10 @@ main {
   font-size: 12px;
   color: var(--muted);
 }
+.sync-stamp {
+  display: block;
+  margin-top: 3px;
+}
 .refresh-button {
   font-size: 12px;
   min-height: 34px;
@@ -1135,7 +1139,9 @@ main {
     padding: 0 16px;
   }
   .page-top {
-    height: 64px;
+    position: relative;
+    height: 112px;
+    padding-bottom: 48px;
     gap: 10px;
   }
   .breadcrumb {
@@ -1146,7 +1152,10 @@ main {
     gap: 8px;
   }
   .data-stamp {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 12px;
   }
   .refresh-button {
     min-height: 38px;
@@ -1586,3 +1595,158 @@ main {
     flex-basis: 100%;
   }
 }
+
+/* Archive controls reuse the existing table, typography and surface tokens. */
+.history-filters {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.history-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.history-filters select {
+  min-height: 44px;
+  max-width: 260px;
+}
+.history-matches {
+  min-width: 1000px;
+}
+.history-matches small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.history-club {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  padding: 4px 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  min-height: 44px;
+}
+.history-club:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+.history-notice {
+  padding: 20px 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.history-notice p + p {
+  margin-top: 8px;
+}
+@media (max-width: 640px) {
+  .sidebar nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  .sidebar nav a {
+    flex-shrink: 0;
+  }
+  .history-top {
+    height: 64px;
+    padding-bottom: 0;
+  }
+  .history-filters label {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+  .history-filters select {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.history-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.history-pagination button {
+  min-height: 44px;
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+  .sidebar {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 64px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .sidebar nav {
+    order: 5;
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+  }
+  .sidebar nav a {
+    flex-shrink: 0;
+  }
+  .sidebar-bottom {
+    margin-left: auto;
+  }
+}
+
+/* Knockout bracket: existing surfaces, typography and data accent. */
+.bracket-controls { padding-inline: 0; flex-wrap: wrap; }
+.bracket-assumption { padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin: 12px 0 24px; }
+.bracket-assumption strong { font-weight: 500; }
+.bracket-assumption p, .bracket-explainer, .bracket-detail p { color: var(--muted); line-height: 1.6; }
+.bracket-summary { display: flex; gap: 40px; flex-wrap: wrap; margin: 0 0 20px; }
+.bracket-summary div { display: grid; gap: 6px; }
+.bracket-summary span { color: var(--muted); }
+.bracket-summary strong { font-size: 20px; font-weight: 500; }
+.bracket-explainer { max-width: 85ch; margin-bottom: 24px; }
+.bracket-scroll { overflow-x: auto; padding: 4px 4px 12px; }
+.knockout-grid { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 32px; min-width: 1000px; }
+.bracket-round { min-width: 0; }
+.bracket-round h2 { font-size: 14px; font-weight: 500; margin-bottom: 16px; }
+.bracket-slots { display: grid; height: 880px; }
+.bracket-slot { display: flex; align-items: center; position: relative; min-width: 0; }
+.bracket-round:not(:last-child) .bracket-slot::after { content: ""; position: absolute; width: 16px; height: 50%; right: -16px; border-right: 1px solid var(--muted); pointer-events: none; }
+.bracket-round:not(:last-child) .bracket-slot:nth-child(odd)::after { top: 50%; border-top: 1px solid var(--muted); }
+.bracket-round:not(:last-child) .bracket-slot:nth-child(even)::after { bottom: 50%; border-bottom: 1px solid var(--muted); }
+.bracket-round:not(:first-child) .bracket-slot::before { content: ""; position: absolute; height: 1px; background: var(--muted); width: 16px; left: -16px; }
+.bracket-tie { padding: 4px 10px; width: 100%; flex-direction: column; gap: 0; text-align: left; }
+.bracket-tie.is-selected { border-color: var(--chart); }
+.bracket-club { display: flex; align-items: center; width: 100%; gap: 7px; padding: 6px 0; min-height: 42px; }
+.bracket-club + .bracket-club { border-top: 1px solid var(--rule); }
+.bracket-club > span { flex: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.25; font-size: 12px; }
+.bracket-club small { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+.bracket-club b { font-size: 12px; font-variant-numeric: tabular-nums; font-weight: 400; }
+.bracket-winner { color: var(--chart); }
+.bracket-detail { margin-top: 24px; padding: 20px; border: 1px solid var(--border); background: var(--surface); border-radius: 6px; scroll-margin-top: 20px; }
+.bracket-detail h2 { font-size: 18px; margin-bottom: 8px; }
+.bracket-detail dl { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 0; }
+.bracket-detail dt { font-weight: 500; margin-bottom: 6px; }
+.bracket-detail dd { margin: 0; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bracket-loading { padding: 40px 0; color: var(--muted); }
+@media (max-width: 700px) {
+  .knockout-grid { display: block; min-width: 0; }
+  .bracket-scroll { overflow: visible; }
+  .bracket-round { margin-bottom: 28px; }
+  .bracket-slots { height: auto; gap: 10px; }
+  .bracket-slot::before, .bracket-slot::after { display: none; }
+  .bracket-club > span, .bracket-club b { font-size: 14px; }
+  .bracket-summary { gap: 20px; }
+  .bracket-summary strong { font-size: 18px; }
+}
+dialog.bracket-detail { color: var(--text); margin: auto; width: min(540px, calc(100% - 32px)); max-height: calc(100dvh - 48px); overflow: auto; }
+dialog.bracket-detail::backdrop { background: rgb(0 0 0 / 55%); }
+.bracket-close { margin-bottom: 20px; }
+.bracket-club > span, .bracket-club b { font-size: 13px; }
+@media (max-width: 700px) { .bracket-club > span, .bracket-club b { font-size: 14px; } }

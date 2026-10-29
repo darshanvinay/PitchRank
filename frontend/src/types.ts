@@ -29,6 +29,7 @@ export interface League {
   season: string;
   results_through: string | null;
   refreshed_at: string;
+  last_synced_at: string | null;
   matches: number;
   squad_coverage: number;
   squad_count: number;

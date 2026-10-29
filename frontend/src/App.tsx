@@ -32,6 +32,8 @@ import type { LeagueId } from "./navigation";
 import "./style.css";
 
 const RatingChart = lazy(() => import("./RatingChart"));
+const ChampionsHistory = lazy(() => import("./ChampionsHistory"));
+const ChampionsBracket = lazy(() => import("./ChampionsBracket"));
 
 const number = new Intl.NumberFormat(undefined, {
   maximumFractionDigits: 1,
@@ -58,7 +60,7 @@ const date = (value: string | null, short = false) =>
 const delta = (value: number) =>
   `${value > 0 ? "+" : ""}${number.format(value)}`;
 async function request<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init);
+  const response = await fetch(url, { cache: "no-store", ...init });
   if (!response.ok) {
     const body = await response.json().catch(() => ({
       detail: "Could not reach PitchRank. Check the backend and try again.",
@@ -162,9 +164,16 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const leagueId = selectedLeague(location.search);
+  const bracketView = location.pathname === "/champions-league/bracket";
+  const historyView = location.pathname === "/champions-league/history" || bracketView;
   const viewId = location.pathname === "/europe" ? "europe" : leagueId;
-  const scope =
-    viewId === "europe"
+  const scope = historyView
+    ? {
+        name: bracketView ? "Champions League Bracket" : "Champions League History",
+        country: "Europe",
+        source: "https://github.com/openfootball/champions-league",
+      }
+    : viewId === "europe"
       ? {
           name: "European Rankings",
           country: "Europe",
@@ -189,6 +198,11 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+  useEffect(() => {
+    const revalidate = () => setRevision((value) => value + 1);
+    window.addEventListener("focus", revalidate);
+    return () => window.removeEventListener("focus", revalidate);
+  }, []);
   useEffect(() => {
     const controller = new AbortController();
     setError("");
@@ -284,6 +298,14 @@ export default function App() {
               <BarChart3 aria-hidden="true" size={17} />
               European Rankings
             </NavLink>
+            <NavLink to="/champions-league/history">
+              <BarChart3 aria-hidden="true" size={17} />
+              Champions League History
+            </NavLink>
+            <NavLink to="/champions-league/bracket">
+              <BarChart3 aria-hidden="true" size={17} />
+              Knockout Bracket
+            </NavLink>
             <NavLink to={path("/method")}>
               <CircleHelp aria-hidden="true" size={17} />
               <span className="nav-method-full">How ratings work</span>
@@ -317,31 +339,51 @@ export default function App() {
           </div>
         </aside>
         <main id="main" tabIndex={-1}>
-          <header className="page-top">
+          <header className={`page-top${historyView ? " history-top" : ""}`}>
             <span className="breadcrumb">
               Football <ChevronRight aria-hidden="true" size={13} />{" "}
               {scope.name}
             </span>
-            <div className="top-actions">
-              <span className="data-stamp">
-                {league?.league_id === viewId
-                  ? `Through ${date(league.results_through, true)}`
-                  : "Loading data…"}
-              </span>
-              <button
-                className="refresh-button"
-                onClick={refresh}
-                disabled={busy}
-                aria-busy={busy}
-              >
-                <RefreshCw
-                  aria-hidden="true"
-                  size={15}
-                  className={busy ? "rotating" : ""}
-                />
-                {busy ? "Refreshing…" : "Refresh data"}
-              </button>
-            </div>
+            {!historyView && (
+              <div className="top-actions">
+                <span className="data-stamp">
+                  {league?.league_id === viewId
+                    ? `Latest match: ${date(league.results_through, true)}`
+                    : "Loading data…"}
+                  {league?.league_id === viewId && viewId !== "europe" && (
+                    <span className="sync-stamp">
+                      Last updated:{" "}
+                      {league.last_synced_at ? (
+                        <time dateTime={league.last_synced_at}>
+                          {new Intl.DateTimeFormat(undefined, {
+                            month: "short",
+                            day: "numeric",
+                            hour: "numeric",
+                            minute: "2-digit",
+                            timeZoneName: "short",
+                          }).format(new Date(league.last_synced_at))}
+                        </time>
+                      ) : (
+                        "Never synchronized"
+                      )}
+                    </span>
+                  )}
+                </span>
+                <button
+                  className="refresh-button"
+                  onClick={refresh}
+                  disabled={busy}
+                  aria-busy={busy}
+                >
+                  <RefreshCw
+                    aria-hidden="true"
+                    size={15}
+                    className={busy ? "rotating" : ""}
+                  />
+                  {busy ? "Refreshing…" : "Refresh data"}
+                </button>
+              </div>
+            )}
           </header>
           <div className="announcements" aria-live="polite">
             {notice && (
@@ -352,7 +394,11 @@ export default function App() {
             )}
             {refreshError && <p className="error-notice">{refreshError}</p>}
           </div>
-          {error ? (
+          {historyView ? (
+            <Suspense fallback={<Loading />}>
+              {bracketView ? <ChampionsBracket /> : <ChampionsHistory />}
+            </Suspense>
+          ) : error ? (
             <ErrorState
               message={error}
               retry={() => setRevision((v) => v + 1)}
@@ -383,7 +429,11 @@ export default function App() {
             <span>PitchRank · Strength beyond the standings.</span>
             <a href={scope.source} target="_blank" rel="noreferrer">
               Results:{" "}
-              {viewId === "europe" ? "Fixture Download" : "Football-Data"}{" "}
+              {historyView
+                ? "Openfootball"
+                : viewId === "europe"
+                  ? "Fixture Download"
+                  : "Football-Data"}{" "}
               <ExternalLink aria-hidden="true" size={12} />
             </a>
           </footer>

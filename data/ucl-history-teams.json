@@ -1,0 +1,685 @@
+{
+  "source": "https://github.com/openfootball/champions-league",
+  "aliases": [
+    {
+      "name": "1. FC Union Berlin",
+      "canonical": "Union Berlin",
+      "league": "bundesliga"
+    },
+    {
+      "name": "1899 Hoffenheim",
+      "canonical": "Hoffenheim",
+      "league": "bundesliga"
+    },
+    {
+      "name": "AC Milan",
+      "canonical": "Milan",
+      "league": "seriea"
+    },
+    {
+      "name": "AC Sparta Praha",
+      "canonical": "Sparta Praha",
+      "league": "other"
+    },
+    {
+      "name": "AEK Athen",
+      "canonical": "AEK Athens",
+      "league": "other"
+    },
+    {
+      "name": "AFC Ajax",
+      "canonical": "Ajax",
+      "league": "other"
+    },
+    {
+      "name": "APOEL Nikosia",
+      "canonical": "APOEL",
+      "league": "other"
+    },
+    {
+      "name": "AS Monaco",
+      "canonical": "AS Monaco",
+      "league": "ligue1"
+    },
+    {
+      "name": "AS Monaco FC",
+      "canonical": "AS Monaco",
+      "league": "ligue1"
+    },
+    {
+      "name": "AS Roma",
+      "canonical": "Roma",
+      "league": "seriea"
+    },
+    {
+      "name": "Arsenal FC",
+      "canonical": "Arsenal FC",
+      "league": "epl"
+    },
+    {
+      "name": "Aston Villa FC",
+      "canonical": "Aston Villa FC",
+      "league": "epl"
+    },
+    {
+      "name": "Atalanta",
+      "canonical": "Atalanta",
+      "league": "seriea"
+    },
+    {
+      "name": "Atalanta BC",
+      "canonical": "Atalanta",
+      "league": "seriea"
+    },
+    {
+      "name": "Athletic Club",
+      "canonical": "Athletic Club",
+      "league": "laliga"
+    },
+    {
+      "name": "Atlético Madrid",
+      "canonical": "Atlético de Madrid",
+      "league": "laliga"
+    },
+    {
+      "name": "Austria Wien",
+      "canonical": "Austria Wien",
+      "league": "other"
+    },
+    {
+      "name": "BATE Borisov",
+      "canonical": "BATE Borisov",
+      "league": "other"
+    },
+    {
+      "name": "BSC Young Boys",
+      "canonical": "Young Boys",
+      "league": "other"
+    },
+    {
+      "name": "Bayer 04 Leverkusen",
+      "canonical": "Bayer Leverkusen",
+      "league": "bundesliga"
+    },
+    {
+      "name": "Bayer Leverkusen",
+      "canonical": "Bayer Leverkusen",
+      "league": "bundesliga"
+    },
+    {
+      "name": "Bayern München",
+      "canonical": "Bayern Munich",
+      "league": "bundesliga"
+    },
+    {
+      "name": "Beşiktaş",
+      "canonical": "Beşiktaş",
+      "league": "other"
+    },
+    {
+      "name": "Bologna FC 1909",
+      "canonical": "Bologna",
+      "league": "seriea"
+    },
+    {
+      "name": "Bor. Mönchengladbach",
+      "canonical": "Borussia Mönchengladbach",
+      "league": "bundesliga"
+    },
+    {
+      "name": "Borussia Dortmund",
+      "canonical": "Borussia Dortmund",
+      "league": "bundesliga"
+    },
+    {
+      "name": "CFR Cluj",
+      "canonical": "CFR Cluj",
+      "league": "other"
+    },
+    {
+      "name": "CSKA Moskva",
+      "canonical": "CSKA Moskva",
+      "league": "other"
+    },
+    {
+      "name": "Celtic FC",
+      "canonical": "Celtic",
+      "league": "other"
+    },
+    {
+      "name": "Chelsea FC",
+      "canonical": "Chelsea FC",
+      "league": "epl"
+    },
+    {
+      "name": "Club Atlético de Madrid",
+      "canonical": "Atlético de Madrid",
+      "league": "laliga"
+    },
+    {
+      "name": "Club Brugge KV",
+      "canonical": "Club Brugge",
+      "league": "other"
+    },
+    {
+      "name": "Crvena Zvezda",
+      "canonical": "Crvena Zvezda",
+      "league": "other"
+    },
+    {
+      "name": "Dinamo Kiev",
+      "canonical": "Dynamo Kyiv",
+      "league": "other"
+    },
+    {
+      "name": "Dinamo Zagreb",
+      "canonical": "GNK Dinamo",
+      "league": "other"
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "canonical": "Eintracht Frankfurt",
+      "league": "bundesliga"
+    },
+    {
+      "name": "FC Barcelona",
+      "canonical": "FC Barcelona",
+      "league": "laliga"
+    },
+    {
+      "name": "FC Basel 1893",
+      "canonical": "Basel",
+      "league": "other"
+    },
+    {
+      "name": "FC Bayern München",
+      "canonical": "Bayern Munich",
+      "league": "bundesliga"
+    },
+    {
+      "name": "FC Internazionale Milano",
+      "canonical": "Inter",
+      "league": "seriea"
+    },
+    {
+      "name": "FC København",
+      "canonical": "Copenhagen",
+      "league": "other"
+    },
+    {
+      "name": "FC Midtjylland",
+      "canonical": "FC Midtjylland",
+      "league": "other"
+    },
+    {
+      "name": "FC Nordsjælland",
+      "canonical": "FC Nordsjælland",
+      "league": "other"
+    },
+    {
+      "name": "FC Porto",
+      "canonical": "Porto",
+      "league": "other"
+    },
+    {
+      "name": "FC Red Bull Salzburg",
+      "canonical": "Salzburg",
+      "league": "other"
+    },
+    {
+      "name": "FC Schalke 04",
+      "canonical": "Schalke",
+      "league": "bundesliga"
+    },
+    {
+      "name": "FC Sheriff",
+      "canonical": "Sheriff Tiraspol",
+      "league": "other"
+    },
+    {
+      "name": "FC Steaua Bucureşti",
+      "canonical": "FCSB",
+      "league": "other"
+    },
+    {
+      "name": "FK Astana",
+      "canonical": "Astana",
+      "league": "other"
+    },
+    {
+      "name": "FK Bodø/Glimt",
+      "canonical": "Bodø/Glimt",
+      "league": "other"
+    },
+    {
+      "name": "FK Crvena Zvezda",
+      "canonical": "Crvena Zvezda",
+      "league": "other"
+    },
+    {
+      "name": "FK Kairat",
+      "canonical": "Kairat Almaty",
+      "league": "other"
+    },
+    {
+      "name": "FK Krasnodar",
+      "canonical": "Krasnodar",
+      "league": "other"
+    },
+    {
+      "name": "FK Rostov",
+      "canonical": "Rostov",
+      "league": "other"
+    },
+    {
+      "name": "FK Shakhtar Donetsk",
+      "canonical": "Shakhtar",
+      "league": "other"
+    },
+    {
+      "name": "Ferencvárosi TC",
+      "canonical": "Ferencvárosi TC",
+      "league": "other"
+    },
+    {
+      "name": "Feyenoord",
+      "canonical": "Feyenoord",
+      "league": "other"
+    },
+    {
+      "name": "Feyenoord Rotterdam",
+      "canonical": "Feyenoord",
+      "league": "other"
+    },
+    {
+      "name": "GNK Dinamo Zagreb",
+      "canonical": "GNK Dinamo",
+      "league": "other"
+    },
+    {
+      "name": "Galatasaray",
+      "canonical": "Galatasaray",
+      "league": "other"
+    },
+    {
+      "name": "Galatasaray SK",
+      "canonical": "Galatasaray",
+      "league": "other"
+    },
+    {
+      "name": "Girona FC",
+      "canonical": "Girona",
+      "league": "laliga"
+    },
+    {
+      "name": "Inter",
+      "canonical": "Inter",
+      "league": "seriea"
+    },
+    {
+      "name": "Juventus",
+      "canonical": "Juventus",
+      "league": "seriea"
+    },
+    {
+      "name": "Juventus FC",
+      "canonical": "Juventus",
+      "league": "seriea"
+    },
+    {
+      "name": "KAA Gent",
+      "canonical": "KAA Gent",
+      "league": "other"
+    },
+    {
+      "name": "KRC Genk",
+      "canonical": "KRC Genk",
+      "league": "other"
+    },
+    {
+      "name": "Lazio Roma",
+      "canonical": "Lazio",
+      "league": "seriea"
+    },
+    {
+      "name": "Legia Warszawa",
+      "canonical": "Legia Warszawa",
+      "league": "other"
+    },
+    {
+      "name": "Leicester City",
+      "canonical": "Leicester City",
+      "league": "epl"
+    },
+    {
+      "name": "Lille OSC",
+      "canonical": "LOSC",
+      "league": "ligue1"
+    },
+    {
+      "name": "Liverpool FC",
+      "canonical": "Liverpool FC",
+      "league": "epl"
+    },
+    {
+      "name": "Lokomotiv Moskva",
+      "canonical": "Lokomotiv Moskva",
+      "league": "other"
+    },
+    {
+      "name": "Maccabi Haifa",
+      "canonical": "Maccabi Haifa",
+      "league": "other"
+    },
+    {
+      "name": "Maccabi Tel Aviv",
+      "canonical": "Maccabi Tel Aviv",
+      "league": "other"
+    },
+    {
+      "name": "Malmö FF",
+      "canonical": "Malmö FF",
+      "league": "other"
+    },
+    {
+      "name": "Manchester City",
+      "canonical": "Manchester City",
+      "league": "epl"
+    },
+    {
+      "name": "Manchester City FC",
+      "canonical": "Manchester City",
+      "league": "epl"
+    },
+    {
+      "name": "Manchester United",
+      "canonical": "Manchester United",
+      "league": "epl"
+    },
+    {
+      "name": "Manchester United FC",
+      "canonical": "Manchester United",
+      "league": "epl"
+    },
+    {
+      "name": "Montpellier HSC",
+      "canonical": "Montpellier",
+      "league": "ligue1"
+    },
+    {
+      "name": "Málaga CF",
+      "canonical": "Málaga CF",
+      "league": "laliga"
+    },
+    {
+      "name": "NK Maribor",
+      "canonical": "NK Maribor",
+      "league": "other"
+    },
+    {
+      "name": "Newcastle United FC",
+      "canonical": "Newcastle United",
+      "league": "epl"
+    },
+    {
+      "name": "Olympiakos Piraeus",
+      "canonical": "Olympiacos",
+      "league": "other"
+    },
+    {
+      "name": "Olympique Lyonnais",
+      "canonical": "Olympique Lyonnais",
+      "league": "ligue1"
+    },
+    {
+      "name": "Olympique Marseille",
+      "canonical": "Olympique de Marseille",
+      "league": "ligue1"
+    },
+    {
+      "name": "Olympique de Marseille",
+      "canonical": "Olympique de Marseille",
+      "league": "ligue1"
+    },
+    {
+      "name": "Oţelul Galaţi",
+      "canonical": "Oţelul Galaţi",
+      "league": "other"
+    },
+    {
+      "name": "PAE Olympiakos SFP",
+      "canonical": "Olympiacos",
+      "league": "other"
+    },
+    {
+      "name": "PFC Ludogorets Razgrad",
+      "canonical": "Ludogorets",
+      "league": "other"
+    },
+    {
+      "name": "PSV",
+      "canonical": "PSV",
+      "league": "other"
+    },
+    {
+      "name": "PSV Eindhoven",
+      "canonical": "PSV",
+      "league": "other"
+    },
+    {
+      "name": "Paphos FC",
+      "canonical": "Pafos",
+      "league": "other"
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "canonical": "Paris Saint-Germain",
+      "league": "ligue1"
+    },
+    {
+      "name": "Paris Saint-Germain FC",
+      "canonical": "Paris Saint-Germain",
+      "league": "ligue1"
+    },
+    {
+      "name": "Qarabağ Ağdam FK",
+      "canonical": "Qarabag",
+      "league": "other"
+    },
+    {
+      "name": "Qarabağ FK",
+      "canonical": "Qarabag",
+      "league": "other"
+    },
+    {
+      "name": "RB Leipzig",
+      "canonical": "RB Leipzig",
+      "league": "bundesliga"
+    },
+    {
+      "name": "RB Salzburg",
+      "canonical": "Salzburg",
+      "league": "other"
+    },
+    {
+      "name": "RSC Anderlecht",
+      "canonical": "RSC Anderlecht",
+      "league": "other"
+    },
+    {
+      "name": "Racing Club de Lens",
+      "canonical": "RC Lens",
+      "league": "ligue1"
+    },
+    {
+      "name": "Rangers FC",
+      "canonical": "Rangers FC",
+      "league": "other"
+    },
+    {
+      "name": "Real Madrid",
+      "canonical": "Real Madrid",
+      "league": "laliga"
+    },
+    {
+      "name": "Real Madrid CF",
+      "canonical": "Real Madrid",
+      "league": "laliga"
+    },
+    {
+      "name": "Real Sociedad",
+      "canonical": "Real Sociedad",
+      "league": "laliga"
+    },
+    {
+      "name": "Real Sociedad de Fútbol",
+      "canonical": "Real Sociedad",
+      "league": "laliga"
+    },
+    {
+      "name": "Royal Antwerp FC",
+      "canonical": "Royal Antwerp FC",
+      "league": "other"
+    },
+    {
+      "name": "Royale Union Saint-Gilloise",
+      "canonical": "Union SG",
+      "league": "other"
+    },
+    {
+      "name": "SK Slavia Praha",
+      "canonical": "Slavia Praha",
+      "league": "other"
+    },
+    {
+      "name": "SK Sturm Graz",
+      "canonical": "Sturm Graz",
+      "league": "other"
+    },
+    {
+      "name": "SL Benfica",
+      "canonical": "Benfica",
+      "league": "other"
+    },
+    {
+      "name": "SS Lazio",
+      "canonical": "Lazio",
+      "league": "seriea"
+    },
+    {
+      "name": "SSC Napoli",
+      "canonical": "Napoli",
+      "league": "seriea"
+    },
+    {
+      "name": "Sevilla FC",
+      "canonical": "Sevilla FC",
+      "league": "laliga"
+    },
+    {
+      "name": "Shakhtar Donetsk",
+      "canonical": "Shakhtar",
+      "league": "other"
+    },
+    {
+      "name": "Slavia Praha",
+      "canonical": "Slavia Praha",
+      "league": "other"
+    },
+    {
+      "name": "Spartak Moskva",
+      "canonical": "Spartak Moskva",
+      "league": "other"
+    },
+    {
+      "name": "Sport Lisboa e Benfica",
+      "canonical": "Benfica",
+      "league": "other"
+    },
+    {
+      "name": "Sporting Braga",
+      "canonical": "Braga",
+      "league": "other"
+    },
+    {
+      "name": "Sporting CP",
+      "canonical": "Sporting CP",
+      "league": "other"
+    },
+    {
+      "name": "Sporting Clube de Braga",
+      "canonical": "Braga",
+      "league": "other"
+    },
+    {
+      "name": "Sporting Clube de Portugal",
+      "canonical": "Sporting CP",
+      "league": "other"
+    },
+    {
+      "name": "Stade Brestois 29",
+      "canonical": "Stade Brestois 29",
+      "league": "ligue1"
+    },
+    {
+      "name": "Stade Rennais",
+      "canonical": "Stade Rennais F.C.",
+      "league": "ligue1"
+    },
+    {
+      "name": "Tottenham Hotspur",
+      "canonical": "Tottenham Hotspur",
+      "league": "epl"
+    },
+    {
+      "name": "Tottenham Hotspur FC",
+      "canonical": "Tottenham Hotspur",
+      "league": "epl"
+    },
+    {
+      "name": "Trabzonspor",
+      "canonical": "Trabzonspor",
+      "league": "other"
+    },
+    {
+      "name": "Valencia CF",
+      "canonical": "Valencia CF",
+      "league": "laliga"
+    },
+    {
+      "name": "VfB Stuttgart",
+      "canonical": "VfB Stuttgart",
+      "league": "bundesliga"
+    },
+    {
+      "name": "VfL Wolfsburg",
+      "canonical": "Wolfsburg",
+      "league": "bundesliga"
+    },
+    {
+      "name": "Viktoria Plzeň",
+      "canonical": "Viktoria Plzeň",
+      "league": "other"
+    },
+    {
+      "name": "Villarreal CF",
+      "canonical": "Villarreal CF",
+      "league": "laliga"
+    },
+    {
+      "name": "Zenit St. Petersburg",
+      "canonical": "Zenit St. Petersburg",
+      "league": "other"
+    },
+    {
+      "name": "İstanbul Başakşehir",
+      "canonical": "İstanbul Başakşehir",
+      "league": "other"
+    },
+    {
+      "name": "ŠK Slovan Bratislava",
+      "canonical": "S. Bratislava",
+      "league": "other"
+    }
+  ]
+}

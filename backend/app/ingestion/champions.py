@@ -9,7 +9,12 @@ from urllib.request import Request, urlopen
 import pandas as pd
 
 from app.db.session import ROOT
-from app.ingestion.historical import ImportValidationError, import_csv, season_start
+from app.ingestion.historical import (
+    ImportValidationError,
+    import_csv,
+    provider_ssl_context,
+    season_start,
+)
 
 SOURCE = "fixturedownload.com"
 
@@ -75,7 +80,11 @@ def normalize_results(payload: bytes, season: str) -> pd.DataFrame:
 def download_champions(season: str, directory: Path) -> Path:
     year = season_start(season)
     url = f"https://fixturedownload.com/feed/json/champions-league-{year}"
-    with urlopen(Request(url, headers={"User-Agent": "PitchRank/1.0"}), timeout=45) as response:
+    with urlopen(
+        Request(url, headers={"User-Agent": "PitchRank/1.0", "Cache-Control": "no-cache"}),
+        timeout=45,
+        context=provider_ssl_context(),
+    ) as response:
         payload = response.read(5_000_001)
     if len(payload) > 5_000_000:
         raise ImportValidationError("Champions League feed exceeds 5 MB")
@@ -99,12 +108,13 @@ def download_champions(season: str, directory: Path) -> Path:
     return path
 
 
-def import_champions(bind, path: Path, season: str):
+def import_champions(bind, path: Path, season: str, complete_snapshot: bool = False):
     return import_csv(
         bind,
         path,
         season,
         source=SOURCE,
         league="ucl",
+        complete_snapshot=complete_snapshot,
         location=f"https://fixturedownload.com/feed/json/champions-league-{season[:4]}",
     )

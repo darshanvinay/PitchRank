@@ -1,0 +1,13 @@
+[
+  {
+    "season": "2024-2025",
+    "date": "2025-02-19",
+    "home": "PSV",
+    "away": "Juventus FC",
+    "original_score": [3, 1],
+    "regulation_score": [2, 1],
+    "after_extra_time": [3, 1],
+    "reason": "Openfootball omits the extra-time annotation; retain its raw line and use UEFA's reviewed regulation/extra-time split.",
+    "source_url": "https://www.uefa.com/newsfiles/UCL/2025/2044483_TS.pdf"
+  }
+]

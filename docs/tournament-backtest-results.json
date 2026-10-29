@@ -1,0 +1,5348 @@
+{
+  "scope": "Retrospective draw-conditional evaluation; frozen pre-R16 ratings",
+  "summary": {
+    "greedy": {
+      "rounds": {
+        "round_of_16": {
+          "correct": 38,
+          "total": 48
+        },
+        "quarterfinal": {
+          "correct": 15,
+          "total": 24
+        },
+        "semifinal": {
+          "correct": 3,
+          "total": 12
+        },
+        "final": {
+          "correct": 1,
+          "total": 6
+        }
+      },
+      "correct": 57,
+      "total": 90,
+      "accuracy": 0.6333333333333333,
+      "correct_finalists": 3,
+      "finalists_total": 12,
+      "correct_champions": 1,
+      "exact_brackets": 0,
+      "seasons": 6
+    },
+    "global": {
+      "rounds": {
+        "round_of_16": {
+          "correct": 38,
+          "total": 48
+        },
+        "quarterfinal": {
+          "correct": 15,
+          "total": 24
+        },
+        "semifinal": {
+          "correct": 3,
+          "total": 12
+        },
+        "final": {
+          "correct": 1,
+          "total": 6
+        }
+      },
+      "correct": 57,
+      "total": 90,
+      "accuracy": 0.6333333333333333,
+      "correct_finalists": 3,
+      "finalists_total": 12,
+      "correct_champions": 1,
+      "exact_brackets": 0,
+      "seasons": 6
+    },
+    "actual_participants": {
+      "rounds": {
+        "round_of_16": {
+          "correct": 38,
+          "total": 48
+        },
+        "quarterfinal": {
+          "correct": 17,
+          "total": 24
+        },
+        "semifinal": {
+          "correct": 8,
+          "total": 12
+        },
+        "final": {
+          "correct": 3,
+          "total": 6
+        }
+      },
+      "correct": 66,
+      "total": 90,
+      "accuracy": 0.7333333333333333,
+      "correct_finalists": 8,
+      "finalists_total": 12,
+      "correct_champions": 3,
+      "exact_brackets": 0,
+      "seasons": 6
+    }
+  },
+  "seasons": [
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "ba1d122cb3b21b93c7a8f61f",
+        "round": "final",
+        "left": {
+          "id": "de076954567337c8349205c3",
+          "round": "semifinal",
+          "left": {
+            "id": "35bb5135a952986b9de6f08c",
+            "round": "quarterfinal",
+            "left": {
+              "id": "0075718f85bb3ec00398509c",
+              "round": "round_of_16",
+              "left": 81,
+              "right": 93,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "53c5b903898fe5b83a086c5a",
+              "round": "round_of_16",
+              "left": 58,
+              "right": 123,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "d5b6ac1e757ae20867e1c825",
+            "round": "quarterfinal",
+            "left": {
+              "id": "0750eba4dcddb96ad442fa9a",
+              "round": "round_of_16",
+              "left": 102,
+              "right": 28,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "2ce8a9ac57949fe56fefb247",
+              "round": "round_of_16",
+              "left": 69,
+              "right": 94,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "690c7b34b86fe4cfb57db216",
+          "round": "semifinal",
+          "left": {
+            "id": "69937291e1c0bb0736396db6",
+            "round": "quarterfinal",
+            "left": {
+              "id": "089386939a72d2b864ebd5c8",
+              "round": "round_of_16",
+              "left": 72,
+              "right": 67,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "e63bdf117aa83aeec1e18e0c",
+              "round": "round_of_16",
+              "left": 105,
+              "right": 26,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "29c2efe97bf13f958f053a41",
+            "round": "quarterfinal",
+            "left": {
+              "id": "bd7ffcfdc041b56bc75855aa",
+              "round": "round_of_16",
+              "left": 165,
+              "right": 80,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "5df33a2fd5a99d659b1d2d3d",
+              "round": "round_of_16",
+              "left": 53,
+              "right": 15,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "48e9c52d53a78720274241e3896dbb5716377d2649c21d914c58dbb27bba0204",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": true,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "1cafe601ac694e0c0a4c6daf2f8e1a7f060f40e0c7950bd2e1defbe37349adbb",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2021-02-15",
+      "snapshot_matches": 20489,
+      "clubs": [
+        {
+          "id": 15,
+          "name": "Chelsea",
+          "crest": "/crests/chelsea.png",
+          "elo": 1642.2322701032233
+        },
+        {
+          "id": 26,
+          "name": "Liverpool",
+          "crest": "/crests/liverpool.png",
+          "elo": 1673.1597762192548
+        },
+        {
+          "id": 28,
+          "name": "Man City",
+          "crest": "/crests/man-city.png",
+          "elo": 1777.3808023335614
+        },
+        {
+          "id": 53,
+          "name": "Atl\u00e9tico de Madrid",
+          "crest": "/crests/laliga-13.png",
+          "elo": 1716.275779750911
+        },
+        {
+          "id": 58,
+          "name": "FC Barcelona",
+          "crest": "/crests/laliga-131.png",
+          "elo": 1726.2080439273898
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1683.91607383194
+        },
+        {
+          "id": 69,
+          "name": "Sevilla FC",
+          "crest": "/crests/laliga-368.png",
+          "elo": 1655.8914425089436
+        },
+        {
+          "id": 72,
+          "name": "Atalanta",
+          "crest": "/crests/seriea-800.png",
+          "elo": 1670.2427737436383
+        },
+        {
+          "id": 80,
+          "name": "Juventus",
+          "crest": "/crests/seriea-506.png",
+          "elo": 1702.5947560079628
+        },
+        {
+          "id": 81,
+          "name": "Lazio",
+          "crest": "/crests/seriea-398.png",
+          "elo": 1634.6210132699891
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1806.8097940922003
+        },
+        {
+          "id": 94,
+          "name": "Borussia Dortmund",
+          "crest": "/crests/bundesliga-16.png",
+          "elo": 1611.3058282219736
+        },
+        {
+          "id": 102,
+          "name": "Borussia M\u00f6nchengladbach",
+          "crest": "/crests/bundesliga-18.png",
+          "elo": 1599.3346274967207
+        },
+        {
+          "id": 105,
+          "name": "RB Leipzig",
+          "crest": "/crests/bundesliga-23826.png",
+          "elo": 1671.2595254880996
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1729.5238131237795
+        },
+        {
+          "id": 165,
+          "name": "Porto",
+          "crest": null,
+          "elo": 1596.9292964132048
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 93,
+          "log_joint_probability": -8.201853102814601,
+          "joint_probability": 0.000274145079956239,
+          "matches": [
+            {
+              "id": "0075718f85bb3ec00398509c",
+              "round": "round_of_16",
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.2832234547569644,
+              "p_b": 0.7167765452430356,
+              "winner_id": 93,
+              "selected_probability": 0.7167765452430356,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "53c5b903898fe5b83a086c5a",
+              "round": "round_of_16",
+              "team_a_id": 58,
+              "team_b_id": 123,
+              "p_a": 0.49577463770807173,
+              "p_b": 0.5042253622919283,
+              "winner_id": 123,
+              "selected_probability": 0.5042253622919283,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "0750eba4dcddb96ad442fa9a",
+              "round": "round_of_16",
+              "team_a_id": 102,
+              "team_b_id": 28,
+              "p_a": 0.27682132811277915,
+              "p_b": 0.7231786718872208,
+              "winner_id": 28,
+              "selected_probability": 0.7231786718872208,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "2ce8a9ac57949fe56fefb247",
+              "round": "round_of_16",
+              "team_a_id": 69,
+              "team_b_id": 94,
+              "p_a": 0.5600530783212176,
+              "p_b": 0.43994692167878235,
+              "winner_id": 69,
+              "selected_probability": 0.5600530783212176,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "089386939a72d2b864ebd5c8",
+              "round": "round_of_16",
+              "team_a_id": 72,
+              "team_b_id": 67,
+              "p_a": 0.4818282714951368,
+              "p_b": 0.5181717285048633,
+              "winner_id": 67,
+              "selected_probability": 0.5181717285048633,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "e63bdf117aa83aeec1e18e0c",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 26,
+              "p_a": 0.4976817302979377,
+              "p_b": 0.5023182697020623,
+              "winner_id": 26,
+              "selected_probability": 0.5023182697020623,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "bd7ffcfdc041b56bc75855aa",
+              "round": "round_of_16",
+              "team_a_id": 165,
+              "team_b_id": 80,
+              "p_a": 0.3615323042396055,
+              "p_b": 0.6384676957603945,
+              "winner_id": 80,
+              "selected_probability": 0.6384676957603945,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5df33a2fd5a99d659b1d2d3d",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 15,
+              "p_a": 0.5987889314063931,
+              "p_b": 0.4012110685936069,
+              "winner_id": 53,
+              "selected_probability": 0.5987889314063931,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "35bb5135a952986b9de6f08c",
+              "round": "quarterfinal",
+              "team_a_id": 93,
+              "team_b_id": 123,
+              "p_a": 0.602990566614772,
+              "p_b": 0.397009433385228,
+              "winner_id": 93,
+              "selected_probability": 0.602990566614772,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d5b6ac1e757ae20867e1c825",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 69,
+              "p_a": 0.658614597623609,
+              "p_b": 0.34138540237639103,
+              "winner_id": 28,
+              "selected_probability": 0.658614597623609,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "69937291e1c0bb0736396db6",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 26,
+              "p_a": 0.5147317473888589,
+              "p_b": 0.48526825261114115,
+              "winner_id": 67,
+              "selected_probability": 0.5147317473888589,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "29c2efe97bf13f958f053a41",
+              "round": "quarterfinal",
+              "team_a_id": 80,
+              "team_b_id": 53,
+              "p_a": 0.4818178798812258,
+              "p_b": 0.5181821201187742,
+              "winner_id": 53,
+              "selected_probability": 0.5181821201187742,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "de076954567337c8349205c3",
+              "round": "semifinal",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.5398203522121235,
+              "p_b": 0.46017964778787646,
+              "winner_id": 93,
+              "selected_probability": 0.5398203522121235,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "690c7b34b86fe4cfb57db216",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 53,
+              "p_a": 0.45675454712170105,
+              "p_b": 0.543245452878299,
+              "winner_id": 53,
+              "selected_probability": 0.543245452878299,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ba1d122cb3b21b93c7a8f61f",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 53,
+              "p_a": 0.6058724461958102,
+              "p_b": 0.39412755380418985,
+              "winner_id": 93,
+              "selected_probability": 0.6058724461958102,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 93,
+          "log_joint_probability": -8.201853102814601,
+          "joint_probability": 0.000274145079956239,
+          "matches": [
+            {
+              "id": "0075718f85bb3ec00398509c",
+              "round": "round_of_16",
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.2832234547569644,
+              "p_b": 0.7167765452430356,
+              "winner_id": 93,
+              "selected_probability": 0.7167765452430356,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "53c5b903898fe5b83a086c5a",
+              "round": "round_of_16",
+              "team_a_id": 58,
+              "team_b_id": 123,
+              "p_a": 0.49577463770807173,
+              "p_b": 0.5042253622919283,
+              "winner_id": 123,
+              "selected_probability": 0.5042253622919283,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "0750eba4dcddb96ad442fa9a",
+              "round": "round_of_16",
+              "team_a_id": 102,
+              "team_b_id": 28,
+              "p_a": 0.27682132811277915,
+              "p_b": 0.7231786718872208,
+              "winner_id": 28,
+              "selected_probability": 0.7231786718872208,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "2ce8a9ac57949fe56fefb247",
+              "round": "round_of_16",
+              "team_a_id": 69,
+              "team_b_id": 94,
+              "p_a": 0.5600530783212176,
+              "p_b": 0.43994692167878235,
+              "winner_id": 69,
+              "selected_probability": 0.5600530783212176,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "089386939a72d2b864ebd5c8",
+              "round": "round_of_16",
+              "team_a_id": 72,
+              "team_b_id": 67,
+              "p_a": 0.4818282714951368,
+              "p_b": 0.5181717285048633,
+              "winner_id": 67,
+              "selected_probability": 0.5181717285048633,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "e63bdf117aa83aeec1e18e0c",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 26,
+              "p_a": 0.4976817302979377,
+              "p_b": 0.5023182697020623,
+              "winner_id": 26,
+              "selected_probability": 0.5023182697020623,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "bd7ffcfdc041b56bc75855aa",
+              "round": "round_of_16",
+              "team_a_id": 165,
+              "team_b_id": 80,
+              "p_a": 0.3615323042396055,
+              "p_b": 0.6384676957603945,
+              "winner_id": 80,
+              "selected_probability": 0.6384676957603945,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5df33a2fd5a99d659b1d2d3d",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 15,
+              "p_a": 0.5987889314063931,
+              "p_b": 0.4012110685936069,
+              "winner_id": 53,
+              "selected_probability": 0.5987889314063931,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "35bb5135a952986b9de6f08c",
+              "round": "quarterfinal",
+              "team_a_id": 93,
+              "team_b_id": 123,
+              "p_a": 0.602990566614772,
+              "p_b": 0.397009433385228,
+              "winner_id": 93,
+              "selected_probability": 0.602990566614772,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d5b6ac1e757ae20867e1c825",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 69,
+              "p_a": 0.658614597623609,
+              "p_b": 0.34138540237639103,
+              "winner_id": 28,
+              "selected_probability": 0.658614597623609,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "69937291e1c0bb0736396db6",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 26,
+              "p_a": 0.5147317473888589,
+              "p_b": 0.48526825261114115,
+              "winner_id": 67,
+              "selected_probability": 0.5147317473888589,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "29c2efe97bf13f958f053a41",
+              "round": "quarterfinal",
+              "team_a_id": 80,
+              "team_b_id": 53,
+              "p_a": 0.4818178798812258,
+              "p_b": 0.5181821201187742,
+              "winner_id": 53,
+              "selected_probability": 0.5181821201187742,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "de076954567337c8349205c3",
+              "round": "semifinal",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.5398203522121235,
+              "p_b": 0.46017964778787646,
+              "winner_id": 93,
+              "selected_probability": 0.5398203522121235,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "690c7b34b86fe4cfb57db216",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 53,
+              "p_a": 0.45675454712170105,
+              "p_b": 0.543245452878299,
+              "winner_id": 53,
+              "selected_probability": 0.543245452878299,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ba1d122cb3b21b93c7a8f61f",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 53,
+              "p_a": 0.6058724461958102,
+              "p_b": 0.39412755380418985,
+              "winner_id": 93,
+              "selected_probability": 0.6058724461958102,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 7,
+            "total": 15,
+            "accuracy": 0.4666666666666667,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 7,
+            "total": 15,
+            "accuracy": 0.4666666666666667,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "0075718f85bb3ec00398509c",
+              "round": "round_of_16",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.2832234547569644
+            },
+            {
+              "id": "0750eba4dcddb96ad442fa9a",
+              "round": "round_of_16",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 102,
+              "team_b_id": 28,
+              "p_a": 0.27682132811277915
+            },
+            {
+              "id": "089386939a72d2b864ebd5c8",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 72,
+              "team_b_id": 67,
+              "p_a": 0.4818282714951368
+            },
+            {
+              "id": "2ce8a9ac57949fe56fefb247",
+              "round": "round_of_16",
+              "winner_id": 69,
+              "actual_winner_id": 94,
+              "team_a_id": 69,
+              "team_b_id": 94,
+              "p_a": 0.5600530783212176
+            },
+            {
+              "id": "53c5b903898fe5b83a086c5a",
+              "round": "round_of_16",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 58,
+              "team_b_id": 123,
+              "p_a": 0.49577463770807173
+            },
+            {
+              "id": "5df33a2fd5a99d659b1d2d3d",
+              "round": "round_of_16",
+              "winner_id": 53,
+              "actual_winner_id": 15,
+              "team_a_id": 53,
+              "team_b_id": 15,
+              "p_a": 0.5987889314063931
+            },
+            {
+              "id": "bd7ffcfdc041b56bc75855aa",
+              "round": "round_of_16",
+              "winner_id": 80,
+              "actual_winner_id": 165,
+              "team_a_id": 165,
+              "team_b_id": 80,
+              "p_a": 0.3615323042396055
+            },
+            {
+              "id": "e63bdf117aa83aeec1e18e0c",
+              "round": "round_of_16",
+              "winner_id": 26,
+              "actual_winner_id": 26,
+              "team_a_id": 105,
+              "team_b_id": 26,
+              "p_a": 0.4976817302979377
+            },
+            {
+              "id": "29c2efe97bf13f958f053a41",
+              "round": "quarterfinal",
+              "winner_id": 15,
+              "actual_winner_id": 15,
+              "team_a_id": 165,
+              "team_b_id": 15,
+              "p_a": 0.43950590020227803
+            },
+            {
+              "id": "35bb5135a952986b9de6f08c",
+              "round": "quarterfinal",
+              "winner_id": 93,
+              "actual_winner_id": 123,
+              "team_a_id": 93,
+              "team_b_id": 123,
+              "p_a": 0.602990566614772
+            },
+            {
+              "id": "69937291e1c0bb0736396db6",
+              "round": "quarterfinal",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 67,
+              "team_b_id": 26,
+              "p_a": 0.5147317473888589
+            },
+            {
+              "id": "d5b6ac1e757ae20867e1c825",
+              "round": "quarterfinal",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 28,
+              "team_b_id": 94,
+              "p_a": 0.7107769895203517
+            },
+            {
+              "id": "690c7b34b86fe4cfb57db216",
+              "round": "semifinal",
+              "winner_id": 67,
+              "actual_winner_id": 15,
+              "team_a_id": 67,
+              "team_b_id": 15,
+              "p_a": 0.5561919199909399
+            },
+            {
+              "id": "de076954567337c8349205c3",
+              "round": "semifinal",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 123,
+              "team_b_id": 28,
+              "p_a": 0.436117908741928
+            },
+            {
+              "id": "ba1d122cb3b21b93c7a8f61f",
+              "round": "final",
+              "winner_id": 28,
+              "actual_winner_id": 15,
+              "team_a_id": 28,
+              "team_b_id": 15,
+              "p_a": 0.6550047752156243
+            }
+          ]
+        },
+        "actual_winners": {
+          "0075718f85bb3ec00398509c": 93,
+          "0750eba4dcddb96ad442fa9a": 28,
+          "089386939a72d2b864ebd5c8": 67,
+          "2ce8a9ac57949fe56fefb247": 94,
+          "53c5b903898fe5b83a086c5a": 123,
+          "5df33a2fd5a99d659b1d2d3d": 15,
+          "bd7ffcfdc041b56bc75855aa": 165,
+          "e63bdf117aa83aeec1e18e0c": 26,
+          "29c2efe97bf13f958f053a41": 15,
+          "35bb5135a952986b9de6f08c": 123,
+          "69937291e1c0bb0736396db6": 67,
+          "d5b6ac1e757ae20867e1c825": 28,
+          "690c7b34b86fe4cfb57db216": 15,
+          "de076954567337c8349205c3": 28,
+          "ba1d122cb3b21b93c7a8f61f": 15
+        }
+      }
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "8072d597d24d33442244648b",
+        "round": "final",
+        "left": {
+          "id": "9f3f6ef4c4d4d646f6d8d0c4",
+          "round": "semifinal",
+          "left": {
+            "id": "50104ea0483a65280b577099",
+            "round": "quarterfinal",
+            "left": {
+              "id": "daf71842ddf6db0d46c056f7",
+              "round": "round_of_16",
+              "left": 150,
+              "right": 149,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "916513ba7246e9f7e41f4573",
+              "round": "round_of_16",
+              "left": 79,
+              "right": 26,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "178d1b9cd6441b1519d9cf59",
+            "round": "quarterfinal",
+            "left": {
+              "id": "6dfdb99aef7bf76f65489956",
+              "round": "round_of_16",
+              "left": 71,
+              "right": 80,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "f07cd08d24ba8c0fcd175f65",
+              "round": "round_of_16",
+              "left": 169,
+              "right": 93,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "5a9a1103509ae139155e5df6",
+          "round": "semifinal",
+          "left": {
+            "id": "412cb77f331b3e3b18737cc9",
+            "round": "quarterfinal",
+            "left": {
+              "id": "b29a03f4d99fed5063515810",
+              "round": "round_of_16",
+              "left": 173,
+              "right": 28,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "22f9ab56ccb0a96a713e1060",
+              "round": "round_of_16",
+              "left": 53,
+              "right": 29,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "c133873a7665d1aac0ac8a87",
+            "round": "quarterfinal",
+            "left": {
+              "id": "f623711126e6972a073f6780",
+              "round": "round_of_16",
+              "left": 15,
+              "right": 116,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "80239a3ce5fdc4f66c37f9d7",
+              "round": "round_of_16",
+              "left": 123,
+              "right": 67,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "fbd120400fdaa9adf90eccacba98021007d7a8f87a8ea29b2601a14af3670a3a",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": false,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "e60e48362036be539cd9959b7e328d72a79399164bd87c4e30bd837d01559ed7",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2022-02-14",
+      "snapshot_matches": 22478,
+      "clubs": [
+        {
+          "id": 15,
+          "name": "Chelsea",
+          "crest": "/crests/chelsea.png",
+          "elo": 1702.4366895148014
+        },
+        {
+          "id": 26,
+          "name": "Liverpool",
+          "crest": "/crests/liverpool.png",
+          "elo": 1774.4032002929573
+        },
+        {
+          "id": 28,
+          "name": "Man City",
+          "crest": "/crests/man-city.png",
+          "elo": 1793.216262863982
+        },
+        {
+          "id": 29,
+          "name": "Man United",
+          "crest": "/crests/man-united.png",
+          "elo": 1625.538747630575
+        },
+        {
+          "id": 53,
+          "name": "Atl\u00e9tico de Madrid",
+          "crest": "/crests/laliga-13.png",
+          "elo": 1618.225190453298
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1742.2439680335538
+        },
+        {
+          "id": 71,
+          "name": "Villarreal CF",
+          "crest": "/crests/laliga-1050.png",
+          "elo": 1596.3969238241789
+        },
+        {
+          "id": 79,
+          "name": "Inter",
+          "crest": "/crests/seriea-46.png",
+          "elo": 1728.566005104345
+        },
+        {
+          "id": 80,
+          "name": "Juventus",
+          "crest": "/crests/seriea-506.png",
+          "elo": 1686.7383764131268
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1797.669145850716
+        },
+        {
+          "id": 116,
+          "name": "LOSC",
+          "crest": "/crests/ligue1-1082.png",
+          "elo": 1610.9604679489937
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1739.401692342983
+        },
+        {
+          "id": 149,
+          "name": "Ajax",
+          "crest": null,
+          "elo": 1638.4486696929523
+        },
+        {
+          "id": 150,
+          "name": "Benfica",
+          "crest": null,
+          "elo": 1519.7509522036903
+        },
+        {
+          "id": 169,
+          "name": "Salzburg",
+          "crest": null,
+          "elo": 1529.9484884288504
+        },
+        {
+          "id": 173,
+          "name": "Sporting CP",
+          "crest": null,
+          "elo": 1520.1153153643
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 93,
+          "log_joint_probability": -7.2255923719001585,
+          "joint_probability": 0.0007277213297170423,
+          "matches": [
+            {
+              "id": "daf71842ddf6db0d46c056f7",
+              "round": "round_of_16",
+              "team_a_id": 150,
+              "team_b_id": 149,
+              "p_a": 0.33495560268007035,
+              "p_b": 0.6650443973199296,
+              "winner_id": 149,
+              "selected_probability": 0.6650443973199296,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "916513ba7246e9f7e41f4573",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 26,
+              "p_a": 0.4305723454573398,
+              "p_b": 0.5694276545426602,
+              "winner_id": 26,
+              "selected_probability": 0.5694276545426602,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "6dfdb99aef7bf76f65489956",
+              "round": "round_of_16",
+              "team_a_id": 71,
+              "team_b_id": 80,
+              "p_a": 0.3710706139542086,
+              "p_b": 0.6289293860457914,
+              "winner_id": 80,
+              "selected_probability": 0.6289293860457914,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f07cd08d24ba8c0fcd175f65",
+              "round": "round_of_16",
+              "team_a_id": 169,
+              "team_b_id": 93,
+              "p_a": 0.17926239400604108,
+              "p_b": 0.820737605993959,
+              "winner_id": 93,
+              "selected_probability": 0.820737605993959,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b29a03f4d99fed5063515810",
+              "round": "round_of_16",
+              "team_a_id": 173,
+              "team_b_id": 28,
+              "p_a": 0.17484420063903575,
+              "p_b": 0.8251557993609643,
+              "winner_id": 28,
+              "selected_probability": 0.8251557993609643,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "22f9ab56ccb0a96a713e1060",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 29,
+              "p_a": 0.4838045379879091,
+              "p_b": 0.5161954620120909,
+              "winner_id": 29,
+              "selected_probability": 0.5161954620120909,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f623711126e6972a073f6780",
+              "round": "round_of_16",
+              "team_a_id": 15,
+              "team_b_id": 116,
+              "p_a": 0.6193412099816499,
+              "p_b": 0.3806587900183501,
+              "winner_id": 15,
+              "selected_probability": 0.6193412099816499,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80239a3ce5fdc4f66c37f9d7",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 67,
+              "p_a": 0.49003157378174805,
+              "p_b": 0.509968426218252,
+              "winner_id": 67,
+              "selected_probability": 0.509968426218252,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "50104ea0483a65280b577099",
+              "round": "quarterfinal",
+              "team_a_id": 149,
+              "team_b_id": 26,
+              "p_a": 0.3138385148178687,
+              "p_b": 0.6861614851821314,
+              "winner_id": 26,
+              "selected_probability": 0.6861614851821314,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "178d1b9cd6441b1519d9cf59",
+              "round": "quarterfinal",
+              "team_a_id": 80,
+              "team_b_id": 93,
+              "p_a": 0.34468157313992775,
+              "p_b": 0.6553184268600722,
+              "winner_id": 93,
+              "selected_probability": 0.6553184268600722,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "412cb77f331b3e3b18737cc9",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 29,
+              "p_a": 0.7138872105099938,
+              "p_b": 0.2861127894900062,
+              "winner_id": 28,
+              "selected_probability": 0.7138872105099938,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c133873a7665d1aac0ac8a87",
+              "round": "quarterfinal",
+              "team_a_id": 15,
+              "team_b_id": 67,
+              "p_a": 0.438830465004506,
+              "p_b": 0.5611695349954939,
+              "winner_id": 67,
+              "selected_probability": 0.5611695349954939,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9f3f6ef4c4d4d646f6d8d0c4",
+              "round": "semifinal",
+              "team_a_id": 26,
+              "team_b_id": 93,
+              "p_a": 0.46164532984135587,
+              "p_b": 0.5383546701586441,
+              "winner_id": 93,
+              "selected_probability": 0.5383546701586441,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5a9a1103509ae139155e5df6",
+              "round": "semifinal",
+              "team_a_id": 28,
+              "team_b_id": 67,
+              "p_a": 0.5647201426631775,
+              "p_b": 0.4352798573368225,
+              "winner_id": 28,
+              "selected_probability": 0.5647201426631775,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8072d597d24d33442244648b",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.5052916445641877,
+              "p_b": 0.49470835543581226,
+              "winner_id": 93,
+              "selected_probability": 0.5052916445641877,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 93,
+          "log_joint_probability": -7.2255923719001585,
+          "joint_probability": 0.0007277213297170423,
+          "matches": [
+            {
+              "id": "daf71842ddf6db0d46c056f7",
+              "round": "round_of_16",
+              "team_a_id": 150,
+              "team_b_id": 149,
+              "p_a": 0.33495560268007035,
+              "p_b": 0.6650443973199296,
+              "winner_id": 149,
+              "selected_probability": 0.6650443973199296,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "916513ba7246e9f7e41f4573",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 26,
+              "p_a": 0.4305723454573398,
+              "p_b": 0.5694276545426602,
+              "winner_id": 26,
+              "selected_probability": 0.5694276545426602,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "6dfdb99aef7bf76f65489956",
+              "round": "round_of_16",
+              "team_a_id": 71,
+              "team_b_id": 80,
+              "p_a": 0.3710706139542086,
+              "p_b": 0.6289293860457914,
+              "winner_id": 80,
+              "selected_probability": 0.6289293860457914,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f07cd08d24ba8c0fcd175f65",
+              "round": "round_of_16",
+              "team_a_id": 169,
+              "team_b_id": 93,
+              "p_a": 0.17926239400604108,
+              "p_b": 0.820737605993959,
+              "winner_id": 93,
+              "selected_probability": 0.820737605993959,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b29a03f4d99fed5063515810",
+              "round": "round_of_16",
+              "team_a_id": 173,
+              "team_b_id": 28,
+              "p_a": 0.17484420063903575,
+              "p_b": 0.8251557993609643,
+              "winner_id": 28,
+              "selected_probability": 0.8251557993609643,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "22f9ab56ccb0a96a713e1060",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 29,
+              "p_a": 0.4838045379879091,
+              "p_b": 0.5161954620120909,
+              "winner_id": 29,
+              "selected_probability": 0.5161954620120909,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f623711126e6972a073f6780",
+              "round": "round_of_16",
+              "team_a_id": 15,
+              "team_b_id": 116,
+              "p_a": 0.6193412099816499,
+              "p_b": 0.3806587900183501,
+              "winner_id": 15,
+              "selected_probability": 0.6193412099816499,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80239a3ce5fdc4f66c37f9d7",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 67,
+              "p_a": 0.49003157378174805,
+              "p_b": 0.509968426218252,
+              "winner_id": 67,
+              "selected_probability": 0.509968426218252,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "50104ea0483a65280b577099",
+              "round": "quarterfinal",
+              "team_a_id": 149,
+              "team_b_id": 26,
+              "p_a": 0.3138385148178687,
+              "p_b": 0.6861614851821314,
+              "winner_id": 26,
+              "selected_probability": 0.6861614851821314,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "178d1b9cd6441b1519d9cf59",
+              "round": "quarterfinal",
+              "team_a_id": 80,
+              "team_b_id": 93,
+              "p_a": 0.34468157313992775,
+              "p_b": 0.6553184268600722,
+              "winner_id": 93,
+              "selected_probability": 0.6553184268600722,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "412cb77f331b3e3b18737cc9",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 29,
+              "p_a": 0.7138872105099938,
+              "p_b": 0.2861127894900062,
+              "winner_id": 28,
+              "selected_probability": 0.7138872105099938,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c133873a7665d1aac0ac8a87",
+              "round": "quarterfinal",
+              "team_a_id": 15,
+              "team_b_id": 67,
+              "p_a": 0.438830465004506,
+              "p_b": 0.5611695349954939,
+              "winner_id": 67,
+              "selected_probability": 0.5611695349954939,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9f3f6ef4c4d4d646f6d8d0c4",
+              "round": "semifinal",
+              "team_a_id": 26,
+              "team_b_id": 93,
+              "p_a": 0.46164532984135587,
+              "p_b": 0.5383546701586441,
+              "winner_id": 93,
+              "selected_probability": 0.5383546701586441,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5a9a1103509ae139155e5df6",
+              "round": "semifinal",
+              "team_a_id": 28,
+              "team_b_id": 67,
+              "p_a": 0.5647201426631775,
+              "p_b": 0.4352798573368225,
+              "winner_id": 28,
+              "selected_probability": 0.5647201426631775,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8072d597d24d33442244648b",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.5052916445641877,
+              "p_b": 0.49470835543581226,
+              "winner_id": 93,
+              "selected_probability": 0.5052916445641877,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 8,
+            "total": 15,
+            "accuracy": 0.5333333333333333,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 8,
+            "total": 15,
+            "accuracy": 0.5333333333333333,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 5,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "22f9ab56ccb0a96a713e1060",
+              "round": "round_of_16",
+              "winner_id": 29,
+              "actual_winner_id": 53,
+              "team_a_id": 53,
+              "team_b_id": 29,
+              "p_a": 0.4838045379879091
+            },
+            {
+              "id": "6dfdb99aef7bf76f65489956",
+              "round": "round_of_16",
+              "winner_id": 80,
+              "actual_winner_id": 71,
+              "team_a_id": 71,
+              "team_b_id": 80,
+              "p_a": 0.3710706139542086
+            },
+            {
+              "id": "80239a3ce5fdc4f66c37f9d7",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 123,
+              "team_b_id": 67,
+              "p_a": 0.49003157378174805
+            },
+            {
+              "id": "916513ba7246e9f7e41f4573",
+              "round": "round_of_16",
+              "winner_id": 26,
+              "actual_winner_id": 26,
+              "team_a_id": 79,
+              "team_b_id": 26,
+              "p_a": 0.4305723454573398
+            },
+            {
+              "id": "b29a03f4d99fed5063515810",
+              "round": "round_of_16",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 173,
+              "team_b_id": 28,
+              "p_a": 0.17484420063903575
+            },
+            {
+              "id": "daf71842ddf6db0d46c056f7",
+              "round": "round_of_16",
+              "winner_id": 149,
+              "actual_winner_id": 150,
+              "team_a_id": 150,
+              "team_b_id": 149,
+              "p_a": 0.33495560268007035
+            },
+            {
+              "id": "f07cd08d24ba8c0fcd175f65",
+              "round": "round_of_16",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 169,
+              "team_b_id": 93,
+              "p_a": 0.17926239400604108
+            },
+            {
+              "id": "f623711126e6972a073f6780",
+              "round": "round_of_16",
+              "winner_id": 15,
+              "actual_winner_id": 15,
+              "team_a_id": 15,
+              "team_b_id": 116,
+              "p_a": 0.6193412099816499
+            },
+            {
+              "id": "178d1b9cd6441b1519d9cf59",
+              "round": "quarterfinal",
+              "winner_id": 93,
+              "actual_winner_id": 71,
+              "team_a_id": 71,
+              "team_b_id": 93,
+              "p_a": 0.24088695532952986
+            },
+            {
+              "id": "412cb77f331b3e3b18737cc9",
+              "round": "quarterfinal",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 28,
+              "team_b_id": 53,
+              "p_a": 0.7222221024853439
+            },
+            {
+              "id": "50104ea0483a65280b577099",
+              "round": "quarterfinal",
+              "winner_id": 26,
+              "actual_winner_id": 26,
+              "team_a_id": 150,
+              "team_b_id": 26,
+              "p_a": 0.19034836064277239
+            },
+            {
+              "id": "c133873a7665d1aac0ac8a87",
+              "round": "quarterfinal",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 15,
+              "team_b_id": 67,
+              "p_a": 0.438830465004506
+            },
+            {
+              "id": "5a9a1103509ae139155e5df6",
+              "round": "semifinal",
+              "winner_id": 28,
+              "actual_winner_id": 67,
+              "team_a_id": 28,
+              "team_b_id": 67,
+              "p_a": 0.5647201426631775
+            },
+            {
+              "id": "9f3f6ef4c4d4d646f6d8d0c4",
+              "round": "semifinal",
+              "winner_id": 26,
+              "actual_winner_id": 26,
+              "team_a_id": 26,
+              "team_b_id": 71,
+              "p_a": 0.7256160114269407
+            },
+            {
+              "id": "8072d597d24d33442244648b",
+              "round": "final",
+              "winner_id": 26,
+              "actual_winner_id": 67,
+              "team_a_id": 26,
+              "team_b_id": 67,
+              "p_a": 0.5381393914863328
+            }
+          ]
+        },
+        "actual_winners": {
+          "22f9ab56ccb0a96a713e1060": 53,
+          "6dfdb99aef7bf76f65489956": 71,
+          "80239a3ce5fdc4f66c37f9d7": 67,
+          "916513ba7246e9f7e41f4573": 26,
+          "b29a03f4d99fed5063515810": 28,
+          "daf71842ddf6db0d46c056f7": 150,
+          "f07cd08d24ba8c0fcd175f65": 93,
+          "f623711126e6972a073f6780": 15,
+          "178d1b9cd6441b1519d9cf59": 71,
+          "412cb77f331b3e3b18737cc9": 28,
+          "50104ea0483a65280b577099": 26,
+          "c133873a7665d1aac0ac8a87": 67,
+          "5a9a1103509ae139155e5df6": 67,
+          "9f3f6ef4c4d4d646f6d8d0c4": 26,
+          "8072d597d24d33442244648b": 67
+        }
+      }
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "ac72164462c10ddc1d704b4c",
+        "round": "final",
+        "left": {
+          "id": "8c5c0617d981cf9ab8384e1b",
+          "round": "semifinal",
+          "left": {
+            "id": "539b230581dcd706125741ed",
+            "round": "quarterfinal",
+            "left": {
+              "id": "9a29e5d6cce8840090af92da",
+              "round": "round_of_16",
+              "left": 26,
+              "right": 67,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "7ebb521af8ba241967c76a0e",
+              "round": "round_of_16",
+              "left": 94,
+              "right": 15,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "80963eafe479baf35f1df6a5",
+            "round": "quarterfinal",
+            "left": {
+              "id": "77d20476ff6424e80929abe7",
+              "round": "round_of_16",
+              "left": 105,
+              "right": 28,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "c0b40320342953412979f7cf",
+              "round": "round_of_16",
+              "left": 123,
+              "right": 93,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "e0eecc88c8669441435ad335",
+          "round": "semifinal",
+          "left": {
+            "id": "d9fa28e5c039954d793ac3fd",
+            "round": "quarterfinal",
+            "left": {
+              "id": "63f5505e158c9864771749b8",
+              "round": "round_of_16",
+              "left": 83,
+              "right": 45,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "fdc96d094c982aef1dad7b96",
+              "round": "round_of_16",
+              "left": 95,
+              "right": 85,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "13ad19491e47d2787902cad0",
+            "round": "quarterfinal",
+            "left": {
+              "id": "c41599fb8b785340c64ea8c0",
+              "round": "round_of_16",
+              "left": 153,
+              "right": 150,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "f5e469ffe03f7d3ac3880b7b",
+              "round": "round_of_16",
+              "left": 79,
+              "right": 165,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "f2ba6affd70e9399d3f085726be8017cadb2d3710bfb8d850430757effd62f96",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": false,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "5705f4220e930876defbad7d5f6f5f65a4b4130ef9b804735300c01f2a850228",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2023-02-13",
+      "snapshot_matches": 24335,
+      "clubs": [
+        {
+          "id": 15,
+          "name": "Chelsea",
+          "crest": "/crests/chelsea.png",
+          "elo": 1622.9374564138257
+        },
+        {
+          "id": 26,
+          "name": "Liverpool",
+          "crest": "/crests/liverpool.png",
+          "elo": 1680.7139747532226
+        },
+        {
+          "id": 28,
+          "name": "Man City",
+          "crest": "/crests/man-city.png",
+          "elo": 1749.0656194974094
+        },
+        {
+          "id": 45,
+          "name": "Tottenham",
+          "crest": "/crests/tottenham.png",
+          "elo": 1619.6490519791143
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1713.756079428881
+        },
+        {
+          "id": 79,
+          "name": "Inter",
+          "crest": "/crests/seriea-46.png",
+          "elo": 1680.4285533266545
+        },
+        {
+          "id": 83,
+          "name": "Milan",
+          "crest": "/crests/seriea-5.png",
+          "elo": 1631.3568175643563
+        },
+        {
+          "id": 85,
+          "name": "Napoli",
+          "crest": "/crests/seriea-6195.png",
+          "elo": 1776.2868995567953
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1782.1245795789373
+        },
+        {
+          "id": 94,
+          "name": "Borussia Dortmund",
+          "crest": "/crests/bundesliga-16.png",
+          "elo": 1649.6382786085953
+        },
+        {
+          "id": 95,
+          "name": "Eintracht Frankfurt",
+          "crest": "/crests/bundesliga-24.png",
+          "elo": 1581.9553093636766
+        },
+        {
+          "id": 105,
+          "name": "RB Leipzig",
+          "crest": "/crests/bundesliga-23826.png",
+          "elo": 1648.110970293385
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1727.2289444357277
+        },
+        {
+          "id": 150,
+          "name": "Benfica",
+          "crest": null,
+          "elo": 1603.3286218827964
+        },
+        {
+          "id": 153,
+          "name": "Club Brugge",
+          "crest": null,
+          "elo": 1518.2635038860676
+        },
+        {
+          "id": 165,
+          "name": "Porto",
+          "crest": null,
+          "elo": 1583.7601714864256
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 93,
+          "log_joint_probability": -7.759502383878753,
+          "joint_probability": 0.0004266688451639478,
+          "matches": [
+            {
+              "id": "9a29e5d6cce8840090af92da",
+              "round": "round_of_16",
+              "team_a_id": 26,
+              "team_b_id": 67,
+              "p_a": 0.44815265346678673,
+              "p_b": 0.5518473465332132,
+              "winner_id": 67,
+              "selected_probability": 0.5518473465332132,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "7ebb521af8ba241967c76a0e",
+              "round": "round_of_16",
+              "team_a_id": 94,
+              "team_b_id": 15,
+              "p_a": 0.5311933435500509,
+              "p_b": 0.4688066564499491,
+              "winner_id": 94,
+              "selected_probability": 0.5311933435500509,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "77d20476ff6424e80929abe7",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 28,
+              "p_a": 0.35737972295324894,
+              "p_b": 0.6426202770467511,
+              "winner_id": 28,
+              "selected_probability": 0.6426202770467511,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c0b40320342953412979f7cf",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.41825688943209244,
+              "p_b": 0.5817431105679076,
+              "winner_id": 93,
+              "selected_probability": 0.5817431105679076,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "63f5505e158c9864771749b8",
+              "round": "round_of_16",
+              "team_a_id": 83,
+              "team_b_id": 45,
+              "p_a": 0.5103262076553092,
+              "p_b": 0.4896737923446908,
+              "winner_id": 83,
+              "selected_probability": 0.5103262076553092,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fdc96d094c982aef1dad7b96",
+              "round": "round_of_16",
+              "team_a_id": 95,
+              "team_b_id": 85,
+              "p_a": 0.24809111149736385,
+              "p_b": 0.7519088885026362,
+              "winner_id": 85,
+              "selected_probability": 0.7519088885026362,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c41599fb8b785340c64ea8c0",
+              "round": "round_of_16",
+              "team_a_id": 153,
+              "team_b_id": 150,
+              "p_a": 0.3779812202485626,
+              "p_b": 0.6220187797514374,
+              "winner_id": 150,
+              "selected_probability": 0.6220187797514374,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f5e469ffe03f7d3ac3880b7b",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 165,
+              "p_a": 0.6261822032409292,
+              "p_b": 0.3738177967590708,
+              "winner_id": 79,
+              "selected_probability": 0.6261822032409292,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "539b230581dcd706125741ed",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 94,
+              "p_a": 0.5826911393074238,
+              "p_b": 0.4173088606925762,
+              "winner_id": 67,
+              "selected_probability": 0.5826911393074238,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80963eafe479baf35f1df6a5",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 93,
+              "p_a": 0.4481294217991815,
+              "p_b": 0.5518705782008184,
+              "winner_id": 93,
+              "selected_probability": 0.5518705782008184,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d9fa28e5c039954d793ac3fd",
+              "round": "quarterfinal",
+              "team_a_id": 83,
+              "team_b_id": 85,
+              "p_a": 0.3031565493560798,
+              "p_b": 0.6968434506439203,
+              "winner_id": 85,
+              "selected_probability": 0.6968434506439203,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "13ad19491e47d2787902cad0",
+              "round": "quarterfinal",
+              "team_a_id": 150,
+              "team_b_id": 79,
+              "p_a": 0.38847877151156857,
+              "p_b": 0.6115212284884315,
+              "winner_id": 79,
+              "selected_probability": 0.6115212284884315,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8c5c0617d981cf9ab8384e1b",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 93,
+              "p_a": 0.4001038443625534,
+              "p_b": 0.5998961556374466,
+              "winner_id": 93,
+              "selected_probability": 0.5998961556374466,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "e0eecc88c8669441435ad335",
+              "round": "semifinal",
+              "team_a_id": 85,
+              "team_b_id": 79,
+              "p_a": 0.6251201746350454,
+              "p_b": 0.37487982536495457,
+              "winner_id": 85,
+              "selected_probability": 0.6251201746350454,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ac72164462c10ddc1d704b4c",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 85,
+              "p_a": 0.506937429059426,
+              "p_b": 0.49306257094057404,
+              "winner_id": 93,
+              "selected_probability": 0.506937429059426,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 93,
+          "log_joint_probability": -7.759502383878753,
+          "joint_probability": 0.0004266688451639478,
+          "matches": [
+            {
+              "id": "9a29e5d6cce8840090af92da",
+              "round": "round_of_16",
+              "team_a_id": 26,
+              "team_b_id": 67,
+              "p_a": 0.44815265346678673,
+              "p_b": 0.5518473465332132,
+              "winner_id": 67,
+              "selected_probability": 0.5518473465332132,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "7ebb521af8ba241967c76a0e",
+              "round": "round_of_16",
+              "team_a_id": 94,
+              "team_b_id": 15,
+              "p_a": 0.5311933435500509,
+              "p_b": 0.4688066564499491,
+              "winner_id": 94,
+              "selected_probability": 0.5311933435500509,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "77d20476ff6424e80929abe7",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 28,
+              "p_a": 0.35737972295324894,
+              "p_b": 0.6426202770467511,
+              "winner_id": 28,
+              "selected_probability": 0.6426202770467511,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c0b40320342953412979f7cf",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.41825688943209244,
+              "p_b": 0.5817431105679076,
+              "winner_id": 93,
+              "selected_probability": 0.5817431105679076,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "63f5505e158c9864771749b8",
+              "round": "round_of_16",
+              "team_a_id": 83,
+              "team_b_id": 45,
+              "p_a": 0.5103262076553092,
+              "p_b": 0.4896737923446908,
+              "winner_id": 83,
+              "selected_probability": 0.5103262076553092,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fdc96d094c982aef1dad7b96",
+              "round": "round_of_16",
+              "team_a_id": 95,
+              "team_b_id": 85,
+              "p_a": 0.24809111149736385,
+              "p_b": 0.7519088885026362,
+              "winner_id": 85,
+              "selected_probability": 0.7519088885026362,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c41599fb8b785340c64ea8c0",
+              "round": "round_of_16",
+              "team_a_id": 153,
+              "team_b_id": 150,
+              "p_a": 0.3779812202485626,
+              "p_b": 0.6220187797514374,
+              "winner_id": 150,
+              "selected_probability": 0.6220187797514374,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "f5e469ffe03f7d3ac3880b7b",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 165,
+              "p_a": 0.6261822032409292,
+              "p_b": 0.3738177967590708,
+              "winner_id": 79,
+              "selected_probability": 0.6261822032409292,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "539b230581dcd706125741ed",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 94,
+              "p_a": 0.5826911393074238,
+              "p_b": 0.4173088606925762,
+              "winner_id": 67,
+              "selected_probability": 0.5826911393074238,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80963eafe479baf35f1df6a5",
+              "round": "quarterfinal",
+              "team_a_id": 28,
+              "team_b_id": 93,
+              "p_a": 0.4481294217991815,
+              "p_b": 0.5518705782008184,
+              "winner_id": 93,
+              "selected_probability": 0.5518705782008184,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d9fa28e5c039954d793ac3fd",
+              "round": "quarterfinal",
+              "team_a_id": 83,
+              "team_b_id": 85,
+              "p_a": 0.3031565493560798,
+              "p_b": 0.6968434506439203,
+              "winner_id": 85,
+              "selected_probability": 0.6968434506439203,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "13ad19491e47d2787902cad0",
+              "round": "quarterfinal",
+              "team_a_id": 150,
+              "team_b_id": 79,
+              "p_a": 0.38847877151156857,
+              "p_b": 0.6115212284884315,
+              "winner_id": 79,
+              "selected_probability": 0.6115212284884315,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8c5c0617d981cf9ab8384e1b",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 93,
+              "p_a": 0.4001038443625534,
+              "p_b": 0.5998961556374466,
+              "winner_id": 93,
+              "selected_probability": 0.5998961556374466,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "e0eecc88c8669441435ad335",
+              "round": "semifinal",
+              "team_a_id": 85,
+              "team_b_id": 79,
+              "p_a": 0.6251201746350454,
+              "p_b": 0.37487982536495457,
+              "winner_id": 85,
+              "selected_probability": 0.6251201746350454,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ac72164462c10ddc1d704b4c",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 85,
+              "p_a": 0.506937429059426,
+              "p_b": 0.49306257094057404,
+              "winner_id": 93,
+              "selected_probability": 0.506937429059426,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 2,
+                "total": 2
+              },
+              "final": {
+                "correct": 1,
+                "total": 1
+              }
+            },
+            "correct_finalists": 2,
+            "finalists_total": 2,
+            "champion_correct": true,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "63f5505e158c9864771749b8",
+              "round": "round_of_16",
+              "winner_id": 83,
+              "actual_winner_id": 83,
+              "team_a_id": 83,
+              "team_b_id": 45,
+              "p_a": 0.5103262076553092
+            },
+            {
+              "id": "77d20476ff6424e80929abe7",
+              "round": "round_of_16",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 105,
+              "team_b_id": 28,
+              "p_a": 0.35737972295324894
+            },
+            {
+              "id": "7ebb521af8ba241967c76a0e",
+              "round": "round_of_16",
+              "winner_id": 94,
+              "actual_winner_id": 15,
+              "team_a_id": 94,
+              "team_b_id": 15,
+              "p_a": 0.5311933435500509
+            },
+            {
+              "id": "9a29e5d6cce8840090af92da",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 26,
+              "team_b_id": 67,
+              "p_a": 0.44815265346678673
+            },
+            {
+              "id": "c0b40320342953412979f7cf",
+              "round": "round_of_16",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.41825688943209244
+            },
+            {
+              "id": "c41599fb8b785340c64ea8c0",
+              "round": "round_of_16",
+              "winner_id": 150,
+              "actual_winner_id": 150,
+              "team_a_id": 153,
+              "team_b_id": 150,
+              "p_a": 0.3779812202485626
+            },
+            {
+              "id": "f5e469ffe03f7d3ac3880b7b",
+              "round": "round_of_16",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 79,
+              "team_b_id": 165,
+              "p_a": 0.6261822032409292
+            },
+            {
+              "id": "fdc96d094c982aef1dad7b96",
+              "round": "round_of_16",
+              "winner_id": 85,
+              "actual_winner_id": 85,
+              "team_a_id": 95,
+              "team_b_id": 85,
+              "p_a": 0.24809111149736385
+            },
+            {
+              "id": "13ad19491e47d2787902cad0",
+              "round": "quarterfinal",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 150,
+              "team_b_id": 79,
+              "p_a": 0.38847877151156857
+            },
+            {
+              "id": "539b230581dcd706125741ed",
+              "round": "quarterfinal",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 67,
+              "team_b_id": 15,
+              "p_a": 0.6184871389036519
+            },
+            {
+              "id": "80963eafe479baf35f1df6a5",
+              "round": "quarterfinal",
+              "winner_id": 93,
+              "actual_winner_id": 28,
+              "team_a_id": 28,
+              "team_b_id": 93,
+              "p_a": 0.4481294217991815
+            },
+            {
+              "id": "d9fa28e5c039954d793ac3fd",
+              "round": "quarterfinal",
+              "winner_id": 85,
+              "actual_winner_id": 83,
+              "team_a_id": 83,
+              "team_b_id": 85,
+              "p_a": 0.3031565493560798
+            },
+            {
+              "id": "8c5c0617d981cf9ab8384e1b",
+              "round": "semifinal",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.44502954184182486
+            },
+            {
+              "id": "e0eecc88c8669441435ad335",
+              "round": "semifinal",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 83,
+              "team_b_id": 79,
+              "p_a": 0.42617519307905155
+            },
+            {
+              "id": "ac72164462c10ddc1d704b4c",
+              "round": "final",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 28,
+              "team_b_id": 79,
+              "p_a": 0.5808118371768446
+            }
+          ]
+        },
+        "actual_winners": {
+          "63f5505e158c9864771749b8": 83,
+          "77d20476ff6424e80929abe7": 28,
+          "7ebb521af8ba241967c76a0e": 15,
+          "9a29e5d6cce8840090af92da": 67,
+          "c0b40320342953412979f7cf": 93,
+          "c41599fb8b785340c64ea8c0": 150,
+          "f5e469ffe03f7d3ac3880b7b": 79,
+          "fdc96d094c982aef1dad7b96": 85,
+          "13ad19491e47d2787902cad0": 79,
+          "539b230581dcd706125741ed": 67,
+          "80963eafe479baf35f1df6a5": 28,
+          "d9fa28e5c039954d793ac3fd": 83,
+          "8c5c0617d981cf9ab8384e1b": 28,
+          "e0eecc88c8669441435ad335": 79,
+          "ac72164462c10ddc1d704b4c": 28
+        }
+      }
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "8c544ab1fa4fe4f065e09f42",
+        "round": "final",
+        "left": {
+          "id": "fe9fa0f68cbea3b1ab20f269",
+          "round": "semifinal",
+          "left": {
+            "id": "10b8a7149b650ed9098da062",
+            "round": "quarterfinal",
+            "left": {
+              "id": "babc5b67b48ba1900e1f3941",
+              "round": "round_of_16",
+              "left": 79,
+              "right": 53,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "31a8aeec699a351dc08e10bf",
+              "round": "round_of_16",
+              "left": 163,
+              "right": 94,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "ce1b8b2b259c7f30c3b88440",
+            "round": "quarterfinal",
+            "left": {
+              "id": "c15e8aa9cee0cbb468e4f27b",
+              "round": "round_of_16",
+              "left": 123,
+              "right": 68,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "37d7a2aaaf05b5d9d84ec39c",
+              "round": "round_of_16",
+              "left": 85,
+              "right": 58,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "d839148c2c8e8a40ece2affc",
+          "round": "semifinal",
+          "left": {
+            "id": "5a5726040b5223552ab71eaa",
+            "round": "quarterfinal",
+            "left": {
+              "id": "32f1162d52aca2ce0fb87587",
+              "round": "round_of_16",
+              "left": 165,
+              "right": 1,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "5f530b60bd5600ad6491080a",
+              "round": "round_of_16",
+              "left": 81,
+              "right": 93,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "88d553bf453b194a55bc4d8c",
+            "round": "quarterfinal",
+            "left": {
+              "id": "8f60e6f46d22d644cc49eb03",
+              "round": "round_of_16",
+              "left": 105,
+              "right": 67,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "9cd0dbc73bc20733eebe6ecd",
+              "round": "round_of_16",
+              "left": 154,
+              "right": 28,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "ed29faafc13b915c3526d7288c0afafad7db38af6dd8830d842071a3312c30dd",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": false,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "96786fbabf8e2a156a6baafa885f88a11eedaec5588dab684594354bf9253a3e",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2024-02-12",
+      "snapshot_matches": 26319,
+      "clubs": [
+        {
+          "id": 1,
+          "name": "Arsenal",
+          "crest": "/crests/arsenal.png",
+          "elo": 1708.593734353746
+        },
+        {
+          "id": 28,
+          "name": "Man City",
+          "crest": "/crests/man-city.png",
+          "elo": 1793.1937912069682
+        },
+        {
+          "id": 53,
+          "name": "Atl\u00e9tico de Madrid",
+          "crest": "/crests/laliga-13.png",
+          "elo": 1661.8321479329775
+        },
+        {
+          "id": 58,
+          "name": "FC Barcelona",
+          "crest": "/crests/laliga-131.png",
+          "elo": 1660.2311219178612
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1778.3898765188678
+        },
+        {
+          "id": 68,
+          "name": "Real Sociedad",
+          "crest": "/crests/laliga-681.png",
+          "elo": 1608.8061617635174
+        },
+        {
+          "id": 79,
+          "name": "Inter",
+          "crest": "/crests/seriea-46.png",
+          "elo": 1770.1727938192278
+        },
+        {
+          "id": 81,
+          "name": "Lazio",
+          "crest": "/crests/seriea-398.png",
+          "elo": 1601.3504128991824
+        },
+        {
+          "id": 85,
+          "name": "Napoli",
+          "crest": "/crests/seriea-6195.png",
+          "elo": 1612.88264818198
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1739.536173954089
+        },
+        {
+          "id": 94,
+          "name": "Borussia Dortmund",
+          "crest": "/crests/bundesliga-16.png",
+          "elo": 1672.673770441367
+        },
+        {
+          "id": 105,
+          "name": "RB Leipzig",
+          "crest": "/crests/bundesliga-23826.png",
+          "elo": 1621.6792574843923
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1718.2003792473129
+        },
+        {
+          "id": 154,
+          "name": "Copenhagen",
+          "crest": null,
+          "elo": 1510.0848087372242
+        },
+        {
+          "id": 163,
+          "name": "PSV",
+          "crest": null,
+          "elo": 1524.6733725850258
+        },
+        {
+          "id": 165,
+          "name": "Porto",
+          "crest": null,
+          "elo": 1585.7526808783248
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 28,
+          "log_joint_probability": -7.114651861615757,
+          "joint_probability": 0.0008131037346864222,
+          "matches": [
+            {
+              "id": "babc5b67b48ba1900e1f3941",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 53,
+              "p_a": 0.6413675717516408,
+              "p_b": 0.35863242824835917,
+              "winner_id": 79,
+              "selected_probability": 0.6413675717516408,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "31a8aeec699a351dc08e10bf",
+              "round": "round_of_16",
+              "team_a_id": 163,
+              "team_b_id": 94,
+              "p_a": 0.29955545640775155,
+              "p_b": 0.7004445435922484,
+              "winner_id": 94,
+              "selected_probability": 0.7004445435922484,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c15e8aa9cee0cbb468e4f27b",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 68,
+              "p_a": 0.6427241581434089,
+              "p_b": 0.3572758418565911,
+              "winner_id": 123,
+              "selected_probability": 0.6427241581434089,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "37d7a2aaaf05b5d9d84ec39c",
+              "round": "round_of_16",
+              "team_a_id": 85,
+              "team_b_id": 58,
+              "p_a": 0.4285398981153131,
+              "p_b": 0.5714601018846869,
+              "winner_id": 58,
+              "selected_probability": 0.5714601018846869,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "32f1162d52aca2ce0fb87587",
+              "round": "round_of_16",
+              "team_a_id": 165,
+              "team_b_id": 1,
+              "p_a": 0.3298523670955022,
+              "p_b": 0.6701476329044977,
+              "winner_id": 1,
+              "selected_probability": 0.6701476329044977,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5f530b60bd5600ad6491080a",
+              "round": "round_of_16",
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.31118987731733827,
+              "p_b": 0.6888101226826617,
+              "winner_id": 93,
+              "selected_probability": 0.6888101226826617,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8f60e6f46d22d644cc49eb03",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 67,
+              "p_a": 0.2894370912290633,
+              "p_b": 0.7105629087709366,
+              "winner_id": 67,
+              "selected_probability": 0.7105629087709366,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9cd0dbc73bc20733eebe6ecd",
+              "round": "round_of_16",
+              "team_a_id": 154,
+              "team_b_id": 28,
+              "p_a": 0.16687313085751132,
+              "p_b": 0.8331268691424887,
+              "winner_id": 28,
+              "selected_probability": 0.8331268691424887,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "10b8a7149b650ed9098da062",
+              "round": "quarterfinal",
+              "team_a_id": 79,
+              "team_b_id": 94,
+              "p_a": 0.6272851414078836,
+              "p_b": 0.3727148585921164,
+              "winner_id": 79,
+              "selected_probability": 0.6272851414078836,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ce1b8b2b259c7f30c3b88440",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 58,
+              "p_a": 0.5743306979259538,
+              "p_b": 0.4256693020740462,
+              "winner_id": 123,
+              "selected_probability": 0.5743306979259538,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5a5726040b5223552ab71eaa",
+              "round": "quarterfinal",
+              "team_a_id": 1,
+              "team_b_id": 93,
+              "p_a": 0.4510629031387558,
+              "p_b": 0.5489370968612441,
+              "winner_id": 93,
+              "selected_probability": 0.5489370968612441,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "88d553bf453b194a55bc4d8c",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.47341746856325306,
+              "p_b": 0.5265825314367469,
+              "winner_id": 28,
+              "selected_probability": 0.5265825314367469,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fe9fa0f68cbea3b1ab20f269",
+              "round": "semifinal",
+              "team_a_id": 79,
+              "team_b_id": 123,
+              "p_a": 0.566122762367563,
+              "p_b": 0.433877237632437,
+              "winner_id": 79,
+              "selected_probability": 0.566122762367563,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d839148c2c8e8a40ece2affc",
+              "round": "semifinal",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.41995100287754095,
+              "p_b": 0.580048997122459,
+              "winner_id": 28,
+              "selected_probability": 0.580048997122459,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8c544ab1fa4fe4f065e09f42",
+              "round": "final",
+              "team_a_id": 79,
+              "team_b_id": 28,
+              "p_a": 0.47267346828041307,
+              "p_b": 0.527326531719587,
+              "winner_id": 28,
+              "selected_probability": 0.527326531719587,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 28,
+          "log_joint_probability": -7.114651861615757,
+          "joint_probability": 0.0008131037346864222,
+          "matches": [
+            {
+              "id": "babc5b67b48ba1900e1f3941",
+              "round": "round_of_16",
+              "team_a_id": 79,
+              "team_b_id": 53,
+              "p_a": 0.6413675717516408,
+              "p_b": 0.35863242824835917,
+              "winner_id": 79,
+              "selected_probability": 0.6413675717516408,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "31a8aeec699a351dc08e10bf",
+              "round": "round_of_16",
+              "team_a_id": 163,
+              "team_b_id": 94,
+              "p_a": 0.29955545640775155,
+              "p_b": 0.7004445435922484,
+              "winner_id": 94,
+              "selected_probability": 0.7004445435922484,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c15e8aa9cee0cbb468e4f27b",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 68,
+              "p_a": 0.6427241581434089,
+              "p_b": 0.3572758418565911,
+              "winner_id": 123,
+              "selected_probability": 0.6427241581434089,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "37d7a2aaaf05b5d9d84ec39c",
+              "round": "round_of_16",
+              "team_a_id": 85,
+              "team_b_id": 58,
+              "p_a": 0.4285398981153131,
+              "p_b": 0.5714601018846869,
+              "winner_id": 58,
+              "selected_probability": 0.5714601018846869,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "32f1162d52aca2ce0fb87587",
+              "round": "round_of_16",
+              "team_a_id": 165,
+              "team_b_id": 1,
+              "p_a": 0.3298523670955022,
+              "p_b": 0.6701476329044977,
+              "winner_id": 1,
+              "selected_probability": 0.6701476329044977,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5f530b60bd5600ad6491080a",
+              "round": "round_of_16",
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.31118987731733827,
+              "p_b": 0.6888101226826617,
+              "winner_id": 93,
+              "selected_probability": 0.6888101226826617,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8f60e6f46d22d644cc49eb03",
+              "round": "round_of_16",
+              "team_a_id": 105,
+              "team_b_id": 67,
+              "p_a": 0.2894370912290633,
+              "p_b": 0.7105629087709366,
+              "winner_id": 67,
+              "selected_probability": 0.7105629087709366,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9cd0dbc73bc20733eebe6ecd",
+              "round": "round_of_16",
+              "team_a_id": 154,
+              "team_b_id": 28,
+              "p_a": 0.16687313085751132,
+              "p_b": 0.8331268691424887,
+              "winner_id": 28,
+              "selected_probability": 0.8331268691424887,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "10b8a7149b650ed9098da062",
+              "round": "quarterfinal",
+              "team_a_id": 79,
+              "team_b_id": 94,
+              "p_a": 0.6272851414078836,
+              "p_b": 0.3727148585921164,
+              "winner_id": 79,
+              "selected_probability": 0.6272851414078836,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ce1b8b2b259c7f30c3b88440",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 58,
+              "p_a": 0.5743306979259538,
+              "p_b": 0.4256693020740462,
+              "winner_id": 123,
+              "selected_probability": 0.5743306979259538,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "5a5726040b5223552ab71eaa",
+              "round": "quarterfinal",
+              "team_a_id": 1,
+              "team_b_id": 93,
+              "p_a": 0.4510629031387558,
+              "p_b": 0.5489370968612441,
+              "winner_id": 93,
+              "selected_probability": 0.5489370968612441,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "88d553bf453b194a55bc4d8c",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.47341746856325306,
+              "p_b": 0.5265825314367469,
+              "winner_id": 28,
+              "selected_probability": 0.5265825314367469,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fe9fa0f68cbea3b1ab20f269",
+              "round": "semifinal",
+              "team_a_id": 79,
+              "team_b_id": 123,
+              "p_a": 0.566122762367563,
+              "p_b": 0.433877237632437,
+              "winner_id": 79,
+              "selected_probability": 0.566122762367563,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d839148c2c8e8a40ece2affc",
+              "round": "semifinal",
+              "team_a_id": 93,
+              "team_b_id": 28,
+              "p_a": 0.41995100287754095,
+              "p_b": 0.580048997122459,
+              "winner_id": 28,
+              "selected_probability": 0.580048997122459,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8c544ab1fa4fe4f065e09f42",
+              "round": "final",
+              "team_a_id": 79,
+              "team_b_id": 28,
+              "p_a": 0.47267346828041307,
+              "p_b": 0.527326531719587,
+              "winner_id": 28,
+              "selected_probability": 0.527326531719587,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 2,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 0,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 0,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 9,
+            "total": 15,
+            "accuracy": 0.6,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 7,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 1,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": true,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "31a8aeec699a351dc08e10bf",
+              "round": "round_of_16",
+              "winner_id": 94,
+              "actual_winner_id": 94,
+              "team_a_id": 163,
+              "team_b_id": 94,
+              "p_a": 0.29955545640775155
+            },
+            {
+              "id": "32f1162d52aca2ce0fb87587",
+              "round": "round_of_16",
+              "winner_id": 1,
+              "actual_winner_id": 1,
+              "team_a_id": 165,
+              "team_b_id": 1,
+              "p_a": 0.3298523670955022
+            },
+            {
+              "id": "37d7a2aaaf05b5d9d84ec39c",
+              "round": "round_of_16",
+              "winner_id": 58,
+              "actual_winner_id": 58,
+              "team_a_id": 85,
+              "team_b_id": 58,
+              "p_a": 0.4285398981153131
+            },
+            {
+              "id": "5f530b60bd5600ad6491080a",
+              "round": "round_of_16",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 81,
+              "team_b_id": 93,
+              "p_a": 0.31118987731733827
+            },
+            {
+              "id": "8f60e6f46d22d644cc49eb03",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 105,
+              "team_b_id": 67,
+              "p_a": 0.2894370912290633
+            },
+            {
+              "id": "9cd0dbc73bc20733eebe6ecd",
+              "round": "round_of_16",
+              "winner_id": 28,
+              "actual_winner_id": 28,
+              "team_a_id": 154,
+              "team_b_id": 28,
+              "p_a": 0.16687313085751132
+            },
+            {
+              "id": "babc5b67b48ba1900e1f3941",
+              "round": "round_of_16",
+              "winner_id": 79,
+              "actual_winner_id": 53,
+              "team_a_id": 79,
+              "team_b_id": 53,
+              "p_a": 0.6413675717516408
+            },
+            {
+              "id": "c15e8aa9cee0cbb468e4f27b",
+              "round": "round_of_16",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 68,
+              "p_a": 0.6427241581434089
+            },
+            {
+              "id": "10b8a7149b650ed9098da062",
+              "round": "quarterfinal",
+              "winner_id": 94,
+              "actual_winner_id": 94,
+              "team_a_id": 53,
+              "team_b_id": 94,
+              "p_a": 0.4789262374642818
+            },
+            {
+              "id": "5a5726040b5223552ab71eaa",
+              "round": "quarterfinal",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 1,
+              "team_b_id": 93,
+              "p_a": 0.4510629031387558
+            },
+            {
+              "id": "88d553bf453b194a55bc4d8c",
+              "round": "quarterfinal",
+              "winner_id": 28,
+              "actual_winner_id": 67,
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.47341746856325306
+            },
+            {
+              "id": "ce1b8b2b259c7f30c3b88440",
+              "round": "quarterfinal",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 58,
+              "p_a": 0.5743306979259538
+            },
+            {
+              "id": "d839148c2c8e8a40ece2affc",
+              "round": "semifinal",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 93,
+              "team_b_id": 67,
+              "p_a": 0.4401711170656946
+            },
+            {
+              "id": "fe9fa0f68cbea3b1ab20f269",
+              "round": "semifinal",
+              "winner_id": 123,
+              "actual_winner_id": 94,
+              "team_a_id": 94,
+              "team_b_id": 123,
+              "p_a": 0.43102828000539084
+            },
+            {
+              "id": "8c544ab1fa4fe4f065e09f42",
+              "round": "final",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 94,
+              "team_b_id": 67,
+              "p_a": 0.37711636626919104
+            }
+          ]
+        },
+        "actual_winners": {
+          "31a8aeec699a351dc08e10bf": 94,
+          "32f1162d52aca2ce0fb87587": 1,
+          "37d7a2aaaf05b5d9d84ec39c": 58,
+          "5f530b60bd5600ad6491080a": 93,
+          "8f60e6f46d22d644cc49eb03": 67,
+          "9cd0dbc73bc20733eebe6ecd": 28,
+          "babc5b67b48ba1900e1f3941": 53,
+          "c15e8aa9cee0cbb468e4f27b": 123,
+          "10b8a7149b650ed9098da062": 94,
+          "5a5726040b5223552ab71eaa": 93,
+          "88d553bf453b194a55bc4d8c": 67,
+          "ce1b8b2b259c7f30c3b88440": 123,
+          "d839148c2c8e8a40ece2affc": 67,
+          "fe9fa0f68cbea3b1ab20f269": 94,
+          "8c544ab1fa4fe4f065e09f42": 67
+        }
+      }
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "22772fee249d32decb2e4c39",
+        "round": "final",
+        "left": {
+          "id": "89f791c5b7317268aae19dea",
+          "round": "semifinal",
+          "left": {
+            "id": "cfcca03ae51961c031e0387b",
+            "round": "quarterfinal",
+            "left": {
+              "id": "b6817a8d770c8ef6ef20c755",
+              "round": "round_of_16",
+              "left": 163,
+              "right": 1,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "d663cb2a5010b11deacb40b1",
+              "round": "round_of_16",
+              "left": 67,
+              "right": 53,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "1091b9d4ed120f818cccfe12",
+            "round": "quarterfinal",
+            "left": {
+              "id": "80cd61b1c7dfe8db1e4d468f",
+              "round": "round_of_16",
+              "left": 123,
+              "right": 26,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "8f38bd09158052f8e539ed81",
+              "round": "round_of_16",
+              "left": 153,
+              "right": 2,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "8ab9142800780fe17671379d",
+          "round": "semifinal",
+          "left": {
+            "id": "bb363368c63fcf578081ecdf",
+            "round": "quarterfinal",
+            "left": {
+              "id": "fdd1989fba4184ee8b3d1265",
+              "round": "round_of_16",
+              "left": 150,
+              "right": 58,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "ee7abb0ec7be5caf4ce68fa8",
+              "round": "round_of_16",
+              "left": 94,
+              "right": 116,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "a69bab131bfd2f1d9439102b",
+            "round": "quarterfinal",
+            "left": {
+              "id": "a9e2a2beb573faf57d471369",
+              "round": "round_of_16",
+              "left": 93,
+              "right": 101,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "4070bcda6ae7a3d06cdb08e8",
+              "round": "round_of_16",
+              "left": 157,
+              "right": 79,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "d62e967a828429e6d363c2b2d09e5fe4efe57b469137c4dd25c51895397c16b9",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": false,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "c4fc4fe63f5a57dd47f2ced4a147e1ae427b1319fa4d642bbfe0850f31c29f49",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2025-03-03",
+      "snapshot_matches": 28400,
+      "clubs": [
+        {
+          "id": 1,
+          "name": "Arsenal",
+          "crest": "/crests/arsenal.png",
+          "elo": 1740.1207887589826
+        },
+        {
+          "id": 2,
+          "name": "Aston Villa",
+          "crest": "/crests/aston-villa.png",
+          "elo": 1576.8127444381564
+        },
+        {
+          "id": 26,
+          "name": "Liverpool",
+          "crest": "/crests/liverpool.png",
+          "elo": 1779.7892122280084
+        },
+        {
+          "id": 53,
+          "name": "Atl\u00e9tico de Madrid",
+          "crest": "/crests/laliga-13.png",
+          "elo": 1714.8015226273055
+        },
+        {
+          "id": 58,
+          "name": "FC Barcelona",
+          "crest": "/crests/laliga-131.png",
+          "elo": 1739.4047199847469
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1749.0634805446662
+        },
+        {
+          "id": 79,
+          "name": "Inter",
+          "crest": "/crests/seriea-46.png",
+          "elo": 1751.4570587668848
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1743.3319260489402
+        },
+        {
+          "id": 94,
+          "name": "Borussia Dortmund",
+          "crest": "/crests/bundesliga-16.png",
+          "elo": 1608.3187055848234
+        },
+        {
+          "id": 101,
+          "name": "Bayer Leverkusen",
+          "crest": "/crests/bundesliga-15.png",
+          "elo": 1742.6527831479157
+        },
+        {
+          "id": 116,
+          "name": "LOSC",
+          "crest": "/crests/ligue1-1082.png",
+          "elo": 1637.4266197686832
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1785.8580209422682
+        },
+        {
+          "id": 150,
+          "name": "Benfica",
+          "crest": null,
+          "elo": 1593.3053107110447
+        },
+        {
+          "id": 153,
+          "name": "Club Brugge",
+          "crest": null,
+          "elo": 1558.1495871220511
+        },
+        {
+          "id": 157,
+          "name": "Feyenoord",
+          "crest": null,
+          "elo": 1547.2159597882664
+        },
+        {
+          "id": 163,
+          "name": "PSV",
+          "crest": null,
+          "elo": 1568.6617837777314
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 123,
+          "log_joint_probability": -8.065604140002213,
+          "joint_probability": 0.0003141612590591381,
+          "matches": [
+            {
+              "id": "b6817a8d770c8ef6ef20c755",
+              "round": "round_of_16",
+              "team_a_id": 163,
+              "team_b_id": 1,
+              "p_a": 0.2728219564243958,
+              "p_b": 0.7271780435756042,
+              "winner_id": 1,
+              "selected_probability": 0.7271780435756042,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d663cb2a5010b11deacb40b1",
+              "round": "round_of_16",
+              "team_a_id": 67,
+              "team_b_id": 53,
+              "p_a": 0.541757958013703,
+              "p_b": 0.45824204198629703,
+              "winner_id": 67,
+              "selected_probability": 0.541757958013703,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80cd61b1c7dfe8db1e4d468f",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5025421626617594,
+              "p_b": 0.49745783733824056,
+              "winner_id": 123,
+              "selected_probability": 0.5025421626617594,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8f38bd09158052f8e539ed81",
+              "round": "round_of_16",
+              "team_a_id": 153,
+              "team_b_id": 2,
+              "p_a": 0.46811952328715883,
+              "p_b": 0.5318804767128411,
+              "winner_id": 2,
+              "selected_probability": 0.5318804767128411,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fdd1989fba4184ee8b3d1265",
+              "round": "round_of_16",
+              "team_a_id": 150,
+              "team_b_id": 58,
+              "p_a": 0.3018486359688582,
+              "p_b": 0.6981513640311419,
+              "winner_id": 58,
+              "selected_probability": 0.6981513640311419,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ee7abb0ec7be5caf4ce68fa8",
+              "round": "round_of_16",
+              "team_a_id": 94,
+              "team_b_id": 116,
+              "p_a": 0.4536570340901019,
+              "p_b": 0.5463429659098982,
+              "winner_id": 116,
+              "selected_probability": 0.5463429659098982,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "a9e2a2beb573faf57d471369",
+              "round": "round_of_16",
+              "team_a_id": 93,
+              "team_b_id": 101,
+              "p_a": 0.4950301768420938,
+              "p_b": 0.5049698231579062,
+              "winner_id": 101,
+              "selected_probability": 0.5049698231579062,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4070bcda6ae7a3d06cdb08e8",
+              "round": "round_of_16",
+              "team_a_id": 157,
+              "team_b_id": 79,
+              "p_a": 0.23793655759354668,
+              "p_b": 0.7620634424064533,
+              "winner_id": 79,
+              "selected_probability": 0.7620634424064533,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "cfcca03ae51961c031e0387b",
+              "round": "quarterfinal",
+              "team_a_id": 1,
+              "team_b_id": 67,
+              "p_a": 0.48162916758783186,
+              "p_b": 0.5183708324121681,
+              "winner_id": 67,
+              "selected_probability": 0.5183708324121681,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "1091b9d4ed120f818cccfe12",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 2,
+              "p_a": 0.7591313178646599,
+              "p_b": 0.24086868213534007,
+              "winner_id": 123,
+              "selected_probability": 0.7591313178646599,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "bb363368c63fcf578081ecdf",
+              "round": "quarterfinal",
+              "team_a_id": 58,
+              "team_b_id": 116,
+              "p_a": 0.6331836466986166,
+              "p_b": 0.3668163533013834,
+              "winner_id": 58,
+              "selected_probability": 0.6331836466986166,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "a69bab131bfd2f1d9439102b",
+              "round": "quarterfinal",
+              "team_a_id": 101,
+              "team_b_id": 79,
+              "p_a": 0.48182179375879064,
+              "p_b": 0.5181782062412094,
+              "winner_id": 79,
+              "selected_probability": 0.5181782062412094,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "89f791c5b7317268aae19dea",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 123,
+              "p_a": 0.44306239952688903,
+              "p_b": 0.556937600473111,
+              "winner_id": 123,
+              "selected_probability": 0.556937600473111,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8ab9142800780fe17671379d",
+              "round": "semifinal",
+              "team_a_id": 58,
+              "team_b_id": 79,
+              "p_a": 0.4773032876255114,
+              "p_b": 0.5226967123744886,
+              "winner_id": 79,
+              "selected_probability": 0.5226967123744886,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "22772fee249d32decb2e4c39",
+              "round": "final",
+              "team_a_id": 123,
+              "team_b_id": 79,
+              "p_a": 0.5407865870019435,
+              "p_b": 0.4592134129980565,
+              "winner_id": 123,
+              "selected_probability": 0.5407865870019435,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 123,
+          "log_joint_probability": -8.065604140002213,
+          "joint_probability": 0.0003141612590591381,
+          "matches": [
+            {
+              "id": "b6817a8d770c8ef6ef20c755",
+              "round": "round_of_16",
+              "team_a_id": 163,
+              "team_b_id": 1,
+              "p_a": 0.2728219564243958,
+              "p_b": 0.7271780435756042,
+              "winner_id": 1,
+              "selected_probability": 0.7271780435756042,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "d663cb2a5010b11deacb40b1",
+              "round": "round_of_16",
+              "team_a_id": 67,
+              "team_b_id": 53,
+              "p_a": 0.541757958013703,
+              "p_b": 0.45824204198629703,
+              "winner_id": 67,
+              "selected_probability": 0.541757958013703,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "80cd61b1c7dfe8db1e4d468f",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5025421626617594,
+              "p_b": 0.49745783733824056,
+              "winner_id": 123,
+              "selected_probability": 0.5025421626617594,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8f38bd09158052f8e539ed81",
+              "round": "round_of_16",
+              "team_a_id": 153,
+              "team_b_id": 2,
+              "p_a": 0.46811952328715883,
+              "p_b": 0.5318804767128411,
+              "winner_id": 2,
+              "selected_probability": 0.5318804767128411,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "fdd1989fba4184ee8b3d1265",
+              "round": "round_of_16",
+              "team_a_id": 150,
+              "team_b_id": 58,
+              "p_a": 0.3018486359688582,
+              "p_b": 0.6981513640311419,
+              "winner_id": 58,
+              "selected_probability": 0.6981513640311419,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "ee7abb0ec7be5caf4ce68fa8",
+              "round": "round_of_16",
+              "team_a_id": 94,
+              "team_b_id": 116,
+              "p_a": 0.4536570340901019,
+              "p_b": 0.5463429659098982,
+              "winner_id": 116,
+              "selected_probability": 0.5463429659098982,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "a9e2a2beb573faf57d471369",
+              "round": "round_of_16",
+              "team_a_id": 93,
+              "team_b_id": 101,
+              "p_a": 0.4950301768420938,
+              "p_b": 0.5049698231579062,
+              "winner_id": 101,
+              "selected_probability": 0.5049698231579062,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4070bcda6ae7a3d06cdb08e8",
+              "round": "round_of_16",
+              "team_a_id": 157,
+              "team_b_id": 79,
+              "p_a": 0.23793655759354668,
+              "p_b": 0.7620634424064533,
+              "winner_id": 79,
+              "selected_probability": 0.7620634424064533,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "cfcca03ae51961c031e0387b",
+              "round": "quarterfinal",
+              "team_a_id": 1,
+              "team_b_id": 67,
+              "p_a": 0.48162916758783186,
+              "p_b": 0.5183708324121681,
+              "winner_id": 67,
+              "selected_probability": 0.5183708324121681,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "1091b9d4ed120f818cccfe12",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 2,
+              "p_a": 0.7591313178646599,
+              "p_b": 0.24086868213534007,
+              "winner_id": 123,
+              "selected_probability": 0.7591313178646599,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "bb363368c63fcf578081ecdf",
+              "round": "quarterfinal",
+              "team_a_id": 58,
+              "team_b_id": 116,
+              "p_a": 0.6331836466986166,
+              "p_b": 0.3668163533013834,
+              "winner_id": 58,
+              "selected_probability": 0.6331836466986166,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "a69bab131bfd2f1d9439102b",
+              "round": "quarterfinal",
+              "team_a_id": 101,
+              "team_b_id": 79,
+              "p_a": 0.48182179375879064,
+              "p_b": 0.5181782062412094,
+              "winner_id": 79,
+              "selected_probability": 0.5181782062412094,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "89f791c5b7317268aae19dea",
+              "round": "semifinal",
+              "team_a_id": 67,
+              "team_b_id": 123,
+              "p_a": 0.44306239952688903,
+              "p_b": 0.556937600473111,
+              "winner_id": 123,
+              "selected_probability": 0.556937600473111,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8ab9142800780fe17671379d",
+              "round": "semifinal",
+              "team_a_id": 58,
+              "team_b_id": 79,
+              "p_a": 0.4773032876255114,
+              "p_b": 0.5226967123744886,
+              "winner_id": 79,
+              "selected_probability": 0.5226967123744886,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "22772fee249d32decb2e4c39",
+              "round": "final",
+              "team_a_id": 123,
+              "team_b_id": 79,
+              "p_a": 0.5407865870019435,
+              "p_b": 0.4592134129980565,
+              "winner_id": 123,
+              "selected_probability": 0.5407865870019435,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 6,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 2,
+                "total": 2
+              },
+              "final": {
+                "correct": 1,
+                "total": 1
+              }
+            },
+            "correct_finalists": 2,
+            "finalists_total": 2,
+            "champion_correct": true,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 6,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 2,
+                "total": 2
+              },
+              "final": {
+                "correct": 1,
+                "total": 1
+              }
+            },
+            "correct_finalists": 2,
+            "finalists_total": 2,
+            "champion_correct": true,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 6,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 2,
+                "total": 2
+              },
+              "final": {
+                "correct": 1,
+                "total": 1
+              }
+            },
+            "correct_finalists": 2,
+            "finalists_total": 2,
+            "champion_correct": true,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "4070bcda6ae7a3d06cdb08e8",
+              "round": "round_of_16",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 157,
+              "team_b_id": 79,
+              "p_a": 0.23793655759354668
+            },
+            {
+              "id": "80cd61b1c7dfe8db1e4d468f",
+              "round": "round_of_16",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5025421626617594
+            },
+            {
+              "id": "8f38bd09158052f8e539ed81",
+              "round": "round_of_16",
+              "winner_id": 2,
+              "actual_winner_id": 2,
+              "team_a_id": 153,
+              "team_b_id": 2,
+              "p_a": 0.46811952328715883
+            },
+            {
+              "id": "a9e2a2beb573faf57d471369",
+              "round": "round_of_16",
+              "winner_id": 101,
+              "actual_winner_id": 93,
+              "team_a_id": 93,
+              "team_b_id": 101,
+              "p_a": 0.4950301768420938
+            },
+            {
+              "id": "b6817a8d770c8ef6ef20c755",
+              "round": "round_of_16",
+              "winner_id": 1,
+              "actual_winner_id": 1,
+              "team_a_id": 163,
+              "team_b_id": 1,
+              "p_a": 0.2728219564243958
+            },
+            {
+              "id": "d663cb2a5010b11deacb40b1",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 67,
+              "team_b_id": 53,
+              "p_a": 0.541757958013703
+            },
+            {
+              "id": "ee7abb0ec7be5caf4ce68fa8",
+              "round": "round_of_16",
+              "winner_id": 116,
+              "actual_winner_id": 94,
+              "team_a_id": 94,
+              "team_b_id": 116,
+              "p_a": 0.4536570340901019
+            },
+            {
+              "id": "fdd1989fba4184ee8b3d1265",
+              "round": "round_of_16",
+              "winner_id": 58,
+              "actual_winner_id": 58,
+              "team_a_id": 150,
+              "team_b_id": 58,
+              "p_a": 0.3018486359688582
+            },
+            {
+              "id": "1091b9d4ed120f818cccfe12",
+              "round": "quarterfinal",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 2,
+              "p_a": 0.7591313178646599
+            },
+            {
+              "id": "a69bab131bfd2f1d9439102b",
+              "round": "quarterfinal",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 93,
+              "team_b_id": 79,
+              "p_a": 0.48276700247643645
+            },
+            {
+              "id": "bb363368c63fcf578081ecdf",
+              "round": "quarterfinal",
+              "winner_id": 58,
+              "actual_winner_id": 58,
+              "team_a_id": 58,
+              "team_b_id": 94,
+              "p_a": 0.6701951470101751
+            },
+            {
+              "id": "cfcca03ae51961c031e0387b",
+              "round": "quarterfinal",
+              "winner_id": 67,
+              "actual_winner_id": 1,
+              "team_a_id": 1,
+              "team_b_id": 67,
+              "p_a": 0.48162916758783186
+            },
+            {
+              "id": "89f791c5b7317268aae19dea",
+              "round": "semifinal",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 1,
+              "team_b_id": 123,
+              "p_a": 0.4308019559848642
+            },
+            {
+              "id": "8ab9142800780fe17671379d",
+              "round": "semifinal",
+              "winner_id": 79,
+              "actual_winner_id": 79,
+              "team_a_id": 58,
+              "team_b_id": 79,
+              "p_a": 0.4773032876255114
+            },
+            {
+              "id": "22772fee249d32decb2e4c39",
+              "round": "final",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 79,
+              "p_a": 0.5407865870019435
+            }
+          ]
+        },
+        "actual_winners": {
+          "4070bcda6ae7a3d06cdb08e8": 79,
+          "80cd61b1c7dfe8db1e4d468f": 123,
+          "8f38bd09158052f8e539ed81": 2,
+          "a9e2a2beb573faf57d471369": 93,
+          "b6817a8d770c8ef6ef20c755": 1,
+          "d663cb2a5010b11deacb40b1": 67,
+          "ee7abb0ec7be5caf4ce68fa8": 94,
+          "fdd1989fba4184ee8b3d1265": 58,
+          "1091b9d4ed120f818cccfe12": 123,
+          "a69bab131bfd2f1d9439102b": 79,
+          "bb363368c63fcf578081ecdf": 58,
+          "cfcca03ae51961c031e0387b": 1,
+          "89f791c5b7317268aae19dea": 123,
+          "8ab9142800780fe17671379d": 79,
+          "22772fee249d32decb2e4c39": 123
+        }
+      }
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "cutoff_exclusive": true,
+      "ratings_frozen": true,
+      "model": "A",
+      "scenario": "observed_draw",
+      "conditional": true,
+      "unconditional_historical_forecast": false,
+      "scenario_tree": {
+        "id": "b3f5e16f5504ed5528cb5c08",
+        "round": "final",
+        "left": {
+          "id": "4283508c788aac2c40f88796",
+          "round": "semifinal",
+          "left": {
+            "id": "14a6fb6799872d31c116cb3e",
+            "round": "quarterfinal",
+            "left": {
+              "id": "cfe1571a5f53af40d3bf5fb4",
+              "round": "round_of_16",
+              "left": 123,
+              "right": 15,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "c8af220c05b8cbdcb6874a84",
+              "round": "round_of_16",
+              "left": 159,
+              "right": 26,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "8552d32ef434e42ef16879b1",
+            "round": "quarterfinal",
+            "left": {
+              "id": "9f69d11812f035b62be74b2c",
+              "round": "round_of_16",
+              "left": 67,
+              "right": 28,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "0547efbdae6e261618e630e2",
+              "round": "round_of_16",
+              "left": 72,
+              "right": 93,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "right": {
+          "id": "b5d7a9874e2ddc36616a901e",
+          "round": "semifinal",
+          "left": {
+            "id": "efc848713fb660b7781a0c48",
+            "round": "quarterfinal",
+            "left": {
+              "id": "848f29a95eab5045b77996e6",
+              "round": "round_of_16",
+              "left": 31,
+              "right": 58,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "24e045b50d61b9f1ea881053",
+              "round": "round_of_16",
+              "left": 53,
+              "right": 45,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "right": {
+            "id": "aa30dc839976a6e9b3a9c0cc",
+            "round": "quarterfinal",
+            "left": {
+              "id": "39f624d90f3bc7c0503a2e6e",
+              "round": "round_of_16",
+              "left": 151,
+              "right": 173,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "right": {
+              "id": "4accc13154362b32479e31d8",
+              "round": "round_of_16",
+              "left": 101,
+              "right": 1,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            "neutral_first": false,
+            "neutral_second": false
+          },
+          "neutral_first": false,
+          "neutral_second": false
+        },
+        "neutral_first": true,
+        "neutral_second": false
+      },
+      "scenario_hash": "2221e96be229811548a2916145da6391b6fd92ec7b8936b1c09817cf49a53a41",
+      "scenario_description": "Retrospective conditional scenario: recorded later-round pairings, home order and venue flags supplied. These were not established as known at the cutoff. Later participants identify bracket slots; they are not model-predicted entrants.",
+      "rules": {
+        "away_goals": false,
+        "final": "single neutral match",
+        "penalty_probability": 0.5,
+        "extra_time_minutes_ratio": 0.3333333333333333
+      },
+      "input_hash": "d9265d9fd78df1a3e7cc69d945810dc3a01eaea770d09d6db066e87818777767",
+      "config_hash": "9899ae8e57b753a92d6a86b6a15b2a2813abb9cb1a50387b1c3102793abf0a38",
+      "latest_input_match": "2026-03-09",
+      "snapshot_matches": 30400,
+      "clubs": [
+        {
+          "id": 1,
+          "name": "Arsenal",
+          "crest": "/crests/arsenal.png",
+          "elo": 1793.0637476700745
+        },
+        {
+          "id": 15,
+          "name": "Chelsea",
+          "crest": "/crests/chelsea.png",
+          "elo": 1655.4363341087924
+        },
+        {
+          "id": 26,
+          "name": "Liverpool",
+          "crest": "/crests/liverpool.png",
+          "elo": 1672.6314597332691
+        },
+        {
+          "id": 28,
+          "name": "Man City",
+          "crest": "/crests/man-city.png",
+          "elo": 1704.3870571315394
+        },
+        {
+          "id": 31,
+          "name": "Newcastle",
+          "crest": "/crests/newcastle.png",
+          "elo": 1616.353050758347
+        },
+        {
+          "id": 45,
+          "name": "Tottenham",
+          "crest": "/crests/tottenham.png",
+          "elo": 1504.4272357884981
+        },
+        {
+          "id": 53,
+          "name": "Atl\u00e9tico de Madrid",
+          "crest": "/crests/laliga-13.png",
+          "elo": 1660.7223568562724
+        },
+        {
+          "id": 58,
+          "name": "FC Barcelona",
+          "crest": "/crests/laliga-131.png",
+          "elo": 1750.6293176881886
+        },
+        {
+          "id": 67,
+          "name": "Real Madrid",
+          "crest": "/crests/laliga-418.png",
+          "elo": 1720.4607876470413
+        },
+        {
+          "id": 72,
+          "name": "Atalanta",
+          "crest": "/crests/seriea-800.png",
+          "elo": 1619.3798475295282
+        },
+        {
+          "id": 93,
+          "name": "Bayern Munich",
+          "crest": "/crests/bundesliga-27.png",
+          "elo": 1817.0943006362402
+        },
+        {
+          "id": 101,
+          "name": "Bayer Leverkusen",
+          "crest": "/crests/bundesliga-15.png",
+          "elo": 1624.7476258881318
+        },
+        {
+          "id": 123,
+          "name": "Paris Saint-Germain",
+          "crest": "/crests/ligue1-583.png",
+          "elo": 1743.040369072442
+        },
+        {
+          "id": 151,
+          "name": "Bod\u00f8/Glimt",
+          "crest": null,
+          "elo": 1563.1694607878471
+        },
+        {
+          "id": 159,
+          "name": "Galatasaray",
+          "crest": null,
+          "elo": 1512.2138439317885
+        },
+        {
+          "id": 173,
+          "name": "Sporting CP",
+          "crest": null,
+          "elo": 1576.3101131818053
+        }
+      ],
+      "forecasts": {
+        "greedy": {
+          "method": "greedy",
+          "champion_id": 93,
+          "log_joint_probability": -6.8909381659096285,
+          "joint_probability": 0.0010169593167519407,
+          "matches": [
+            {
+              "id": "cfe1571a5f53af40d3bf5fb4",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 15,
+              "p_a": 0.6143101138284598,
+              "p_b": 0.3856898861715402,
+              "winner_id": 123,
+              "selected_probability": 0.6143101138284598,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c8af220c05b8cbdcb6874a84",
+              "round": "round_of_16",
+              "team_a_id": 159,
+              "team_b_id": 26,
+              "p_a": 0.28524806434258054,
+              "p_b": 0.7147519356574195,
+              "winner_id": 26,
+              "selected_probability": 0.7147519356574195,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9f69d11812f035b62be74b2c",
+              "round": "round_of_16",
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.5164873685142488,
+              "p_b": 0.4835126314857512,
+              "winner_id": 67,
+              "selected_probability": 0.5164873685142488,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "0547efbdae6e261618e630e2",
+              "round": "round_of_16",
+              "team_a_id": 72,
+              "team_b_id": 93,
+              "p_a": 0.24463449916426158,
+              "p_b": 0.7553655008357384,
+              "winner_id": 93,
+              "selected_probability": 0.7553655008357384,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "848f29a95eab5045b77996e6",
+              "round": "round_of_16",
+              "team_a_id": 31,
+              "team_b_id": 58,
+              "p_a": 0.315949857043138,
+              "p_b": 0.684050142956862,
+              "winner_id": 58,
+              "selected_probability": 0.684050142956862,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "24e045b50d61b9f1ea881053",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 45,
+              "p_a": 0.7007145286704456,
+              "p_b": 0.2992854713295544,
+              "winner_id": 53,
+              "selected_probability": 0.7007145286704456,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "39f624d90f3bc7c0503a2e6e",
+              "round": "round_of_16",
+              "team_a_id": 151,
+              "team_b_id": 173,
+              "p_a": 0.47579291163888515,
+              "p_b": 0.5242070883611148,
+              "winner_id": 173,
+              "selected_probability": 0.5242070883611148,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4accc13154362b32479e31d8",
+              "round": "round_of_16",
+              "team_a_id": 101,
+              "team_b_id": 1,
+              "p_a": 0.2763242128116368,
+              "p_b": 0.7236757871883632,
+              "winner_id": 1,
+              "selected_probability": 0.7236757871883632,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "14a6fb6799872d31c116cb3e",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5912915929405334,
+              "p_b": 0.40870840705946665,
+              "winner_id": 123,
+              "selected_probability": 0.5912915929405334,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8552d32ef434e42ef16879b1",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 93,
+              "p_a": 0.3630095839390273,
+              "p_b": 0.6369904160609727,
+              "winner_id": 93,
+              "selected_probability": 0.6369904160609727,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "efc848713fb660b7781a0c48",
+              "round": "quarterfinal",
+              "team_a_id": 58,
+              "team_b_id": 53,
+              "p_a": 0.6173586643270809,
+              "p_b": 0.38264133567291914,
+              "winner_id": 58,
+              "selected_probability": 0.6173586643270809,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "aa30dc839976a6e9b3a9c0cc",
+              "round": "quarterfinal",
+              "team_a_id": 173,
+              "team_b_id": 1,
+              "p_a": 0.22543897370206745,
+              "p_b": 0.7745610262979326,
+              "winner_id": 1,
+              "selected_probability": 0.7745610262979326,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4283508c788aac2c40f88796",
+              "round": "semifinal",
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.39259702084353304,
+              "p_b": 0.607402979156467,
+              "winner_id": 93,
+              "selected_probability": 0.607402979156467,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b5d7a9874e2ddc36616a901e",
+              "round": "semifinal",
+              "team_a_id": 58,
+              "team_b_id": 1,
+              "p_a": 0.43532295215995004,
+              "p_b": 0.56467704784005,
+              "winner_id": 1,
+              "selected_probability": 0.56467704784005,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b3f5e16f5504ed5528cb5c08",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 1,
+              "p_a": 0.5285217784633559,
+              "p_b": 0.4714782215366441,
+              "winner_id": 93,
+              "selected_probability": 0.5285217784633559,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        },
+        "global": {
+          "method": "global",
+          "champion_id": 93,
+          "log_joint_probability": -6.8909381659096285,
+          "joint_probability": 0.0010169593167519407,
+          "matches": [
+            {
+              "id": "cfe1571a5f53af40d3bf5fb4",
+              "round": "round_of_16",
+              "team_a_id": 123,
+              "team_b_id": 15,
+              "p_a": 0.6143101138284598,
+              "p_b": 0.3856898861715402,
+              "winner_id": 123,
+              "selected_probability": 0.6143101138284598,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "c8af220c05b8cbdcb6874a84",
+              "round": "round_of_16",
+              "team_a_id": 159,
+              "team_b_id": 26,
+              "p_a": 0.28524806434258054,
+              "p_b": 0.7147519356574195,
+              "winner_id": 26,
+              "selected_probability": 0.7147519356574195,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "9f69d11812f035b62be74b2c",
+              "round": "round_of_16",
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.5164873685142488,
+              "p_b": 0.4835126314857512,
+              "winner_id": 67,
+              "selected_probability": 0.5164873685142488,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "0547efbdae6e261618e630e2",
+              "round": "round_of_16",
+              "team_a_id": 72,
+              "team_b_id": 93,
+              "p_a": 0.24463449916426158,
+              "p_b": 0.7553655008357384,
+              "winner_id": 93,
+              "selected_probability": 0.7553655008357384,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "848f29a95eab5045b77996e6",
+              "round": "round_of_16",
+              "team_a_id": 31,
+              "team_b_id": 58,
+              "p_a": 0.315949857043138,
+              "p_b": 0.684050142956862,
+              "winner_id": 58,
+              "selected_probability": 0.684050142956862,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "24e045b50d61b9f1ea881053",
+              "round": "round_of_16",
+              "team_a_id": 53,
+              "team_b_id": 45,
+              "p_a": 0.7007145286704456,
+              "p_b": 0.2992854713295544,
+              "winner_id": 53,
+              "selected_probability": 0.7007145286704456,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "39f624d90f3bc7c0503a2e6e",
+              "round": "round_of_16",
+              "team_a_id": 151,
+              "team_b_id": 173,
+              "p_a": 0.47579291163888515,
+              "p_b": 0.5242070883611148,
+              "winner_id": 173,
+              "selected_probability": 0.5242070883611148,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4accc13154362b32479e31d8",
+              "round": "round_of_16",
+              "team_a_id": 101,
+              "team_b_id": 1,
+              "p_a": 0.2763242128116368,
+              "p_b": 0.7236757871883632,
+              "winner_id": 1,
+              "selected_probability": 0.7236757871883632,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "14a6fb6799872d31c116cb3e",
+              "round": "quarterfinal",
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5912915929405334,
+              "p_b": 0.40870840705946665,
+              "winner_id": 123,
+              "selected_probability": 0.5912915929405334,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "8552d32ef434e42ef16879b1",
+              "round": "quarterfinal",
+              "team_a_id": 67,
+              "team_b_id": 93,
+              "p_a": 0.3630095839390273,
+              "p_b": 0.6369904160609727,
+              "winner_id": 93,
+              "selected_probability": 0.6369904160609727,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "efc848713fb660b7781a0c48",
+              "round": "quarterfinal",
+              "team_a_id": 58,
+              "team_b_id": 53,
+              "p_a": 0.6173586643270809,
+              "p_b": 0.38264133567291914,
+              "winner_id": 58,
+              "selected_probability": 0.6173586643270809,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "aa30dc839976a6e9b3a9c0cc",
+              "round": "quarterfinal",
+              "team_a_id": 173,
+              "team_b_id": 1,
+              "p_a": 0.22543897370206745,
+              "p_b": 0.7745610262979326,
+              "winner_id": 1,
+              "selected_probability": 0.7745610262979326,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "4283508c788aac2c40f88796",
+              "round": "semifinal",
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.39259702084353304,
+              "p_b": 0.607402979156467,
+              "winner_id": 93,
+              "selected_probability": 0.607402979156467,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b5d7a9874e2ddc36616a901e",
+              "round": "semifinal",
+              "team_a_id": 58,
+              "team_b_id": 1,
+              "p_a": 0.43532295215995004,
+              "p_b": 0.56467704784005,
+              "winner_id": 1,
+              "selected_probability": 0.56467704784005,
+              "single_match": false,
+              "neutral_first": false,
+              "neutral_second": false
+            },
+            {
+              "id": "b3f5e16f5504ed5528cb5c08",
+              "round": "final",
+              "team_a_id": 93,
+              "team_b_id": 1,
+              "p_a": 0.5285217784633559,
+              "p_b": 0.4714782215366441,
+              "winner_id": 93,
+              "selected_probability": 0.5285217784633559,
+              "single_match": true,
+              "neutral_first": true,
+              "neutral_second": false
+            }
+          ]
+        }
+      },
+      "evaluation": {
+        "scope": "Conditional on retrospective draw scenario; not an unconditional forecast",
+        "own_predicted_winners": {
+          "greedy": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 8,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "global": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 8,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          }
+        },
+        "actual_participants": {
+          "metrics": {
+            "rounds": {
+              "round_of_16": {
+                "correct": 8,
+                "total": 8
+              },
+              "quarterfinal": {
+                "correct": 3,
+                "total": 4
+              },
+              "semifinal": {
+                "correct": 1,
+                "total": 2
+              },
+              "final": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "correct_finalists": 1,
+            "finalists_total": 2,
+            "champion_correct": false,
+            "correct": 12,
+            "total": 15,
+            "accuracy": 0.8,
+            "exact_bracket": false
+          },
+          "predictions": [
+            {
+              "id": "0547efbdae6e261618e630e2",
+              "round": "round_of_16",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 72,
+              "team_b_id": 93,
+              "p_a": 0.24463449916426158
+            },
+            {
+              "id": "24e045b50d61b9f1ea881053",
+              "round": "round_of_16",
+              "winner_id": 53,
+              "actual_winner_id": 53,
+              "team_a_id": 53,
+              "team_b_id": 45,
+              "p_a": 0.7007145286704456
+            },
+            {
+              "id": "39f624d90f3bc7c0503a2e6e",
+              "round": "round_of_16",
+              "winner_id": 173,
+              "actual_winner_id": 173,
+              "team_a_id": 151,
+              "team_b_id": 173,
+              "p_a": 0.47579291163888515
+            },
+            {
+              "id": "4accc13154362b32479e31d8",
+              "round": "round_of_16",
+              "winner_id": 1,
+              "actual_winner_id": 1,
+              "team_a_id": 101,
+              "team_b_id": 1,
+              "p_a": 0.2763242128116368
+            },
+            {
+              "id": "848f29a95eab5045b77996e6",
+              "round": "round_of_16",
+              "winner_id": 58,
+              "actual_winner_id": 58,
+              "team_a_id": 31,
+              "team_b_id": 58,
+              "p_a": 0.315949857043138
+            },
+            {
+              "id": "9f69d11812f035b62be74b2c",
+              "round": "round_of_16",
+              "winner_id": 67,
+              "actual_winner_id": 67,
+              "team_a_id": 67,
+              "team_b_id": 28,
+              "p_a": 0.5164873685142488
+            },
+            {
+              "id": "c8af220c05b8cbdcb6874a84",
+              "round": "round_of_16",
+              "winner_id": 26,
+              "actual_winner_id": 26,
+              "team_a_id": 159,
+              "team_b_id": 26,
+              "p_a": 0.28524806434258054
+            },
+            {
+              "id": "cfe1571a5f53af40d3bf5fb4",
+              "round": "round_of_16",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 15,
+              "p_a": 0.6143101138284598
+            },
+            {
+              "id": "14a6fb6799872d31c116cb3e",
+              "round": "quarterfinal",
+              "winner_id": 123,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 26,
+              "p_a": 0.5912915929405334
+            },
+            {
+              "id": "8552d32ef434e42ef16879b1",
+              "round": "quarterfinal",
+              "winner_id": 93,
+              "actual_winner_id": 93,
+              "team_a_id": 67,
+              "team_b_id": 93,
+              "p_a": 0.3630095839390273
+            },
+            {
+              "id": "aa30dc839976a6e9b3a9c0cc",
+              "round": "quarterfinal",
+              "winner_id": 1,
+              "actual_winner_id": 1,
+              "team_a_id": 173,
+              "team_b_id": 1,
+              "p_a": 0.22543897370206745
+            },
+            {
+              "id": "efc848713fb660b7781a0c48",
+              "round": "quarterfinal",
+              "winner_id": 58,
+              "actual_winner_id": 53,
+              "team_a_id": 58,
+              "team_b_id": 53,
+              "p_a": 0.6173586643270809
+            },
+            {
+              "id": "4283508c788aac2c40f88796",
+              "round": "semifinal",
+              "winner_id": 93,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 93,
+              "p_a": 0.39259702084353304
+            },
+            {
+              "id": "b5d7a9874e2ddc36616a901e",
+              "round": "semifinal",
+              "winner_id": 1,
+              "actual_winner_id": 1,
+              "team_a_id": 53,
+              "team_b_id": 1,
+              "p_a": 0.318290458269707
+            },
+            {
+              "id": "b3f5e16f5504ed5528cb5c08",
+              "round": "final",
+              "winner_id": 1,
+              "actual_winner_id": 123,
+              "team_a_id": 123,
+              "team_b_id": 1,
+              "p_a": 0.4408549080552495
+            }
+          ]
+        },
+        "actual_winners": {
+          "0547efbdae6e261618e630e2": 93,
+          "24e045b50d61b9f1ea881053": 53,
+          "39f624d90f3bc7c0503a2e6e": 173,
+          "4accc13154362b32479e31d8": 1,
+          "848f29a95eab5045b77996e6": 58,
+          "9f69d11812f035b62be74b2c": 67,
+          "c8af220c05b8cbdcb6874a84": 26,
+          "cfe1571a5f53af40d3bf5fb4": 123,
+          "14a6fb6799872d31c116cb3e": 123,
+          "8552d32ef434e42ef16879b1": 93,
+          "aa30dc839976a6e9b3a9c0cc": 1,
+          "efc848713fb660b7781a0c48": 53,
+          "4283508c788aac2c40f88796": 123,
+          "b5d7a9874e2ddc36616a901e": 1,
+          "b3f5e16f5504ed5528cb5c08": 123
+        }
+      }
+    }
+  ],
+  "database_sha256": "4b6d5d97320854af4ee974f8e51dd35a1b195f9022c348f7a198cd4ff537c5c1"
+}

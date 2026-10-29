@@ -81,6 +81,14 @@ def seed_teams(session: Session, league: str = "epl") -> None:
             snapshot = json.loads(path.read_text())
             clubs.update({c["provider_name"]: [c["official_name"]] for c in snapshot["clubs"]})
     assets = json.loads((ROOT / "data" / "club-assets.json").read_text())
+    archive = json.loads((ROOT / "data/domestic-history.json").read_text())
+    clubs = {
+        **clubs,
+        **{
+            n: [canonical, *clubs.get(n, [])]
+            for n, canonical in archive["clubs"].get(league, {}).items()
+        },
+    }
     for short, alternatives in clubs.items():
         canonical = alternatives[0] if alternatives else short
         team = session.scalar(select(Team).where(Team.canonical_name == canonical))
@@ -104,6 +112,8 @@ def seed_teams(session: Session, league: str = "epl") -> None:
                 )
                 if existing is None:
                     session.add(TeamAlias(team_id=team.id, source=source, name=normalized))
+                elif existing.team_id != team.id:
+                    raise ValueError(f"Conflicting canonical mapping for {name}")
     session.flush()
 
 
@@ -130,6 +140,10 @@ def verified_roster(league: str, season: str) -> set[str] | None:
     info = competition(league)
     path = ROOT / "data" / "rosters" / f"{league}-{season}.json"
     if not path.exists():
+        archive = json.loads((ROOT / "data/domestic-history.json").read_text())
+        snapshot = archive["seasons"].get(league, {}).get(season)
+        if snapshot:
+            return {archive["clubs"][league][n] for n in snapshot["clubs"]}
         raise ValueError(f"No verified roster for {league} {season}")
     data = json.loads(path.read_text())
     names = {c["official_name"] for c in data["clubs"]}

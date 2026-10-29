@@ -176,18 +176,21 @@ def refresh_season(
         connection.exec_driver_sql("BEGIN IMMEDIATE")
         try:
             summary = None
+            reports = []
             for key, year, path in jobs:
                 summary = import_csv(
                     connection,
                     path,
                     year,
                     league=key,
+                    complete_snapshot=results is None,
                     location=(
                         str(path.resolve())
                         if results
                         else f"https://www.football-data.co.uk/mmz4281/{year[2:4]}{year[7:9]}/{competition(key).division}.csv"
                     ),
                 )
+                reports.append({"league": key, "season": year, **asdict(summary)})
             for key in targets:
                 path = squads or ROOT / "data/squads" / (
                     f"{season}.csv" if key == "epl" else f"{key}-{season}.csv"
@@ -195,10 +198,14 @@ def refresh_season(
                 if path.exists():
                     import_squads(connection, path, season, key)
             for year, path in ucl_jobs:
-                import_champions(connection, path, year)
+                ucl_summary = import_champions(connection, path, year, complete_snapshot=True)
+                reports.append({"league": "ucl", "season": year, **asdict(ucl_summary)})
             calculation = calculate_season(connection, season, league=targets[0])
             connection.commit()
         except Exception:
             connection.rollback()
             raise
-    return {**calculation, "import": asdict(summary)}
+    selected_report = next(
+        r for r in reports if r["league"] == targets[0] and r["season"] == season
+    )
+    return {**calculation, "import": selected_report, "imports": reports}

@@ -1,4 +1,4 @@
-from datetime import timedelta
+from datetime import timedelta, timezone
 
 import pandas as pd
 from sqlalchemy import select, text
@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.core.leagues import LEAGUES, competition
 from app.core.season import season_config
-from app.db.models import Match, SeasonHistory, SeasonRating, SquadValue, Team
+from app.db.models import ImportRun, Match, SeasonHistory, SeasonRating, SquadValue, Team
 from app.services.season import fingerprint
 
 
@@ -181,6 +181,25 @@ def league_data(engine: Engine, season: str, league: str = "epl"):
         if league == "europe":
             clubs = clubs[:25]
         domestic = [m for m in current if m.league == league] if info else current
+        last_import = (
+            session.scalar(
+                select(ImportRun)
+                .where(
+                    ImportRun.season == season,
+                    ImportRun.league == league,
+                )
+                .order_by(ImportRun.imported_at.desc(), ImportRun.id.desc())
+                .limit(1)
+            )
+            if info
+            else None
+        )
+        # A global rating rebuild is not a successful synchronization of every league.
+        synced_at = (
+            last_import.imported_at.replace(tzinfo=timezone.utc).isoformat()
+            if last_import
+            else None
+        )
         data = {
             "league_id": league,
             "name": info.name if info else "European Rankings",
@@ -192,7 +211,8 @@ def league_data(engine: Engine, season: str, league: str = "epl"):
             "source": info.source
             if info
             else "https://fixturedownload.com/results/champions-league-2026",
-            "results_through": str(max(m.match_date for m in current)) if current else None,
+            "results_through": str(max(m.match_date for m in domestic)) if domestic else None,
+            "last_synced_at": synced_at,
             "refreshed_at": max(r.calculated_at for r in ratings).isoformat() + "Z",
             "matches": len(domestic),
             "squad_coverage": sum(t in squad_lookup for t in selected),
