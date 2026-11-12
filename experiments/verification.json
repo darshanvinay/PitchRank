@@ -1,0 +1,14 @@
+{
+  "resume_checkpoint_and_csv_unchanged": {
+    "trials.jsonl": true,
+    "diagnostics.jsonl": true,
+    "results.csv": true
+  },
+  "csv_unique_trials": 10515,
+  "no_diagnostic_configs_in_walk_forward": true,
+  "database_unchanged": true,
+  "initial_run_seconds": 143.3695698750089,
+  "resume_seconds": 70.99637341598282,
+  "backend_tests": 193,
+  "frontend_navigation_tests": 5
+}

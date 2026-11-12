@@ -1,0 +1,11 @@
+{
+  "retrieved_on": "2026-11-12",
+  "asset_id": 399247157,
+  "asset_updated_at": "2026-04-18T08:01:32Z",
+  "archive_url": "https://github.com/peteowen1/pannadata/releases/download/understat-latest/understat_metadata.parquet",
+  "archive_sha256": "edddd2a00f259ea631e9c5089939b6b35d64bef79c8ba4c4d8d8cec0534d18d3",
+  "independent_archive_sha256": "54e5f240b61b425e55c83102e3c803135e28199d97dd6778b59e8721b576828f",
+  "direct_understat_status": "Maintenance HTML returned for EPL/2020 page and EPL + La_Liga getLeagueData endpoints",
+  "archived_data_is_retrospective": true,
+  "original_publication_timestamps_available": false
+}

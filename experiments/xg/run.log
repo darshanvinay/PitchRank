@@ -1,0 +1,51 @@
+Cached 30404 matches, 21120 xG fixtures, 2000 configs; resume 0
+256/2000 batch 1.16s ETA 7.9s
+512/2000 batch 1.12s ETA 6.5s
+768/2000 batch 1.11s ETA 5.3s
+1024/2000 batch 1.13s ETA 4.3s
+1280/2000 batch 1.11s ETA 3.1s
+1536/2000 batch 1.13s ETA 2.1s
+1792/2000 batch 1.13s ETA 0.9s
+2000/2000 batch 1.03s ETA 0.0s
+{
+  "Model A": {
+    "ties": 48,
+    "correct": 38,
+    "accuracy": 0.7916666666666666,
+    "brier": 0.18056490331282324,
+    "log_loss": 0.5441203012681249,
+    "confidence": 0.6300356873498995
+  },
+  "Fixed exploratory 42/48 reference": {
+    "ties": 48,
+    "correct": 42,
+    "accuracy": 0.875,
+    "brier": 0.14944885000910954,
+    "log_loss": 0.46035648681206265,
+    "confidence": 0.7083851569403916
+  },
+  "Best exploratory xG": {
+    "ties": 48,
+    "correct": 43,
+    "accuracy": 0.8958333333333334,
+    "brier": 0.17148136687165239,
+    "log_loss": 0.5254336223747565,
+    "confidence": 0.6349044615614399
+  },
+  "Walk-forward probability": {
+    "ties": 48,
+    "correct": 41,
+    "accuracy": 0.8541666666666666,
+    "brier": 0.1509953586223405,
+    "log_loss": 0.47523090277350405,
+    "confidence": 0.686077123524111
+  },
+  "Walk-forward accuracy": {
+    "ties": 48,
+    "correct": 38,
+    "accuracy": 0.7916666666666666,
+    "brier": 0.1781838637466738,
+    "log_loss": 0.5394519270886682,
+    "confidence": 0.6318039456184422
+  }
+}

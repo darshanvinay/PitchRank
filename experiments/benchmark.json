@@ -1,0 +1,13 @@
+{
+  "smoke": {
+    "configurations": 8,
+    "cache_seconds": 2.128601832984714,
+    "batch_seconds": 1.6919854170118924,
+    "max_baseline_error": 3.3306690738754696e-15
+  },
+  "benchmark_256": {
+    "batch_seconds": 2.26,
+    "total_seconds": 9.25013758300338,
+    "purpose": "Runtime-only preliminary benchmark; not independent evaluation"
+  }
+}

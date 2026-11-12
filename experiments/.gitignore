@@ -1,0 +1,3 @@
+# Local resumable checkpoints retain every raw/calibrated forecast; CSV reports are tracked.
+/trials.jsonl
+/diagnostics.jsonl

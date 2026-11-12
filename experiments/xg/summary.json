@@ -1,0 +1,328 @@
+{
+  "trials": 2000,
+  "seed": 20261112,
+  "seconds": 13.678785166004673,
+  "comparisons": {
+    "Model A": {
+      "ties": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "brier": 0.18056490331282324,
+      "log_loss": 0.5441203012681249,
+      "confidence": 0.6300356873498995
+    },
+    "Fixed exploratory 42/48 reference": {
+      "ties": 48,
+      "correct": 42,
+      "accuracy": 0.875,
+      "brier": 0.14944885000910954,
+      "log_loss": 0.46035648681206265,
+      "confidence": 0.7083851569403916
+    },
+    "Best exploratory xG": {
+      "ties": 48,
+      "correct": 43,
+      "accuracy": 0.8958333333333334,
+      "brier": 0.17148136687165239,
+      "log_loss": 0.5254336223747565,
+      "confidence": 0.6349044615614399
+    },
+    "Walk-forward probability": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.1509953586223405,
+      "log_loss": 0.47523090277350405,
+      "confidence": 0.686077123524111
+    },
+    "Walk-forward accuracy": {
+      "ties": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "brier": 0.1781838637466738,
+      "log_loss": 0.5394519270886682,
+      "confidence": 0.6318039456184422
+    }
+  },
+  "best_id": "4e8e9969e40e42c4",
+  "best_changes": [
+    {
+      "season": "2020-2021",
+      "tie_id": "2ce8a9ac57949fe56fefb247",
+      "team_a": "Sevilla FC",
+      "team_b": "Borussia Dortmund",
+      "actual": "Borussia Dortmund",
+      "baseline_p_a": 0.5600530783212174,
+      "candidate_p_a": 0.48824484204519525,
+      "effect": "corrected"
+    },
+    {
+      "season": "2020-2021",
+      "tie_id": "5df33a2fd5a99d659b1d2d3d",
+      "team_a": "Atl\u00e9tico de Madrid",
+      "team_b": "Chelsea",
+      "actual": "Chelsea",
+      "baseline_p_a": 0.5987889314063964,
+      "candidate_p_a": 0.49681618783797366,
+      "effect": "corrected"
+    },
+    {
+      "season": "2021-2022",
+      "tie_id": "22f9ab56ccb0a96a713e1060",
+      "team_a": "Atl\u00e9tico de Madrid",
+      "team_b": "Man United",
+      "actual": "Atl\u00e9tico de Madrid",
+      "baseline_p_a": 0.4838045379879115,
+      "candidate_p_a": 0.5680171910083238,
+      "effect": "corrected"
+    },
+    {
+      "season": "2021-2022",
+      "tie_id": "80239a3ce5fdc4f66c37f9d7",
+      "team_a": "Paris Saint-Germain",
+      "team_b": "Real Madrid",
+      "actual": "Real Madrid",
+      "baseline_p_a": 0.4900315737817478,
+      "candidate_p_a": 0.5652849626273018,
+      "effect": "new_error"
+    },
+    {
+      "season": "2022-2023",
+      "tie_id": "7ebb521af8ba241967c76a0e",
+      "team_a": "Borussia Dortmund",
+      "team_b": "Chelsea",
+      "actual": "Chelsea",
+      "baseline_p_a": 0.5311933435500511,
+      "candidate_p_a": 0.4924378270418946,
+      "effect": "corrected"
+    },
+    {
+      "season": "2024-2025",
+      "tie_id": "a9e2a2beb573faf57d471369",
+      "team_a": "Bayern Munich",
+      "team_b": "Bayer Leverkusen",
+      "actual": "Bayern Munich",
+      "baseline_p_a": 0.49503017684209455,
+      "candidate_p_a": 0.6245206366144331,
+      "effect": "corrected"
+    },
+    {
+      "season": "2024-2025",
+      "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+      "team_a": "Borussia Dortmund",
+      "team_b": "LOSC",
+      "actual": "Borussia Dortmund",
+      "baseline_p_a": 0.4536570340901016,
+      "candidate_p_a": 0.531540338209046,
+      "effect": "corrected"
+    }
+  ],
+  "best_changes_vs_42": [
+    {
+      "season": "2020-2021",
+      "tie_id": "5df33a2fd5a99d659b1d2d3d",
+      "team_a": "Atl\u00e9tico de Madrid",
+      "team_b": "Chelsea",
+      "actual": "Chelsea",
+      "baseline_p_a": 0.6012833510297906,
+      "candidate_p_a": 0.49681618783797366,
+      "effect": "corrected"
+    }
+  ],
+  "families": {
+    "attack_defence": {
+      "trials": 400,
+      "best_id": "c5514e4ce0a962a9",
+      "config": {
+        "family": "attack_defence",
+        "window": 10,
+        "half_life": 60,
+        "shrink": 5,
+        "feature_scale": 100,
+        "k": 20,
+        "xg_share": 1,
+        "regression": 0.1,
+        "learning_rate": 0.02,
+        "prior_goals": 1.35,
+        "home_log": 0.15,
+        "blend": 0.75
+      },
+      "exploratory": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.17721042857229494,
+        "log_loss": 0.53820671638427,
+        "confidence": 0.623620201445435
+      },
+      "walk_forward": {
+        "ties": 48,
+        "correct": 40,
+        "accuracy": 0.8333333333333334,
+        "brier": 0.16556745591659458,
+        "log_loss": 0.5120935338845984,
+        "confidence": 0.6451152758195057
+      }
+    },
+    "differential": {
+      "trials": 400,
+      "best_id": "e73509c442ddbb9d",
+      "config": {
+        "family": "differential",
+        "window": 0,
+        "half_life": 30.0,
+        "shrink": 2.0,
+        "feature_scale": 300.0,
+        "k": 20,
+        "xg_share": 1,
+        "regression": 0.25,
+        "learning_rate": 0.05,
+        "prior_goals": 1.35,
+        "home_log": 0.25,
+        "blend": 1.0
+      },
+      "exploratory": {
+        "ties": 48,
+        "correct": 40,
+        "accuracy": 0.8333333333333334,
+        "brier": 0.141147532073282,
+        "log_loss": 0.4439307659462208,
+        "confidence": 0.7248936680884882
+      },
+      "walk_forward": {
+        "ties": 48,
+        "correct": 39,
+        "accuracy": 0.8125,
+        "brier": 0.14534063016912444,
+        "log_loss": 0.45751807492553004,
+        "confidence": 0.7121139855828447
+      }
+    },
+    "ensemble": {
+      "trials": 400,
+      "best_id": "4e8e9969e40e42c4",
+      "config": {
+        "family": "ensemble",
+        "window": 10,
+        "half_life": 60,
+        "shrink": 5,
+        "feature_scale": 100,
+        "k": 10.0,
+        "xg_share": 0.25,
+        "regression": 0.0,
+        "learning_rate": 0.1,
+        "prior_goals": 1.5,
+        "home_log": 0.15,
+        "blend": 1.0
+      },
+      "exploratory": {
+        "ties": 48,
+        "correct": 43,
+        "accuracy": 0.8958333333333334,
+        "brier": 0.17148136687165239,
+        "log_loss": 0.5254336223747565,
+        "confidence": 0.6349044615614399
+      },
+      "walk_forward": {
+        "ties": 48,
+        "correct": 41,
+        "accuracy": 0.8541666666666666,
+        "brier": 0.17113767496544377,
+        "log_loss": 0.5249294998322288,
+        "confidence": 0.6332523170825124
+      }
+    },
+    "recent": {
+      "trials": 400,
+      "best_id": "fe80e3a1fa2c3200",
+      "config": {
+        "family": "recent",
+        "window": 15,
+        "half_life": 60.0,
+        "shrink": 2.0,
+        "feature_scale": 300.0,
+        "k": 20,
+        "xg_share": 1,
+        "regression": 0.25,
+        "learning_rate": 0.05,
+        "prior_goals": 1.35,
+        "home_log": 0.25,
+        "blend": 1.0
+      },
+      "exploratory": {
+        "ties": 48,
+        "correct": 40,
+        "accuracy": 0.8333333333333334,
+        "brier": 0.14313083274573793,
+        "log_loss": 0.4497820837554432,
+        "confidence": 0.7258938751241805
+      },
+      "walk_forward": {
+        "ties": 48,
+        "correct": 39,
+        "accuracy": 0.8125,
+        "brier": 0.14873240202488372,
+        "log_loss": 0.4665970589869716,
+        "confidence": 0.6934142127267421
+      }
+    },
+    "xg_elo": {
+      "trials": 400,
+      "best_id": "b54d7a46f2c42874",
+      "config": {
+        "family": "xg_elo",
+        "window": 10,
+        "half_life": 60,
+        "shrink": 5,
+        "feature_scale": 100,
+        "k": 10.0,
+        "xg_share": 1.0,
+        "regression": 0.1,
+        "learning_rate": 0.05,
+        "prior_goals": 1.35,
+        "home_log": 0.25,
+        "blend": 0.75
+      },
+      "exploratory": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.17784530650950178,
+        "log_loss": 0.5400056607339984,
+        "confidence": 0.61820605065501
+      },
+      "walk_forward": {
+        "ties": 48,
+        "correct": 40,
+        "accuracy": 0.8333333333333334,
+        "brier": 0.17284435838606269,
+        "log_loss": 0.5284068973669735,
+        "confidence": 0.6297287655136478
+      }
+    }
+  },
+  "uncertainty": {
+    "probability": {
+      "accuracy_wilson95": [
+        0.7283255295714138,
+        0.9275184258620602
+      ],
+      "paired_log_loss_delta": -0.06888939849462099,
+      "paired_log_loss_seasonal95": [
+        -0.15084033794643215,
+        0.01306154095719017
+      ]
+    },
+    "accuracy": {
+      "accuracy_wilson95": [
+        0.6574082647864651,
+        0.8826985220411018
+      ],
+      "paired_log_loss_delta": -0.0046683741794567475,
+      "paired_log_loss_seasonal95": [
+        -0.03168271867871543,
+        0.022345970319801938
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Same xG-selected fold configs and fixture availability; replace xG with goals only for this diagnostic",
+  "goals_only": {
+    "ties": 48,
+    "correct": 38,
+    "accuracy": 0.7916666666666666,
+    "brier": 0.16428973882371722,
+    "log_loss": 0.5093596160995769,
+    "confidence": 0.6862025454495019
+  },
+  "xg": {
+    "ties": 48,
+    "correct": 41,
+    "accuracy": 0.8541666666666666,
+    "brier": 0.1509953586223405,
+    "log_loss": 0.47523090277350405,
+    "confidence": 0.686077123524111
+  }
+}

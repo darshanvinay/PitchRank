@@ -1,0 +1,1982 @@
+{
+  "inserted": 21120,
+  "updated": 0,
+  "unchanged": 0,
+  "duplicate_rows": 189,
+  "rejected": [
+    {
+      "id": "190",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Tottenham",
+      "away": "Aston Villa",
+      "date": "2015-11-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "210",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Crystal Palace",
+      "away": "Sunderland",
+      "date": "2015-11-24 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "230",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Everton",
+      "away": "Crystal Palace",
+      "date": "2015-12-08 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "240",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Leicester",
+      "away": "Chelsea",
+      "date": "2015-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "250",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Arsenal",
+      "away": "Manchester City",
+      "date": "2015-12-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "289",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Liverpool",
+      "away": "Arsenal",
+      "date": "2016-01-14 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "290",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Tottenham",
+      "away": "Leicester",
+      "date": "2016-01-14 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "300",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Swansea",
+      "away": "Watford",
+      "date": "2016-01-19 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "316",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Crystal Palace",
+      "away": "Bournemouth",
+      "date": "2016-02-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "317",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Manchester United",
+      "away": "Stoke",
+      "date": "2016-02-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "318",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "West Bromwich Albion",
+      "away": "Swansea",
+      "date": "2016-02-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "357",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Liverpool",
+      "away": "Manchester City",
+      "date": "2016-03-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "358",
+      "league": "epl",
+      "season": "2015-2016",
+      "home": "Manchester United",
+      "away": "Watford",
+      "date": "2016-03-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2686",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Stoke",
+      "away": "Swansea",
+      "date": "2016-11-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2706",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "West Bromwich Albion",
+      "away": "Burnley",
+      "date": "2016-11-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3114",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Middlesbrough",
+      "away": "Hull",
+      "date": "2016-12-06 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3130",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Crystal Palace",
+      "away": "Manchester United",
+      "date": "2016-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3131",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "West Bromwich Albion",
+      "away": "Swansea",
+      "date": "2016-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3132",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Manchester City",
+      "away": "Watford",
+      "date": "2016-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3133",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Stoke",
+      "away": "Southampton",
+      "date": "2016-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3134",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Tottenham",
+      "away": "Hull",
+      "date": "2016-12-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3144",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Everton",
+      "away": "Liverpool",
+      "date": "2016-12-20 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3155",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Hull",
+      "away": "Everton",
+      "date": "2016-12-31 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3337",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Crystal Palace",
+      "away": "Swansea",
+      "date": "2017-01-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3338",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Stoke",
+      "away": "Watford",
+      "date": "2017-01-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3339",
+      "league": "epl",
+      "season": "2016-2017",
+      "home": "Tottenham",
+      "away": "Chelsea",
+      "date": "2017-01-05 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1403",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "date": "2015-08-23 00:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1406",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Levante",
+      "away": "Celta Vigo",
+      "date": "2015-08-24 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1407",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Villarreal",
+      "date": "2015-08-24 00:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1412",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Celta Vigo",
+      "away": "Rayo Vallecano",
+      "date": "2015-08-30 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1413",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Madrid",
+      "away": "Real Betis",
+      "date": "2015-08-30 00:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1417",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Getafe",
+      "away": "Granada",
+      "date": "2015-08-31 00:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1418",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Levante",
+      "date": "2015-08-31 00:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1423",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Real Sociedad",
+      "date": "2015-09-13 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1433",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Sociedad",
+      "away": "Espanyol",
+      "date": "2015-09-20 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1441",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Granada",
+      "away": "Real Sociedad",
+      "date": "2015-09-23 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1446",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Malaga",
+      "away": "Villarreal",
+      "date": "2015-09-24 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1447",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Sevilla",
+      "date": "2015-09-24 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1448",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Deportivo La Coruna",
+      "date": "2015-09-25 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1454",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Eibar",
+      "away": "Celta Vigo",
+      "date": "2015-09-27 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1463",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Eibar",
+      "date": "2015-10-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1464",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Malaga",
+      "away": "Real Sociedad",
+      "date": "2015-10-04 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1472",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Valencia",
+      "away": "Malaga",
+      "date": "2015-10-18 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1473",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Espanyol",
+      "date": "2015-10-18 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1483",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Malaga",
+      "away": "Deportivo La Coruna",
+      "date": "2015-10-25 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1494",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Sociedad",
+      "away": "Celta Vigo",
+      "date": "2015-11-01 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1504",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Malaga",
+      "away": "Real Betis",
+      "date": "2015-11-08 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1512",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Valencia",
+      "away": "Las Palmas",
+      "date": "2015-11-22 01:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1513",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Deportivo La Coruna",
+      "away": "Celta Vigo",
+      "date": "2015-11-22 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1523",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Deportivo La Coruna",
+      "date": "2015-11-29 01:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1524",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Celta Vigo",
+      "away": "Sporting Gijon",
+      "date": "2015-11-29 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1532",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Deportivo La Coruna",
+      "away": "Sevilla",
+      "date": "2015-12-06 01:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1533",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Celta Vigo",
+      "date": "2015-12-06 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1544",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Real Betis",
+      "date": "2015-12-13 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1552",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Deportivo La Coruna",
+      "away": "Eibar",
+      "date": "2015-12-20 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1566",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Granada",
+      "date": "2015-12-31 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1570",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Malaga",
+      "away": "Celta Vigo",
+      "date": "2016-01-03 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1582",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Levante",
+      "away": "Rayo Vallecano",
+      "date": "2016-01-10 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1591",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Sociedad",
+      "away": "Deportivo La Coruna",
+      "date": "2016-01-17 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1602",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Rayo Vallecano",
+      "away": "Celta Vigo",
+      "date": "2016-01-24 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1612",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Sociedad",
+      "away": "Real Betis",
+      "date": "2016-01-31 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1622",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Sporting Gijon",
+      "away": "Deportivo La Coruna",
+      "date": "2016-02-07 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1632",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Deportivo La Coruna",
+      "away": "Real Betis",
+      "date": "2016-02-14 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1643",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Celta Vigo",
+      "away": "Eibar",
+      "date": "2016-02-21 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1654",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Sociedad",
+      "away": "Malaga",
+      "date": "2016-02-28 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1659",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Atletico Madrid",
+      "away": "Real Sociedad",
+      "date": "2016-03-02 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1660",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Las Palmas",
+      "away": "Getafe",
+      "date": "2016-03-02 01:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1665",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Levante",
+      "away": "Real Madrid",
+      "date": "2016-03-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1668",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Rayo Vallecano",
+      "away": "Barcelona",
+      "date": "2016-03-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1672",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Deportivo La Coruna",
+      "away": "Malaga",
+      "date": "2016-03-06 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1683",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Rayo Vallecano",
+      "away": "Eibar",
+      "date": "2016-03-13 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1694",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Malaga",
+      "date": "2016-03-20 01:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1703",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Celta Vigo",
+      "away": "Deportivo La Coruna",
+      "date": "2016-04-03 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1713",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Betis",
+      "away": "Levante",
+      "date": "2016-04-10 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1723",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Celta Vigo",
+      "away": "Real Betis",
+      "date": "2016-04-17 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1736",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "date": "2016-04-21 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1743",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Eibar",
+      "away": "Deportivo La Coruna",
+      "date": "2016-04-24 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1753",
+      "league": "laliga",
+      "season": "2015-2016",
+      "home": "Granada",
+      "away": "Las Palmas",
+      "date": "2016-05-01 00:05:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1780",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Deportivo La Coruna",
+      "away": "Eibar",
+      "date": "2016-08-20 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1783",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Sevilla",
+      "away": "Espanyol",
+      "date": "2016-08-21 00:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1786",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Atletico Madrid",
+      "away": "Alaves",
+      "date": "2016-08-22 00:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1788",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Valencia",
+      "away": "Las Palmas",
+      "date": "2016-08-23 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1790",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Espanyol",
+      "away": "Malaga",
+      "date": "2016-08-27 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1794",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Leganes",
+      "away": "Atletico Madrid",
+      "date": "2016-08-28 00:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1798",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Villarreal",
+      "away": "Sevilla",
+      "date": "2016-08-29 00:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1820",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Sevilla",
+      "away": "Real Betis",
+      "date": "2016-09-21 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1823",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Real Sociedad",
+      "away": "Las Palmas",
+      "date": "2016-09-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1824",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Granada",
+      "away": "Athletic Club",
+      "date": "2016-09-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1825",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Barcelona",
+      "away": "Atletico Madrid",
+      "date": "2016-09-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1828",
+      "league": "laliga",
+      "season": "2016-2017",
+      "home": "Valencia",
+      "away": "Alaves",
+      "date": "2016-09-23 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "7915",
+      "league": "laliga",
+      "season": "2017-2018",
+      "home": "Eibar",
+      "away": "Leganes",
+      "date": "2017-09-16 06:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "7967",
+      "league": "laliga",
+      "season": "2017-2018",
+      "home": "Celta Vigo",
+      "away": "Atletico Madrid",
+      "date": "2017-10-23 01:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "7987",
+      "league": "laliga",
+      "season": "2017-2018",
+      "home": "Barcelona",
+      "away": "Sevilla",
+      "date": "2017-11-05 03:45:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "17503",
+      "league": "laliga",
+      "season": "2021-2022",
+      "home": "Espanyol",
+      "away": "Valencia",
+      "date": "2022-05-15 17:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "22842",
+      "league": "laliga",
+      "season": "2023-2024",
+      "home": "Granada",
+      "away": "Athletic Club",
+      "date": "2023-12-12 15:15:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "29218",
+      "league": "laliga",
+      "season": "2025-2026",
+      "home": "Valencia",
+      "away": "Real Oviedo",
+      "date": "2025-09-29 19:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1977",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Paris Saint Germain",
+      "away": "Saint-Etienne",
+      "date": "2015-10-26 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1987",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Nantes",
+      "away": "Marseille",
+      "date": "2015-11-02 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1997",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lyon",
+      "away": "Saint-Etienne",
+      "date": "2015-11-09 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "1998",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Bordeaux",
+      "away": "Monaco",
+      "date": "2015-11-09 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2008",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Saint-Etienne",
+      "away": "Marseille",
+      "date": "2015-11-23 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2018",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Marseille",
+      "away": "Monaco",
+      "date": "2015-11-30 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2021",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Nantes",
+      "away": "Lyon",
+      "date": "2015-12-02 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2027",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lille",
+      "away": "Saint-Etienne",
+      "date": "2015-12-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2028",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Rennes",
+      "away": "Marseille",
+      "date": "2015-12-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2038",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Saint-Etienne",
+      "away": "Rennes",
+      "date": "2015-12-07 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2048",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Paris Saint Germain",
+      "away": "Lyon",
+      "date": "2015-12-14 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2058",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Bordeaux",
+      "away": "Marseille",
+      "date": "2015-12-21 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2068",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Marseille",
+      "away": "Guingamp",
+      "date": "2016-01-11 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2078",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Saint-Etienne",
+      "away": "Lyon",
+      "date": "2016-01-18 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2088",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lyon",
+      "away": "Marseille",
+      "date": "2016-01-25 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2098",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Saint-Etienne",
+      "away": "Paris Saint Germain",
+      "date": "2016-02-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2100",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Montpellier",
+      "away": "Marseille",
+      "date": "2016-02-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2107",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Paris Saint Germain",
+      "away": "Lorient",
+      "date": "2016-02-04 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2108",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Rennes",
+      "away": "Saint-Etienne",
+      "date": "2016-02-05 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2118",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Marseille",
+      "away": "Paris Saint Germain",
+      "date": "2016-02-08 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2128",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Nice",
+      "away": "Marseille",
+      "date": "2016-02-15 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2137",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lille",
+      "away": "Lyon",
+      "date": "2016-02-22 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2146",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lyon",
+      "away": "Paris Saint Germain",
+      "date": "2016-02-29 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2156",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lyon",
+      "away": "Guingamp",
+      "date": "2016-03-07 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2168",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Rennes",
+      "away": "Lyon",
+      "date": "2016-03-14 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2175",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Lyon",
+      "away": "Nantes",
+      "date": "2016-03-20 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2178",
+      "league": "ligue1",
+      "season": "2015-2016",
+      "home": "Paris Saint Germain",
+      "away": "Monaco",
+      "date": "2016-03-21 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2865",
+      "league": "ligue1",
+      "season": "2016-2017",
+      "home": "Dijon",
+      "away": "Monaco",
+      "date": "2016-11-30 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3228",
+      "league": "ligue1",
+      "season": "2016-2017",
+      "home": "Paris Saint Germain",
+      "away": "Angers",
+      "date": "2016-12-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "4114",
+      "league": "ligue1",
+      "season": "2016-2017",
+      "home": "Marseille",
+      "away": "Monaco",
+      "date": "2017-01-16 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "8886",
+      "league": "ligue1",
+      "season": "2017-2018",
+      "home": "Caen",
+      "away": "Toulouse",
+      "date": "2018-04-14 18:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "8928",
+      "league": "ligue1",
+      "season": "2017-2018",
+      "home": "Guingamp",
+      "away": "Marseille",
+      "date": "2018-05-12 20:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "17955",
+      "league": "ligue1",
+      "season": "2021-2022",
+      "home": "Lyon",
+      "away": "Marseille",
+      "date": "2022-02-02 21:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "19973",
+      "league": "ligue1",
+      "season": "2022-2023",
+      "home": "Strasbourg",
+      "away": "Lyon",
+      "date": "2023-04-30 19:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "23377",
+      "league": "ligue1",
+      "season": "2023-2024",
+      "home": "Nice",
+      "away": "Lille",
+      "date": "2023-08-12 18:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "23378",
+      "league": "ligue1",
+      "season": "2023-2024",
+      "home": "Brest",
+      "away": "Lens",
+      "date": "2023-08-12 18:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "29720",
+      "league": "ligue1",
+      "season": "2025-2026",
+      "home": "Brest",
+      "away": "Lorient",
+      "date": "2026-02-08 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "29722",
+      "league": "ligue1",
+      "season": "2025-2026",
+      "home": "Lens",
+      "away": "Rennes",
+      "date": "2026-02-08 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "29723",
+      "league": "ligue1",
+      "season": "2025-2026",
+      "home": "Metz",
+      "away": "Lille",
+      "date": "2026-02-08 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "29724",
+      "league": "ligue1",
+      "season": "2025-2026",
+      "home": "Nantes",
+      "away": "Lyon",
+      "date": "2026-02-08 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "27849",
+      "league": "bundesliga",
+      "season": "2024-2025",
+      "home": "St. Pauli",
+      "away": "Holstein Kiel",
+      "date": "2024-11-30 14:30:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "27866",
+      "league": "bundesliga",
+      "season": "2024-2025",
+      "home": "Union Berlin",
+      "away": "Bochum",
+      "date": "2024-12-14 14:30:00",
+      "reason": "Incomplete fixture or score disagreement"
+    },
+    {
+      "id": "660",
+      "league": "seriea",
+      "season": "2015-2016",
+      "home": "Palermo",
+      "away": "Empoli",
+      "date": "2015-11-03 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "690",
+      "league": "seriea",
+      "season": "2015-2016",
+      "home": "Napoli",
+      "away": "Inter",
+      "date": "2015-12-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "810",
+      "league": "seriea",
+      "season": "2015-2016",
+      "home": "Napoli",
+      "away": "AC Milan",
+      "date": "2016-02-23 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "820",
+      "league": "seriea",
+      "season": "2015-2016",
+      "home": "Fiorentina",
+      "away": "Napoli",
+      "date": "2016-03-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "945",
+      "league": "seriea",
+      "season": "2016-2017",
+      "home": "Sassuolo",
+      "away": "Pescara",
+      "date": "2016-08-28 22:45:00",
+      "reason": "Incomplete fixture or score disagreement"
+    },
+    {
+      "id": "2745",
+      "league": "seriea",
+      "season": "2016-2017",
+      "home": "Cagliari",
+      "away": "Palermo",
+      "date": "2016-11-01 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "2775",
+      "league": "seriea",
+      "season": "2016-2017",
+      "home": "Inter",
+      "away": "Fiorentina",
+      "date": "2016-11-29 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3075",
+      "league": "seriea",
+      "season": "2016-2017",
+      "home": "Udinese",
+      "away": "Bologna",
+      "date": "2016-12-06 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "3085",
+      "league": "seriea",
+      "season": "2016-2017",
+      "home": "Roma",
+      "away": "AC Milan",
+      "date": "2016-12-13 00:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "7709",
+      "league": "seriea",
+      "season": "2017-2018",
+      "home": "Sassuolo",
+      "away": "Atalanta",
+      "date": "2018-01-28 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "7715",
+      "league": "seriea",
+      "season": "2017-2018",
+      "home": "Chievo",
+      "away": "Juventus",
+      "date": "2018-01-28 14:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "22621",
+      "league": "seriea",
+      "season": "2023-2024",
+      "home": "Udinese",
+      "away": "Roma",
+      "date": "2024-04-14 16:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "22676",
+      "league": "seriea",
+      "season": "2023-2024",
+      "home": "Cagliari",
+      "away": "Fiorentina",
+      "date": "2024-05-24 16:00:00",
+      "reason": "No unique exact-date existing fixture"
+    },
+    {
+      "id": "27724",
+      "league": "seriea",
+      "season": "2024-2025",
+      "home": "Genoa",
+      "away": "Atalanta",
+      "date": "2025-05-18 13:00:00",
+      "reason": "No unique exact-date existing fixture"
+    }
+  ],
+  "coverage": [
+    {
+      "league": "bundesliga",
+      "season": "2014-2015",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2014-08-22",
+      "last": "2015-05-23"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2015-2016",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2015-08-14",
+      "last": "2016-05-14"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2016-2017",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2016-08-26",
+      "last": "2017-05-20"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2017-2018",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2017-08-18",
+      "last": "2018-05-12"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2018-2019",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2018-08-24",
+      "last": "2019-05-18"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2019-2020",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2019-08-16",
+      "last": "2020-06-27"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2020-2021",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2020-09-18",
+      "last": "2021-05-22"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2021-2022",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2021-08-13",
+      "last": "2022-05-14"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2022-2023",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2022-08-05",
+      "last": "2023-05-27"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2023-2024",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2023-08-18",
+      "last": "2024-05-18"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2024-2025",
+      "existing": 306,
+      "source": 306,
+      "matched": 304,
+      "missing": 2,
+      "first": "2024-08-23",
+      "last": "2025-05-17"
+    },
+    {
+      "league": "bundesliga",
+      "season": "2025-2026",
+      "existing": 306,
+      "source": 261,
+      "matched": 261,
+      "missing": 45,
+      "first": "2025-08-22",
+      "last": "2026-04-17"
+    },
+    {
+      "league": "epl",
+      "season": "2014-2015",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2014-08-16",
+      "last": "2015-05-24"
+    },
+    {
+      "league": "epl",
+      "season": "2015-2016",
+      "existing": 380,
+      "source": 380,
+      "matched": 367,
+      "missing": 13,
+      "first": "2015-08-08",
+      "last": "2016-05-17"
+    },
+    {
+      "league": "epl",
+      "season": "2016-2017",
+      "existing": 380,
+      "source": 380,
+      "matched": 367,
+      "missing": 13,
+      "first": "2016-08-13",
+      "last": "2017-05-21"
+    },
+    {
+      "league": "epl",
+      "season": "2017-2018",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2017-08-11",
+      "last": "2018-05-13"
+    },
+    {
+      "league": "epl",
+      "season": "2018-2019",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2018-08-10",
+      "last": "2019-05-12"
+    },
+    {
+      "league": "epl",
+      "season": "2019-2020",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2019-08-09",
+      "last": "2020-07-26"
+    },
+    {
+      "league": "epl",
+      "season": "2020-2021",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2020-09-12",
+      "last": "2021-05-23"
+    },
+    {
+      "league": "epl",
+      "season": "2021-2022",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2021-08-13",
+      "last": "2022-05-22"
+    },
+    {
+      "league": "epl",
+      "season": "2022-2023",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2022-08-05",
+      "last": "2023-05-28"
+    },
+    {
+      "league": "epl",
+      "season": "2023-2024",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2023-08-11",
+      "last": "2024-05-19"
+    },
+    {
+      "league": "epl",
+      "season": "2024-2025",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2024-08-16",
+      "last": "2025-05-25"
+    },
+    {
+      "league": "epl",
+      "season": "2025-2026",
+      "existing": 380,
+      "source": 290,
+      "matched": 290,
+      "missing": 90,
+      "first": "2025-08-15",
+      "last": "2026-04-13"
+    },
+    {
+      "league": "laliga",
+      "season": "2014-2015",
+      "existing": 380,
+      "source": 375,
+      "matched": 375,
+      "missing": 5,
+      "first": "2014-08-23",
+      "last": "2015-05-23"
+    },
+    {
+      "league": "laliga",
+      "season": "2015-2016",
+      "existing": 380,
+      "source": 380,
+      "matched": 328,
+      "missing": 52,
+      "first": "2015-08-21",
+      "last": "2016-05-15"
+    },
+    {
+      "league": "laliga",
+      "season": "2016-2017",
+      "existing": 380,
+      "source": 380,
+      "matched": 368,
+      "missing": 12,
+      "first": "2016-08-19",
+      "last": "2017-05-21"
+    },
+    {
+      "league": "laliga",
+      "season": "2017-2018",
+      "existing": 380,
+      "source": 380,
+      "matched": 377,
+      "missing": 3,
+      "first": "2017-08-18",
+      "last": "2018-05-20"
+    },
+    {
+      "league": "laliga",
+      "season": "2018-2019",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2018-08-17",
+      "last": "2019-05-19"
+    },
+    {
+      "league": "laliga",
+      "season": "2019-2020",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2019-08-16",
+      "last": "2020-07-19"
+    },
+    {
+      "league": "laliga",
+      "season": "2020-2021",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2020-09-12",
+      "last": "2021-05-23"
+    },
+    {
+      "league": "laliga",
+      "season": "2021-2022",
+      "existing": 380,
+      "source": 380,
+      "matched": 379,
+      "missing": 1,
+      "first": "2021-08-13",
+      "last": "2022-05-22"
+    },
+    {
+      "league": "laliga",
+      "season": "2022-2023",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2022-08-12",
+      "last": "2023-06-04"
+    },
+    {
+      "league": "laliga",
+      "season": "2023-2024",
+      "existing": 380,
+      "source": 380,
+      "matched": 379,
+      "missing": 1,
+      "first": "2023-08-11",
+      "last": "2024-05-26"
+    },
+    {
+      "league": "laliga",
+      "season": "2024-2025",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2024-08-15",
+      "last": "2025-05-25"
+    },
+    {
+      "league": "laliga",
+      "season": "2025-2026",
+      "existing": 380,
+      "source": 308,
+      "matched": 307,
+      "missing": 73,
+      "first": "2025-08-15",
+      "last": "2026-04-13"
+    },
+    {
+      "league": "ligue1",
+      "season": "2014-2015",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2014-08-08",
+      "last": "2015-05-23"
+    },
+    {
+      "league": "ligue1",
+      "season": "2015-2016",
+      "existing": 380,
+      "source": 380,
+      "matched": 353,
+      "missing": 27,
+      "first": "2015-08-07",
+      "last": "2016-05-14"
+    },
+    {
+      "league": "ligue1",
+      "season": "2016-2017",
+      "existing": 380,
+      "source": 380,
+      "matched": 377,
+      "missing": 3,
+      "first": "2016-08-12",
+      "last": "2017-05-20"
+    },
+    {
+      "league": "ligue1",
+      "season": "2017-2018",
+      "existing": 380,
+      "source": 380,
+      "matched": 378,
+      "missing": 2,
+      "first": "2017-08-04",
+      "last": "2018-05-19"
+    },
+    {
+      "league": "ligue1",
+      "season": "2018-2019",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2018-08-10",
+      "last": "2019-05-24"
+    },
+    {
+      "league": "ligue1",
+      "season": "2019-2020",
+      "existing": 279,
+      "source": 279,
+      "matched": 279,
+      "missing": 0,
+      "first": "2019-08-09",
+      "last": "2020-03-08"
+    },
+    {
+      "league": "ligue1",
+      "season": "2020-2021",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2020-08-21",
+      "last": "2021-05-23"
+    },
+    {
+      "league": "ligue1",
+      "season": "2021-2022",
+      "existing": 380,
+      "source": 380,
+      "matched": 379,
+      "missing": 1,
+      "first": "2021-08-06",
+      "last": "2022-05-21"
+    },
+    {
+      "league": "ligue1",
+      "season": "2022-2023",
+      "existing": 380,
+      "source": 380,
+      "matched": 379,
+      "missing": 1,
+      "first": "2022-08-05",
+      "last": "2023-06-03"
+    },
+    {
+      "league": "ligue1",
+      "season": "2023-2024",
+      "existing": 306,
+      "source": 306,
+      "matched": 304,
+      "missing": 2,
+      "first": "2023-08-12",
+      "last": "2024-05-19"
+    },
+    {
+      "league": "ligue1",
+      "season": "2024-2025",
+      "existing": 306,
+      "source": 306,
+      "matched": 306,
+      "missing": 0,
+      "first": "2024-08-16",
+      "last": "2025-05-17"
+    },
+    {
+      "league": "ligue1",
+      "season": "2025-2026",
+      "existing": 306,
+      "source": 259,
+      "matched": 255,
+      "missing": 51,
+      "first": "2025-08-15",
+      "last": "2026-04-17"
+    },
+    {
+      "league": "seriea",
+      "season": "2014-2015",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2014-08-30",
+      "last": "2015-05-31"
+    },
+    {
+      "league": "seriea",
+      "season": "2015-2016",
+      "existing": 380,
+      "source": 380,
+      "matched": 376,
+      "missing": 4,
+      "first": "2015-08-22",
+      "last": "2016-05-15"
+    },
+    {
+      "league": "seriea",
+      "season": "2016-2017",
+      "existing": 380,
+      "source": 380,
+      "matched": 375,
+      "missing": 5,
+      "first": "2016-08-20",
+      "last": "2017-05-28"
+    },
+    {
+      "league": "seriea",
+      "season": "2017-2018",
+      "existing": 380,
+      "source": 380,
+      "matched": 378,
+      "missing": 2,
+      "first": "2017-08-19",
+      "last": "2018-05-20"
+    },
+    {
+      "league": "seriea",
+      "season": "2018-2019",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2018-08-18",
+      "last": "2019-05-26"
+    },
+    {
+      "league": "seriea",
+      "season": "2019-2020",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2019-08-24",
+      "last": "2020-08-02"
+    },
+    {
+      "league": "seriea",
+      "season": "2020-2021",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2020-09-19",
+      "last": "2021-05-23"
+    },
+    {
+      "league": "seriea",
+      "season": "2021-2022",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2021-08-21",
+      "last": "2022-05-22"
+    },
+    {
+      "league": "seriea",
+      "season": "2022-2023",
+      "existing": 380,
+      "source": 380,
+      "matched": 380,
+      "missing": 0,
+      "first": "2022-08-13",
+      "last": "2023-06-04"
+    },
+    {
+      "league": "seriea",
+      "season": "2023-2024",
+      "existing": 380,
+      "source": 380,
+      "matched": 378,
+      "missing": 2,
+      "first": "2023-08-19",
+      "last": "2024-06-02"
+    },
+    {
+      "league": "seriea",
+      "season": "2024-2025",
+      "existing": 380,
+      "source": 380,
+      "matched": 379,
+      "missing": 1,
+      "first": "2024-08-17",
+      "last": "2025-05-25"
+    },
+    {
+      "league": "seriea",
+      "season": "2025-2026",
+      "existing": 380,
+      "source": 322,
+      "matched": 322,
+      "missing": 58,
+      "first": "2025-08-23",
+      "last": "2026-04-17"
+    }
+  ],
+  "applied": false,
+  "archive_url": "https://github.com/peteowen1/pannadata/releases/download/understat-latest/understat_metadata.parquet",
+  "archive_sha256": "edddd2a00f259ea631e9c5089939b6b35d64bef79c8ba4c4d8d8cec0534d18d3",
+  "normalized_sha256": "0aa2a150680665a26362a60e624b224dc896a662c55cd19d382fa2d1aea5ce73"
+}

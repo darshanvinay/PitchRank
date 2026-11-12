@@ -165,3 +165,23 @@ class SeasonHistory(Base):
     rating_after: Mapped[float] = mapped_column(Float)
     rating_change: Mapped[float] = mapped_column(Float)
     sequence: Mapped[int] = mapped_column(Integer)
+
+
+class MatchXG(Base):
+    """Optional Understat observations; production rating inputs do not read this table."""
+
+    __tablename__ = "match_xg"
+    __table_args__ = (
+        UniqueConstraint("source", "external_id"),
+        CheckConstraint("home_xg >= 0 AND away_xg >= 0"),
+    )
+    match_id: Mapped[int] = mapped_column(ForeignKey("matches.id"), primary_key=True)
+    source: Mapped[str] = mapped_column(String(80), default="understat")
+    external_id: Mapped[str] = mapped_column(String(100))
+    home_xg: Mapped[float] = mapped_column(Float)
+    away_xg: Mapped[float] = mapped_column(Float)
+    source_url: Mapped[str] = mapped_column(String(1000))
+    archive_url: Mapped[str] = mapped_column(String(1000))
+    archive_sha256: Mapped[str] = mapped_column(String(64))
+    provider_date: Mapped[date] = mapped_column(Date)
+    retrieved_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=now)

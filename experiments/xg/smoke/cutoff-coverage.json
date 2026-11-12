@@ -1,0 +1,2027 @@
+[
+  {
+    "season": "2011-2012",
+    "cutoff": "2012-02-14",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 79,
+        "club": "Inter",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 83,
+        "club": "Milan",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 85,
+        "club": "Napoli",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 118,
+        "club": "Olympique Lyonnais",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 119,
+        "club": "Olympique de Marseille",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 178,
+        "club": "APOEL",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 183,
+        "club": "CSKA Moskva",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 185,
+        "club": "Basel",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 211,
+        "club": "Zenit St. Petersburg",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 8
+  },
+  {
+    "season": "2012-2013",
+    "cutoff": "2013-02-12",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 29,
+        "club": "Man United",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 61,
+        "club": "M\u00e1laga CF",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 70,
+        "club": "Valencia CF",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 83,
+        "club": "Milan",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 106,
+        "club": "Schalke",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 152,
+        "club": "Celtic",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 159,
+        "club": "Galatasaray",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 170,
+        "club": "Shakhtar",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 8
+  },
+  {
+    "season": "2013-2014",
+    "cutoff": "2014-02-18",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 29,
+        "club": "Man United",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 83,
+        "club": "Milan",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 106,
+        "club": "Schalke",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 159,
+        "club": "Galatasaray",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 162,
+        "club": "Olympiacos",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 211,
+        "club": "Zenit St. Petersburg",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 8
+  },
+  {
+    "season": "2014-2015",
+    "cutoff": "2015-02-17",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 25,
+        "latest": "2015-02-10",
+        "age_days": 7,
+        "eligible": true
+      },
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 25,
+        "latest": "2015-02-11",
+        "age_days": 6,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 25,
+        "latest": "2015-02-11",
+        "age_days": 6,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 23,
+        "latest": "2015-02-15",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 23,
+        "latest": "2015-02-15",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 23,
+        "latest": "2015-02-14",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 23,
+        "latest": "2015-02-15",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 21,
+        "latest": "2015-02-14",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 21,
+        "latest": "2015-02-13",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 21,
+        "latest": "2015-02-14",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 106,
+        "club": "Schalke",
+        "count": 21,
+        "latest": "2015-02-14",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 120,
+        "club": "AS Monaco",
+        "count": 24,
+        "latest": "2015-02-08",
+        "age_days": 9,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 25,
+        "latest": "2015-02-14",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 170,
+        "club": "Shakhtar",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 185,
+        "club": "Basel",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 2
+  },
+  {
+    "season": "2015-2016",
+    "cutoff": "2016-02-16",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 62,
+        "latest": "2016-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 63,
+        "latest": "2016-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 63,
+        "latest": "2016-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 61,
+        "latest": "2016-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 61,
+        "latest": "2016-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 61,
+        "latest": "2016-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 63,
+        "latest": "2016-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 87,
+        "club": "Roma",
+        "count": 63,
+        "latest": "2016-02-12",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 55,
+        "latest": "2016-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 59,
+        "latest": "2016-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 142,
+        "club": "Wolfsburg",
+        "count": 55,
+        "latest": "2016-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 163,
+        "club": "PSV",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 184,
+        "club": "Dynamo Kyiv",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 194,
+        "club": "KAA Gent",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 211,
+        "club": "Zenit St. Petersburg",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 4
+  },
+  {
+    "season": "2016-2017",
+    "cutoff": "2017-02-14",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 99,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 25,
+        "club": "Leicester",
+        "count": 99,
+        "latest": "2017-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 98,
+        "latest": "2017-02-13",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 93,
+        "latest": "2017-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 96,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 93,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 69,
+        "club": "Sevilla FC",
+        "count": 93,
+        "latest": "2017-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 100,
+        "latest": "2017-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 85,
+        "club": "Napoli",
+        "count": 97,
+        "latest": "2017-02-10",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 88,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 88,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 88,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 120,
+        "club": "AS Monaco",
+        "count": 96,
+        "latest": "2017-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 93,
+        "latest": "2017-02-10",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 2
+  },
+  {
+    "season": "2017-2018",
+    "cutoff": "2018-02-13",
+    "clubs": [
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 139,
+        "latest": "2018-02-12",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 138,
+        "latest": "2018-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 138,
+        "latest": "2018-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 29,
+        "club": "Man United",
+        "count": 138,
+        "latest": "2018-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 45,
+        "club": "Tottenham",
+        "count": 137,
+        "latest": "2018-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 134,
+        "latest": "2018-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 133,
+        "latest": "2018-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 69,
+        "club": "Sevilla FC",
+        "count": 131,
+        "latest": "2018-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 137,
+        "latest": "2018-02-09",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 87,
+        "club": "Roma",
+        "count": 137,
+        "latest": "2018-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 124,
+        "latest": "2018-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 131,
+        "latest": "2018-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 170,
+        "club": "Shakhtar",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 181,
+        "club": "Be\u015fikta\u015f",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 185,
+        "club": "Basel",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 4
+  },
+  {
+    "season": "2018-2019",
+    "cutoff": "2019-02-12",
+    "clubs": [
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 175,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 176,
+        "latest": "2019-02-10",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 29,
+        "club": "Man United",
+        "count": 175,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 45,
+        "club": "Tottenham",
+        "count": 174,
+        "latest": "2019-02-10",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 169,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 172,
+        "latest": "2019-02-10",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 172,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 174,
+        "latest": "2019-02-10",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 87,
+        "club": "Roma",
+        "count": 174,
+        "latest": "2019-02-08",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 157,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 157,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 106,
+        "club": "Schalke",
+        "count": 157,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 118,
+        "club": "Olympique Lyonnais",
+        "count": 166,
+        "latest": "2019-02-10",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 166,
+        "latest": "2019-02-09",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 149,
+        "club": "Ajax",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 2
+  },
+  {
+    "season": "2019-2020",
+    "cutoff": "2020-02-18",
+    "clubs": [
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 214,
+        "latest": "2020-02-17",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 213,
+        "latest": "2020-02-15",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 212,
+        "latest": "2020-02-02",
+        "age_days": 16,
+        "eligible": true
+      },
+      {
+        "team_id": 45,
+        "club": "Tottenham",
+        "count": 212,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 208,
+        "latest": "2020-02-14",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 211,
+        "latest": "2020-02-15",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 211,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 70,
+        "club": "Valencia CF",
+        "count": 207,
+        "latest": "2020-02-14",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 72,
+        "club": "Atalanta",
+        "count": 213,
+        "latest": "2020-02-15",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 213,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 85,
+        "club": "Napoli",
+        "count": 211,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 192,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 192,
+        "latest": "2020-02-14",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 105,
+        "club": "RB Leipzig",
+        "count": 124,
+        "latest": "2020-02-15",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 118,
+        "club": "Olympique Lyonnais",
+        "count": 205,
+        "latest": "2020-02-16",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 207,
+        "latest": "2020-02-15",
+        "age_days": 3,
+        "eligible": true
+      }
+    ],
+    "fallback_ties": 0
+  },
+  {
+    "season": "2020-2021",
+    "cutoff": "2021-02-16",
+    "clubs": [
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 250,
+        "latest": "2021-02-15",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 249,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 248,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 243,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 247,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 248,
+        "latest": "2021-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 69,
+        "club": "Sevilla FC",
+        "count": 244,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 72,
+        "club": "Atalanta",
+        "count": 249,
+        "latest": "2021-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 248,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 81,
+        "club": "Lazio",
+        "count": 250,
+        "latest": "2021-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 225,
+        "latest": "2021-02-15",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 225,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 102,
+        "club": "Borussia M\u00f6nchengladbach",
+        "count": 225,
+        "latest": "2021-02-14",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 105,
+        "club": "RB Leipzig",
+        "count": 157,
+        "latest": "2021-02-12",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 234,
+        "latest": "2021-02-13",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 1
+  },
+  {
+    "season": "2021-2022",
+    "cutoff": "2022-02-15",
+    "clubs": [
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 288,
+        "latest": "2022-01-23",
+        "age_days": 23,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 287,
+        "latest": "2022-02-13",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 288,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 29,
+        "club": "Man United",
+        "count": 287,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 283,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 287,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 71,
+        "club": "Villarreal CF",
+        "count": 285,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 79,
+        "club": "Inter",
+        "count": 288,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 80,
+        "club": "Juventus",
+        "count": 290,
+        "latest": "2022-02-13",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 260,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 116,
+        "club": "LOSC",
+        "count": 278,
+        "latest": "2022-02-12",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 271,
+        "latest": "2022-02-11",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 149,
+        "club": "Ajax",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 169,
+        "club": "Salzburg",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 173,
+        "club": "Sporting CP",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 3
+  },
+  {
+    "season": "2022-2023",
+    "cutoff": "2023-02-14",
+    "clubs": [
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 324,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 322,
+        "latest": "2023-02-13",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 323,
+        "latest": "2023-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 45,
+        "club": "Tottenham",
+        "count": 323,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 321,
+        "latest": "2023-02-05",
+        "age_days": 9,
+        "eligible": true
+      },
+      {
+        "team_id": 79,
+        "club": "Inter",
+        "count": 324,
+        "latest": "2023-02-13",
+        "age_days": 1,
+        "eligible": true
+      },
+      {
+        "team_id": 83,
+        "club": "Milan",
+        "count": 324,
+        "latest": "2023-02-10",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 85,
+        "club": "Napoli",
+        "count": 323,
+        "latest": "2023-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 292,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 292,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 95,
+        "club": "Eintracht Frankfurt",
+        "count": 292,
+        "latest": "2023-02-12",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 105,
+        "club": "RB Leipzig",
+        "count": 224,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 308,
+        "latest": "2023-02-11",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 153,
+        "club": "Club Brugge",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 2
+  },
+  {
+    "season": "2023-2024",
+    "cutoff": "2024-02-13",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 364,
+        "latest": "2024-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 362,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 360,
+        "latest": "2024-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 363,
+        "latest": "2024-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 363,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 68,
+        "club": "Real Sociedad",
+        "count": 355,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 79,
+        "club": "Inter",
+        "count": 363,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 81,
+        "club": "Lazio",
+        "count": 365,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 85,
+        "club": "Napoli",
+        "count": 362,
+        "latest": "2024-02-11",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 327,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 327,
+        "latest": "2024-02-09",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 105,
+        "club": "RB Leipzig",
+        "count": 259,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 344,
+        "latest": "2024-02-10",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 154,
+        "club": "Copenhagen",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 163,
+        "club": "PSV",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 165,
+        "club": "Porto",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 3
+  },
+  {
+    "season": "2024-2025",
+    "cutoff": "2025-03-04",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 405,
+        "latest": "2025-02-26",
+        "age_days": 6,
+        "eligible": true
+      },
+      {
+        "team_id": 2,
+        "club": "Aston Villa",
+        "count": 293,
+        "latest": "2025-02-25",
+        "age_days": 7,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 405,
+        "latest": "2025-02-26",
+        "age_days": 6,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 400,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 403,
+        "latest": "2025-03-02",
+        "age_days": 2,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 403,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 79,
+        "club": "Inter",
+        "count": 405,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 364,
+        "latest": "2025-02-28",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 94,
+        "club": "Borussia Dortmund",
+        "count": 364,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 364,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 116,
+        "club": "LOSC",
+        "count": 387,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 381,
+        "latest": "2025-03-01",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 150,
+        "club": "Benfica",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 153,
+        "club": "Club Brugge",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 157,
+        "club": "Feyenoord",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 163,
+        "club": "PSV",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 4
+  },
+  {
+    "season": "2025-2026",
+    "cutoff": "2026-03-10",
+    "clubs": [
+      {
+        "team_id": 1,
+        "club": "Arsenal",
+        "count": 443,
+        "latest": "2026-02-18",
+        "age_days": 20,
+        "eligible": true
+      },
+      {
+        "team_id": 15,
+        "club": "Chelsea",
+        "count": 442,
+        "latest": "2026-02-10",
+        "age_days": 28,
+        "eligible": true
+      },
+      {
+        "team_id": 26,
+        "club": "Liverpool",
+        "count": 442,
+        "latest": "2026-03-03",
+        "age_days": 7,
+        "eligible": true
+      },
+      {
+        "team_id": 28,
+        "club": "Man City",
+        "count": 441,
+        "latest": "2026-02-11",
+        "age_days": 27,
+        "eligible": true
+      },
+      {
+        "team_id": 31,
+        "club": "Newcastle",
+        "count": 406,
+        "latest": "2026-02-10",
+        "age_days": 28,
+        "eligible": true
+      },
+      {
+        "team_id": 45,
+        "club": "Tottenham",
+        "count": 440,
+        "latest": "2026-02-10",
+        "age_days": 28,
+        "eligible": true
+      },
+      {
+        "team_id": 53,
+        "club": "Atl\u00e9tico de Madrid",
+        "count": 439,
+        "latest": "2026-03-07",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 58,
+        "club": "FC Barcelona",
+        "count": 442,
+        "latest": "2026-03-07",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 67,
+        "club": "Real Madrid",
+        "count": 442,
+        "latest": "2026-03-06",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 72,
+        "club": "Atalanta",
+        "count": 444,
+        "latest": "2026-03-07",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 93,
+        "club": "Bayern Munich",
+        "count": 399,
+        "latest": "2026-03-06",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 101,
+        "club": "Bayer Leverkusen",
+        "count": 398,
+        "latest": "2026-03-07",
+        "age_days": 3,
+        "eligible": true
+      },
+      {
+        "team_id": 123,
+        "club": "Paris Saint-Germain",
+        "count": 416,
+        "latest": "2026-03-06",
+        "age_days": 4,
+        "eligible": true
+      },
+      {
+        "team_id": 151,
+        "club": "Bod\u00f8/Glimt",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 159,
+        "club": "Galatasaray",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      },
+      {
+        "team_id": 173,
+        "club": "Sporting CP",
+        "count": 0,
+        "latest": null,
+        "age_days": null,
+        "eligible": false
+      }
+    ],
+    "fallback_ties": 2
+  }
+]

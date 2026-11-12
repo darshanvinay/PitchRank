@@ -1,0 +1,635 @@
+{
+  "all_trials_top5": [
+    {
+      "id": "66fb758a013eebb5",
+      "phase": "robustness",
+      "config": {
+        "k_domestic": 9.0,
+        "k_ucl": 9.0,
+        "home": 22.5,
+        "home_mode": "league",
+        "neutral_factor": 0.0,
+        "regression": 0.09000000000000001,
+        "regression_target": "initial",
+        "regression_asymmetry": 0.0,
+        "regression_league": 0.0,
+        "margin": "linear",
+        "margin_cap": 4.0,
+        "margin_adjust": 0.0,
+        "k_gap": 0.0,
+        "k_stage": 0.0,
+        "ucl_group": 1.25,
+        "ucl_knockout": 1.5,
+        "ucl_finals": 1.75,
+        "opponent_league": 0.0,
+        "form_window": 10,
+        "form_weight": 0.0,
+        "form_kind": "residual",
+        "form_ew": false,
+        "form_venue": false,
+        "european_weight": 0.0,
+        "offsets": "none",
+        "offset_sd": 50.0,
+        "head": "expected",
+        "draw_strength": 0.7,
+        "logistic_rate": 0.05,
+        "logistic_ridge": 0.1,
+        "logistic_features": 7,
+        "calibration": "none"
+      },
+      "metrics": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.14944885000910954,
+        "log_loss": 0.46035648681206265,
+        "confidence": 0.7083851569403916
+      },
+      "changes": [
+        {
+          "season": "2020-2021",
+          "tie_id": "2ce8a9ac57949fe56fefb247",
+          "team_a": "Sevilla FC",
+          "team_b": "Borussia Dortmund",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.5600530783212176,
+          "candidate_p_a": 0.48191052551016744,
+          "distance_from_50pct": 0.018089474489832558,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "22f9ab56ccb0a96a713e1060",
+          "team_a": "Atl\u00e9tico de Madrid",
+          "team_b": "Man United",
+          "actual": "Atl\u00e9tico de Madrid",
+          "baseline_p_a": 0.4838045379879091,
+          "candidate_p_a": 0.5110050636449636,
+          "distance_from_50pct": 0.011005063644963564,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "80239a3ce5fdc4f66c37f9d7",
+          "team_a": "Paris Saint-Germain",
+          "team_b": "Real Madrid",
+          "actual": "Real Madrid",
+          "baseline_p_a": 0.49003157378174805,
+          "candidate_p_a": 0.5507825363281178,
+          "distance_from_50pct": 0.0507825363281178,
+          "improved": false
+        },
+        {
+          "season": "2022-2023",
+          "tie_id": "7ebb521af8ba241967c76a0e",
+          "team_a": "Borussia Dortmund",
+          "team_b": "Chelsea",
+          "actual": "Chelsea",
+          "baseline_p_a": 0.5311933435500509,
+          "candidate_p_a": 0.47342633632506714,
+          "distance_from_50pct": 0.026573663674932857,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "a9e2a2beb573faf57d471369",
+          "team_a": "Bayern Munich",
+          "team_b": "Bayer Leverkusen",
+          "actual": "Bayern Munich",
+          "baseline_p_a": 0.4950301768420938,
+          "candidate_p_a": 0.5378697101564788,
+          "distance_from_50pct": 0.037869710156478775,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+          "team_a": "Borussia Dortmund",
+          "team_b": "LOSC",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.4536570340901019,
+          "candidate_p_a": 0.5010052538875057,
+          "distance_from_50pct": 0.0010052538875057193,
+          "improved": true
+        }
+      ]
+    },
+    {
+      "id": "3ab3bdf77f6d8dac",
+      "phase": "robustness",
+      "config": {
+        "k_domestic": 10.0,
+        "k_ucl": 10.0,
+        "home": 65.0,
+        "home_mode": "fixed",
+        "neutral_factor": 0.0,
+        "regression": 0.25,
+        "regression_target": "initial",
+        "regression_asymmetry": 0.0,
+        "regression_league": 0.0,
+        "margin": "linear",
+        "margin_cap": 99.0,
+        "margin_adjust": 0.0,
+        "k_gap": 0.0,
+        "k_stage": 0.0,
+        "ucl_group": 2.0,
+        "ucl_knockout": 3.0,
+        "ucl_finals": 1.5,
+        "opponent_league": 0.0,
+        "form_window": 10,
+        "form_weight": 0.0,
+        "form_kind": "residual",
+        "form_ew": false,
+        "form_venue": false,
+        "european_weight": 0.0,
+        "offsets": "none",
+        "offset_sd": 50.0,
+        "head": "regularized",
+        "draw_strength": 0.7,
+        "logistic_rate": 0.1,
+        "logistic_ridge": 0.01,
+        "logistic_features": 5,
+        "calibration": "none"
+      },
+      "metrics": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.1587207593036677,
+        "log_loss": 0.49136337504577643,
+        "confidence": 0.667378971550385
+      },
+      "changes": [
+        {
+          "season": "2020-2021",
+          "tie_id": "2ce8a9ac57949fe56fefb247",
+          "team_a": "Sevilla FC",
+          "team_b": "Borussia Dortmund",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.5600530783212176,
+          "candidate_p_a": 0.49479415789874825,
+          "distance_from_50pct": 0.005205842101251745,
+          "improved": true
+        },
+        {
+          "season": "2022-2023",
+          "tie_id": "7ebb521af8ba241967c76a0e",
+          "team_a": "Borussia Dortmund",
+          "team_b": "Chelsea",
+          "actual": "Chelsea",
+          "baseline_p_a": 0.5311933435500509,
+          "candidate_p_a": 0.4685630450201937,
+          "distance_from_50pct": 0.03143695497980631,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "a9e2a2beb573faf57d471369",
+          "team_a": "Bayern Munich",
+          "team_b": "Bayer Leverkusen",
+          "actual": "Bayern Munich",
+          "baseline_p_a": 0.4950301768420938,
+          "candidate_p_a": 0.5056289109810261,
+          "distance_from_50pct": 0.005628910981026136,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+          "team_a": "Borussia Dortmund",
+          "team_b": "LOSC",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.4536570340901019,
+          "candidate_p_a": 0.5038551244979013,
+          "distance_from_50pct": 0.0038551244979012633,
+          "improved": true
+        }
+      ]
+    },
+    {
+      "id": "661f0f73cfe8a19c",
+      "phase": "robustness",
+      "config": {
+        "k_domestic": 9.0,
+        "k_ucl": 9.0,
+        "home": 45.0,
+        "home_mode": "league",
+        "neutral_factor": 0.0,
+        "regression": 0.09000000000000001,
+        "regression_target": "initial",
+        "regression_asymmetry": 0.0,
+        "regression_league": 0.0,
+        "margin": "linear",
+        "margin_cap": 99.0,
+        "margin_adjust": 0.0,
+        "k_gap": 0.0,
+        "k_stage": 0.0,
+        "ucl_group": 1.25,
+        "ucl_knockout": 1.5,
+        "ucl_finals": 1.75,
+        "opponent_league": 0.0,
+        "form_window": 3,
+        "form_weight": 0.1,
+        "form_kind": "goal",
+        "form_ew": false,
+        "form_venue": true,
+        "european_weight": 0.0,
+        "offsets": "none",
+        "offset_sd": 50.0,
+        "head": "logistic",
+        "draw_strength": 0.7,
+        "logistic_rate": 0.05,
+        "logistic_ridge": 0.1,
+        "logistic_features": 7,
+        "calibration": "none"
+      },
+      "metrics": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.15952832492174673,
+        "log_loss": 0.49459864606346865,
+        "confidence": 0.6635471698105285
+      },
+      "changes": [
+        {
+          "season": "2020-2021",
+          "tie_id": "2ce8a9ac57949fe56fefb247",
+          "team_a": "Sevilla FC",
+          "team_b": "Borussia Dortmund",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.5600530783212176,
+          "candidate_p_a": 0.4902740210787122,
+          "distance_from_50pct": 0.009725978921287792,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "22f9ab56ccb0a96a713e1060",
+          "team_a": "Atl\u00e9tico de Madrid",
+          "team_b": "Man United",
+          "actual": "Atl\u00e9tico de Madrid",
+          "baseline_p_a": 0.4838045379879091,
+          "candidate_p_a": 0.5071841325339017,
+          "distance_from_50pct": 0.00718413253390171,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "80239a3ce5fdc4f66c37f9d7",
+          "team_a": "Paris Saint-Germain",
+          "team_b": "Real Madrid",
+          "actual": "Real Madrid",
+          "baseline_p_a": 0.49003157378174805,
+          "candidate_p_a": 0.5403572183590531,
+          "distance_from_50pct": 0.04035721835905315,
+          "improved": false
+        },
+        {
+          "season": "2022-2023",
+          "tie_id": "7ebb521af8ba241967c76a0e",
+          "team_a": "Borussia Dortmund",
+          "team_b": "Chelsea",
+          "actual": "Chelsea",
+          "baseline_p_a": 0.5311933435500509,
+          "candidate_p_a": 0.49133960069549715,
+          "distance_from_50pct": 0.008660399304502853,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "a9e2a2beb573faf57d471369",
+          "team_a": "Bayern Munich",
+          "team_b": "Bayer Leverkusen",
+          "actual": "Bayern Munich",
+          "baseline_p_a": 0.4950301768420938,
+          "candidate_p_a": 0.537702822162592,
+          "distance_from_50pct": 0.03770282216259202,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+          "team_a": "Borussia Dortmund",
+          "team_b": "LOSC",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.4536570340901019,
+          "candidate_p_a": 0.5113503386118666,
+          "distance_from_50pct": 0.011350338611866628,
+          "improved": true
+        }
+      ]
+    },
+    {
+      "id": "1124b18ca75bd770",
+      "phase": "robustness",
+      "config": {
+        "k_domestic": 10.0,
+        "k_ucl": 11.0,
+        "home": 50.0,
+        "home_mode": "league",
+        "neutral_factor": 0.0,
+        "regression": 0.1,
+        "regression_target": "initial",
+        "regression_asymmetry": 0.0,
+        "regression_league": 0.0,
+        "margin": "linear",
+        "margin_cap": 99.0,
+        "margin_adjust": 0.0,
+        "k_gap": 0.0,
+        "k_stage": 0.0,
+        "ucl_group": 1.25,
+        "ucl_knockout": 1.5,
+        "ucl_finals": 1.75,
+        "opponent_league": 0.0,
+        "form_window": 3,
+        "form_weight": 0.1,
+        "form_kind": "goal",
+        "form_ew": false,
+        "form_venue": true,
+        "european_weight": 0.0,
+        "offsets": "none",
+        "offset_sd": 50.0,
+        "head": "logistic",
+        "draw_strength": 0.7,
+        "logistic_rate": 0.05,
+        "logistic_ridge": 0.1,
+        "logistic_features": 7,
+        "calibration": "none"
+      },
+      "metrics": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.15968393684872373,
+        "log_loss": 0.49478896617053514,
+        "confidence": 0.6639785750855703
+      },
+      "changes": [
+        {
+          "season": "2020-2021",
+          "tie_id": "2ce8a9ac57949fe56fefb247",
+          "team_a": "Sevilla FC",
+          "team_b": "Borussia Dortmund",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.5600530783212176,
+          "candidate_p_a": 0.4999184096639068,
+          "distance_from_50pct": 8.159033609317357e-05,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "22f9ab56ccb0a96a713e1060",
+          "team_a": "Atl\u00e9tico de Madrid",
+          "team_b": "Man United",
+          "actual": "Atl\u00e9tico de Madrid",
+          "baseline_p_a": 0.4838045379879091,
+          "candidate_p_a": 0.5004360562547617,
+          "distance_from_50pct": 0.0004360562547617297,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "80239a3ce5fdc4f66c37f9d7",
+          "team_a": "Paris Saint-Germain",
+          "team_b": "Real Madrid",
+          "actual": "Real Madrid",
+          "baseline_p_a": 0.49003157378174805,
+          "candidate_p_a": 0.5324401513535306,
+          "distance_from_50pct": 0.03244015135353062,
+          "improved": false
+        },
+        {
+          "season": "2022-2023",
+          "tie_id": "7ebb521af8ba241967c76a0e",
+          "team_a": "Borussia Dortmund",
+          "team_b": "Chelsea",
+          "actual": "Chelsea",
+          "baseline_p_a": 0.5311933435500509,
+          "candidate_p_a": 0.48896300313914265,
+          "distance_from_50pct": 0.011036996860857351,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "a9e2a2beb573faf57d471369",
+          "team_a": "Bayern Munich",
+          "team_b": "Bayer Leverkusen",
+          "actual": "Bayern Munich",
+          "baseline_p_a": 0.4950301768420938,
+          "candidate_p_a": 0.5227841632626732,
+          "distance_from_50pct": 0.022784163262673185,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+          "team_a": "Borussia Dortmund",
+          "team_b": "LOSC",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.4536570340901019,
+          "candidate_p_a": 0.5042926609657422,
+          "distance_from_50pct": 0.004292660965742212,
+          "improved": true
+        }
+      ]
+    },
+    {
+      "id": "f8631e6e56d1e9c4",
+      "phase": "robustness",
+      "config": {
+        "k_domestic": 9.5,
+        "k_ucl": 9.5,
+        "home": 47.5,
+        "home_mode": "league",
+        "neutral_factor": 0.0,
+        "regression": 0.095,
+        "regression_target": "initial",
+        "regression_asymmetry": 0.0,
+        "regression_league": 0.0,
+        "margin": "linear",
+        "margin_cap": 99.0,
+        "margin_adjust": 0.0,
+        "k_gap": 0.0,
+        "k_stage": 0.0,
+        "ucl_group": 1.25,
+        "ucl_knockout": 1.5,
+        "ucl_finals": 1.75,
+        "opponent_league": 0.0,
+        "form_window": 3,
+        "form_weight": 0.1,
+        "form_kind": "goal",
+        "form_ew": false,
+        "form_venue": true,
+        "european_weight": 0.0,
+        "offsets": "none",
+        "offset_sd": 50.0,
+        "head": "logistic",
+        "draw_strength": 0.7,
+        "logistic_rate": 0.05,
+        "logistic_ridge": 0.1,
+        "logistic_features": 7,
+        "calibration": "none"
+      },
+      "metrics": {
+        "ties": 48,
+        "correct": 42,
+        "accuracy": 0.875,
+        "brier": 0.15974158383356704,
+        "log_loss": 0.4949899715224657,
+        "confidence": 0.6634377039330785
+      },
+      "changes": [
+        {
+          "season": "2020-2021",
+          "tie_id": "2ce8a9ac57949fe56fefb247",
+          "team_a": "Sevilla FC",
+          "team_b": "Borussia Dortmund",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.5600530783212176,
+          "candidate_p_a": 0.495703478817349,
+          "distance_from_50pct": 0.004296521182651003,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "22f9ab56ccb0a96a713e1060",
+          "team_a": "Atl\u00e9tico de Madrid",
+          "team_b": "Man United",
+          "actual": "Atl\u00e9tico de Madrid",
+          "baseline_p_a": 0.4838045379879091,
+          "candidate_p_a": 0.5058478120186345,
+          "distance_from_50pct": 0.005847812018634491,
+          "improved": true
+        },
+        {
+          "season": "2021-2022",
+          "tie_id": "80239a3ce5fdc4f66c37f9d7",
+          "team_a": "Paris Saint-Germain",
+          "team_b": "Real Madrid",
+          "actual": "Real Madrid",
+          "baseline_p_a": 0.49003157378174805,
+          "candidate_p_a": 0.5377041434715126,
+          "distance_from_50pct": 0.03770414347151263,
+          "improved": false
+        },
+        {
+          "season": "2022-2023",
+          "tie_id": "7ebb521af8ba241967c76a0e",
+          "team_a": "Borussia Dortmund",
+          "team_b": "Chelsea",
+          "actual": "Chelsea",
+          "baseline_p_a": 0.5311933435500509,
+          "candidate_p_a": 0.49354333869826394,
+          "distance_from_50pct": 0.006456661301736055,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "a9e2a2beb573faf57d471369",
+          "team_a": "Bayern Munich",
+          "team_b": "Bayer Leverkusen",
+          "actual": "Bayern Munich",
+          "baseline_p_a": 0.4950301768420938,
+          "candidate_p_a": 0.531496723896112,
+          "distance_from_50pct": 0.03149672389611202,
+          "improved": true
+        },
+        {
+          "season": "2024-2025",
+          "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+          "team_a": "Borussia Dortmund",
+          "team_b": "LOSC",
+          "actual": "Borussia Dortmund",
+          "baseline_p_a": 0.4536570340901019,
+          "candidate_p_a": 0.5069853717135673,
+          "distance_from_50pct": 0.006985371713567279,
+          "improved": true
+        }
+      ]
+    }
+  ],
+  "walk_forward_uncertainty": {
+    "probability": {
+      "accuracy_wilson_95": [
+        0.5466666274950367,
+        0.800544878322685
+      ],
+      "paired_log_loss_delta": -0.020741039851166546,
+      "paired_season_approx_95": [
+        -0.11525313553033026,
+        0.07377105582799717
+      ],
+      "gains": 2,
+      "losses": 7,
+      "paired_accuracy_exact_p": 0.1796875
+    },
+    "accuracy": {
+      "accuracy_wilson_95": [
+        0.6346046409154885,
+        0.8669230897101096
+      ],
+      "paired_log_loss_delta": -0.028278174068876255,
+      "paired_season_approx_95": [
+        -0.11109631571829807,
+        0.054539967580545565
+      ],
+      "gains": 3,
+      "losses": 4,
+      "paired_accuracy_exact_p": 1
+    }
+  },
+  "ablation_insights": {
+    "K": {
+      "active_parents": 20,
+      "median_validation_ablation_loss": -0.00447084259459718,
+      "median_evaluation_ablation_loss": 0.0029425333883346394
+    },
+    "home": {
+      "active_parents": 17,
+      "median_validation_ablation_loss": -0.0001681693067585588,
+      "median_evaluation_ablation_loss": 0.00032467321202467314
+    },
+    "regression": {
+      "active_parents": 18,
+      "median_validation_ablation_loss": -0.004786726474898084,
+      "median_evaluation_ablation_loss": 0.026083532696067557
+    },
+    "margin": {
+      "active_parents": 17,
+      "median_validation_ablation_loss": -0.0008601105228520645,
+      "median_evaluation_ablation_loss": 0.006394093751691421
+    },
+    "Europe": {
+      "active_parents": 6,
+      "median_validation_ablation_loss": -0.0007841689772438154,
+      "median_evaluation_ablation_loss": 0.00019441335857706132
+    },
+    "calibration": {
+      "active_parents": 1,
+      "median_validation_ablation_loss": -0.024884995987278558,
+      "median_evaluation_ablation_loss": 0.04958731880219164
+    },
+    "head": {
+      "active_parents": 11,
+      "median_validation_ablation_loss": -0.00039999413215285884,
+      "median_evaluation_ablation_loss": 0.0026124169567146027
+    },
+    "recent": {
+      "active_parents": 3,
+      "median_validation_ablation_loss": -0.00012118348288781,
+      "median_evaluation_ablation_loss": -0.00017053068194849974
+    },
+    "goal_feature": {
+      "active_parents": 3,
+      "median_validation_ablation_loss": -0.00020272357511186279,
+      "median_evaluation_ablation_loss": 0.00021911037056754346
+    },
+    "offsets": {
+      "active_parents": 1,
+      "median_validation_ablation_loss": -0.0016957903781380512,
+      "median_evaluation_ablation_loss": -0.0013237933835150706
+    }
+  },
+  "search_trials_ge40": 91
+}

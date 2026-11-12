@@ -1,0 +1,53 @@
+Caching immutable match data...
+Canonical baseline {"ties": 48, "correct": 38, "accuracy": 0.7916666666666666, "brier_score": 0.18056490331282316, "log_loss": 0.5441203012681248}
+512/10000 trials; batch 2.74s; ETA 50.9s
+1024/10000 trials; batch 2.72s; ETA 47.7s
+1536/10000 trials; batch 2.80s; ETA 46.2s
+2048/10000 trials; batch 2.73s; ETA 42.4s
+2560/10000 trials; batch 2.73s; ETA 39.7s
+3072/10000 trials; batch 2.68s; ETA 36.3s
+3584/10000 trials; batch 2.66s; ETA 33.4s
+4096/10000 trials; batch 2.65s; ETA 30.5s
+4608/10000 trials; batch 2.65s; ETA 27.9s
+5120/10000 trials; batch 2.68s; ETA 25.5s
+5632/10000 trials; batch 2.68s; ETA 22.8s
+6144/10000 trials; batch 2.65s; ETA 19.9s
+6656/10000 trials; batch 2.64s; ETA 17.3s
+7168/10000 trials; batch 2.68s; ETA 14.8s
+7680/10000 trials; batch 2.72s; ETA 12.3s
+8000/10000 trials; batch 2.48s; ETA 15.5s
+8512/10000 trials; batch 2.84s; ETA 8.3s
+9024/10000 trials; batch 2.88s; ETA 5.5s
+9536/10000 trials; batch 2.87s; ETA 2.6s
+10000/10000 trials; batch 2.70s; ETA 0.0s
+Robustness 512/515 new configurations
+Robustness 515/515 new configurations
+{
+  "complete": true,
+  "search_trials": 10000,
+  "diagnostic_trials": 515,
+  "exploratory_best_correct": 41,
+  "exploratory_best_including_diagnostics": 42,
+  "ties": 48,
+  "walk_forward": {
+    "probability": {
+      "ties": 48,
+      "correct": 33,
+      "accuracy": 0.6875,
+      "brier": 0.1766518884195354,
+      "log_loss": 0.5233792614169583,
+      "confidence": 0.7294122417196521
+    },
+    "accuracy": {
+      "ties": 48,
+      "correct": 37,
+      "accuracy": 0.7708333333333334,
+      "brier": 0.17012661585123498,
+      "log_loss": 0.5158421271992486,
+      "confidence": 0.7077104467326577
+    }
+  },
+  "seconds": 143.3695698750089,
+  "last_invocation_seconds": 143.3695701660181,
+  "database_sha256": "4b6d5d97320854af4ee974f8e51dd35a1b195f9022c348f7a198cd4ff537c5c1"
+}

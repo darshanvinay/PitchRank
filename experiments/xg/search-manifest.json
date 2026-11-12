@@ -1,0 +1,12 @@
+{
+  "seed": 20261112,
+  "trials": 2000,
+  "data": "0b46d3fdd9bdc749630ba3fb1692c1987db81eb3ab4fc77fdad5f0e2ecf72941",
+  "observations": "e0ca3c0e87d1de69fc796511ed87e4f7dfdf37ec85c5cb9fda5d0b4a0798d2ea",
+  "sources": {
+    "xg_search.py": "d076b09890b0f516af44a35a5aace274f848f8fccdf2b96871f5806bab0711fb",
+    "xg_engine.py": "1dc17abfaece4bde3e4763eedb04bb0adf6edc4063b9fb8d1636139ab0ec4a07",
+    "search_engine.py": "61971d6d6b128af6bcf4fe21479ec6b38001f4f7426fec72aea79ceb3df4cfcb",
+    "search_data.py": "46796c147b82a0accf18b40f24a2ffe2b6d5d310def642c567429b89a51eebec"
+  }
+}

@@ -1,0 +1,790 @@
+{
+  "probability": {
+    "strategy": "probability",
+    "folds": [
+      {
+        "season": "2020-2021",
+        "selected_id": "d1639f74eddfe8d6",
+        "config": {
+          "family": "ensemble",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 15.0,
+          "xg_share": 0.75,
+          "regression": 0.0,
+          "learning_rate": 0.05,
+          "prior_goals": 1.5,
+          "home_log": 0.4,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2017-2018",
+          "2018-2019",
+          "2019-2020"
+        ],
+        "p": [
+          0.2685986574779063,
+          0.21272006885713338,
+          0.5133630114243157,
+          0.4783782813191498,
+          0.446308723539079,
+          0.46145823078135156,
+          0.3615323042396048,
+          0.48907312970500166
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 16,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.21131691473787248,
+          "log_loss": 0.6100597079863131,
+          "confidence": 0.6455066238343147
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 6,
+          "accuracy": 0.75,
+          "brier": 0.20859389102774928,
+          "log_loss": 0.6027480906151765,
+          "confidence": 0.5994117019381362
+        }
+      },
+      {
+        "season": "2021-2022",
+        "selected_id": "36822ad2f95521cd",
+        "config": {
+          "family": "attack_defence",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.0,
+          "learning_rate": 0.05,
+          "prior_goals": 1.5,
+          "home_log": 0.15,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2018-2019",
+          "2019-2020",
+          "2020-2021"
+        ],
+        "p": [
+          0.5846512269876164,
+          0.35875248652208747,
+          0.6151967538987337,
+          0.4887932215872255,
+          0.17484420063903577,
+          0.3349556026800705,
+          0.1792623940060412,
+          0.613278807805097
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 15,
+          "accuracy": 0.625,
+          "brier": 0.22181182937934815,
+          "log_loss": 0.63161450324599,
+          "confidence": 0.6384514354857521
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 5,
+          "accuracy": 0.625,
+          "brier": 0.23195520844535147,
+          "log_loss": 0.6450368021352144,
+          "confidence": 0.6595648604071234
+        }
+      },
+      {
+        "season": "2022-2023",
+        "selected_id": "338c02feedd1fd99",
+        "config": {
+          "family": "attack_defence",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.0,
+          "learning_rate": 0.1,
+          "prior_goals": 1.35,
+          "home_log": 0.4,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2019-2020",
+          "2020-2021",
+          "2021-2022"
+        ],
+        "p": [
+          0.5297748702651677,
+          0.3213188379148421,
+          0.5183774977902835,
+          0.3934950416158581,
+          0.48007595327438163,
+          0.3779812202485631,
+          0.6261822032409287,
+          0.2099743303049888
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 16,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.2049035156785448,
+          "log_loss": 0.5906243673735724,
+          "confidence": 0.6474325890641202
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 7,
+          "accuracy": 0.875,
+          "brier": 0.16313534181979994,
+          "log_loss": 0.5107756590608709,
+          "confidence": 0.6114361484922183
+        }
+      },
+      {
+        "season": "2023-2024",
+        "selected_id": "1a8f35467070e9ee",
+        "config": {
+          "family": "differential",
+          "window": 0,
+          "half_life": 60.0,
+          "shrink": 2.0,
+          "feature_scale": 300.0,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.25,
+          "learning_rate": 0.05,
+          "prior_goals": 1.35,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2020-2021",
+          "2021-2022",
+          "2022-2023"
+        ],
+        "p": [
+          0.29955545640775255,
+          0.32985236709550164,
+          0.230572316984572,
+          0.0673929541893925,
+          0.13791310905585957,
+          0.16687313085751146,
+          0.8260290807966162,
+          0.7736959929976394
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 16,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18740028989668636,
+          "log_loss": 0.5435953496699267,
+          "confidence": 0.686585523536114
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 7,
+          "accuracy": 0.875,
+          "brier": 0.12958070906685484,
+          "log_loss": 0.4280736141211712,
+          "confidence": 0.7959457174004583
+        }
+      },
+      {
+        "season": "2024-2025",
+        "selected_id": "e86e4aa62ede35ca",
+        "config": {
+          "family": "recent",
+          "window": 8,
+          "half_life": 60.0,
+          "shrink": 5.0,
+          "feature_scale": 300.0,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.25,
+          "learning_rate": 0.05,
+          "prior_goals": 1.35,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2021-2022",
+          "2022-2023",
+          "2023-2024"
+        ],
+        "p": [
+          0.23793655759354657,
+          0.7340823454912289,
+          0.46811952328715656,
+          0.6429337555675781,
+          0.2728219564243953,
+          0.7232717026438369,
+          0.74503525413466,
+          0.3018486359688576
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 20,
+          "accuracy": 0.8333333333333334,
+          "brier": 0.14160684374349816,
+          "log_loss": 0.45130394034904514,
+          "confidence": 0.706123436309205
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 8,
+          "accuracy": 1.0,
+          "brier": 0.09763602331873689,
+          "log_loss": 0.36876336872674026,
+          "confidence": 0.6955745480704185
+        }
+      },
+      {
+        "season": "2025-2026",
+        "selected_id": "e86e4aa62ede35ca",
+        "config": {
+          "family": "recent",
+          "window": 8,
+          "half_life": 60.0,
+          "shrink": 5.0,
+          "feature_scale": 300.0,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.25,
+          "learning_rate": 0.05,
+          "prior_goals": 1.35,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2022-2023",
+          "2023-2024",
+          "2024-2025"
+        ],
+        "p": [
+          0.1407838464227558,
+          0.8422653108862361,
+          0.4757929116388865,
+          0.1859030534492938,
+          0.09012562750537258,
+          0.622122551980621,
+          0.285248064342581,
+          0.7497037591825244
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 22,
+          "accuracy": 0.9166666666666666,
+          "brier": 0.11697729115966304,
+          "log_loss": 0.401165464367853,
+          "confidence": 0.7137356219615515
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 8,
+          "accuracy": 1.0,
+          "brier": 0.07507097805555082,
+          "log_loss": 0.2959878819818507,
+          "confidence": 0.7545297648363114
+        }
+      }
+    ],
+    "overall": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.1509953586223405,
+      "log_loss": 0.47523090277350405,
+      "confidence": 0.686077123524111
+    },
+    "changes_vs_A": [
+      {
+        "season": "2020-2021",
+        "tie_id": "089386939a72d2b864ebd5c8",
+        "team_a": "Atalanta",
+        "team_b": "Real Madrid",
+        "actual": "Real Madrid",
+        "baseline_p_a": 0.4818282714951361,
+        "candidate_p_a": 0.5133630114243157,
+        "effect": "new_error"
+      },
+      {
+        "season": "2020-2021",
+        "tie_id": "2ce8a9ac57949fe56fefb247",
+        "team_a": "Sevilla FC",
+        "team_b": "Borussia Dortmund",
+        "actual": "Borussia Dortmund",
+        "baseline_p_a": 0.5600530783212174,
+        "candidate_p_a": 0.4783782813191498,
+        "effect": "corrected"
+      },
+      {
+        "season": "2020-2021",
+        "tie_id": "5df33a2fd5a99d659b1d2d3d",
+        "team_a": "Atl\u00e9tico de Madrid",
+        "team_b": "Chelsea",
+        "actual": "Chelsea",
+        "baseline_p_a": 0.5987889314063964,
+        "candidate_p_a": 0.46145823078135156,
+        "effect": "corrected"
+      },
+      {
+        "season": "2021-2022",
+        "tie_id": "22f9ab56ccb0a96a713e1060",
+        "team_a": "Atl\u00e9tico de Madrid",
+        "team_b": "Man United",
+        "actual": "Atl\u00e9tico de Madrid",
+        "baseline_p_a": 0.4838045379879115,
+        "candidate_p_a": 0.5846512269876164,
+        "effect": "corrected"
+      },
+      {
+        "season": "2021-2022",
+        "tie_id": "80239a3ce5fdc4f66c37f9d7",
+        "team_a": "Paris Saint-Germain",
+        "team_b": "Real Madrid",
+        "actual": "Real Madrid",
+        "baseline_p_a": 0.4900315737817478,
+        "candidate_p_a": 0.6151967538987337,
+        "effect": "new_error"
+      },
+      {
+        "season": "2024-2025",
+        "tie_id": "a9e2a2beb573faf57d471369",
+        "team_a": "Bayern Munich",
+        "team_b": "Bayer Leverkusen",
+        "actual": "Bayern Munich",
+        "baseline_p_a": 0.49503017684209455,
+        "candidate_p_a": 0.6429337555675781,
+        "effect": "corrected"
+      },
+      {
+        "season": "2024-2025",
+        "tie_id": "ee7abb0ec7be5caf4ce68fa8",
+        "team_a": "Borussia Dortmund",
+        "team_b": "LOSC",
+        "actual": "Borussia Dortmund",
+        "baseline_p_a": 0.4536570340901016,
+        "candidate_p_a": 0.74503525413466,
+        "effect": "corrected"
+      }
+    ]
+  },
+  "accuracy": {
+    "strategy": "accuracy",
+    "folds": [
+      {
+        "season": "2020-2021",
+        "selected_id": "fce52ff359e7183f",
+        "config": {
+          "family": "attack_defence",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.25,
+          "learning_rate": 0.05,
+          "prior_goals": 1.35,
+          "home_log": 0.25,
+          "blend": 0.75
+        },
+        "past_validation": [
+          "2017-2018",
+          "2018-2019",
+          "2019-2020"
+        ],
+        "p": [
+          0.3131061242265456,
+          0.2398167413832235,
+          0.5083847546197775,
+          0.4966012125835951,
+          0.4550184752425582,
+          0.49172321456947365,
+          0.3615323042396048,
+          0.5316530348219288
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 17,
+          "accuracy": 0.7083333333333334,
+          "brier": 0.21258870120908258,
+          "log_loss": 0.6127082315205256,
+          "confidence": 0.6448724723443123
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 5,
+          "accuracy": 0.625,
+          "brier": 0.22496810225858752,
+          "log_loss": 0.6382356229397974,
+          "confidence": 0.5852799646495882
+        }
+      },
+      {
+        "season": "2021-2022",
+        "selected_id": "347619f1d73803c8",
+        "config": {
+          "family": "ensemble",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 10.0,
+          "xg_share": 0.25,
+          "regression": 0.0,
+          "learning_rate": 0.1,
+          "prior_goals": 1.5,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2018-2019",
+          "2019-2020",
+          "2020-2021"
+        ],
+        "p": [
+          0.5658691490484742,
+          0.35643665026347154,
+          0.5654684036316895,
+          0.4362738981684995,
+          0.17484420063903577,
+          0.3349556026800705,
+          0.1792623940060412,
+          0.6291229700394823
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 17,
+          "accuracy": 0.7083333333333334,
+          "brier": 0.22654031278900513,
+          "log_loss": 0.6428937997187288,
+          "confidence": 0.6253478643634188
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 5,
+          "accuracy": 0.625,
+          "brier": 0.21940901659521878,
+          "log_loss": 0.6193231596959343,
+          "confidence": 0.659835972120316
+        }
+      },
+      {
+        "season": "2022-2023",
+        "selected_id": "46e568d5c933c90b",
+        "config": {
+          "family": "attack_defence",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 20,
+          "xg_share": 1,
+          "regression": 0.0,
+          "learning_rate": 0.02,
+          "prior_goals": 1.2,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2019-2020",
+          "2020-2021",
+          "2021-2022"
+        ],
+        "p": [
+          0.5686863020503066,
+          0.28160229067489484,
+          0.45161441200658337,
+          0.5108521880368968,
+          0.4902409887727921,
+          0.3779812202485631,
+          0.6261822032409287,
+          0.2521228684312586
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 18,
+          "accuracy": 0.75,
+          "brier": 0.208599770455145,
+          "log_loss": 0.6020216044403502,
+          "confidence": 0.6340397130515669
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 7,
+          "accuracy": 0.875,
+          "brier": 0.16459607589998176,
+          "log_loss": 0.5147822611122878,
+          "confidence": 0.6065198641492551
+        }
+      },
+      {
+        "season": "2023-2024",
+        "selected_id": "4e8e9969e40e42c4",
+        "config": {
+          "family": "ensemble",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 10.0,
+          "xg_share": 0.25,
+          "regression": 0.0,
+          "learning_rate": 0.1,
+          "prior_goals": 1.5,
+          "home_log": 0.15,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2020-2021",
+          "2021-2022",
+          "2022-2023"
+        ],
+        "p": [
+          0.29955545640775255,
+          0.32985236709550164,
+          0.4798083998085858,
+          0.26545635988265504,
+          0.38936755232854575,
+          0.16687313085751146,
+          0.6861668411598321,
+          0.6592738081867611
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 20,
+          "accuracy": 0.8333333333333334,
+          "brier": 0.1976684388522826,
+          "log_loss": 0.5790920118904693,
+          "confidence": 0.6190618293172522
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 7,
+          "accuracy": 0.875,
+          "brier": 0.15819902992181414,
+          "log_loss": 0.4962125987678663,
+          "confidence": 0.6768159228707551
+        }
+      },
+      {
+        "season": "2024-2025",
+        "selected_id": "9263f61856f3266e",
+        "config": {
+          "family": "xg_elo",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 20.0,
+          "xg_share": 0.25,
+          "regression": 0.0,
+          "learning_rate": 0.05,
+          "prior_goals": 1.35,
+          "home_log": 0.25,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2021-2022",
+          "2022-2023",
+          "2023-2024"
+        ],
+        "p": [
+          0.23793655759354657,
+          0.4597643330272599,
+          0.46811952328715656,
+          0.509935161887046,
+          0.2728219564243953,
+          0.5896360156345477,
+          0.48839572193777103,
+          0.3018486359688576
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 21,
+          "accuracy": 0.875,
+          "brier": 0.17268325382551794,
+          "log_loss": 0.5260987838077208,
+          "confidence": 0.6492637366500417
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 6,
+          "accuracy": 0.75,
+          "brier": 0.17543122136069716,
+          "log_loss": 0.5345446642051279,
+          "confidence": 0.6088355561603259
+        }
+      },
+      {
+        "season": "2025-2026",
+        "selected_id": "4e8e9969e40e42c4",
+        "config": {
+          "family": "ensemble",
+          "window": 10,
+          "half_life": 60,
+          "shrink": 5,
+          "feature_scale": 100,
+          "k": 10.0,
+          "xg_share": 0.25,
+          "regression": 0.0,
+          "learning_rate": 0.1,
+          "prior_goals": 1.5,
+          "home_log": 0.15,
+          "blend": 1.0
+        },
+        "past_validation": [
+          "2022-2023",
+          "2023-2024",
+          "2024-2025"
+        ],
+        "p": [
+          0.2572860260889349,
+          0.660461961949241,
+          0.4757929116388865,
+          0.302120466734881,
+          0.32314352264007995,
+          0.51586917250438,
+          0.285248064342581,
+          0.6955510070750478
+        ],
+        "validation_metrics": {
+          "ties": 24,
+          "correct": 23,
+          "accuracy": 0.9583333333333334,
+          "brier": 0.1562223179008231,
+          "log_loss": 0.49519884117339785,
+          "confidence": 0.6360753370557014
+        },
+        "metrics": {
+          "ties": 8,
+          "correct": 8,
+          "accuracy": 1.0,
+          "brier": 0.12649973644374335,
+          "log_loss": 0.43361325581099563,
+          "confidence": 0.6535363937604133
+        }
+      }
+    ],
+    "overall": {
+      "ties": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "brier": 0.1781838637466738,
+      "log_loss": 0.5394519270886682,
+      "confidence": 0.6318039456184422
+    },
+    "changes_vs_A": [
+      {
+        "season": "2020-2021",
+        "tie_id": "089386939a72d2b864ebd5c8",
+        "team_a": "Atalanta",
+        "team_b": "Real Madrid",
+        "actual": "Real Madrid",
+        "baseline_p_a": 0.4818282714951361,
+        "candidate_p_a": 0.5083847546197775,
+        "effect": "new_error"
+      },
+      {
+        "season": "2020-2021",
+        "tie_id": "2ce8a9ac57949fe56fefb247",
+        "team_a": "Sevilla FC",
+        "team_b": "Borussia Dortmund",
+        "actual": "Borussia Dortmund",
+        "baseline_p_a": 0.5600530783212174,
+        "candidate_p_a": 0.4966012125835951,
+        "effect": "corrected"
+      },
+      {
+        "season": "2020-2021",
+        "tie_id": "5df33a2fd5a99d659b1d2d3d",
+        "team_a": "Atl\u00e9tico de Madrid",
+        "team_b": "Chelsea",
+        "actual": "Chelsea",
+        "baseline_p_a": 0.5987889314063964,
+        "candidate_p_a": 0.49172321456947365,
+        "effect": "corrected"
+      },
+      {
+        "season": "2020-2021",
+        "tie_id": "e63bdf117aa83aeec1e18e0c",
+        "team_a": "RB Leipzig",
+        "team_b": "Liverpool",
+        "actual": "Liverpool",
+        "baseline_p_a": 0.4976817302979403,
+        "candidate_p_a": 0.5316530348219288,
+        "effect": "new_error"
+      },
+      {
+        "season": "2021-2022",
+        "tie_id": "22f9ab56ccb0a96a713e1060",
+        "team_a": "Atl\u00e9tico de Madrid",
+        "team_b": "Man United",
+        "actual": "Atl\u00e9tico de Madrid",
+        "baseline_p_a": 0.4838045379879115,
+        "candidate_p_a": 0.5658691490484742,
+        "effect": "corrected"
+      },
+      {
+        "season": "2021-2022",
+        "tie_id": "80239a3ce5fdc4f66c37f9d7",
+        "team_a": "Paris Saint-Germain",
+        "team_b": "Real Madrid",
+        "actual": "Real Madrid",
+        "baseline_p_a": 0.4900315737817478,
+        "candidate_p_a": 0.5654684036316895,
+        "effect": "new_error"
+      },
+      {
+        "season": "2022-2023",
+        "tie_id": "7ebb521af8ba241967c76a0e",
+        "team_a": "Borussia Dortmund",
+        "team_b": "Chelsea",
+        "actual": "Chelsea",
+        "baseline_p_a": 0.5311933435500511,
+        "candidate_p_a": 0.45161441200658337,
+        "effect": "corrected"
+      },
+      {
+        "season": "2022-2023",
+        "tie_id": "9a29e5d6cce8840090af92da",
+        "team_a": "Liverpool",
+        "team_b": "Real Madrid",
+        "actual": "Real Madrid",
+        "baseline_p_a": 0.44815265346678995,
+        "candidate_p_a": 0.5108521880368968,
+        "effect": "new_error"
+      },
+      {
+        "season": "2024-2025",
+        "tie_id": "80cd61b1c7dfe8db1e4d468f",
+        "team_a": "Paris Saint-Germain",
+        "team_b": "Liverpool",
+        "actual": "Paris Saint-Germain",
+        "baseline_p_a": 0.5025421626617603,
+        "candidate_p_a": 0.4597643330272599,
+        "effect": "new_error"
+      },
+      {
+        "season": "2024-2025",
+        "tie_id": "a9e2a2beb573faf57d471369",
+        "team_a": "Bayern Munich",
+        "team_b": "Bayer Leverkusen",
+        "actual": "Bayern Munich",
+        "baseline_p_a": 0.49503017684209455,
+        "candidate_p_a": 0.509935161887046,
+        "effect": "corrected"
+      }
+    ]
+  }
+}

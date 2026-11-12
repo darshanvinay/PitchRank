@@ -1,0 +1,31 @@
+Caching immutable match data...
+Canonical baseline {"ties": 48, "correct": 38, "accuracy": 0.7916666666666666, "brier_score": 0.18056490331282316, "log_loss": 0.5441203012681248}
+{
+  "complete": true,
+  "search_trials": 10000,
+  "diagnostic_trials": 515,
+  "exploratory_best_correct": 41,
+  "exploratory_best_including_diagnostics": 42,
+  "ties": 48,
+  "walk_forward": {
+    "probability": {
+      "ties": 48,
+      "correct": 33,
+      "accuracy": 0.6875,
+      "brier": 0.1766518884195354,
+      "log_loss": 0.5233792614169583,
+      "confidence": 0.7294122417196521
+    },
+    "accuracy": {
+      "ties": 48,
+      "correct": 37,
+      "accuracy": 0.7708333333333334,
+      "brier": 0.17012661585123498,
+      "log_loss": 0.5158421271992486,
+      "confidence": 0.7077104467326577
+    }
+  },
+  "seconds": 214.36594270798378,
+  "last_invocation_seconds": 70.99637341598282,
+  "database_sha256": "4b6d5d97320854af4ee974f8e51dd35a1b195f9022c348f7a198cd4ff537c5c1"
+}

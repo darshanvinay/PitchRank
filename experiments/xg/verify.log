@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-11-12T16:51:59.497082+00:00",
+  "existing_tables_unchanged": true,
+  "table_hashes": {
+    "import_runs": "4eadb7658f73be89112b525de195f156bb78c76aa2c6a152ebe51c03f1edc6fd",
+    "model_versions": "7c790de494fe42f262170e90100270c895b0bf561b20801ec8190e085e210a13",
+    "teams": "43a9a28dce6ca0430417a8a510c4066bba2509c69c1fc5c5442e69fa49ff94e5",
+    "matches": "f39f6d30fd37601202cabe6f1246b8ee7ba3101ff92663acfba27055a871a710",
+    "team_aliases": "bd747abe15e60b9118c330e1fa4c86687525cbffe4d816094ef114858174c72b",
+    "match_observations": "5d122cd61be4433d7ce83cc4d2138eb28a0ee1228c1151b62679c977717117d0",
+    "rating_history": "4f22f9b0b0703be8976f2e58dd059b34549c82cc01f9aef8065b12263544ec57",
+    "season_ratings": "4b9c233e809369f38c944ce6e757884a5e530e2d9e6d73adb18b6e17d19348a7",
+    "squad_values": "44716231e45187e98c85a443cdb3b765b1e0d99ea243e370ac8192bfbf7a0fe9",
+    "season_history": "c18873548f07cad54fe8c1d697313bfb3072221f20235d7187d624655cfc94d8"
+  },
+  "xg_rows": 21120,
+  "canonical_baseline": {
+    "ties": 48,
+    "correct": 38,
+    "accuracy": 0.7916666666666666,
+    "brier_score": 0.18056490331282316,
+    "log_loss": 0.5441203012681248
+  },
+  "baseline_max_abs_error": 3.3306690738754696e-15,
+  "scalar_best_ties": 120,
+  "scalar_best_max_abs_error": 1.1102230246251565e-15,
+  "goals_control": {
+    "description": "Same xG-selected fold configs and fixture availability; replace xG with goals only for this diagnostic",
+    "goals_only": {
+      "ties": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "brier": 0.16428973882371722,
+      "log_loss": 0.5093596160995769,
+      "confidence": 0.6862025454495019
+    },
+    "xg": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.1509953586223405,
+      "log_loss": 0.47523090277350405,
+      "confidence": 0.686077123524111
+    }
+  }
+}

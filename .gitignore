@@ -19,3 +19,6 @@ frontend/dist/
 .taste-skill/
 data/raw/openfootball/
 data/raw/domestic-history/
+
+# Re-downloadable research source snapshots (hashes retained in xG reports).
+data/raw/understat/
