@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 import {
   ArrowLeft,
-  ArrowUpRight,
   BarChart3,
   Check,
   ChevronRight,
@@ -30,7 +29,10 @@ import type { Club, League, Result, TeamDetail } from "./types";
 import { competitions, selectedLeague, leaguePath } from "./navigation";
 import type { LeagueId } from "./navigation";
 import "./style.css";
+import "./programme.css";
+import EloPlot from "./EloPlot";
 
+const ClubAnalysis = lazy(() => import("./ClubAnalysis"));
 const RatingChart = lazy(() => import("./RatingChart"));
 const ChampionsHistory = lazy(() => import("./ChampionsHistory"));
 const ChampionsBracket = lazy(() => import("./ChampionsBracket"));
@@ -151,11 +153,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [dark, setDark] = useState(() => {
     try {
-      return (
-        localStorage.getItem("pitchrank-theme") === "dark" ||
-        (!localStorage.getItem("pitchrank-theme") &&
-          matchMedia("(prefers-color-scheme: dark)").matches)
-      );
+      return localStorage.getItem("pitchrank-edition-theme") === "dark";
     } catch {
       return false;
     }
@@ -188,9 +186,9 @@ export default function App() {
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", dark ? "#111111" : "#f8f8f8");
+      ?.setAttribute("content", dark ? "#181714" : "#f1ead8");
     try {
-      localStorage.setItem("pitchrank-theme", dark ? "dark" : "light");
+      localStorage.setItem("pitchrank-edition-theme", dark ? "dark" : "light");
     } catch {
       /* Browsing remains usable without storage. */
     }
@@ -244,20 +242,10 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <div className="app-shell">
-        <aside className="sidebar">
+      <div className="app-shell programme">
+        <header className="sidebar programme-masthead">
           <Link className="brand" to={path("/")} aria-label="PitchRank home">
-            <svg viewBox="0 0 30 32" width="30" height="32" aria-hidden="true">
-              <path
-                d="M4 28V4h13c8 0 12 10 5 15-2 1-4 1-8 1H4M9 4v24M9 9h7c4 0 5 6 1 6H9"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.3"
-              />
-            </svg>
-            <span translate="no">
-              PitchRank<span className="brand-period">.</span>
-            </span>
+            <span translate="no">PitchRank</span>
           </Link>
           <div className="workspace">
             <label className="context-label" htmlFor="league-selector">
@@ -287,7 +275,7 @@ export default function App() {
           <nav aria-label="Main navigation">
             <NavLink to={path("/")} end>
               <BarChart3 aria-hidden="true" size={17} />
-              Leaderboard
+              League table
               <ChevronRight
                 aria-hidden="true"
                 className="nav-chevron"
@@ -296,7 +284,7 @@ export default function App() {
             </NavLink>
             <NavLink to="/europe">
               <BarChart3 aria-hidden="true" size={17} />
-              European Rankings
+              Europe
             </NavLink>
             <NavLink to="/champions-league/history">
               <BarChart3 aria-hidden="true" size={17} />
@@ -304,7 +292,7 @@ export default function App() {
             </NavLink>
             <NavLink to="/champions-league/bracket">
               <BarChart3 aria-hidden="true" size={17} />
-              Knockout Bracket
+              Knockouts
             </NavLink>
             <NavLink to={path("/method")}>
               <CircleHelp aria-hidden="true" size={17} />
@@ -337,12 +325,11 @@ export default function App() {
             </button>
             <p className="version-note">Independent football analytics</p>
           </div>
-        </aside>
-        <main id="main" tabIndex={-1}>
+        </header>
+        <main id="main" tabIndex={-1} className={bracketView ? "programme-knockouts" : undefined}>
           <header className={`page-top${historyView ? " history-top" : ""}`}>
             <span className="breadcrumb">
-              Football <ChevronRight aria-hidden="true" size={13} />{" "}
-              {scope.name}
+              {scope.name} {league?.season.replace(/-20/, "/")}
             </span>
             {!historyView && (
               <div className="top-actions">
@@ -447,6 +434,8 @@ function Leaderboard({ league }: { league: League }) {
   const path = (url: string) =>
     leaguePath(url, league.league_id === "europe" ? "epl" : league.league_id);
   const [params, setParams] = useSearchParams();
+  const requestedView = params.get("view");
+  const view = requestedView === "plot" || (requestedView === "stats" && !european) ? requestedView : null;
   const query = params.get("q") || "";
   const sort = params.get("sort") || "rating";
   const clubs = league.clubs
@@ -478,78 +467,26 @@ function Leaderboard({ league }: { league: League }) {
   };
   return (
     <>
-      <section className="title-row">
-        <div>
-          <div className="eyebrow">Club strength ratings</div>
-          <h1>{league.name}</h1>
-          <p>
-            {european
-              ? "The top 25 across five leagues, connected by Champions League results."
-              : "A clearer view of who’s performing, and against whom."}
-          </p>
-        </div>
-        <span className="season-label">
-          {league.season.replace("-", "/")} season
-        </span>
+      <section className="programme-lead">
+        <h1>{european ? "Europe’s strongest clubs." : "Who is actually playing well, and against whom."}</h1>
+        <p>Ratings reflect results, opposition and a capped squad-value starting point.{" "}
+          <strong>{integer.format(european ? league.pool_matches : league.matches)} matches</strong> processed so far.{" "}
+          <Link to={path("/method")}>Read the methodology</Link>
+        </p>
       </section>
-      <div className="insight-strip">
-        <div>
-          <span className="stat-label">Highest rated</span>
-          <div className="strip-club">
-            <Crest club={leader} size={25} />
-            <Link to={leaguePath(`/teams/${leader.id}`, leader.league_id)}>
-              {leader.name}
-            </Link>
-            <span className="strip-number">{number.format(leader.rating)}</span>
-          </div>
-        </div>
-        <div>
-          <span className="stat-label">
-            {european ? "Biggest last-match gain" : "Biggest season gain"}
-          </span>
-          <div className="strip-club">
-            <Link
-              to={leaguePath(
-                `/teams/${changeLeader.id}`,
-                changeLeader.league_id,
-              )}
-            >
-              {changeLeader.name}
-            </Link>
-            <span className="strip-number">
-              <Change
-                value={
-                  european ? changeLeader.last_change : changeLeader.change
-                }
-              />
-            </span>
-          </div>
-        </div>
-        <div>
-          <span className="stat-label">Performance evidence</span>
-          <div className="strip-value">
-            {integer.format(european ? league.pool_matches : league.matches)}
-            <span>matches processed</span>
-          </div>
+      <div className="programme-notes">
+        <div><span>Highest rated</span><strong><Link to={leaguePath(`/teams/${leader.id}`, leader.league_id)}>{leader.name} {number.format(leader.rating)}</Link></strong></div>
+        <div><span>{european ? "Biggest last-match gain" : "Biggest season gain"}</span>
+          <strong><Link to={leaguePath(`/teams/${changeLeader.id}`, changeLeader.league_id)}>{changeLeader.name}</Link>{" "}
+            <Change value={european ? changeLeader.last_change : changeLeader.change} /></strong>
         </div>
       </div>
       <section className="ranking-section" aria-labelledby="rankings-heading">
-        <div className="section-title">
-          <div>
-            <h2 id="rankings-heading">
-              {european ? "European leaderboard" : "Elo leaderboard"}{" "}
-              <span className="count">
-                {european ? clubs.length : league.clubs.length}
-              </span>
-            </h2>
-            <p>
-              Ratings reflect results, opposition and a capped squad-value
-              starting point.
-            </p>
-          </div>
-          <Link className="text-link" to={path("/method")}>
-            The methodology <ArrowUpRight aria-hidden="true" size={15} />
-          </Link>
+        <h2 id="rankings-heading" className="sr-only">Elo rankings</h2>
+        <div className="programme-views" aria-label="Ranking view">
+          <button type="button" aria-pressed={!view} onClick={() => setFilter("view", "")}>Leaderboard</button>
+          <button type="button" aria-pressed={view === "plot"} onClick={() => setFilter("view", "plot")}>Elo plot</button>
+          {!european && <button type="button" aria-pressed={view === "stats"} onClick={() => setFilter("view", "stats")}>Full statistics</button>}
         </div>
         <div className="table-toolbar">
           <label className="search-field">
@@ -564,7 +501,7 @@ function Leaderboard({ league }: { league: League }) {
               onChange={(event) => setFilter("q", event.target.value)}
             />
           </label>
-          {european && (
+          {european && view !== "plot" && (
             <label className="sort-control">
               <span className="sr-only">Filter Top 25 by domestic league</span>
               <select
@@ -584,7 +521,7 @@ function Leaderboard({ league }: { league: League }) {
               </select>
             </label>
           )}
-          <label className="sort-control">
+          {view !== "plot" && <label className="sort-control">
             <span>Sort by</span>
             <select
               aria-label="Sort clubs"
@@ -598,10 +535,11 @@ function Leaderboard({ league }: { league: League }) {
               </option>
               {!european && <option value="value">Squad value</option>}
             </select>
-          </label>
+          </label>}
         </div>
-        <div className="table-scroll">
-          <table className={`leaderboard ${european ? "european-table" : ""}`}>
+        {view === "plot" ? <EloPlot clubs={league.clubs} query={query} /> : <>
+        <div className="table-scroll" role="region" aria-label="Leaderboard statistics" tabIndex={0}>
+          <table className={`leaderboard ${european ? "european-table" : view === "stats" ? "" : "programme-compact"}`}>
             <caption className="sr-only">
               {european
                 ? "European Top 25: club, domestic league, unified Elo, last-match Elo change and recent form."
@@ -623,6 +561,8 @@ function Leaderboard({ league }: { league: League }) {
                   <th scope="col" className="numeric">
                     Last match Δ
                   </th>
+                ) : view !== "stats" ? (
+                  <><th scope="col" className="numeric">W–D–L</th><th scope="col" className="numeric">GD</th></>
                 ) : (
                   <>
                     <th scope="col" className="numeric">
@@ -679,7 +619,7 @@ function Leaderboard({ league }: { league: League }) {
                     <span className="rating-track" aria-hidden="true">
                       <span
                         style={{
-                          width: `${Math.min(100, Math.max(0, (club.rating - 1200) / 5))}%`,
+                          width: `${Math.min(100, Math.max(0, ((club.rating - 1500) / Math.max(1, leader.rating - 1500)) * 100))}%`,
                         }}
                       />
                     </span>
@@ -688,6 +628,9 @@ function Leaderboard({ league }: { league: League }) {
                     <td className="numeric">
                       <Change value={club.last_change} />
                     </td>
+                  ) : view !== "stats" ? (
+                    <><td className="numeric">{club.won}–{club.drawn}–{club.lost}</td>
+                    <td className="numeric">{club.goal_difference > 0 ? "+" : ""}{integer.format(club.goal_difference)}</td></>
                   ) : (
                     <>
                       <td className="numeric">{club.played}</td>
@@ -739,10 +682,13 @@ function Leaderboard({ league }: { league: League }) {
           <span>
             {european
               ? "Last match Δ includes domestic and Champions League matches. Form: oldest to newest."
-              : "MP played · W wins · D draws · L losses · GF goals for · GA goals against · GD goal difference"}
+              : view === "stats"
+                ? "MP played · W wins · D draws · L losses · GF goals for · GA goals against · GD goal difference"
+                : "W–D–L wins, draws and losses · GD goal difference · Form oldest to newest"}
           </span>
           <span>Elo is not the points table.</span>
         </div>
+        </>}
       </section>
       <div className="source-note">
         <CircleHelp aria-hidden="true" size={17} />
@@ -944,6 +890,12 @@ function TeamPage({ league }: { league: League }) {
           )}
         </aside>
       </div>
+      <details className="history-details">
+        <summary>More analysis: Elo, form and archived xG</summary>
+        <Suspense fallback={<p role="status">Loading analysis…</p>}>
+          <ClubAnalysis club={club} history={history} results={results} />
+        </Suspense>
+      </details>
       <section className="recent-section">
         <div className="section-title">
           <div>
