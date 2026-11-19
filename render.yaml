@@ -2,27 +2,19 @@ services:
   - type: web
     name: pitchrank-api
     runtime: python
-    plan: standard
-    buildCommand: python -m pip install -e ./backend
+    plan: free
+    buildCommand: python -m pip install -e ./backend && bash deploy/build-render.sh
     startCommand: bash deploy/start-render.sh
     healthCheckPath: /health
-    disk:
-      name: pitchrank-data
-      mountPath: /var/data
-      sizeGB: 5
     envVars:
       - key: PYTHON_VERSION
         value: 3.13.13
-      - key: DATABASE_URL
-        value: sqlite:////var/data/pitchrank.sqlite3
       - key: PITCHRANK_SEASON
         value: "2026-2027"
       - key: PITCHRANK_PUBLIC
         value: "1"
       - key: PITCHRANK_DAILY_REFRESH
         value: "0"
-      - key: PITCHRANK_PROJECTION_DIR
-        value: /var/data/projections
       - key: PITCHRANK_CORS_ORIGINS
         sync: false
       - key: PITCHRANK_SEED_URL
