@@ -1,3 +1,4 @@
+import SeasonProjection from "./SeasonProjection";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -22,6 +23,12 @@ const jointPercent = new Intl.NumberFormat(undefined, { style: "percent", maximu
 const rating = new Intl.NumberFormat(undefined, { maximumFractionDigits: 1 });
 
 export default function ChampionsBracket() {
+  const [params] = useSearchParams();
+  return params.has("season") || params.has("scenario") || params.has("method")
+    ? <HistoricalBracket /> : <SeasonProjection />;
+}
+
+function HistoricalBracket() {
   const [params, setParams] = useSearchParams();
   const season = params.get("season") || "2020-2021";
   const scenario = params.get("scenario") || "r16_order";
