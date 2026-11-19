@@ -225,3 +225,39 @@ PYTHONPATH=backend .venv/bin/python -m app.backtesting.tournament \
 
 The read-only endpoint is `/api/ucl/bracket?season=2020-2021&scenario=r16_order`.
 See [full methodology, measured results and interview explanation](docs/tournament-backtesting.md).
+
+### Daily match updates on the SQLite host
+
+For this project's local macOS deployment, install the LaunchAgent from the repository root:
+
+```sh
+.venv/bin/python deploy/install-daily-macos.py
+```
+
+It runs at 06:15 host time during the macOS user session, and installation triggers an immediate
+run. It uses the checkout's default persistent SQLite database. If you deploy to another host,
+schedule the command below there with the same SQLite path, environment, and persistent volume
+as the app. An ordinary GitHub-hosted job or Vercel function would have a separate filesystem.
+Install the agent from the checkout that actually serves the app.
+
+```sh
+PYTHONPATH=backend .venv/bin/python -m app.ingestion.daily --season 2026-2027
+```
+
+Omit the season for automatic selection. The job downloads fresh full-season snapshots from
+Football-Data and Fixture Download into a private temporary directory. It merges completed
+scores incrementally, synchronizes named upcoming Champions League fixtures and replays Elo
+chronologically in one SQLite transaction. Earlier season matches are retained and used for
+replay. The same database is read by rankings and live predictions. A per-database file lock
+prevents overlapping daily jobs. SQLite serializes writes with the existing manual refresh.
+
+Understat xG runs separately after results commit. Provider outages are logged and retried
+on the next daily run. Monitor `data/daily-refresh.log` for failures, per-league match dates and
+freshness warnings. A failed required feed exits nonzero and leaves the existing data intact.
+The domestic leaderboards display both **Latest match** and **Last updated** from the database.
+An old latest match date with a recent sync can reflect a break or delayed provider results.
+
+```sh
+launchctl print gui/$(id -u)/com.pitchrank.daily
+tail -n 60 data/daily-refresh.log
+```
