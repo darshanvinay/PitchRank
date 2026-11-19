@@ -1750,3 +1750,20 @@ dialog.bracket-detail::backdrop { background: rgb(0 0 0 / 55%); }
 .bracket-close { margin-bottom: 20px; }
 .bracket-club > span, .bracket-club b { font-size: 13px; }
 @media (max-width: 700px) { .bracket-club > span, .bracket-club b { font-size: 14px; } }
+
+.projection-summary { margin-top: 20px; }
+.projection-club { display: inline-flex; align-items: center; gap: 8px; }
+.projection-club img { object-fit: contain; flex-shrink: 0; }
+.projection-scroll { overflow-x: auto; }
+.projection-rounds { display: grid; grid-template-columns: repeat(5, minmax(180px, 1fr)); gap: 12px; }
+.projection-rounds h3 { font-size: 14px; margin: 8px 0 12px; }
+.projection-rounds .bracket-tie { margin-bottom: 8px; }
+.projection-table { margin-top: 28px; }
+.projection-table table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.projection-table th, .projection-table td { padding: 10px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+.projection-table th:first-child { text-align: left; }
+.projection-scroll:focus-visible, .projection-rounds button:focus-visible { outline: 2px solid var(--chart); outline-offset: -2px; }
+@media (max-width: 700px) {
+  .projection-rounds { grid-template-columns: 1fr; }
+  .projection-rounds .bracket-round { margin-bottom: 8px; }
+}
