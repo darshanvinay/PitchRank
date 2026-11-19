@@ -1,0 +1,74 @@
+{
+  "baseline": {
+    "elo": {
+      "initial_rating": 1500.0,
+      "promoted_default": 1400.0,
+      "k_factor": 20.0,
+      "home_advantage": 65.0,
+      "rating_scale": 400.0,
+      "goal_multiplier_scale": 1.0,
+      "season_regression": 0.25
+    },
+    "squad_log_scale": 60.0,
+    "squad_reference_eur": 556425000.0,
+    "history_start": "2024-2025",
+    "domestic_importance": 1.0,
+    "ucl_league_importance": 1.25,
+    "ucl_knockout_importance": 1.5,
+    "ucl_finals_importance": 1.75,
+    "squad_cap": 100.0
+  },
+  "xg": {
+    "4e8e9969e40e42c4": {
+      "family": "ensemble",
+      "window": 10,
+      "half_life": 60,
+      "shrink": 5,
+      "feature_scale": 100,
+      "k": 10.0,
+      "xg_share": 0.25,
+      "regression": 0.0,
+      "learning_rate": 0.1,
+      "prior_goals": 1.5,
+      "home_log": 0.15,
+      "blend": 1.0
+    },
+    "e86e4aa62ede35ca": {
+      "family": "recent",
+      "window": 8,
+      "half_life": 60.0,
+      "shrink": 5.0,
+      "feature_scale": 300.0,
+      "k": 20,
+      "xg_share": 1,
+      "regression": 0.25,
+      "learning_rate": 0.05,
+      "prior_goals": 1.35,
+      "home_log": 0.25,
+      "blend": 1.0
+    }
+  },
+  "sha256": {
+    "backend/app/backtesting/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/backtesting/cross_league.py": "175c93ae0fba4f453bf1355ec0a2f95181f18366e0c04462af27566a9ac90295",
+    "backend/app/backtesting/europe_experiment.py": "ec5ac6dfe0e3fa0b46cf3e56e4386b988fd8a7ef5ce77da8362ccddcaa480147",
+    "backend/app/backtesting/evaluation.py": "a429a30b30bd0a8b7a5953f05fe1ef7fd6cc2e70c03f55176d91906106248dca",
+    "backend/app/backtesting/knockout.py": "c0325ace8b8b71e851761f31e4860709f9e65cacab3da0542362e766f1d4e2be",
+    "backend/app/backtesting/metrics.py": "068360bf6122c4c8c19cead62b76cf9d94d20e5ae09dc71ed88a147515e4c70f",
+    "backend/app/backtesting/model_search.py": "4c7284859dc2fe1e2b8bc7cc74d20d64070159f829503988771b378cb9c7f591",
+    "backend/app/backtesting/optimization.py": "8cbc77d29ca30f0eb474a875d8bcdf71df4dea0e923fe9827277131bbcf1e5b0",
+    "backend/app/backtesting/recent_form.py": "0dac483d258e8ea3e2ba87332d69dc7a85cfa82e28d9d72bf7ca5832e1296a5a",
+    "backend/app/backtesting/report.py": "6750b15e55f849d36c6fe5660da5e681e588c92f24568b4a0d092cedccd94ceb",
+    "backend/app/backtesting/search_data.py": "46796c147b82a0accf18b40f24a2ffe2b6d5d310def642c567429b89a51eebec",
+    "backend/app/backtesting/search_engine.py": "61971d6d6b128af6bcf4fe21479ec6b38001f4f7426fec72aea79ceb3df4cfcb",
+    "backend/app/backtesting/tournament.py": "96b0b534e085f43974b02a87a94eb5153d9f36bf7f89e12f7f080acf36c3cb3c",
+    "backend/app/backtesting/xg_engine.py": "1dc17abfaece4bde3e4763eedb04bb0adf6edc4063b9fb8d1636139ab0ec4a07",
+    "backend/app/backtesting/xg_search.py": "d076b09890b0f516af44a35a5aace274f848f8fccdf2b96871f5806bab0711fb",
+    "experiments/results.csv": "a8bd10d96908419c857020c9b16c2b11c47cd8ccf06f7da0421d21758202227d",
+    "experiments/top_models.json": "87fcd09ce0e90c10cbc8eccc04af02afb066acb94b5be27365c8f807585b7e2f",
+    "experiments/xg/results.csv": "5458e725e7d9496c08ec4277e938a4bb4e1a9726259db870d48075f0236e7bd8",
+    "experiments/xg/search-manifest.json": "bcfdb7c89ef8e0bc4ce15be357ebb0d854c404cf5625b82db51b797041e34db4",
+    "experiments/xg/top-models.json": "412afbfc20066e4a468dae692f64631d328461aac0da10a8e85df2b62761bbbd",
+    "experiments/xg/walk-forward.json": "5d23fba2dc5760f0db1830a7f83eabff45a0c4fddcbe45da90bd6e430fb764a3"
+  }
+}
