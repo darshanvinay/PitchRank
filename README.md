@@ -261,3 +261,34 @@ An old latest match date with a recent sync can reflect a break or delayed provi
 launchctl print gui/$(id -u)/com.pitchrank.daily
 tail -n 60 data/daily-refresh.log
 ```
+
+### 2026/27 Champions League projection
+
+Open `/champions-league/bracket` for the current forecast. Historical brackets remain
+available via the season query parameter or the link on the projection page. The daily
+refresh publishes an atomic dated JSON snapshot after the results and xG steps. Run
+the projection manually after updating match data with:
+
+```sh
+PYTHONPATH=backend .venv/bin/python -m app.backtesting.season_projection
+PYTHONPATH=backend .venv/bin/python -m app.backtesting.season_projection --replay PATH_TO_SNAPSHOT
+```
+
+Keep `data/projections` on the persistent backing volume. Each snapshot contains the full
+league score inputs, per-model probability heads, score distributions, model parameters,
+random seed and results needed to reproduce the Monte Carlo calculation. There are 50,000
+trials per model. Ratings and xG features stay fixed inside each trial. In the league
+phase the experimental model mixes the two frozen components' H/D/A probabilities before
+sampling a score. In knockout ties it averages their independently computed advancement
+probabilities, retaining the frozen ensemble's aggregation rule. Extra time and shootouts
+are integrated into those probabilities using the existing scoring model.
+
+Both bracket modes share a projected draw selected without reference to its knockout outcomes.
+Most Likely Bracket advances each matchup favorite, with the first-listed club advancing on an
+exact probability tie. Simulated Bracket shows sampled wins and upsets for the same draw.
+Each mode calculates probabilities for the clubs that actually advance in that mode.
+The title leaderboard aggregates all runs and is independent of the bracket mode. Ties that survive the first eight UEFA sporting
+criteria are randomized because the fixture feed provides no disciplinary points or
+coefficient data. This implementation covers forecasting from the league phase and
+keeps the last valid snapshot once official knockout fixtures appear. Conditioning on
+confirmed knockout draws and completed knockout legs needs a subsequent implementation.
