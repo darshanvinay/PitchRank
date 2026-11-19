@@ -25,3 +25,6 @@ data/raw/understat/
 
 data/daily-refresh.log
 data/*.refresh.lock
+
+# Private Render build snapshot.
+.render-seed/
