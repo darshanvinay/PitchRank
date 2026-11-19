@@ -128,16 +128,14 @@ export default function ChampionsHistory() {
   }
   return (
     <>
-      <div className="title-row">
-        <div>
-          <h1>Champions League history</h1>
-          <p>
-            Real main-draw results, with regulation, extra-time and shootout
-            scores kept separate.
-          </p>
-        </div>
-      </div>
-      <section aria-labelledby="archive-heading">
+      <section className="programme-lead">
+        <h1>Champions League history</h1>
+        <p>
+          Real main-draw results, with regulation, extra-time and shootout
+          scores kept separate.
+        </p>
+      </section>
+      <section className="programme-archive" aria-labelledby="archive-heading">
         <div className="section-title">
           <div>
             <h2 id="archive-heading">Historical results</h2>
