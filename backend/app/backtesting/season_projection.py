@@ -24,7 +24,8 @@ from app.elo.engine import update_ratings
 from app.elo.season import replay_season
 from app.services.ratings import played
 
-DIRECTORY = ROOT / "data/projections"
+BUNDLED_DIRECTORY = ROOT / "data/projections"
+DIRECTORY = Path(os.getenv("PITCHRANK_PROJECTION_DIR", str(BUNDLED_DIRECTORY)))
 SEASON = "2026-2027"
 ROUNDS = ("Play-offs", "Round of 16", "Quarter-finals", "Semi-finals", "Final")
 
