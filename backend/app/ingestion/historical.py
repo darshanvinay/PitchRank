@@ -327,6 +327,10 @@ def import_csv(
             # Future engines must rebuild before serving a model marked stale.
             if league == "epl":
                 session.execute(update(ModelVersion).values(needs_rebuild=True))
-            session.execute(update(Match).where(Match.league == league).values(processed=False))
+            session.execute(
+                update(Match)
+                .where(Match.league == league, Match.processed.is_(True))
+                .values(processed=False, updated_at=Match.updated_at)
+            )
         run.inserted, run.updated, run.unchanged = inserted, updated, unchanged
         return ImportSummary(run.id, inserted, updated, unchanged, skipped)
