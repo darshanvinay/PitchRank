@@ -1,4 +1,4 @@
-"""Install a checked SQLite backup once, before starting the Render web service."""
+"""Verify and install a private SQLite backup into the Render build."""
 
 import hashlib
 import os
@@ -14,17 +14,18 @@ from sqlalchemy.engine import make_url
 
 def main():
     target = Path(make_url(os.environ["DATABASE_URL"]).database)
-    if target.is_file():
-        return
+    target.parent.mkdir(parents=True, exist_ok=True)
 
     url = os.environ.get("PITCHRANK_SEED_URL", "")
     expected = os.environ.get("PITCHRANK_SEED_SHA256", "").lower()
     if urlsplit(url).scheme != "https" or len(expected) != 64:
         raise SystemExit(
-            "A private HTTPS seed URL and SHA-256 are required on the first boot."
+            "A private HTTPS seed URL and SHA-256 are required for the build."
         )
 
-    with NamedTemporaryFile(dir=target.parent, suffix=".sqlite3") as temp:
+    with NamedTemporaryFile(
+        dir=target.parent, suffix=".sqlite3", delete_on_close=False
+    ) as temp:
         try:
             with urlopen(url, timeout=60) as response:
                 shutil.copyfileobj(response, temp)
@@ -44,11 +45,8 @@ def main():
             if database.execute("PRAGMA quick_check").fetchone() != ("ok",):
                 raise SystemExit("SQLite seed integrity check failed.")
 
-        # Publish without overwriting a database if another startup initialized it first.
-        try:
-            os.link(temp.name, target)
-        except FileExistsError:
-            pass
+        # The build directory is separate from the running service's snapshot.
+        os.replace(temp.name, target)
 
 
 if __name__ == "__main__":
