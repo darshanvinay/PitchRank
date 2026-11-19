@@ -1,0 +1,1302 @@
+{
+  "ablation": {
+    "Model A": {
+      "ties": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "brier": 0.18056490331282324,
+      "log_loss": 0.5441203012681249,
+      "confidence": 0.6300356873498995
+    },
+    "frozen": {
+      "ties": 48,
+      "correct": 43,
+      "accuracy": 0.8958333333333334,
+      "brier": 0.17148136687165239,
+      "log_loss": 0.5254336223747565,
+      "confidence": 0.6349044615614399
+    },
+    "Elo leg only": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.16983296856187846,
+      "log_loss": 0.522094946917083,
+      "confidence": 0.6377652183849842
+    },
+    "attack and defence only": {
+      "ties": 48,
+      "correct": 40,
+      "accuracy": 0.8333333333333334,
+      "brier": 0.17497224895621524,
+      "log_loss": 0.5326159318628778,
+      "confidence": 0.6398578152920328
+    },
+    "zero Elo xG share": {
+      "ties": 48,
+      "correct": 42,
+      "accuracy": 0.875,
+      "brier": 0.17074422573616296,
+      "log_loss": 0.5236727985933102,
+      "confidence": 0.6371962478189567
+    },
+    "half Elo xG share": {
+      "ties": 48,
+      "correct": 43,
+      "accuracy": 0.8958333333333334,
+      "brier": 0.1721906346363351,
+      "log_loss": 0.5271012394183349,
+      "confidence": 0.6333701934564862
+    },
+    "K 20": {
+      "ties": 48,
+      "correct": 39,
+      "accuracy": 0.8125,
+      "brier": 0.1738559978751101,
+      "log_loss": 0.530065306000301,
+      "confidence": 0.6343279518920327
+    },
+    "25% offseason regression": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.17471685976145027,
+      "log_loss": 0.5332478534871362,
+      "confidence": 0.6254699428733539
+    },
+    "attack learning rate .05": {
+      "ties": 48,
+      "correct": 41,
+      "accuracy": 0.8541666666666666,
+      "brier": 0.17216181129554356,
+      "log_loss": 0.5268233026136743,
+      "confidence": 0.6345163978348777
+    },
+    "goal prior 1.35": {
+      "ties": 48,
+      "correct": 43,
+      "accuracy": 0.8958333333333334,
+      "brier": 0.1714947849319972,
+      "log_loss": 0.5254601899633492,
+      "confidence": 0.6349086046266096
+    },
+    "home log effect zero": {
+      "ties": 48,
+      "correct": 43,
+      "accuracy": 0.8958333333333334,
+      "brier": 0.17102385183314836,
+      "log_loss": 0.5244307044017685,
+      "confidence": 0.6350506762317503
+    },
+    "50% baseline blend": {
+      "ties": 48,
+      "correct": 39,
+      "accuracy": 0.8125,
+      "brier": 0.17554312999238997,
+      "log_loss": 0.5339541628133766,
+      "confidence": 0.6306955912749983
+    }
+  },
+  "ties": [
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Lazio",
+          "count": 250,
+          "latest": "2021-02-14",
+          "age": 2
+        },
+        {
+          "club": "Bayern Munich",
+          "count": 225,
+          "latest": "2021-02-15",
+          "age": 1
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.283223454756964,
+      "frozen": 0.29363573802846515,
+      "elo": 0.2417236670066771,
+      "attack": 0.3455478090502532,
+      "walk": 0.2685986574779063
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Borussia M\u00f6nchengladbach",
+          "count": 225,
+          "latest": "2021-02-14",
+          "age": 2
+        },
+        {
+          "club": "Man City",
+          "count": 248,
+          "latest": "2021-02-13",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.27682132811277854,
+      "frozen": 0.1978097791720696,
+      "elo": 0.24440194882404961,
+      "attack": 0.15121760952008956,
+      "walk": 0.21272006885713338
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Atalanta",
+          "count": 249,
+          "latest": "2021-02-14",
+          "age": 2
+        },
+        {
+          "club": "Real Madrid",
+          "count": 248,
+          "latest": "2021-02-14",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.4818282714951361,
+      "frozen": 0.47563485663378974,
+      "elo": 0.44040470082878214,
+      "attack": 0.5108650124387973,
+      "walk": 0.5133630114243157
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Sevilla FC",
+          "count": 244,
+          "latest": "2021-02-13",
+          "age": 3
+        },
+        {
+          "club": "Borussia Dortmund",
+          "count": 225,
+          "latest": "2021-02-13",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.5600530783212174,
+      "frozen": 0.48824484204519525,
+      "elo": 0.4808912144213645,
+      "attack": 0.49559846966902604,
+      "walk": 0.4783782813191498
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "FC Barcelona",
+          "count": 247,
+          "latest": "2021-02-13",
+          "age": 3
+        },
+        {
+          "club": "Paris Saint-Germain",
+          "count": 234,
+          "latest": "2021-02-13",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.4957746377080716,
+      "frozen": 0.4919306959871816,
+      "elo": 0.49797512236320146,
+      "attack": 0.4858862696111617,
+      "walk": 0.446308723539079
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Atl\u00e9tico de Madrid",
+          "count": 243,
+          "latest": "2021-02-13",
+          "age": 3
+        },
+        {
+          "club": "Chelsea",
+          "count": 250,
+          "latest": "2021-02-15",
+          "age": 1
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.5987889314063964,
+      "frozen": 0.49681618783797366,
+      "elo": 0.5574729356510255,
+      "attack": 0.43615944002492185,
+      "walk": 0.46145823078135156
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "Porto",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Juventus",
+          "count": 248,
+          "latest": "2021-02-13",
+          "age": 3
+        }
+      ],
+      "fallback": true,
+      "actual_a": true,
+      "baseline": 0.3615323042396048,
+      "frozen": 0.3615323042396048,
+      "elo": 0.3615323042396048,
+      "attack": 0.3615323042396048,
+      "walk": 0.3615323042396048
+    },
+    {
+      "season": "2020-2021",
+      "cutoff": "2021-02-16",
+      "clubs": [
+        {
+          "club": "RB Leipzig",
+          "count": 157,
+          "latest": "2021-02-12",
+          "age": 4
+        },
+        {
+          "club": "Liverpool",
+          "count": 249,
+          "latest": "2021-02-13",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.4976817302979403,
+      "frozen": 0.48624867399136285,
+      "elo": 0.40373738183589214,
+      "attack": 0.5687599661468336,
+      "walk": 0.48907312970500166
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Atl\u00e9tico de Madrid",
+          "count": 283,
+          "latest": "2022-02-12",
+          "age": 3
+        },
+        {
+          "club": "Man United",
+          "count": 287,
+          "latest": "2022-02-12",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.4838045379879115,
+      "frozen": 0.5680171910083238,
+      "elo": 0.5187435686887872,
+      "attack": 0.6172908133278603,
+      "walk": 0.5846512269876164
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Villarreal CF",
+          "count": 285,
+          "latest": "2022-02-12",
+          "age": 3
+        },
+        {
+          "club": "Juventus",
+          "count": 290,
+          "latest": "2022-02-13",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.37107061395420937,
+      "frozen": 0.36255814131370784,
+      "elo": 0.31936596541831824,
+      "attack": 0.40575031720909743,
+      "walk": 0.35875248652208747
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Paris Saint-Germain",
+          "count": 271,
+          "latest": "2022-02-11",
+          "age": 4
+        },
+        {
+          "club": "Real Madrid",
+          "count": 287,
+          "latest": "2022-02-12",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.4900315737817478,
+      "frozen": 0.5652849626273018,
+      "elo": 0.526732670753873,
+      "attack": 0.6038372545007307,
+      "walk": 0.6151967538987337
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Inter",
+          "count": 288,
+          "latest": "2022-02-12",
+          "age": 3
+        },
+        {
+          "club": "Liverpool",
+          "count": 287,
+          "latest": "2022-02-13",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.43057234545734024,
+      "frozen": 0.44019974706120124,
+      "elo": 0.40859568009679914,
+      "attack": 0.4718038140256034,
+      "walk": 0.4887932215872255
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Sporting CP",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Man City",
+          "count": 288,
+          "latest": "2022-02-12",
+          "age": 3
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.17484420063903577,
+      "frozen": 0.17484420063903577,
+      "elo": 0.17484420063903577,
+      "attack": 0.17484420063903577,
+      "walk": 0.17484420063903577
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Benfica",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Ajax",
+          "count": 0,
+          "latest": null,
+          "age": null
+        }
+      ],
+      "fallback": true,
+      "actual_a": true,
+      "baseline": 0.3349556026800705,
+      "frozen": 0.3349556026800705,
+      "elo": 0.3349556026800705,
+      "attack": 0.3349556026800705,
+      "walk": 0.3349556026800705
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Salzburg",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Bayern Munich",
+          "count": 260,
+          "latest": "2022-02-12",
+          "age": 3
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.1792623940060412,
+      "frozen": 0.1792623940060412,
+      "elo": 0.1792623940060412,
+      "attack": 0.1792623940060412,
+      "walk": 0.1792623940060412
+    },
+    {
+      "season": "2021-2022",
+      "cutoff": "2022-02-15",
+      "clubs": [
+        {
+          "club": "Chelsea",
+          "count": 288,
+          "latest": "2022-01-23",
+          "age": 23
+        },
+        {
+          "club": "LOSC",
+          "count": 278,
+          "latest": "2022-02-12",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.619341209981651,
+      "frozen": 0.631685925529051,
+      "elo": 0.6377403826132816,
+      "attack": 0.6256314684448203,
+      "walk": 0.613278807805097
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Milan",
+          "count": 324,
+          "latest": "2023-02-10",
+          "age": 4
+        },
+        {
+          "club": "Tottenham",
+          "count": 323,
+          "latest": "2023-02-11",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.5103262076553108,
+      "frozen": 0.5354253723611357,
+      "elo": 0.5336270054568902,
+      "attack": 0.5372237392653811,
+      "walk": 0.5297748702651677
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "RB Leipzig",
+          "count": 224,
+          "latest": "2023-02-11",
+          "age": 3
+        },
+        {
+          "club": "Man City",
+          "count": 323,
+          "latest": "2023-02-12",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.3573797229532476,
+      "frozen": 0.2988345257698108,
+      "elo": 0.2905797157466826,
+      "attack": 0.30708933579293896,
+      "walk": 0.3213188379148421
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Borussia Dortmund",
+          "count": 292,
+          "latest": "2023-02-11",
+          "age": 3
+        },
+        {
+          "club": "Chelsea",
+          "count": 324,
+          "latest": "2023-02-11",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.5311933435500511,
+      "frozen": 0.4924378270418946,
+      "elo": 0.46947895942323004,
+      "attack": 0.5153966946605592,
+      "walk": 0.5183774977902835
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Liverpool",
+          "count": 322,
+          "latest": "2023-02-13",
+          "age": 1
+        },
+        {
+          "club": "Real Madrid",
+          "count": 321,
+          "latest": "2023-02-05",
+          "age": 9
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.44815265346678995,
+      "frozen": 0.4478045387549297,
+      "elo": 0.4947310790890185,
+      "attack": 0.40087799842084093,
+      "walk": 0.3934950416158581
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Paris Saint-Germain",
+          "count": 308,
+          "latest": "2023-02-11",
+          "age": 3
+        },
+        {
+          "club": "Bayern Munich",
+          "count": 292,
+          "latest": "2023-02-11",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.4182568894320944,
+      "frozen": 0.43453735722155074,
+      "elo": 0.39595187770010143,
+      "attack": 0.47312283674300004,
+      "walk": 0.48007595327438163
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Club Brugge",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Benfica",
+          "count": 0,
+          "latest": null,
+          "age": null
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.3779812202485631,
+      "frozen": 0.3779812202485631,
+      "elo": 0.3779812202485631,
+      "attack": 0.3779812202485631,
+      "walk": 0.3779812202485631
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Inter",
+          "count": 324,
+          "latest": "2023-02-13",
+          "age": 1
+        },
+        {
+          "club": "Porto",
+          "count": 0,
+          "latest": null,
+          "age": null
+        }
+      ],
+      "fallback": true,
+      "actual_a": true,
+      "baseline": 0.6261822032409287,
+      "frozen": 0.6261822032409287,
+      "elo": 0.6261822032409287,
+      "attack": 0.6261822032409287,
+      "walk": 0.6261822032409287
+    },
+    {
+      "season": "2022-2023",
+      "cutoff": "2023-02-14",
+      "clubs": [
+        {
+          "club": "Eintracht Frankfurt",
+          "count": 292,
+          "latest": "2023-02-12",
+          "age": 2
+        },
+        {
+          "club": "Napoli",
+          "count": 323,
+          "latest": "2023-02-12",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.2480911114973629,
+      "frozen": 0.23384311848023975,
+      "elo": 0.25521002291223693,
+      "attack": 0.21247621404824255,
+      "walk": 0.2099743303049888
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "PSV",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Borussia Dortmund",
+          "count": 327,
+          "latest": "2024-02-09",
+          "age": 4
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.29955545640775255,
+      "frozen": 0.29955545640775255,
+      "elo": 0.29955545640775255,
+      "attack": 0.29955545640775255,
+      "walk": 0.29955545640775255
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Porto",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Arsenal",
+          "count": 364,
+          "latest": "2024-02-11",
+          "age": 2
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.32985236709550164,
+      "frozen": 0.32985236709550164,
+      "elo": 0.32985236709550164,
+      "attack": 0.32985236709550164,
+      "walk": 0.32985236709550164
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Napoli",
+          "count": 362,
+          "latest": "2024-02-11",
+          "age": 2
+        },
+        {
+          "club": "FC Barcelona",
+          "count": 363,
+          "latest": "2024-02-11",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.42853989811531457,
+      "frozen": 0.4798083998085858,
+      "elo": 0.46990416220462883,
+      "attack": 0.4897126374125428,
+      "walk": 0.230572316984572
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Lazio",
+          "count": 365,
+          "latest": "2024-02-10",
+          "age": 3
+        },
+        {
+          "club": "Bayern Munich",
+          "count": 327,
+          "latest": "2024-02-10",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.31118987731733794,
+      "frozen": 0.26545635988265504,
+      "elo": 0.25389563566742995,
+      "attack": 0.2770170840978801,
+      "walk": 0.0673929541893925
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "RB Leipzig",
+          "count": 259,
+          "latest": "2024-02-10",
+          "age": 3
+        },
+        {
+          "club": "Real Madrid",
+          "count": 363,
+          "latest": "2024-02-10",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.28943709122906497,
+      "frozen": 0.38936755232854575,
+      "elo": 0.32694219451007306,
+      "attack": 0.45179291014701844,
+      "walk": 0.13791310905585957
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Copenhagen",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Man City",
+          "count": 362,
+          "latest": "2024-02-10",
+          "age": 3
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.16687313085751146,
+      "frozen": 0.16687313085751146,
+      "elo": 0.16687313085751146,
+      "attack": 0.16687313085751146,
+      "walk": 0.16687313085751146
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Inter",
+          "count": 363,
+          "latest": "2024-02-10",
+          "age": 3
+        },
+        {
+          "club": "Atl\u00e9tico de Madrid",
+          "count": 360,
+          "latest": "2024-02-11",
+          "age": 2
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.6413675717516414,
+      "frozen": 0.6861668411598321,
+      "elo": 0.6162849674062966,
+      "attack": 0.7560487149133674,
+      "walk": 0.8260290807966162
+    },
+    {
+      "season": "2023-2024",
+      "cutoff": "2024-02-13",
+      "clubs": [
+        {
+          "club": "Paris Saint-Germain",
+          "count": 344,
+          "latest": "2024-02-10",
+          "age": 3
+        },
+        {
+          "club": "Real Sociedad",
+          "count": 355,
+          "latest": "2024-02-10",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.6427241581434103,
+      "frozen": 0.6592738081867611,
+      "elo": 0.6594436846555297,
+      "attack": 0.6591039317179925,
+      "walk": 0.7736959929976394
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Feyenoord",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Inter",
+          "count": 405,
+          "latest": "2025-03-01",
+          "age": 3
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.23793655759354657,
+      "frozen": 0.23793655759354657,
+      "elo": 0.23793655759354657,
+      "attack": 0.23793655759354657,
+      "walk": 0.23793655759354657
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Paris Saint-Germain",
+          "count": 381,
+          "latest": "2025-03-01",
+          "age": 3
+        },
+        {
+          "club": "Liverpool",
+          "count": 405,
+          "latest": "2025-02-26",
+          "age": 6
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.5025421626617603,
+      "frozen": 0.5142567197082376,
+      "elo": 0.4649559555979237,
+      "attack": 0.5635574838185515,
+      "walk": 0.7340823454912289
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Club Brugge",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Aston Villa",
+          "count": 293,
+          "latest": "2025-02-25",
+          "age": 7
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.46811952328715656,
+      "frozen": 0.46811952328715656,
+      "elo": 0.46811952328715656,
+      "attack": 0.46811952328715656,
+      "walk": 0.46811952328715656
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Bayern Munich",
+          "count": 364,
+          "latest": "2025-02-28",
+          "age": 4
+        },
+        {
+          "club": "Bayer Leverkusen",
+          "count": 364,
+          "latest": "2025-03-01",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.49503017684209455,
+      "frozen": 0.6245206366144331,
+      "elo": 0.5873484749596564,
+      "attack": 0.6616927982692098,
+      "walk": 0.6429337555675781
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "PSV",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Arsenal",
+          "count": 405,
+          "latest": "2025-02-26",
+          "age": 6
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.2728219564243953,
+      "frozen": 0.2728219564243953,
+      "elo": 0.2728219564243953,
+      "attack": 0.2728219564243953,
+      "walk": 0.2728219564243953
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Real Madrid",
+          "count": 403,
+          "latest": "2025-03-01",
+          "age": 3
+        },
+        {
+          "club": "Atl\u00e9tico de Madrid",
+          "count": 400,
+          "latest": "2025-03-01",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.5417579580137022,
+      "frozen": 0.5855206970279568,
+      "elo": 0.6167825924858686,
+      "attack": 0.554258801570045,
+      "walk": 0.7232717026438369
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Borussia Dortmund",
+          "count": 364,
+          "latest": "2025-03-01",
+          "age": 3
+        },
+        {
+          "club": "LOSC",
+          "count": 387,
+          "latest": "2025-03-01",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.4536570340901016,
+      "frozen": 0.531540338209046,
+      "elo": 0.5263386127681831,
+      "attack": 0.5367420636499091,
+      "walk": 0.74503525413466
+    },
+    {
+      "season": "2024-2025",
+      "cutoff": "2025-03-04",
+      "clubs": [
+        {
+          "club": "Benfica",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "FC Barcelona",
+          "count": 403,
+          "latest": "2025-03-02",
+          "age": 2
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.3018486359688576,
+      "frozen": 0.3018486359688576,
+      "elo": 0.3018486359688576,
+      "attack": 0.3018486359688576,
+      "walk": 0.3018486359688576
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Atalanta",
+          "count": 444,
+          "latest": "2026-03-07",
+          "age": 3
+        },
+        {
+          "club": "Bayern Munich",
+          "count": 399,
+          "latest": "2026-03-06",
+          "age": 4
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.2446344991642614,
+      "frozen": 0.2572860260889349,
+      "elo": 0.2654558129994796,
+      "attack": 0.24911623917839015,
+      "walk": 0.1407838464227558
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Atl\u00e9tico de Madrid",
+          "count": 439,
+          "latest": "2026-03-07",
+          "age": 3
+        },
+        {
+          "club": "Tottenham",
+          "count": 440,
+          "latest": "2026-02-10",
+          "age": 28
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.7007145286704474,
+      "frozen": 0.660461961949241,
+      "elo": 0.6642874486813553,
+      "attack": 0.6566364752171268,
+      "walk": 0.8422653108862361
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Bod\u00f8/Glimt",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Sporting CP",
+          "count": 0,
+          "latest": null,
+          "age": null
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.4757929116388865,
+      "frozen": 0.4757929116388865,
+      "elo": 0.4757929116388865,
+      "attack": 0.4757929116388865,
+      "walk": 0.4757929116388865
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Bayer Leverkusen",
+          "count": 398,
+          "latest": "2026-03-07",
+          "age": 3
+        },
+        {
+          "club": "Arsenal",
+          "count": 443,
+          "latest": "2026-02-18",
+          "age": 20
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.2763242128116375,
+      "frozen": 0.302120466734881,
+      "elo": 0.3212643084695704,
+      "attack": 0.2829766250001916,
+      "walk": 0.1859030534492938
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Newcastle",
+          "count": 406,
+          "latest": "2026-02-10",
+          "age": 28
+        },
+        {
+          "club": "FC Barcelona",
+          "count": 442,
+          "latest": "2026-03-07",
+          "age": 3
+        }
+      ],
+      "fallback": false,
+      "actual_a": false,
+      "baseline": 0.3159498570431374,
+      "frozen": 0.32314352264007995,
+      "elo": 0.315241398817857,
+      "attack": 0.33104564646230294,
+      "walk": 0.09012562750537258
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Real Madrid",
+          "count": 442,
+          "latest": "2026-03-06",
+          "age": 4
+        },
+        {
+          "club": "Man City",
+          "count": 441,
+          "latest": "2026-02-11",
+          "age": 27
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.5164873685142503,
+      "frozen": 0.51586917250438,
+      "elo": 0.5139064455271084,
+      "attack": 0.5178318994816518,
+      "walk": 0.622122551980621
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Galatasaray",
+          "count": 0,
+          "latest": null,
+          "age": null
+        },
+        {
+          "club": "Liverpool",
+          "count": 442,
+          "latest": "2026-03-03",
+          "age": 7
+        }
+      ],
+      "fallback": true,
+      "actual_a": false,
+      "baseline": 0.285248064342581,
+      "frozen": 0.285248064342581,
+      "elo": 0.285248064342581,
+      "attack": 0.285248064342581,
+      "walk": 0.285248064342581
+    },
+    {
+      "season": "2025-2026",
+      "cutoff": "2026-03-10",
+      "clubs": [
+        {
+          "club": "Paris Saint-Germain",
+          "count": 416,
+          "latest": "2026-03-06",
+          "age": 4
+        },
+        {
+          "club": "Chelsea",
+          "count": 442,
+          "latest": "2026-02-10",
+          "age": 28
+        }
+      ],
+      "fallback": false,
+      "actual_a": true,
+      "baseline": 0.6143101138284576,
+      "frozen": 0.6955510070750478,
+      "elo": 0.6551706189532808,
+      "attack": 0.7359313951968148,
+      "walk": 0.7497037591825244
+    }
+  ]
+}
