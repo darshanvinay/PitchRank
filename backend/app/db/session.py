@@ -13,7 +13,7 @@ def get_engine(url: str | None = None) -> Engine:
     parsed = make_url(url)
     if parsed.drivername != "sqlite":
         raise ValueError("PitchRank currently supports SQLite only")
-    if parsed.database and parsed.database != ":memory:":
+    if parsed.database and parsed.database != ":memory:" and parsed.query.get("uri") != "true":
         Path(parsed.database).parent.mkdir(parents=True, exist_ok=True)
     engine = create_engine(url)
 
