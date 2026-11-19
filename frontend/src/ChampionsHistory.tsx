@@ -1,3 +1,4 @@
+import { apiFetch } from "./api";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -46,7 +47,7 @@ const rounds: Record<string, string> = {
   final: "Final",
 };
 async function load<T>(url: string, signal: AbortSignal): Promise<T> {
-  const response = await fetch(url, { signal, cache: "no-store" });
+  const response = await apiFetch(url, { signal, cache: "no-store" });
   if (!response.ok)
     throw new Error(
       "History could not be loaded. Check the backend and retry.",
