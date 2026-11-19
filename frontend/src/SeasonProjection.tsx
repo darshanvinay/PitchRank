@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 type Club = {
   id: number; name: string; crest: string | null; elo: number;
@@ -28,9 +28,15 @@ function ClubName({ club }: { club: Club }) {
 export default function SeasonProjection() {
   const [data, setData] = useState<Projection | null>(null);
   const [error, setError] = useState("");
-  const [model, setModel] = useState<"xg" | "baseline">("xg");
-  const [mode, setMode] = useState<"likely" | "simulated">("likely");
-  const [view, setView] = useState<"title" | "league">("title");
+  const [params, setParams] = useSearchParams();
+  const model = params.get("model") === "baseline" ? "baseline" : "xg";
+  const mode = params.get("mode") === "simulated" ? "simulated" : "likely";
+  const view = params.get("order") === "league" ? "league" : "title";
+  function setViewParam(name: string, value: string) {
+    const next = new URLSearchParams(params);
+    next.set(name, value);
+    setParams(next, { replace: true, preventScrollReset: true });
+  }
   const [selected, setSelected] = useState<Tie | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -60,13 +66,13 @@ export default function SeasonProjection() {
       <p>League phase and knockout projections</p></div></div>
     <div className="table-toolbar history-filters bracket-controls">
       <label>Prediction model<select value={model} name="projection-model" onChange={(e) => {
-        setModel(e.target.value === "baseline" ? "baseline" : "xg");
+        setViewParam("model", e.target.value);
       }}>
         <option value="xg">Frozen xG ensemble · experimental</option>
         <option value="baseline">Model A · Elo</option>
       </select></label>
       <label>Bracket mode<select value={mode} name="bracket-mode" onChange={(e) => {
-        setMode(e.target.value === "simulated" ? "simulated" : "likely");
+        setViewParam("mode", e.target.value);
       }}>
         <option value="likely">Most Likely Bracket</option>
         <option value="simulated">Simulated Bracket</option>
@@ -75,9 +81,9 @@ export default function SeasonProjection() {
     </div>
     {error && <p className="error-notice" role="alert">{error}</p>}
     {(!data || !forecast || !champion) ? (!error && <p role="status">Loading season projection…</p>) : <>
-      <section className="bracket-summary projection-summary" aria-label="Forecast summary">
+      <section className="bracket-summary projection-summary knockout-scoreboard" aria-label="Forecast summary">
         <div><span>Title favorite</span><strong><ClubName club={champion} /></strong></div>
-        <div><span>Championship probability</span><strong className="bracket-winner">{pct.format(champion.title)}</strong></div>
+        <div><span>Championship probability</span><strong className="scoreboard-odds">{pct.format(champion.title)}</strong></div>
         <div><span>Simulation run</span><strong><time dateTime={data.generated_at}>
           {timestamp.format(new Date(data.generated_at))}</time></strong></div>
       </section>
@@ -92,7 +98,7 @@ export default function SeasonProjection() {
           ? "The higher-probability team advances in each matchup on this simulated draw."
           : "One possible tournament outcome. Winners are sampled from their matchup probabilities, so upsets can occur."}
           {" "}Final: {bracket.finalists.map((id) => clubs[id].name).join(" vs ")}.</p>
-        <p><strong>Bracket champion</strong> · {clubs[bracket.champion].name}</p>
+        <div className="knockout-champion"><span>Bracket champion</span><strong><ClubName club={clubs[bracket.champion]} /></strong></div>
         <div className="projection-scroll" role="region" aria-label="Simulated bracket rounds" tabIndex={0}>
           <div className="projection-rounds">
             {rounds.map((round) => <section className="bracket-round" key={round} aria-label={round}>
@@ -127,7 +133,7 @@ export default function SeasonProjection() {
         <div className="table-toolbar history-filters bracket-controls">
           <h2 id="projection-table-title">All 36 clubs</h2>
           <label>Sort by<select value={view} name="projection-sort" onChange={(e) => {
-            setView(e.target.value === "league" ? "league" : "title");
+            setViewParam("order", e.target.value);
           }}>
             <option value="title">Title probability</option>
             <option value="league">Mean league position</option>
