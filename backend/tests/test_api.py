@@ -127,3 +127,21 @@ def test_archived_xg_is_read_from_the_selected_clubs_perspective(client):
     assert (away_xg["xg"], away_xg["xga"]) == (0.6, 2.4)
     assert (home_xg["opponent"], away_xg["opponent"]) == ("Coventry", "Arsenal")
     assert http.get("/api/teams/999999/xg").status_code == 404
+
+
+def test_public_api_health_cors_and_refresh(client, monkeypatch):
+    _, engine = client
+    origin = "https://pitchrank.example"
+    monkeypatch.setenv("PITCHRANK_PUBLIC", "1")
+    monkeypatch.setenv("PITCHRANK_CORS_ORIGINS", origin)
+    with TestClient(create_app(engine, "2026-2027")) as http:
+        assert http.get("/health").json() == {"status": "ok"}
+        response = http.get("/api/league", headers={"Origin": origin})
+        assert response.headers["access-control-allow-origin"] == origin
+        foreign = http.get("/api/league", headers={"Origin": "https://other.example"})
+        assert "access-control-allow-origin" not in foreign.headers
+        assert http.post("/api/refresh").status_code == 403
+        assert http.post("/api/refresh", headers={"Origin": origin}).status_code == 403
+
+    with TestClient(create_app(engine, "2099-2100")) as http:
+        assert http.get("/health").status_code == 503
