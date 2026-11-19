@@ -31,6 +31,7 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000
 
 Open [PitchRank locally](http://127.0.0.1:8000). FastAPI serves the built website, its assets, and the
 API from the same origin. API documentation is at [localhost:8000/docs](http://127.0.0.1:8000/docs).
+For a hosted frontend and API, see the [Vercel and Render deployment guide](docs/deployment.md).
 No frontend dev server is needed after a build.
 
 If Python on macOS cannot locate its TLS certificates, point it at a trusted CA bundle:
