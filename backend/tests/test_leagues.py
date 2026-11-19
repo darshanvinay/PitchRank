@@ -338,3 +338,57 @@ def test_new_league_mappings_values_timezone_and_wrong_club_rejection(five_leagu
     assert league_data(engine, SEASON, league) == before
     with pytest.raises(ValueError, match="No verified roster"):
         import_csv(engine, files[league], "2027-2028", league=league)
+
+
+def test_daily_bundle_reruns_and_rolls_back_on_invalid_ucl_schedule(
+    five_leagues, tmp_path, monkeypatch
+):
+    from datetime import datetime, timezone
+
+    from app.ingestion import champions, daily
+    from app.services import season as service
+
+    engine, files = five_leagues
+
+    class Clock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return cls(2026, 11, 18, tzinfo=timezone.utc).astimezone(tz)
+
+    monkeypatch.setattr(champions, "datetime", Clock)
+    monkeypatch.setattr(service, "download_season", lambda year, directory, league: files[league])
+    ucl = tmp_path / "UCL.csv"
+    ucl.write_text(
+        HEADER.strip() + ",Stage,Neutral\nUCL,08/09/2026,19:00,Arsenal,Barcelona,1,0,H,league,0\n"
+    )
+    fixture = {
+        "DateUtc": "2026-11-24T20:00:00Z",
+        "RoundNumber": 5,
+        "HomeTeam": "Arsenal",
+        "AwayTeam": "Barcelona",
+        "HomeTeamScore": None,
+        "AwayTeamScore": None,
+    }
+    feed = ucl.with_suffix(".feed.json")
+    feed.write_text(json.dumps([fixture]))
+    monkeypatch.setattr(champions, "download_champions", lambda *args: ucl)
+    monkeypatch.setattr(daily, "sync_xg", lambda *args: None)
+
+    def states():
+        with engine.connect() as connection:
+            return connection.exec_driver_sql(
+                "SELECT id, league, status FROM matches ORDER BY id"
+            ).all()
+
+    daily.run(engine, SEASON)
+    imported = states()
+    assert [row[2] for row in imported if row[1] == "ucl"] == ["finished", "scheduled"]
+    daily.run(engine, SEASON)
+    assert states() == imported
+
+    england = files["epl"]
+    england.write_text(england.read_text() + "E0,28/08/2026,20:00,Coventry,Arsenal,0,1,A\n")
+    feed.write_text(json.dumps([dict(fixture, HomeTeam="Unknown Test Team")]))
+    with pytest.raises(ValueError, match="Unknown team"):
+        daily.run(engine, SEASON)
+    assert states() == imported
