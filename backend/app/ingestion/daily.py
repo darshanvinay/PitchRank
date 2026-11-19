@@ -109,6 +109,13 @@ def run(engine, season):
                     "%s latest completed result is older than its freshness threshold", league
                 )
         sync_xg(engine, season)
+        from app.backtesting.season_projection import SEASON, publish
+
+        if season == SEASON:
+            try:
+                LOG.info("Published Champions League projection: %s", publish(engine, season))
+            except Exception:
+                LOG.exception("Projection refresh failed. Previous snapshot remains available.")
 
 
 def main():
