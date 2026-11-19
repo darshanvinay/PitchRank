@@ -1,0 +1,16 @@
+.optional-club-analysis { margin-block: 14px; }
+.optional-club-analysis .analysis-heading, .optional-club-analysis .editorial-tabs {
+  display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center;
+}
+.optional-club-analysis .editorial-tabs button[aria-pressed="true"],
+.optional-club-analysis :is(.form-timeline,.xg-columns) button[aria-pressed="true"] {
+  border-color: var(--chart);
+}
+.optional-club-analysis .analysis-range { display: flex; gap: 8px; align-items: center; margin-block: 8px; }
+.optional-club-analysis :is(.analysis-caption,.analysis-readout) { color: var(--muted); margin-block: 10px; }
+.optional-club-analysis :is(.form-timeline,.xg-columns) { display: flex; gap: 5px; overflow-x: auto; padding: 4px; }
+.optional-club-analysis .form-timeline button { display: grid; flex: 1 0 98px; text-align: left; }
+.optional-club-analysis .xg-columns button { flex: 1 0 36px; display: grid; padding: 4px; }
+.optional-club-analysis .xg-columns button > span { display: flex; height: 140px; gap: 3px; align-items: end; justify-content: center; }
+.optional-club-analysis .xg-columns i { width: 10px; background: var(--chart); }
+.optional-club-analysis .xg-columns i + i { background: var(--negative); }
