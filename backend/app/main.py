@@ -68,6 +68,21 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
     def ucl_seasons():
         return history_seasons(database)
 
+    @app.get("/api/ucl/projection")
+    def ucl_projection():
+        import json
+
+        from app.backtesting.season_projection import DIRECTORY, SEASON
+
+        paths = sorted((DIRECTORY / SEASON).glob("*.json"))
+        if not paths:
+            raise HTTPException(503, "No season projection has been published yet.")
+        data = json.loads(paths[-1].read_text())
+        inputs = data.pop("inputs")
+        data["completed"] = sum(row[2] is not None for row in inputs["fixtures"])
+        data["xg_clubs"] = sum(inputs["eligible"])
+        return data
+
     @app.get("/api/ucl/bracket")
     def ucl_bracket(
         season: str = "2020-2021",
