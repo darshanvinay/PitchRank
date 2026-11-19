@@ -1,3 +1,4 @@
+import { apiFetch } from "./api";
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
@@ -43,7 +44,7 @@ export default function SeasonProjection() {
     const controller = new AbortController();
     async function load() {
       try {
-        const response = await fetch("/api/ucl/projection", { signal: controller.signal });
+        const response = await apiFetch("/api/ucl/projection", { signal: controller.signal });
         if (!response.ok) throw new Error("Season projection unavailable.");
         setData(await response.json() as Projection);
         setError("");
