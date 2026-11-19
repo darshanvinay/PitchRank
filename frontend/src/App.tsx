@@ -613,6 +613,7 @@ function Leaderboard({ league }: { league: League }) {
                   </th>
                   {european && <td>{club.league_name}</td>}
                   <td className="numeric rating-cell">
+                    <div className="rating-reading">
                     <Link to={leaguePath(`/teams/${club.id}`, club.league_id)}>
                       {number.format(club.rating)}
                     </Link>
@@ -623,6 +624,7 @@ function Leaderboard({ league }: { league: League }) {
                         }}
                       />
                     </span>
+                  </div>
                   </td>
                   {european ? (
                     <td className="numeric">
