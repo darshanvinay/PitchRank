@@ -1,3 +1,4 @@
+import { apiFetch } from "./api";
 import { useEffect, useState } from "react";
 import "./club-analysis.css";
 import RatingChart from "./RatingChart";
@@ -21,7 +22,7 @@ export default function ClubAnalysis({ club, history, results }: {
   useEffect(() => {
     if (metric !== "xg") return;
     const controller = new AbortController();
-    fetch("/api/teams/" + club.id + "/xg", { signal: controller.signal })
+    apiFetch("/api/teams/" + club.id + "/xg", { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error("Could not load xG observations.");
         return response.json() as Promise<Observation[]>;
