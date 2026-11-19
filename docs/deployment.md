@@ -36,13 +36,14 @@ seed_dir=$(mktemp -d)
 sqlite3 -readonly data/pitchrank.sqlite3 ".backup '$seed_dir/pitchrank.sqlite3'"
 sqlite3 -readonly "$seed_dir/pitchrank.sqlite3" "PRAGMA quick_check;"
 shasum -a 256 "$seed_dir/pitchrank.sqlite3"
+gzip -c "$seed_dir/pitchrank.sqlite3" > "$seed_dir/pitchrank-seed.sqlite3.gz"
 ```
 
-Host that file at a private, signed HTTPS download URL you already control and can use within
-free quotas. Add the URL as `PITCHRANK_SEED_URL` and the digest as
+Host `pitchrank-seed.sqlite3.gz` at a private, signed HTTPS download URL you already control and can use within
+free quotas. Add the URL as `PITCHRANK_SEED_URL` and the **uncompressed SQLite file's** digest as
 `PITCHRANK_SEED_SHA256` in the Render service's environment. Keep the backup, URL and digest
 out of Git and public artifacts. Renew the URL before a new build if it expired. The build
-verifies and migrates the backup, then packages it in its private filesystem. Render cold
+decompresses, verifies, and migrates the backup, then packages it in its private filesystem. Render cold
 starts open the packaged snapshot and do not call the seed host. A fresh build requires valid
 seed credentials. Avoid unattended rebuilds if the URL is short-lived.
 
