@@ -99,3 +99,31 @@ def test_refresh_success_and_cross_site_rejection(client, monkeypatch):
     assert not called
     assert http.post("/api/refresh", headers={"Origin": "http://testserver"}).status_code == 200
     assert called == [True]
+
+
+def test_archived_xg_is_read_from_the_selected_clubs_perspective(client):
+    from app.db.models import Match, MatchXG
+
+    http, engine = client
+    with Session(engine) as session, session.begin():
+        match = session.scalar(select(Match))
+        home, away = match.home_team_id, match.away_team_id
+        session.add(
+            MatchXG(
+                match_id=match.id,
+                source="understat",
+                external_id="1",
+                home_xg=2.4,
+                away_xg=0.6,
+                source_url="https://understat.com/match/1",
+                archive_url="https://understat.com",
+                archive_sha256="0" * 64,
+                provider_date=match.match_date,
+            )
+        )
+    home_xg = http.get(f"/api/teams/{home}/xg").json()[0]
+    away_xg = http.get(f"/api/teams/{away}/xg").json()[0]
+    assert (home_xg["xg"], home_xg["xga"]) == (2.4, 0.6)
+    assert (away_xg["xg"], away_xg["xga"]) == (0.6, 2.4)
+    assert (home_xg["opponent"], away_xg["opponent"]) == ("Coventry", "Arsenal")
+    assert http.get("/api/teams/999999/xg").status_code == 404
