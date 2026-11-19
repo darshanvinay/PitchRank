@@ -28,3 +28,4 @@ data/*.refresh.lock
 
 # Private Render build snapshot.
 .render-seed/
+deploy/private/
