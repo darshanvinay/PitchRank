@@ -50,6 +50,46 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
     def league(league: LeagueView = "epl"):
         return league_data(database, selected_season, league)[0]
 
+    @app.get("/api/teams/{team_id}/xg")
+    def team_xg(team_id: int):
+        from sqlalchemy import case, or_, select
+        from sqlalchemy.orm import Session
+
+        from app.db.models import Match, MatchXG, Team
+
+        with Session(database) as session:
+            if session.get(Team, team_id) is None:
+                raise HTTPException(404, "Club not found.")
+            rows = session.execute(
+                select(Match, MatchXG, Team.display_name)
+                .join(MatchXG, Match.id == MatchXG.match_id)
+                .join(
+                    Team,
+                    Team.id
+                    == case(
+                        (Match.home_team_id == team_id, Match.away_team_id),
+                        else_=Match.home_team_id,
+                    ),
+                )
+                .where(
+                    Match.status == "finished",
+                    MatchXG.source == "understat",
+                    or_(Match.home_team_id == team_id, Match.away_team_id == team_id),
+                )
+                .order_by(Match.match_date.desc(), Match.id.desc())
+                .limit(40)
+            ).all()
+            return [
+                {
+                    "id": match.id,
+                    "date": str(match.match_date),
+                    "opponent": opponent,
+                    "xg": xg.home_xg if match.home_team_id == team_id else xg.away_xg,
+                    "xga": xg.away_xg if match.home_team_id == team_id else xg.home_xg,
+                }
+                for match, xg, opponent in rows
+            ]
+
     @app.get("/api/teams/{team_id}/historical-elo")
     def historical_elo(team_id: int, cutoff: date):
         from app.services.historical import get_team_elo_at_date
