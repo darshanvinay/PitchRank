@@ -1,3 +1,4 @@
+import { apiFetch, usesHostedApi } from "./api";
 import { lazy, Suspense, useEffect, useState, useRef } from "react";
 import {
   Link,
@@ -62,7 +63,7 @@ const date = (value: string | null, short = false) =>
 const delta = (value: number) =>
   `${value > 0 ? "+" : ""}${number.format(value)}`;
 async function request<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, { cache: "no-store", ...init });
+  const response = await apiFetch(url, { cache: "no-store", ...init });
   if (!response.ok) {
     const body = await response.json().catch(() => ({
       detail: "Could not reach PitchRank. Check the backend and try again.",
@@ -223,12 +224,16 @@ export default function App() {
     setRefreshError("");
     setNotice("");
     try {
-      const updated = await request<League>(`/api/refresh?league=${viewId}`, {
-        method: "POST",
-      });
+      const updated = await request<League>(
+        usesHostedApi ? `/api/league?league=${viewId}` : `/api/refresh?league=${viewId}`,
+        { method: usesHostedApi ? "GET" : "POST" },
+      );
       if (activeLeague.current === viewId) {
         setLeague(updated);
-        setNotice(`${scope.name} results refreshed and ratings recalculated.`);
+        setNotice(
+          usesHostedApi ? `Latest published ${scope.name} data loaded.`
+            : `${scope.name} results refreshed and ratings recalculated.`,
+        );
       }
     } catch (error) {
       if (activeLeague.current === viewId)
