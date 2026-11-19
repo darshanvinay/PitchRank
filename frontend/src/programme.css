@@ -54,9 +54,19 @@
 .programme .sync-stamp { display: inline; margin-inline-start: 10px; }
 .programme .refresh-button { min-height: 34px; margin-inline-start: auto; background: none; border: 0; border-radius: 0; }
 .programme .refresh-button:hover { text-decoration: underline; }
-.programme h1, .programme h2, .programme h3 { font-family: var(--programme-serif); text-wrap: balance; }
+.programme :is(h2, h3) {
+  font-family: var(--programme-serif);
+  font-weight: 700;
+  text-wrap: balance;
+}
+.programme h1 {
+  font: 700 clamp(36px, 5.8vw, 79px)/.98 var(--programme-serif);
+  color: var(--text);
+  letter-spacing: -.05em;
+  overflow-wrap: anywhere;
+}
 .programme-lead { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(190px, .9fr); align-items: end; gap: 26px; margin-block: 22px 27px; }
-.programme .programme-lead h1 { font: bold clamp(36px, 5.8vw, 79px)/.98 var(--programme-serif); letter-spacing: -.05em; max-width: 10.8em; text-wrap: wrap; }
+.programme-lead h1 { max-width: 10.8em; }
 .programme-lead p { border-inline-start: 1px solid var(--border); padding-inline-start: 18px; margin: 0; font-size: 13px; line-height: 1.55; color: var(--text); }
 .programme-lead a { text-decoration: underline; text-underline-offset: 2px; }
 .programme-notes { display: flex; flex-wrap: wrap; gap: 10px 45px; margin-bottom: 12px; }
@@ -140,7 +150,7 @@
 .programme-knockouts .bracket-winner { font-weight: 700; }
 .programme-knockouts .bracket-club.bracket-winner small { color: var(--positive); }
 .programme-knockouts .bracket-round h2, .programme-knockouts .bracket-round h3 {
-  border-bottom: 1px solid var(--border); padding-bottom: 6px;
+  border-bottom: 1px solid var(--border); padding-bottom: 6px; font-weight: 700;
 }
 .programme .club-context,
 .programme .team-stats,
@@ -178,3 +188,50 @@
   .programme .programme-compact thead th:nth-child(5) { width: 9%; }
   .programme .programme-compact .form-cell { width: 23%; min-width: 0; }
 }
+
+/* Shared editorial type and ruled sections. */
+.programme .team-title,
+.programme .method-page > h1 { border-bottom: 2px solid var(--text); padding-block-end: 15px; }
+.programme :is(.team-head-rating strong,.team-stats strong,.starting-value,.result-score) {
+  font-family: var(--programme-serif); font-variant-numeric: tabular-nums;
+}
+.programme :is(.team-stats,.club-context,.bracket-assumption) {
+  background: transparent; border: 0; border-block: 1px solid var(--rule);
+}
+.programme .club-context { border-top: 2px solid var(--text); padding-inline: 0; }
+.programme .history-details summary { border-top: 1px solid var(--rule); }
+.programme :is(.history-matches,.projection-table table) thead th {
+  border-bottom: 2px solid var(--text); text-transform: uppercase;
+  letter-spacing: .075em; font-size: 10px; background: transparent;
+}
+.programme .history-club { font-family: var(--programme-serif); font-weight: 700; }
+.programme .method-page code { background: var(--raised); border: 0; border-inline-start: 2px solid var(--text); border-radius: 0; }
+.programme .method-index { color: var(--negative); font: bold italic 17px var(--programme-serif); }
+
+/* Give the Elo value a stable measure so every bar starts on the same line. */
+.programme .rating-reading { display: flex; align-items: center; gap: 12px; }
+.programme .rating-reading > a {
+  flex: 0 0 5.1em; white-space: nowrap;
+  font: bold clamp(17px, 2.2vw, 24px) var(--programme-serif);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.programme .rating-reading .rating-track { flex: 1 1 0; max-width: 205px; margin: 0; }
+@media (min-width: 641px) {
+  .programme .programme-compact .rating-cell { width: auto; }
+  .programme .programme-compact :is(th,td):nth-child(4) { width: 94px; }
+  .programme .programme-compact :is(th,td):nth-child(5) { width: 62px; }
+  .programme .leaderboard .form-cell { padding-right: 10px; }
+}
+@media (max-width: 640px) {
+  .programme .rating-reading { display: block; }
+  .programme .programme-compact .rating-reading > a { font-size: 15px; }
+}
+.programme-knockouts .knockout-scoreboard .projection-club,
+.programme-knockouts .knockout-scoreboard .projection-club > span { color: #f4eedb; }
+
+.programme .programme-archive .history-club {
+  font: bold clamp(15px, 2vw, 22px)/1.15 var(--programme-serif);
+}
+.programme .programme-archive .history-matches :is(th, td) { padding-block: 5px; }
+.programme .programme-archive .history-matches tbody td { height: 45px; color: var(--text); }
+.programme .programme-archive .history-matches .numeric { font-variant-numeric: tabular-nums; }
