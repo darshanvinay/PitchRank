@@ -136,8 +136,11 @@ def refresh_season(
     results: Path | None = None,
     squads: Path | None = None,
     league: str = "epl",
+    *,
+    current_only: bool = False,
+    download_dir: Path | None = None,
 ) -> dict:
-    from app.ingestion.champions import download_champions, import_champions
+    from app.ingestion.champions import download_champions, import_champions, sync_scheduled
     from app.ingestion.historical import season_start
 
     targets = list(LEAGUES) if league == "europe" else [league]
@@ -148,8 +151,11 @@ def refresh_season(
     if league == "europe" and (results is not None or squads is not None):
         raise ValueError("Local result/value overrides require a domestic league selection")
     years = (
-        [f"{year}-{year + 1}" for year in range(start, end + 1)] if league == "europe" else [season]
+        [f"{year}-{year + 1}" for year in range(start, end + 1)]
+        if league == "europe" and not current_only
+        else [season]
     )
+    directory = download_dir or ROOT / "data/raw"
     jobs = []
     for year in years:
         for key in targets:
@@ -157,7 +163,7 @@ def refresh_season(
             path = results or (
                 cached
                 if year != season and cached.exists()
-                else download_season(year, ROOT / "data/raw", key)
+                else download_season(year, directory, key)
             )
             jobs.append((key, year, path))
     ucl_jobs = []
@@ -167,7 +173,7 @@ def refresh_season(
             path = (
                 cached
                 if year != season and cached.exists()
-                else download_champions(year, ROOT / "data/raw")
+                else download_champions(year, directory)
             )
             ucl_jobs.append((year, path))
     if squads is not None and not squads.exists():
@@ -200,6 +206,9 @@ def refresh_season(
             for year, path in ucl_jobs:
                 ucl_summary = import_champions(connection, path, year, complete_snapshot=True)
                 reports.append({"league": "ucl", "season": year, **asdict(ucl_summary)})
+                if current_only:
+                    sync_scheduled(connection, path.with_suffix(".feed.json"), year)
+            # Replay through the existing engine using the same production parameters.
             calculation = calculate_season(connection, season, league=targets[0])
             connection.commit()
         except Exception:
