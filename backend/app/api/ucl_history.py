@@ -8,8 +8,10 @@ from sqlalchemy.orm import Session
 from app.db.models import ImportRun, Match, Team
 from app.ingestion.ucl_history import AVAILABLE, SOURCE, expected_rounds
 
+SOURCE_PAGE = "https://github.com/openfootball/champions-league"
 
-def history_seasons(engine):
+
+def history_seasons(engine, *, public: bool = False):
     with Session(engine) as session:
         matches = session.scalars(
             select(Match).where(Match.league == "ucl", Match.ucl_detail.is_not(None))
@@ -28,6 +30,8 @@ def history_seasons(engine):
             counts = dict(Counter(m.ucl_detail["round"] for m in rows))
             latest = next((r for r in reversed(runs) if r.season == season), None)
             expected = expected_rounds(season)
+            location = latest.location if latest else None
+            public_url = location if location and location.startswith("https://") else None
             output.append(
                 {
                     "season": season,
@@ -40,10 +44,8 @@ def history_seasons(engine):
                     if counts == expected
                     else ("not_imported" if season in AVAILABLE else "source_unavailable"),
                     "last_imported_at": latest.imported_at.isoformat() + "Z" if latest else None,
-                    "source_url": latest.location
-                    if latest and latest.location.startswith("https://")
-                    else "https://github.com/openfootball/champions-league",
-                    "source_location": latest.location if latest else None,
+                    "source_url": public_url or SOURCE_PAGE,
+                    "source_location": public_url if public else location,
                     "license": "CC0-1.0",
                     "reviewed_errata": sum(bool(m.ucl_detail.get("erratum")) for m in rows),
                     "scope": "main draw; qualifiers excluded",
@@ -57,7 +59,7 @@ def history_seasons(engine):
         return {"seasons": list(reversed(output))}
 
 
-def history_matches(engine, season=None, stage=None, team_id=None):
+def history_matches(engine, season=None, stage=None, team_id=None, *, public: bool = False):
     with Session(engine) as session:
         query = select(Match).where(Match.league == "ucl", Match.ucl_detail.is_not(None))
         if season is not None:
@@ -76,6 +78,9 @@ def history_matches(engine, season=None, stage=None, team_id=None):
             detail = match.ucl_detail
             if stage and detail["round"] != stage:
                 continue
+            source_url = detail.get("source_url")
+            if public and not (source_url and source_url.startswith("https://")):
+                source_url = SOURCE_PAGE
             rows.append(
                 {
                     "match_id": match.id,
@@ -91,6 +96,7 @@ def history_matches(engine, season=None, stage=None, team_id=None):
                     "away_crest": teams[match.away_team_id].crest_url,
                     "home_goals": match.home_goals,
                     "away_goals": match.away_goals,
+                    "source_url": source_url,
                     **{
                         key: detail.get(key)
                         for key in (
@@ -105,7 +111,6 @@ def history_matches(engine, season=None, stage=None, team_id=None):
                             "penalties_home",
                             "penalties_away",
                             "source",
-                            "source_url",
                             "source_id",
                             "source_line",
                             "revision",
