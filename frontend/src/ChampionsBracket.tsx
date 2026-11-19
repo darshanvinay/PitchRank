@@ -1,3 +1,4 @@
+import { apiFetch } from "./api";
 import SeasonProjection from "./SeasonProjection";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -38,7 +39,7 @@ function HistoricalBracket() {
   const [revision, setRevision] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`/api/ucl/bracket?season=${encodeURIComponent(season)}&scenario=${encodeURIComponent(scenario)}`,
+    apiFetch(`/api/ucl/bracket?season=${encodeURIComponent(season)}&scenario=${encodeURIComponent(scenario)}`,
       { signal: controller.signal, cache: "no-store" })
       .then(async (response) => {
         if (!response.ok) throw new Error("Bracket unavailable. Choose a supported season or retry.");
