@@ -22,3 +22,6 @@ data/raw/domestic-history/
 
 # Re-downloadable research source snapshots (hashes retained in xG reports).
 data/raw/understat/
+
+data/daily-refresh.log
+data/*.refresh.lock
