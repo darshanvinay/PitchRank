@@ -1,13 +1,18 @@
+import asyncio
 import logging
+import os
 import threading
+from contextlib import asynccontextmanager, suppress
 from datetime import date
 from pathlib import Path
 from typing import Literal
 from urllib.error import URLError
 
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
 from app.api.data import DataUnavailable, league_data
@@ -22,10 +27,53 @@ logger = logging.getLogger(__name__)
 
 
 def create_app(engine=None, season: str | None = None) -> FastAPI:
-    app = FastAPI(title="PitchRank", description="Current-season European club strength ratings")
     database = engine if engine is not None else get_engine()
     selected_season = season or current_season()
     refresh_lock = threading.Lock()
+    origins = [
+        origin.strip().rstrip("/")
+        for origin in os.getenv("PITCHRANK_CORS_ORIGINS", "").split(",")
+        if origin.strip()
+    ]
+    public = os.getenv("PITCHRANK_PUBLIC") == "1"
+
+    @asynccontextmanager
+    async def lifespan(_: FastAPI):
+        if os.getenv("PITCHRANK_DAILY_REFRESH") != "1":
+            yield
+            return
+
+        from app.ingestion.schedule import run_daily
+
+        refresh_task = asyncio.create_task(run_daily(selected_season))
+        try:
+            yield
+        finally:
+            refresh_task.cancel()
+            with suppress(asyncio.CancelledError):
+                await refresh_task
+
+    app = FastAPI(
+        title="PitchRank",
+        description="Current-season European club strength ratings",
+        lifespan=lifespan,
+    )
+
+    if origins:
+        app.add_middleware(
+            CORSMiddleware, allow_origins=origins, allow_methods=["GET"], allow_headers=[]
+        )
+
+    @app.get("/health")
+    def health():
+        with database.connect() as connection:
+            populated = connection.execute(
+                text("SELECT 1 FROM season_ratings WHERE season = :season LIMIT 1"),
+                {"season": selected_season},
+            ).scalar()
+        if not populated:
+            raise HTTPException(503, "Season ratings are unavailable.")
+        return {"status": "ok"}
 
     @app.middleware("http")
     async def fresh_api(request: Request, call_next):
@@ -106,18 +154,22 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
 
     @app.get("/api/ucl/seasons")
     def ucl_seasons():
-        return history_seasons(database)
+        return history_seasons(database, public=public)
 
     @app.get("/api/ucl/projection")
     def ucl_projection():
         import json
 
-        from app.backtesting.season_projection import DIRECTORY, SEASON
+        from app.backtesting.season_projection import BUNDLED_DIRECTORY, DIRECTORY, SEASON
 
-        paths = sorted((DIRECTORY / SEASON).glob("*.json"))
+        paths = [
+            path
+            for folder in (BUNDLED_DIRECTORY, DIRECTORY)
+            for path in (folder / SEASON).glob("*.json")
+        ]
         if not paths:
             raise HTTPException(503, "No season projection has been published yet.")
-        data = json.loads(paths[-1].read_text())
+        data = json.loads(max(paths, key=lambda path: path.name).read_text())
         inputs = data.pop("inputs")
         data["completed"] = sum(row[2] is not None for row in inputs["fixtures"])
         data["xg_clubs"] = sum(inputs["eligible"])
@@ -156,7 +208,7 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
                 )
         except ValueError as exc:
             raise HTTPException(422, str(exc)) from exc
-        return history_matches(database, season, stage, team_id)
+        return history_matches(database, season, stage, team_id, public=public)
 
     @app.get("/api/teams/{team_id}", response_model=TeamDetail)
     def team(team_id: int, league: LeagueId = "epl"):
@@ -173,8 +225,9 @@ def create_app(engine=None, season: str | None = None) -> FastAPI:
 
     @app.post("/api/refresh", response_model=League)
     def refresh(request: Request, league: LeagueView = "epl"):
-        # Local manual update only; reject cross-site form submissions. The development Vite
-        # proxy preserves Host, and production serves the frontend on the same origin.
+        if public:
+            raise HTTPException(403, "Imports are managed by the server.")
+        # The development Vite proxy preserves Host for local imports.
         origin = request.headers.get("origin")
         if origin and origin.rstrip("/") != str(request.base_url).rstrip("/"):
             raise HTTPException(403, "Refresh must come from this application's origin.")
